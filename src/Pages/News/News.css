@@ -1,0 +1,45 @@
+
+.container{
+    background: linear-gradient( #204241 30%,#26595a 80%, #33989d 100%);
+}
+h2{
+    padding:2rem 2rem;
+    text-align: center;
+    justify-content: center;
+}
+ul{
+    margin:2rem 2rem;
+
+}
+/*=========p1 Style===========*/
+
+.p1{
+}
+
+.p1 li{
+    list-style: circle;
+}
+
+/*=========p2 Style===========*/
+.p2{
+    margin:2rem 2rem;
+    padding: 2rem 2rem ;
+}
+
+.p2 li{
+    margin:0;
+    padding: 0 ;
+}
+/*=========p3 Style===========*/
+
+.p3{
+    margin:0;
+    padding: 2rem 2rem ;
+}
+.p3{
+    text-align:start;
+    justify-content: center;
+}
+.p3 li{
+    list-style: circle;
+}

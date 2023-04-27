@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+
+}
+.footer{
+    background-color:  #1f4140;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff ;
+
+}
+/* .footer ul{
+    // display:contents; 
+    margin:0;
+} */
+.member {
+    margin: 1rem 5rem;
+}
+/* .member a, li{
+    color:#fff ;
+   margin: 0 2.5rem; 
+    list-style: none;
+
+} */
+
+.connection{
+    margin: 1rem 6rem;
+}
+.connection h2{
+    color: #fff;
+}

@@ -1,8 +1,5 @@
 
-.container{
-    background: linear-gradient( #204241 30%,#26595a 80%, #33989d 100%);
-}
-h2{
+.container h2{
     padding:2rem 2rem;
     text-align: center;
     justify-content: center;
@@ -22,8 +19,8 @@ ul{
 
 /*=========p2 Style===========*/
 .p2{
-    margin:2rem 2rem;
-    padding: 2rem 2rem ;
+    margin:2rem 0;
+    padding: 2rem 0 ;
 }
 
 .p2 li{
@@ -34,7 +31,7 @@ ul{
 
 .p3{
     margin:0;
-    padding: 2rem 2rem ;
+    padding: 2rem 0 ;
 }
 .p3{
     text-align:start;

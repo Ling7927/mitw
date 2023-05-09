@@ -2,8 +2,7 @@ import React from "react";
 
 import IntroductionImform from "./IntroductionInform.json";
 import Tab from "../../Components/IntroductionTab/IntroductionTab";
-import Tracks from "../../Components/Trak/Traks";
-import "./Introduction.css";
+import Tracks from "../../Components/Traklist/Trakslist";
 import { Link } from "react-router-dom";
 function Introduction() {
   return (
@@ -12,10 +11,10 @@ function Introduction() {
         style={{
           background: "#90a09f",
           margin: 0,
-          padding: "10rem",
+          padding: "5rem 20rem",
         }}
       >
-        <div style={{ color: "#fff" }}>
+        {/* <div style={{ color: "#fff" }}>
           <h2
             style={{
               margin: 0,
@@ -34,10 +33,8 @@ function Introduction() {
               </Link>
             </p>
           </div>
-        </div>
+        </div> */}
         <Tab />
-
-        <Tracks />
       </div>
     </>
   );

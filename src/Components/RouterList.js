@@ -1,8 +1,9 @@
 import News from "../Pages/News/News"
 import Introduction from "../Pages/Introduction/Introduction"
-import Network from "../Pages/Network/Network";
-import Preconnectathon from "../Pages/Preconnectathon/Preconnectathon";
+import Specification from "../Pages/Specification/Specification";
+import Traks from "../Pages/Traks/Traks";
 import Result from "../Pages/Result/Result";
+import Successcase from "../Pages/Successcase/Successcase"
 export const routerList = [
     {
       name: "最新消息",
@@ -15,18 +16,28 @@ export const routerList = [
         Component: <Introduction />,
       },
       {
-        name: "網路與主機架構",
-        path: "/Network",
-        Component: <Network />,
+        name: "規格與資源",
+        path: "/Specification",
+        Component: <Specification />,
       },
       {
-          name: "技術規格",
-          path: "/Preconnectathon",
-          Component: <Preconnectathon />,
+          name: "賽道",
+          path: "/Traks",
+          Component: <Traks />,
         },
+        // {
+        //     name: "技術規格",
+        //     path: "/Preconnectathon",
+        //     Component: <Preconnectathon />,
+        //   },
         {
-          name: "2023聯測松結果",
+          name: "2022聯測松結果",
           path: "/Result",
           Component: <Result />,
+        },
+        {
+          name: "成果發表",
+          path: "/Successcase",
+          Component: <Successcase />,
         },
  ];

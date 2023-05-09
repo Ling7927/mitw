@@ -9,7 +9,6 @@ function IntroductionTab() {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            marginTop: "5rem",
             width: "100%",
           }}
         >
@@ -50,22 +49,18 @@ function IntroductionTab() {
         </div>
         <div
           style={{
+            // display:"flex",
             backgroundColor: "#fff",
             fontColor: "black",
-            padding: "2px",
-            marginTop: 0,
-            marginBottom: "10px",
-            borderRadius: "0px 0px 10px 10px",
-            height: "20rem",
+            // padding: "2px",
+            borderRadius: "0px 0px 1rem 1rem",
+            height: "40rem",
+            overflow:"scroll",
+            justifyContent: "center",alignItems:"center",
           }}
         >
-          <p
-            style={{
-              fontColor: "black",
-            }}
-          >
+        
             {Inform.filter((item) => item.id === onHandle)[0].content}
-          </p>
         </div>
       </div>
     </>

@@ -8,20 +8,20 @@ import Traks from "../../Components/Traklist/Trakslist";
 import Title from "../../assets/Title.png";
 import NewsInform from "./NewsInform.json";
 function News() {
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch("SamplePDF.pdf").then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "mitw2023_DM.pdf";
-        alink.click();
-      });
-    });
-  };
+  // const onButtonClick = () => {
+  //   // using Java Script method to get PDF file
+  //   fetch("SamplePDF.pdf").then((response) => {
+  //     response.blob().then((blob) => {
+  //       // Creating new object of PDF file
+  //       const fileURL = window.URL.createObjectURL(blob);
+  //       // Setting various property values
+  //       let alink = document.createElement("a");
+  //       alink.href = fileURL;
+  //       alink.download = "mitw2023_DM.pdf";
+  //       alink.click();
+  //     });
+  //   });
+  // };
   return (
     <>
       <div
@@ -49,7 +49,8 @@ function News() {
         >
           <a
             href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
-            onClick={onButtonClick}
+            target="_blank"
+            // onClick={onButtonClick}
             style={{ color: "#fff" }}
           >
             MITW-DM 宣傳單下載 <AiOutlineDownload />

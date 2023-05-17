@@ -1,7 +1,7 @@
 import BlueLight from "../../assets/BlueLightLogo.png";
 import Raccoon from "../../assets/RaccoonLogo.png";
 import Burni from "../../assets/BurniLogo.png";
-import Panda from "../../assets/RedPandaLogo.jpg";
+import RedPanda from "../../assets/RedPandaLogo.png"
 import Power from "../../assets/2.SYSPOWER.png";
 import EBM from "../../assets/EBM.jpeg";
 import Advance from "../../assets/wiAdvance.jpg";
@@ -31,10 +31,10 @@ const List=[
 ];
 
 const OpenSourceInform=[
-    {img:<img src={BlueLight} style={{width:"30%"}}/>,link:"https://mitw.dicom.org.tw/pdf/2.%E5%A5%87%E5%94%AF%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%80%8B%E6%A1%88%E5%B0%8E%E5%90%91%E9%86%AB%E7%99%82%E8%B3%87%E6%BA%90%E8%A8%88%E7%95%AB%E6%95%B4%E5%90%88%E5%B9%B3%E5%8F%B0(POMRP)+%E5%BA%B7%E5%B0%8F%E7%BE%8E.pdf",name:"藍光(BlueLight) - Web-based DICOM Viewer",traks:"參加賽道  \n TRACK#4 - DICOMWeb查詢與調閱 \n TRACK#5 - DICOM數位全幅病理顯微鏡影像查詢與調閱 \n TRACK#7 - 影像檢查流程",introduce:"A browser-based medical image viewer,a pure single-page application (SPA), lightweight, and using only JavaScript and HTML5 technologies so as to deploy it on any HTTP server easily (just put it in HTTP server). It supports not only opening local data, but also connecting to medical image archives which support DICOMweb. It provides tools for medical image interpretation and 3D image reconstruction, e.g., Multiplanar Rreformation or Reconstruction (MPR) and Volume Rendering (VR)."},
-    {img:<img src={Raccoon} style={{width:"30%"}}/>,link:"https://github.com/cylab-tw/raccoon",name:"浣熊(Raccoon) - NoSQL醫學影像資料庫",traks:"參加賽道 \n TRACK#4 - DICOMWeb查詢與調閱 \n TRACK#5 - DICOM數位全幅病理顯微鏡影像查詢與調閱 \n TRACK#7 - 影像檢查流程",introduce:"Raccoon is a noSQL-based medical image archive for managing the DICOM images. It uses the MongoDB to manage the DICOM images and provide RESTful API, supported both FHIR ImagingStudy and DICOMWeb to store, query/retrieve, and manage DICOM images. Raccoon is bulit on the top of the Burni FHIR Server to manage the FHIR resourcs related to medical images."},
-    {img:<img src={Burni} style={{width:"30%"}}/>,link:"https://github.com/Chinlinlee/Burni",name:"布魯尼(Burni) - NoSQL FHIR Server",traks:"參加賽道 \n TRACK#1 - 病人基本資料互通 \n TRACK#2 - 生理量測數據互通 \n TRACK#3 - 用藥及疫苗接種紀錄 \n TRACK#6 - 基因定序標記",introduce:"Burni is an implementation of the FHIR server with Node, Express, and MongoDB providing very simple ways to customize the HL7 FHIR® specification, Burni support both Windows and Linux environment to enable developers to rapidly deploy a FHIR service. Burni also supports to import your Implementation Guide to store FHIR Resources and create FHIR RESTful API as well."},
-    {img:<img src={Panda} style={{width:"30%"}}/>,link:"https://github.com/cylab-tw/FHIR-Pandas",name:"FHIR Pandas - an FHIR client to access an FHIR server",traks:"參加賽道 \n TRACK#1 - 病人基本資料互通",introduce:"FHIR Pandas is coded by various programming languages, including Vue.js, Angular.js, and Vanilla.js, to implement the FHIR client. FHIR Pandas provide source code for FHIR developers to develop their FHIR client application. Currently, we have three pandas: \n Green Panda developed by Vue.js \n Red Panda developed by angularjs \n Vanilla Panda developed by Vanilla.js \n FHIR Pandas提供基於臺灣核心實作指引規格之FHIR Client(Consumer)範例程式"}
+    {img:BlueLight,link:"https://mitw.dicom.org.tw/pdf/2.%E5%A5%87%E5%94%AF%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%80%8B%E6%A1%88%E5%B0%8E%E5%90%91%E9%86%AB%E7%99%82%E8%B3%87%E6%BA%90%E8%A8%88%E7%95%AB%E6%95%B4%E5%90%88%E5%B9%B3%E5%8F%B0(POMRP)+%E5%BA%B7%E5%B0%8F%E7%BE%8E.pdf",name:"藍光(BlueLight) - Web-based DICOM Viewer",traks:"參加賽道  \n TRACK#4 - DICOMWeb查詢與調閱 \n TRACK#5 - DICOM數位全幅病理顯微鏡影像查詢與調閱 \n TRACK#7 - 影像檢查流程",introduce:"A browser-based medical image viewer,a pure single-page application (SPA), lightweight, and using only JavaScript and HTML5 technologies so as to deploy it on any HTTP server easily (just put it in HTTP server). It supports not only opening local data, but also connecting to medical image archives which support DICOMweb. It provides tools for medical image interpretation and 3D image reconstruction, e.g., Multiplanar Rreformation or Reconstruction (MPR) and Volume Rendering (VR)."},
+    {img:Raccoon ,link:"https://github.com/cylab-tw/raccoon",name:"浣熊(Raccoon) - NoSQL醫學影像資料庫",traks:"參加賽道 \n TRACK#4 - DICOMWeb查詢與調閱 \n TRACK#5 - DICOM數位全幅病理顯微鏡影像查詢與調閱 \n TRACK#7 - 影像檢查流程",introduce:"Raccoon is a noSQL-based medical image archive for managing the DICOM images. It uses the MongoDB to manage the DICOM images and provide RESTful API, supported both FHIR ImagingStudy and DICOMWeb to store, query/retrieve, and manage DICOM images. Raccoon is bulit on the top of the Burni FHIR Server to manage the FHIR resourcs related to medical images."},
+    {img:Burni ,link:"https://github.com/Chinlinlee/Burni",name:"布魯尼(Burni) - NoSQL FHIR Server",traks:"參加賽道 \n TRACK#1 - 病人基本資料互通 \n TRACK#2 - 生理量測數據互通 \n TRACK#3 - 用藥及疫苗接種紀錄 \n TRACK#6 - 基因定序標記",introduce:"Burni is an implementation of the FHIR server with Node, Express, and MongoDB providing very simple ways to customize the HL7 FHIR® specification, Burni support both Windows and Linux environment to enable developers to rapidly deploy a FHIR service. Burni also supports to import your Implementation Guide to store FHIR Resources and create FHIR RESTful API as well."},
+    {img:RedPanda,link:"https://github.com/cylab-tw/FHIR-Pandas",name:"FHIR Pandas - an FHIR client to access an FHIR server",traks:"參加賽道 \n TRACK#1 - 病人基本資料互通",introduce:"FHIR Pandas is coded by various programming languages, including Vue.js, Angular.js, and Vanilla.js, to implement the FHIR client. FHIR Pandas provide source code for FHIR developers to develop their FHIR client application. Currently, we have three pandas: \n Green Panda developed by Vue.js \n Red Panda developed by angularjs \n Vanilla Panda developed by Vanilla.js \n FHIR Pandas提供基於臺灣核心實作指引規格之FHIR Client(Consumer)範例程式"}
 ];
 
 const IndustryInform=[
@@ -57,6 +57,6 @@ const GovernmentInform=[
 ];
 
 const CrosssystemInform=[
-{title:"DICOM互通情境",img:[<img src={c1}/>,<img src={c2}/>]}
+{title:"DICOM互通情境",img:[<img src={c1} style={{width:"100%"}}/>,<img src={c2} style={{width:"100%"}}/>]}
 ];
 export {ListTitle,List,OpenSourceInform,IndustryInform,HospitalInform,GovernmentInform,CrosssystemInform}

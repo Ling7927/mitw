@@ -30,7 +30,7 @@
     text-decoration: none;
 
 } */
- .nav a:hover{
+ /* .nav a:hover{
     color:aqua;
     border-bottom:#fff 2px solid ;
 } 
@@ -72,7 +72,7 @@
     .navbar  button {
       background-color: transparent;
       border: none;
-      color: white;
+      color: #fff;
       cursor: pointer;
     }
      .nav-menu {
@@ -131,4 +131,4 @@
         color: #fff;
     }
     
-  } 
+  }  */

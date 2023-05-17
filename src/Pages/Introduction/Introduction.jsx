@@ -11,7 +11,7 @@ function Introduction() {
         style={{
           background: "#90a09f",
           margin: 0,
-          padding: "5rem 20rem",
+          padding:"5rem 0"
         }}
       >
         {/* <div style={{ color: "#fff" }}>

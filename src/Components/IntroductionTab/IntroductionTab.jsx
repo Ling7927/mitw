@@ -4,7 +4,8 @@ function IntroductionTab() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div style={{}}>
+      <div style={{width:"80%",margin:" auto"}}>
+        {/* 上方按鈕 */}
         <div
           style={{
             display: "flex",
@@ -20,8 +21,8 @@ function IntroductionTab() {
                   backgroundColor: onHandle === item.id ? "#fff" : "#7AACA9",
                   color: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
+                  width:"15%",
                   borderRadius: "10px 10px 0px 0px",
-                  padding: "1rem 3rem",
                   boxShadow: " 0px 0px 1px rgba(0, 0, 0, 0.5)",
                 }}
               >
@@ -30,23 +31,25 @@ function IntroductionTab() {
                     fontSize: "40px",
                     color: onHandle === item.id ? "#7AACA9" : "#fff",
                     stroke: "white",
-                    marginTop:"2rem",
+                    margin:"auto",
+                    padding:"5% 0"
                   }}
                 >
                   {item.icon}
                 </p>
 
-                <div style={{ marginTop: "10px" }}>
-                  <h3
-                    style={{ color: onHandle === item.id ? "#7AACA9" : "#fff" }}
+                <div style={{ padding: "15% 0" }}>
+                  <h5
+                    style={{ color: onHandle === item.id ? "#7AACA9" : "#fff" ,margin:"0 0 0 0"}}
                   >
                     {item.Tabtitle}
-                  </h3>
+                  </h5>
                 </div>
               </button>
             );
           })}
         </div>
+          {/* 下方內容 */}
         <div
           style={{
             // display:"flex",
@@ -54,8 +57,6 @@ function IntroductionTab() {
             fontColor: "black",
             // padding: "2px",
             borderRadius: "0px 0px 1rem 1rem",
-            height: "40rem",
-            overflow:"scroll",
             justifyContent: "center",alignItems:"center",
           }}
         >

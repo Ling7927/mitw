@@ -1,24 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TraksTabInform } from "./TraksTabInform";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
-import { GrPrevious, GrNext } from "react-icons/gr";
-import Slider from "react-slick";
-
-import AutoSlider from "./AutoSlider";
+import PhotoSlider from "../../Components/Slider/PhotoSlider";
 function TraksTab() {
   const [onHandle, setOnHandle] = useState("1");
   const [Click, setClick] = useState("0");
   const handleClick = () => {};
-  const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear"
-  };
+
   return (
     <>
       <div
@@ -27,10 +15,11 @@ function TraksTab() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          margin: "15rem 0 5rem 0",
+          margin: "5% 0 5% 0",
           width: "80%",
         }}
       >
+        {/* 上面按鈕 */}
         <div
           style={{
             display: "flex",
@@ -47,27 +36,31 @@ function TraksTab() {
                   background: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
                   borderRadius: "50%",
-                  padding: onHandle === item.id ? "1rem 1.5rem" : "0.5rem 1rem",
+                  padding: onHandle === item.id ? "2rem 1.5rem" : "1.5rem 1rem",
                   marginBottom: "2rem",
                   boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
                 }}
               >
-                <h2
-                  style={{ color: onHandle === item.id ? "#fff" : "#7AACA9" }}
+                <p
+                  style={{
+                    fontSize:onHandle === item.id ? "2rem" : "1.5rem",
+                    color: onHandle === item.id ? "#fff" : "#7AACA9",
+                    margin: 0,
+                  }}
                 >
                   {item.TabTitle}
-                </h2>
+                </p>
               </button>
             );
           })}
         </div>
-
+        {/* 內容 */}
         <div
           style={{
             backgroundColor: "#fff",
             padding: "2rem",
             marginBottom: "10px",
-            borderRadius: "0px 0px 10px 10px",
+            borderRadius: "10px 10px 10px 10px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -87,64 +80,20 @@ function TraksTab() {
                 .ContentTitle
             }
           </h3>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div
-              style={{
-                flexDirection: "column",
-                justifyContent: "space-between",
-              }}
-            >
-              {/* <AutoSlider/> */}
-
-              {TraksTabInform.filter((item) => item.id === onHandle)[0].Img.map(
-                (item) => {
-                  return (
-                    <img
-                      className="card"
-                      src={item.img}
-                      key={item.id}
-                      style={{ width: "5rem" }}
-                    />
-
-                    
-                    // <Slider {...settings}>
-                    //   <div className="wrap">
-                    //   <img src={item.img} key={item.id}></img>
-                    //   </div>
-                    // </Slider>
-                    
-                  );
-                }
-              )}
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                width: "100%",
-              }}
-            >
-              <button
-                style={{
-                  backgroundColor: "#849E93",
-                  border: "none",
-                  margin: "0.5rem",
-                }}
-              >
-                <GrPrevious />
-              </button>
-              <button
-                style={{
-                  backgroundColor: "#849C9E",
-                  border: "none",
-                  margin: "0.5rem",
-                }}
-              >
-                <GrNext />
-              </button>
-            </div>
+          {/* 輪播照片 */}
+          <div
+            style={{
+              width: "60%",
+              margin: "2rem",
+            }}
+          >
+            <PhotoSlider
+              images={
+                TraksTabInform.filter((item) => item.id === onHandle)[0].Img
+              }
+            />
           </div>
+          {/* 內容選單 */}
           <div
             style={{
               display: "flex",
@@ -156,14 +105,15 @@ function TraksTab() {
               (item) => {
                 return (
                   <div>
-                    <div
+                    <button
                       style={{
                         height: "2rem",
+                        width:"100%",
+                        border:"none",
                         borderRadius: "0.3rem",
                         background: "#7AACA9",
                         margin: "1rem",
                         padding: "0.3rem",
-                        display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
                       }}
@@ -176,7 +126,7 @@ function TraksTab() {
                       ) : (
                         <GoTriangleUp />
                       )}
-                    </div>
+                    </button>
                   </div>
                 );
               }

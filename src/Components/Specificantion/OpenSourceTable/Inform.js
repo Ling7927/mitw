@@ -1,5 +1,5 @@
 import Burni from "../../../assets/BurniLogo.png"
-import Panda from "../../../assets/RedPandaLogo.jpg"
+import Panda from "../../../assets/RedPandaLogo.png"
 import BlueLight from "../../../assets/BlueLightLogo.png"
 import Raccoon from "../../../assets/RaccoonLogo.png"
 const Title=[

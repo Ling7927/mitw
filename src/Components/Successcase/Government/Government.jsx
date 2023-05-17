@@ -9,6 +9,7 @@ function Goverment() {
             {/* 上半 */}
             <a
               href={item.link}
+              target="_blank"
               style={{ textDecoration: "none ", color: "#fff" }}
             >
               <h3>{item.name}</h3>

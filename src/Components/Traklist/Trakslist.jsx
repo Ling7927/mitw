@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import Items from "./TraksInform.json";
+import {TraksInform} from "./TraksInform.js";
 
 function Trakslist() {
   const [isHover, setIsHover] = useState("");
-  
+
   return (
     <>
       <div
         className="containter"
-        style={{ color: "#fff", display: "flex", flexDirection: "column",padding:0
-
-      }}
+        style={{
+          color: "#fff",
+          display: "flex",
+          flexDirection: "column",
+          padding: 0,
+        }}
       >
         <h2
           style={{
@@ -23,28 +26,27 @@ function Trakslist() {
         </h2>
         <div
           style={{
-            display: "flex"
-            ,justifyContent: "space-between",
+            display: "flex",
+            justifyContent: "space-between",
             flexWrap: "wrap",
-            margin:"1rem 2rem",
-            width:"100%"
+            margin: "1rem 2rem",
+            width: "100%",
             // textShadow:
             //   "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
           }}
         >
-          {Items.Traks.map((index) => {
+          {TraksInform.map((index) => {
             return (
               <>
-                
                 <div
                   onMouseEnter={() => setIsHover(index.id)}
                   onMouseLeave={() => setIsHover("")}
                   style={{
                     margin: "1rem 1rem",
-                    width:"8rem",
+                    width: "8rem",
                     textShadow:
                       isHover === index.id
-                        ? "0 0 0.7em #FF8C00, 0 0 0.7em #FF8C00,0 0 0.7em #FF8C00"
+                        ? index.onhover
                         : "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
                   }}
                 >

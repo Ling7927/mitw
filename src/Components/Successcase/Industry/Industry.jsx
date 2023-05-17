@@ -1,14 +1,28 @@
 import React from 'react'
 import { IndustryInform } from '../../../Pages/Successcase/Inform'
+import { motion  } from "framer-motion";
+
 function Industry() {
   return (
     <>
+    <motion.div
+    
+    >
       {IndustryInform.map((item) => {
         return (
-          <div style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
+          <motion.div style={{marginTop:"1rem" ,border:"2px solid #fff"}} initial={ {
+            y: "150%",
+        }}
+        animate={ {
+            y: "0%",
+        }}
+        transition={{delay:0.5,
+          duration: 1,
+        }}>
             {/* 上半 */}
             <a
               href={item.link}
+              target="_blank"
               style={{ textDecoration: "none ", color: "#fff" }}
             >
               <h3>{item.name}</h3>
@@ -33,9 +47,11 @@ function Industry() {
             </div>
             {/* 下半 */}
             <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
-          </div>
+          </motion.div>
         );
       })}
+    </motion.div>
+      
     </>
   )
 }

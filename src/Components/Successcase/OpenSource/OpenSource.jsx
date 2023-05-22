@@ -1,27 +1,26 @@
 import React from "react";
 import { OpenSourceInform } from "../../../Pages/Successcase/Inform";
 import { Grid } from "@mui/material";
-import { motion  } from "framer-motion";
+import { motion } from "framer-motion";
 
 function OpenSource() {
   return (
     <>
-    
-      {OpenSourceInform.map((item) => {
+      {OpenSourceInform.map((item,i) => {
         return (
-          <motion.div style={{ marginTop: "1rem",  }}
-          initial={ {
-            x: "-150%",
-        }}
-        whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}
-        animate={ {
-            x: "0%",
-        }}
-        transition={{delay:0.7,
-          duration: 0.7,
-        }}
-         >
+          <motion.div
+          key={i}
+            style={{ marginTop: "1rem" }}
+            initial={{
+              x: "-150%",
+            }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            animate={{
+              x: "0%",
+            }}
+            transition={{ delay: 0.7, duration: 0.7 }}
+          >
             {/* 上半 */}
             <a
               href={item.link}
@@ -59,13 +58,10 @@ function OpenSource() {
             </Grid>
             {/* 下半 */}
             <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
-            <hr/>
-
+            <hr />
           </motion.div>
         );
       })}
-   
-      
     </>
   );
 }

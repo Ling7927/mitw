@@ -8,15 +8,15 @@ function OpenSourceTable() {
       <Table bordered style={{ backgroundColor: "#dcdcdc" }}>
         <thead>
           <tr>
-            {Title.map((item) => {
-              return <th>{item}</th>;
+            {Title.map((item,i) => {
+              return <th key={i}>{item}</th>;
             })}
           </tr>
         </thead>
         <tbody style={{ justifyContent: "center", alignItems: "center" }}>
-          {TBody.map((item) => {
+          {TBody.map((item,i) => {
             return (
-              <tr>
+              <tr key={i}>
                 <th scope="row">
                   <div
                     style={{

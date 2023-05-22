@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { TraksTabInform } from "./TraksTabInform";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import PhotoSlider from "../../Components/Slider/PhotoSlider";
 function TraksTab() {
   const [onHandle, setOnHandle] = useState("1");
   const [Click, setClick] = useState("0");
-  const handleClick = () => {};
 
   return (
     <>
@@ -28,9 +27,10 @@ function TraksTab() {
             width: "100%",
           }}
         >
-          {TraksTabInform.map((item) => {
+          {TraksTabInform.map((item,i) => {
             return (
               <button
+              key={i}
                 onClick={() => setOnHandle(item.id)}
                 style={{
                   background: onHandle === item.id ? "#7AACA9" : "#fff",
@@ -102,7 +102,7 @@ function TraksTab() {
             }}
           >
             {TraksTabInform.filter((item) => item.id === onHandle)[0].List.map(
-              (item) => {
+              (item,i) => {
                 return (
                   <div>
                     <button

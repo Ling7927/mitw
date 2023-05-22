@@ -38,7 +38,7 @@ function Successcase() {
               paddingLeft:"4%"
             }}
           >
-            {ListTitle.map((item) => {
+            {ListTitle.map((item,i) => {
               return (
                 <>
                   <button
@@ -53,6 +53,7 @@ function Successcase() {
                       margin: 0,
                       color: onHandle === item.id ? "#fff" : "#949494",
                     }}
+                    key={i}
                   >
                     {item.title}
                   </button>

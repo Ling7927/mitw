@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Traks.css";
 import Tab from "../../Components/TraksTab/TraksTab";
 function Traks() {

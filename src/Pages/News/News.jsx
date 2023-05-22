@@ -1,27 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Box } from "@mui/material";
 import "./News.css";
 import { AiOutlineDownload } from "react-icons/ai";
 
 import Traks from "../../Components/Traklist/Trakslist";
 import Title from "../../assets/Title.png";
 import NewsInform from "./NewsInform.json";
+
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import Background from "../../assets/Background.png";
+import T2023 from "../../assets/T2023.png";
+import Ttext from "../../assets/Titletext.png";
+
 function News() {
-  // const onButtonClick = () => {
-  //   // using Java Script method to get PDF file
-  //   fetch("SamplePDF.pdf").then((response) => {
-  //     response.blob().then((blob) => {
-  //       // Creating new object of PDF file
-  //       const fileURL = window.URL.createObjectURL(blob);
-  //       // Setting various property values
-  //       let alink = document.createElement("a");
-  //       alink.href = fileURL;
-  //       alink.download = "mitw2023_DM.pdf";
-  //       alink.click();
-  //     });
-  //   });
-  // };
+
+  
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   return (
     <>
       <div
@@ -31,13 +27,54 @@ function News() {
           // display:"flex"
         }}
       >
-        <div>
+        {/* -----------------首圖------------------ */}
+        {/* <div>
           <img
             src={Title}
             alt="Title"
             style={{ width: "100%", height: "5%", display: "flex" }}
           />
+        </div> */}
+
+        <div style={{ backgroundColor: "#000" }}>
+          <div
+            style={{
+              backgroundSize: window.innerWidth,
+              backgroundImage: `url(${Background})`,
+              backgroundAttachment: "fixed",
+              objectFit: "scale-down",
+              height: "20rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <motion.img
+              ref={ref}
+              src={T2023}
+              style={{
+                transform: isInView
+                  ? "translateX(10rem)"
+                  : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}
+            ></motion.img>
+            <motion.img
+              ref={ref}
+              src={Ttext}
+              style={{
+                position: "relative",
+                top: "-2rem",
+                transform: isInView ? "translateX(-3rem)" : "translateX(300px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}
+            ></motion.img>
+          </div>
         </div>
+
+        {/* ---------------------------------------- */}
         <div
           style={{
             display: "flex",
@@ -107,8 +144,8 @@ function News() {
               </div>
               <div style={{ width: "50%" }}>
                 <ul style={{ margin: 0 }}>
-                  {NewsInform.p3.context.map((item) => {
-                    return <li style={{ margin: "0.5rem" }}>{item}</li>;
+                  {NewsInform.p3.context.map((item,i) => {
+                    return <li style={{ margin: "0.5rem" }} key={i}>{item}</li>;
                   })}
                 </ul>
               </div>

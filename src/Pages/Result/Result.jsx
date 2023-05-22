@@ -58,7 +58,7 @@ function Specification() {
         <div>jgre</div>
       </div>
       <div
-        style={{ display: "flex", flexDirection: "row", textAlign: "center" }}
+        style={{ display: "flex", flexDirection: "row", textAlign: "center",overflow:"hidden" }}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -158,7 +158,6 @@ function Specification() {
           backgroundAttachment: "fixed",
           objectFit: "scale-down",
           height: "30rem",
-          backgroundRepeat: "no-repeat",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

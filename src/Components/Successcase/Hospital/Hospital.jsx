@@ -3,9 +3,9 @@ import { HospitalInform } from '../../../Pages/Successcase/Inform'
 function Hospital() {
   return (
     <>
-    {HospitalInform.map((item) => {
+    {HospitalInform.map((item,i) => {
         return (
-      <div style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
+      <div key={i} style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
             {/* 上半 */}
             <a
               href={item.link}

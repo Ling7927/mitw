@@ -1,11 +1,24 @@
 import React from 'react'
 import { GovernmentInform } from '../../../Pages/Successcase/Inform'
+import { motion } from "framer-motion";
 function Goverment() {
   return (
     <>
-    {GovernmentInform.map((item) => {
+    {GovernmentInform.map((item,i) => {
         return (
-      <div style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
+          <motion.div
+          key={i}
+          style={{ marginTop: "1rem",border:"2px solid #fff" }}
+          initial={{
+            x: "-150%",
+          }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          animate={{
+            x: "0%",
+          }}
+          transition={{ delay: 0.7, duration: 0.7 }}>
+            
             {/* 上半 */}
             <a
               href={item.link}
@@ -34,7 +47,7 @@ function Goverment() {
             </div>
             {/* 下半 */}
             <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
-          </div>
+          </motion.div>
         )})}
 
     </>

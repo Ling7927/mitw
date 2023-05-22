@@ -8,9 +8,11 @@ function Industry() {
     <motion.div
     
     >
-      {IndustryInform.map((item) => {
+      {IndustryInform.map((item,i) => {
         return (
-          <motion.div style={{marginTop:"1rem" ,border:"2px solid #fff"}} initial={ {
+          <motion.div
+          key={i}
+          style={{marginTop:"1rem" ,border:"2px solid #fff"}} initial={ {
             y: "150%",
         }}
         animate={ {

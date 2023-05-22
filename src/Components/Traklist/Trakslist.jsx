@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import {TraksInform} from "./TraksInform.js";
+import { TraksInform } from "./TraksInform.js";
+import { Grid } from "@mui/material";
 
 function Trakslist() {
   const [isHover, setIsHover] = useState("");
@@ -35,33 +36,36 @@ function Trakslist() {
             //   "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
           }}
         >
-          {TraksInform.map((index) => {
-            return (
-              <>
-                <div
-                  onMouseEnter={() => setIsHover(index.id)}
-                  onMouseLeave={() => setIsHover("")}
-                  style={{
-                    margin: "1rem 1rem",
-                    width: "8rem",
-                    textShadow:
-                      isHover === index.id
-                        ? index.onhover
-                        : "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
-                  }}
-                >
-                  <h3
+          <Grid container spacing={1}>
+            {TraksInform.map((item,i) => {
+              return (
+                <Grid item xs={6} md={4} lg={2.25}>
+                  <div
+                  key={i}
+                    onMouseEnter={() => setIsHover(item.id)}
+                    onMouseLeave={() => setIsHover("")}
                     style={{
-                      fontWeight: "bold",
+                      margin: "1rem 1rem",
+                      width: "8rem",
+                      textShadow:
+                        isHover === item.id
+                          ? item.onhover
+                          : "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
                     }}
                   >
-                    {index.title}
-                  </h3>
-                  <h5 style={{}}>{index.context}</h5>
-                </div>
-              </>
-            );
-          })}
+                    <h3
+                      style={{
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {item.title}
+                    </h3>
+                    <h5 style={{}}>{item.context}</h5>
+                  </div>
+                </Grid>
+              );
+            })}
+          </Grid>
         </div>
       </div>
     </>

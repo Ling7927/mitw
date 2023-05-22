@@ -3,9 +3,9 @@ import { CrosssystemInform } from '../../../Pages/Successcase/Inform'
 function Crosssystem() {
   return (
     <>
-      {CrosssystemInform.map((item) => {
+      {CrosssystemInform.map((item,i) => {
         return (
-          <div style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
+          <div key={i} style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
             <div>
                 <h3>
                     {item.title}

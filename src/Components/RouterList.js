@@ -3,7 +3,8 @@ import Introduction from "../Pages/Introduction/Introduction"
 import Specification from "../Pages/Specification/Specification";
 import Traks from "../Pages/Traks/Traks";
 import Result from "../Pages/Result/Result";
-import Successcase from "../Pages/Successcase/Successcase"
+import Successcase from "../Pages/Successcase/Successcase";
+import Recruit from "../Pages/Recruit/Recruit";
 export const routerList = [
     {
       name: "最新消息",
@@ -39,5 +40,10 @@ export const routerList = [
           name: "成果發表",
           path: "/Successcase",
           Component: <Successcase />,
+        },
+        {
+          name: "招募",
+          path: "/Recruit",
+          Component: <Recruit />,
         },
  ];

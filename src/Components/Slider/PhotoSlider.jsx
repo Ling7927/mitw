@@ -40,6 +40,10 @@ function PhotoSlider({ images }) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
@@ -47,9 +51,9 @@ function PhotoSlider({ images }) {
   return (
     <div style={{ width: "100%" }}>
       <Slider {...settings}>
-        {images.map((item) => {
+        {images.map((item,i) => {
           return (
-            <div style={{ width: "100%" }}>
+            <div style={{ width: "100%" }} key={i}>
               <img src={item.img} style={{ width: "100%" }} />
             </div>
           );

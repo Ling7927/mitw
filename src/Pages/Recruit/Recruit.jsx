@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import {WorkGrop } from "./Inform";
+import { WorkGrop } from "./Inform";
 import { motion, useInView } from "framer-motion";
 import { Grid } from "@mui/material";
 
@@ -26,33 +26,7 @@ function Recruit() {
   return (
     <>
       <div style={{ background: "#FEFEFA" }}>
-        {/* 小組及說明 */}
-        {/*     
-      {Title.map((item) => {
-        return (
-          <Part>
-            <h4>{item.title}</h4>
 
-            <p>{item.instructions}</p>
-            <hr /> */}
-        {/* 細項規則 */}
-        {/* {Subtitle.map((item)=>{
-        return(
-            <div style={{
-                display: "flex",
-                justifyContent: "space-between",
-                flexWrap: "wrap",
-                margin: "1rem 2rem",
-                width: "100%",}}>
-                {item.li}
-
-            </div>
-        )
-      })}
-          </Part>
-        );
-      })} */}
-      
         <Grid container spacing={1}>
           <div style={{ margin: "6rem" }}>
             {WorkGrop.map((item) => {
@@ -60,8 +34,8 @@ function Recruit() {
                 <>
                   <Grid item xs={12} sm={12} md={12} lg={10}>
                     <Part>
+                      {/* 小組及說明 */}
                       <h4 key={item.title}>{item.title}</h4>
-
                       <p>{item.instructions}</p>
                       <hr />
                     </Part>
@@ -69,6 +43,8 @@ function Recruit() {
 
                   <Part>
                     <Grid item xs={12} sm={12} md={6} lg={4}>
+                      {/* 細項規則 */}
+
                       <>{item.li}</>
                     </Grid>
                   </Part>

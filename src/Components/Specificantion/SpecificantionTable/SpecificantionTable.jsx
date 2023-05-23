@@ -5,7 +5,7 @@ import { Table} from "reactstrap";
 function SpecificantionTable() {
   return (
     <div>
-    <Table bordered  style={{backgroundColor:"#dcdcdc"}}>
+    <Table bordered  style={{backgroundColor:"#f1f4ec"}}>
       <thead>
         <tr>
           {Title.map((item,i) => {

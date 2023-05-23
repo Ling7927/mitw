@@ -23,7 +23,7 @@ const Navbar = () => {
  
         <Grid container spacing={1}>
           <nav className="nav">
-            <Grid item xs={12} sm={12} md={4}>
+            <Grid item xs={12} sm={12} md={3}>
 
               <Link to="/" style={{ borderBottom: "none" }}>
                 <img
@@ -33,7 +33,7 @@ const Navbar = () => {
                 />
               </Link>
             </Grid>
-            <Grid item xs={12} sm={12} md={8}>    
+            <Grid item xs={12} sm={12} md={9}>    
             <ul className={collapse}>
               {routerList.map((item) => (
                 <li key={item.name} className="nav__item">

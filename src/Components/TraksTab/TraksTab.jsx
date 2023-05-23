@@ -1,9 +1,13 @@
-import React, {  useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TraksTabInform } from "./TraksTabInform";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import PhotoSlider from "../../Components/Slider/PhotoSlider";
+
+import { useParams } from "react-router-dom";
+
 function TraksTab() {
-  const [onHandle, setOnHandle] = useState("1");
+  const { id } = useParams();
+  const [onHandle, setOnHandle] = useState(id || "1");
   const [Click, setClick] = useState("0");
 
   return (
@@ -27,24 +31,24 @@ function TraksTab() {
             width: "100%",
           }}
         >
-          {TraksTabInform.map((item,i) => {
+          {TraksTabInform.map((item, i) => {
             return (
               <button
-              key={i}
-                onClick={() => setOnHandle(item.id)}
+                key={i}
+                onClick={() => setOnHandle(item.Id)}
                 style={{
-                  background: onHandle === item.id ? "#7AACA9" : "#fff",
+                  background: onHandle === item.Id ? "#7AACA9" : "#fff",
                   border: 0,
                   borderRadius: "50%",
-                  padding: onHandle === item.id ? "2rem 1.5rem" : "1.5rem 1rem",
+                  padding: onHandle === item.Id ? "2rem 1.5rem" : "1.5rem 1rem",
                   marginBottom: "2rem",
                   boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
                 }}
               >
                 <p
                   style={{
-                    fontSize:onHandle === item.id ? "2rem" : "1.5rem",
-                    color: onHandle === item.id ? "#fff" : "#7AACA9",
+                    fontSize: onHandle === item.Id ? "2rem" : "1.5rem",
+                    color: onHandle === item.Id ? "#fff" : "#7AACA9",
                     margin: 0,
                   }}
                 >
@@ -76,7 +80,7 @@ function TraksTab() {
             }}
           >
             {
-              TraksTabInform.filter((item) => item.id === onHandle)[0]
+              TraksTabInform.filter((item) => item.Id === onHandle)[0]
                 .ContentTitle
             }
           </h3>
@@ -89,7 +93,7 @@ function TraksTab() {
           >
             <PhotoSlider
               images={
-                TraksTabInform.filter((item) => item.id === onHandle)[0].Img
+                TraksTabInform.filter((item) => item.Id === onHandle)[0].Img
               }
             />
           </div>
@@ -101,15 +105,15 @@ function TraksTab() {
               width: "100%",
             }}
           >
-            {TraksTabInform.filter((item) => item.id === onHandle)[0].List.map(
-              (item,i) => {
+            {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
+              (item, i) => {
                 return (
                   <div>
                     <button
                       style={{
                         height: "2rem",
-                        width:"100%",
-                        border:"none",
+                        width: "100%",
+                        border: "none",
                         borderRadius: "0.3rem",
                         background: "#7AACA9",
                         margin: "1rem",

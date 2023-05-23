@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TraksInform } from "./TraksInform.js";
 import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function Trakslist() {
   const [isHover, setIsHover] = useState("");
@@ -37,11 +38,11 @@ function Trakslist() {
           }}
         >
           <Grid container spacing={1}>
-            {TraksInform.map((item,i) => {
+            {TraksInform.map((item, i) => {
               return (
                 <Grid item xs={6} md={4} lg={2.25}>
                   <div
-                  key={i}
+                    key={i}
                     onMouseEnter={() => setIsHover(item.id)}
                     onMouseLeave={() => setIsHover("")}
                     style={{
@@ -53,14 +54,19 @@ function Trakslist() {
                           : "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
                     }}
                   >
-                    <h3
-                      style={{
-                        fontWeight: "bold",
-                      }}
+                    <Link
+                      to={`/Traks/${item.id}`}
+                      style={{ color:"#fff" }}
                     >
-                      {item.title}
-                    </h3>
-                    <h5 style={{}}>{item.context}</h5>
+                      <h3
+                        style={{
+                          fontWeight: "bold",
+                        }}
+                      >
+                        {item.title}
+                      </h3>
+                      <h5 style={{}}>{item.context}</h5>
+                    </Link>
                   </div>
                 </Grid>
               );

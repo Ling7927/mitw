@@ -35,6 +35,7 @@
   justify-content: space-around;
   gap: 3rem;
   margin:0;
+  z-index:999;
 }
 
 .nav__link {
@@ -71,10 +72,10 @@
     position: absolute;
     background: #1f4140;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-start;
-    top: 5%;
+    top: 5.3rem;
     width: 50%;
-    height: 90%;
     right: 0%;
     transform: translateX(100%);
     transition: 0.5s ease;

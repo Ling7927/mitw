@@ -14,16 +14,15 @@ import T2023 from "../../assets/T2023.png";
 import Ttext from "../../assets/Titletext.png";
 
 function News() {
-
-  
   const ref = useRef(null);
   const isInView = useInView(ref);
   return (
     <>
       <div
         style={{
-          background: "linear-gradient( #204241 30%,#26595a 80%, #33989d 100%)",
-          color: "#fff",
+          background: "#ecf4f4",
+          // "linear-gradient( #204241 30%,#26595a 80%, #33989d 100%)",
+          color: "#000",
           // display:"flex"
         }}
       >
@@ -36,7 +35,7 @@ function News() {
           />
         </div> */}
 
-        <div style={{ backgroundColor: "#000" }}>
+        <div style={{ backgroundColor: "#1f4140" }}>
           <div
             style={{
               backgroundSize: window.innerWidth,
@@ -74,7 +73,7 @@ function News() {
           </div>
         </div>
 
-        {/* ---------------------------------------- */}
+        {/* -------------------DM下載--------------------- */}
         <div
           style={{
             display: "flex",
@@ -88,11 +87,12 @@ function News() {
             href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
             target="_blank"
             // onClick={onButtonClick}
-            style={{ color: "#fff" }}
+            style={{ color: "#000" }}
           >
             MITW-DM 宣傳單下載 <AiOutlineDownload />
           </a>
         </div>
+        {/* ----------------預計賽道------------------- */}
         <div
           style={{
             // background: "#90a09f",
@@ -109,7 +109,7 @@ function News() {
             <Traks />
           </div>
 
-          <hr style={{ border: 0, height: "1px", background: "#fff" }} />
+          <hr style={{ border: 0, height: "1px", background: "#000" }} />
 
           <div className="p1">
             <h2 style={{ textAlign: "center", justifyContent: "center" }}>
@@ -144,8 +144,12 @@ function News() {
               </div>
               <div style={{ width: "50%" }}>
                 <ul style={{ margin: 0 }}>
-                  {NewsInform.p3.context.map((item,i) => {
-                    return <li style={{ margin: "0.5rem" }} key={i}>{item}</li>;
+                  {NewsInform.p3.context.map((item, i) => {
+                    return (
+                      <li style={{ margin: "0.5rem" }} key={i}>
+                        {item}
+                      </li>
+                    );
                   })}
                 </ul>
               </div>

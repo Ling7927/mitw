@@ -1,49 +1,25 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import MemberCard from "./MemberCard";
-import { Mem } from "../../Pages/Member/Inform";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-const  settings = {
+import { Mem } from "../../Pages/Member/Inform";
+
+function MemberSlider() {
+  const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
-    initialSlide: 0,
-    arrows : false,
-    responsive: [
-      {
-        breakpoint: 990,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 530,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]}
-
-function MemberSlider(props) {
+    autoplay: true,
+    speed: 10000,
+    autoplaySpeed: 0.0000001,
+    cssEase: "linear",
+  };
   // const arrowRef = useRef(null);
-const Member="";
-Member=Mem.map((item,i)=>(
-    <MemberCard item={item} key={i}/>
-))
+  // const Member="";
+  // Member=Mem.map((item,i)=>(
+  //     <MemberCard item={item} key={i}/>
+  // ))
   return (
     <div>
       {/* <Slider ref={arrowRef} {...settings}>
@@ -58,9 +34,9 @@ Member=Mem.map((item,i)=>(
       className='next'><IoIosArrowForward/></button>
     </div> */}
       <Slider {...settings}>
-        {Member}
-       
-       
+        {Mem.map((item) => {
+          return <MemberCard item={item} key={item} />;
+        })}
       </Slider>
     </div>
   );

@@ -4,9 +4,10 @@ import MemberSlider from "../../Components/MemberCard/MemberSlider";
 function Member() {
   return (
     <>
-     <MemberCard/>
-     <div style={{width:"600px",height:"400px",margin:"3rem"}}>
-        <MemberSlider/>
+     
+     <div style={{margin:"3rem"}}>
+       <MemberSlider/> 
+        {/* <MemberCard/> */}
      </div>
    
     </>

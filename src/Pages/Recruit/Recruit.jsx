@@ -45,7 +45,7 @@ function Recruit() {
                     <Grid item xs={12} sm={12} md={6} lg={4}>
                       {/* 細項規則 */}
 
-                      <>{item.li}</>
+                      {item.li}
                     </Grid>
                   </Part>
                 </>

@@ -15,32 +15,7 @@ function Trak1Table() {
 
   return (
     <>
-{/* <div>
-      <Table bordered  style={{backgroundColor:"#f1f4ec"}}>
-      <thead>
-        <tr>
-          {Title.map((item,i) => {
-            return <th key={i}>{item}</th>;
-          })}
-        </tr>
-      </thead>
-      <tbody style={{justifyContent: "center",alignItems:"center" }}>
-        {TBody.map((item,i) => {
-          return (
-            <tr key={i}>
-              <th scope="row">
-                {item.level}
-              </th>
-              <th>{item.name}</th>
-              <th>{item.describe}</th>
 
-            </tr>
-          );
-        })}
-      </tbody>
-    </Table>
-    </div> */}
-    {/* ------------------- */}
     <button onClick={()=>setTrack(1)}>1</button>
     <button onClick={()=>setTrack(2)}>2</button>
     {

@@ -33,7 +33,7 @@ const Track3Data1 = [
     key: "醫合股份有限公司 An architecture and management platform for blockchain-based FHIR personal 版本2.0.0",
     unit: "醫合股份有限公司 An architecture and management platform for blockchain-based FHIR personal 版本2.0.0",
     CONSUMER: "✓",
-    CREATOR: "✓",
+    CREATOR: "✓(缺少 UI 介面)",
   },
 ];
 

@@ -18,6 +18,12 @@ function Trak1Table() {
 
     <button onClick={()=>setTrack(1)}>1</button>
     <button onClick={()=>setTrack(2)}>2</button>
+    <button onClick={()=>setTrack(3)}>3</button>
+    <button onClick={()=>setTrack(4)}>4</button>
+    <button onClick={()=>setTrack(5)}>5</button>
+    <button onClick={()=>setTrack(6)}>6</button>
+    <button onClick={()=>setTrack(7)}>7</button>
+
     {
       tableData.map(({column,data})=>(
       <Table

@@ -1,0 +1,16 @@
+.ant-table-thead .ant-table-cell {
+    background-color: #89cbce !important;
+  }
+ .ant-table-tbody .ant-table-cell {
+    background-color:rgba(141, 180, 169, 0.3) !important;
+ }
+ .ant-table-wrapper .ant-table-thead >tr>th{
+    border-bottom: 1px solid #fff;
+ }
+ .ant-table-wrapper .ant-table-tbody >tr >td{
+    border-bottom: 1px solid #fff;
+ }
+ .ant-table table { 
+    font-size: 18px;
+    margin-bottom: 3rem;
+}

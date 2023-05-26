@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import TRACK from "./Inform";
 import { Table } from 'antd';
-
+import "./ResultTable.css"
 import { useEffect } from 'react';
 function Trak1Table() {
 
@@ -26,7 +26,9 @@ function Trak1Table() {
 
     {
       tableData.map(({column,data})=>(
-      <Table
+      <Table 
+
+      
         columns={column}
         dataSource={data}
         pagination={false}

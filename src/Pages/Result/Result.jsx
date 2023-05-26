@@ -1,11 +1,11 @@
 import React from 'react'
 import ResultTab from '../../Components/Result/ResultTab'
-import Trak1Table from '../../Components/Result/Table/Trak1Table'
+import Table from '../../Components/Result/Table/ResultTable'
 function Result() {
   return (
-    <div style={{margin:"3rem 15rem 2rem"}}>
+    <div style={{margin:"3rem 10rem 2rem"}}>
       {/* <ResultTab/> */}
-      <Trak1Table/>
+      <Table/>
     </div>
   )
 }

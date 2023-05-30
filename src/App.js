@@ -3,6 +3,7 @@ import "./App.css";
 
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import Main from "./Pages/Main/Main";
 import News from "./Pages/News/News";
 import Introduction from "./Pages/Introduction/Introduction";
 import Specification from "./Pages/Specification/Specification";
@@ -33,7 +34,8 @@ function App() {
     <>
       <Navbar istop={istop} />
       <Routes>
-        <Route path="/" element={<News />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/News" element={<News />} />
         <Route path="/Introduction" element={<Introduction />} />
         <Route path="/Specification" element={<Specification />} />
         <Route path="/Traks" element={<Traks />} />

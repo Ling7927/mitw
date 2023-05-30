@@ -1,6 +1,6 @@
 const Track6Title1=[
     {
-        title: ["單位-產品-版本"],
+        title: "單位-產品-版本",
         dataIndex: "unit",
         key: "unit",
         width: 150,
@@ -26,7 +26,7 @@ const Track6Title1=[
 
 const Track6Title2=[
     {
-        title: ["單位-產品-版本"],
+        title: "單位-產品-版本",
         dataIndex: "unit",
         key: "unit",
         width: 150,

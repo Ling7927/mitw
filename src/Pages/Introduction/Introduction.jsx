@@ -9,7 +9,7 @@ function Introduction() {
     <>
       <div
         style={{
-          background: "#90a09f",
+          background: "linear-gradient( to bottom, #20413F 20%, transparent 70%)",
           margin: 0,
           padding:"5rem 0"
         }}

@@ -7,8 +7,9 @@ function Specification() {
     <>
       <div
         style={{
-          background: "linear-gradient( #204241 30%,#26595a 50%, #1C4442 100%)",
-          color: "#fff",
+         margin:"0 5rem 1rem",
+         background:"#dcdcdc",
+         paddingTop:"2rem",
         }}
       >
         {/* 公開意見徵求 */}
@@ -25,13 +26,13 @@ function Specification() {
             justifyContent: "center",
             alignItems: "center",
             padding: "1rem",
-            margin: "0 5rem 1rem 5rem",
+            margin: "2rem 5rem 1rem 5rem",
             // border: "4px dotted #fff"  ,
           }}
         >
-          <h4 style={{}}> {P1.title}</h4>
+          <h4 style={{marginBottom:"2rem"}}> {P1.title}</h4>
           <p>{P1.context}</p>
-          <a href={P1.link} target="_blank" style={{ color: "#fff" }}>
+          <a href={P1.link} target="_blank" style={{ color: "#000" }}>
             {P1.linkTitle}
           </a>
         </motion.div>
@@ -76,7 +77,7 @@ function Specification() {
               style={{
                 margin: "0.5rem 0",
                 padding: "0 1rem ",
-                borderLeft: "2px solid #fff",
+                borderLeft: "2px solid #F5CE85",
               }}
             >
               {List.filter((item) => item.id === onHandle)[0].title}

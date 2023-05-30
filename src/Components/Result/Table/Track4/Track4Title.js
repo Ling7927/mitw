@@ -1,12 +1,12 @@
 const Track4Title1 = [
     {
-        title: ["單位-產品-版本"],
+        title: "單位-產品-版本",
         dataIndex: "unit",
         key: "unit",
         width: 150,
     },
     {
-        title: ["IMG_DOC Web影像存取"],
+        title: "IMG_DOC Web影像存取",
         children: [
             {
                 title: "CONSUMER",
@@ -26,13 +26,13 @@ const Track4Title1 = [
 
 const Track4Title2 = [
     {
-        title: ["單位-產品-版本"],
+        title: "單位-產品-版本",
         dataIndex: "unit",
         key: "unit",
         width: 150,
     },
     {
-        title: ["IMG_DOC IMG_REPORT 影像報告及影像整合-影像報告"],
+        title: "IMG_DOC IMG_REPORT 影像報告及影像整合-影像報告",
         children: [
             {
                 title: "CONSUMER",
@@ -52,13 +52,13 @@ const Track4Title2 = [
 
 const Track4Title3 = [
     {
-        title: ["單位-產品-版本"],
+        title: "單位-產品-版本",
         dataIndex: "unit",
         key: "unit",
         width: 150,
     },
     {
-        title: ["IMG_STUDY 影像報告及影像整合-影像索引"],
+        title: "IMG_STUDY 影像報告及影像整合-影像索引",
         children: [
             {
                 title: "CONSUMER",
@@ -78,13 +78,13 @@ const Track4Title3 = [
 
 const Track4Title4 = [
     {
-        title: ["單位-產品-版本"],
+        title: "單位-產品-版本",
         dataIndex: "unit",
         key: "unit",
         width: 150,
     },
     {
-        title: ["OBS_ANN Web影像與標記 (FHIR標記)"],
+        title: "OBS_ANN Web影像與標記 (FHIR標記)",
         children: [
             {
                 title: "CONSUMER",

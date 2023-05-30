@@ -1,44 +1,48 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 import TRACK from "./Inform";
-import { Table } from 'antd';
-import "./ResultTable.css"
-import { useEffect } from 'react';
-function Trak1Table() {
+import { Table } from "antd";
+import "./ResultTable.css";
+import { useEffect } from "react";
 
-  const [track,setTrack] = useState(1)
-  const [tableData,setTableData] = useState([])
-
-  useEffect(()=>{
-    
-    setTableData(TRACK[track])
-  },[track])
-
+function Trak1Table({id}) {
+  
+  //const [track, setTrack] = useState(1);
+  const [tableData, setTableData] = useState([]);
+  useEffect(() => {
+    setTableData(TRACK[id]);
+  }, [id]);
+  const bt = Object.keys(TRACK);
   return (
     <>
+     {/* {bt.map((item) => {
+        return <button onClick={() => setTrack(item)}
+        style={{background:"none",border:"none"}}
+        >{item}</button>;
+      })} */}
+{bt.map((item) => {
 
-    <button onClick={()=>setTrack(1)}>1</button>
-    <button onClick={()=>setTrack(2)}>2</button>
-    <button onClick={()=>setTrack(3)}>3</button>
-    <button onClick={()=>setTrack(4)}>4</button>
-    <button onClick={()=>setTrack(5)}>5</button>
-    <button onClick={()=>setTrack(6)}>6</button>
-    <button onClick={()=>setTrack(7)}>7</button>
+      {tableData.map(({ column, data }) => {
 
-    {
-      tableData.map(({column,data})=>(
-      <Table 
+    if (id===item)
 
-      
-        columns={column}
-        dataSource={data}
-        pagination={false}
-        bordered
-        size="large"
+      return(
+        <>
         
-      />))
-    }
-    
-    {/* <Table
+        <Table
+          columns={column}
+          dataSource={data}
+          pagination={false}
+          bordered
+          size="large"
+        />
+        </>
+      )
+      }
+       
+      )}
+    })}
+
+      {/* <Table
     columns={Track1Colums}
     dataSource={Track1Data.filter(t=>t.type==='CONSUMER')}
     pagination={false}
@@ -46,10 +50,8 @@ function Trak1Table() {
     size="large"
     
   /> */}
-
     </>
-    
-  )
+  );
 }
 
-export default Trak1Table
+export default Trak1Table;

@@ -1,6 +1,6 @@
 const Track7Title1 = [
     {
-        title: ["單位-產品-版本"],
+        title: "單位-產品-版本",
         dataIndex: "unit",
         key: "unit",
         width: 150,

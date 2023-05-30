@@ -6,8 +6,8 @@ function Member() {
     <>
      
      <div style={{margin:"3rem"}}>
-       <MemberSlider/> 
-        {/* <MemberCard/> */}
+       {/* <MemberSlider/>  */}
+        <MemberCard/>
      </div>
    
     </>

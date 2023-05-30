@@ -4,8 +4,8 @@ import Table from '../../Components/Result/Table/ResultTable'
 function Result() {
   return (
     <div style={{margin:"3rem 10rem 2rem"}}>
-      {/* <ResultTab/> */}
-      <Table/>
+      <ResultTab/>
+      {/* <Table/> */}
     </div>
   )
 }

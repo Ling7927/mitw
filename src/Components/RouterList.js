@@ -8,7 +8,7 @@ import Recruit from "../Pages/Recruit/Recruit";
 export const routerList = [
     {
       name: "最新消息",
-      path: "/",
+      path: "/News",
       Component: <News />,
     },
     {

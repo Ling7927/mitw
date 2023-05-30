@@ -18,7 +18,7 @@ function IntroductionTab() {
               <button
                 onClick={() => setOnHandle(item.id)}
                 style={{
-                  backgroundColor: onHandle === item.id ? "#fff" : "#7AACA9",
+                  backgroundColor: onHandle === item.id ? "#f0f0f0" : "#7AACA9",
                   color: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
                   width:"15%",
@@ -53,7 +53,7 @@ function IntroductionTab() {
         <div
           style={{
             // display:"flex",
-            backgroundColor: "#fff",
+            backgroundColor: "#f0f0f0",
             fontColor: "black",
             // padding: "2px",
             borderRadius: "0px 0px 1rem 1rem",

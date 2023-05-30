@@ -1,17 +1,15 @@
 import React from "react";
 import "./News.css";
-import { AiOutlineDownload } from "react-icons/ai";
-
-import Traks from "../../Components/Traklist/Trakslist";
 import Title from "../../assets/Title.png";
+import time from "../../assets/Timee.png";
+import p1Img from "../../assets/圖片1.png";
+import Traks from "../../Components/Traklist/Trakslist";
 import NewsInform from "./NewsInform.json";
 
+import { Grid } from "@mui/material";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import Background from "../../assets/Background.png";
-import T2023 from "../../assets/T2023.png";
-import Ttext from "../../assets/Titletext.png";
 
 function News() {
   const ref = useRef(null);
@@ -20,8 +18,8 @@ function News() {
     <>
       <div
         style={{
-          background: "#ecf4f4",
-          // "linear-gradient( #204241 30%,#26595a 80%, #33989d 100%)",
+          background:
+            "linear-gradient( to bottom, #20413F 20%, transparent 70%)",
           color: "#000",
           // display:"flex"
         }}
@@ -35,62 +33,38 @@ function News() {
           />
         </div> */}
 
-        <div style={{ backgroundColor: "#1f4140" }}>
-          <div
-            style={{
-              backgroundSize: window.innerWidth,
-              backgroundImage: `url(${Background})`,
-              backgroundAttachment: "fixed",
-              objectFit: "scale-down",
-              height: "20rem",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <motion.img
-              ref={ref}
-              src={T2023}
-              style={{
-                transform: isInView
-                  ? "translateX(10rem)"
-                  : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              }}
-            ></motion.img>
-            <motion.img
-              ref={ref}
-              src={Ttext}
-              style={{
-                position: "relative",
-                top: "-2rem",
-                transform: isInView ? "translateX(-3rem)" : "translateX(300px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              }}
-            ></motion.img>
-          </div>
+        <div>
+          <img
+            src={time}
+            alt="time"
+            style={{ width: "60%", margin: "5% 20% 3%" }}
+          />
         </div>
 
-        {/* -------------------DM下載--------------------- */}
+        {/* <hr style={{ border: 0, height: "1px", background: "#000" }} /> */}
+        {/* 意見小組 */}
+
         <div
-          style={{
-            display: "flex",
-            textAlign: "center",
-            justifyContent: "center",
-            margin: "10rem 10rem",
-            fontSize: "25px",
-          }}
+          className="p1"
+          style={{ margin: "2rem 1rem", background: "#f1f1f1" }}
         >
-          <a
-            href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
-            target="_blank"
-            // onClick={onButtonClick}
-            style={{ color: "#000" }}
-          >
-            MITW-DM 宣傳單下載 <AiOutlineDownload />
-          </a>
+          <Grid container direction="row" height="30rem">
+            <Grid item lg={4} >
+              <img src={p1Img} alt="p1img" height="20%"  />
+            </Grid>
+            <Grid item lg={8}>
+              <h2 style={{ textAlign: "center", justifyContent: "center" }}>
+                {NewsInform.title.p1}
+              </h2>
+              <ul>
+                <p>{NewsInform.p1.hash1}</p>
+                <p>{NewsInform.p1.hash2}</p>
+                {NewsInform.p1.context.map((item) => {
+                  return <li>{item}</li>;
+                })}
+              </ul>
+            </Grid>
+          </Grid>
         </div>
         {/* ----------------預計賽道------------------- */}
         <div
@@ -109,23 +83,10 @@ function News() {
             <Traks />
           </div>
 
-          <hr style={{ border: 0, height: "1px", background: "#000" }} />
+          {/* 預計時程 */}
+          {/*  <hr />
 
-          <div className="p1">
-            <h2 style={{ textAlign: "center", justifyContent: "center" }}>
-              {NewsInform.title.p1}
-            </h2>
-            <ul>
-              <p>{NewsInform.p1.hash1}</p>
-              <p>{NewsInform.p1.hash2}</p>
-              {NewsInform.p1.context.map((item) => {
-                return <li>{item}</li>;
-              })}
-            </ul>
-          </div>
-
-          <hr style={{ border: 0, height: "1px", background: "#fff" }} />
-          <div className="p3">
+           <div className="p3">
             <h2 style={{ textAlign: "center", justifyContent: "center" }}>
               {NewsInform.title.p3}
             </h2>
@@ -154,7 +115,7 @@ function News() {
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

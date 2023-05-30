@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { TraksTabInform } from "./TraksTabInform";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import PhotoSlider from "../../Components/Slider/PhotoSlider";
+import { Grid } from "@mui/material";
 
 import { useParams } from "react-router-dom";
 
@@ -12,54 +13,98 @@ function TraksTab() {
 
   return (
     <>
-      <div
+      {/* <div
         style={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          margin: "5% 0 5% 0",
+          margin: "5% ",
           width: "80%",
+          background:"#f1f1f1"
         }}
+      > */}
+      <Grid
+        container
+        spacing={1}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ background: "#f1f1f1" }}
       >
         {/* 上面按鈕 */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          {TraksTabInform.map((item, i) => {
-            return (
-              <button
-                key={i}
-                onClick={() => setOnHandle(item.Id)}
-                style={{
-                  background: onHandle === item.Id ? "#7AACA9" : "#fff",
-                  border: 0,
-                  borderRadius: "50%",
-                  padding: onHandle === item.Id ? "2rem 1.5rem" : "1.5rem 1rem",
-                  marginBottom: "2rem",
-                  boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
-                }}
-              >
-                <p
+
+        <Grid item>
+          {TraksTabInform.map((item) => {
+            //已選取
+            if (onHandle === item.Id)
+              return (
+                <button
+                  key={item}
+                  onClick={() => setOnHandle(item.Id)}
                   style={{
-                    fontSize: onHandle === item.Id ? "2rem" : "1.5rem",
-                    color: onHandle === item.Id ? "#fff" : "#7AACA9",
-                    margin: 0,
+                    position: "absolute",
+                    top: "10%",
+                    left: "10%",
+                    background: "none",
+                    border: 0,
+                    padding: 0,
+                    // boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
                   }}
                 >
-                  {item.TabTitle}
-                </p>
-              </button>
-            );
+                  <p
+                    style={{
+                      fontSize: "4rem",
+                      color: "#1e1e1e",
+                      margin: 0,
+                    }}
+                  >
+                    {item.TabTitle}
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "15px",
+                      color: "#1e1e1e",
+                      margin: 0,
+                      padding: "1rem",
+                      background: "#f1f1f1",
+                      position: "relative",
+                      top: "-2rem",
+                    }}
+                  >
+                    {item.ContentTitle}
+                  </p>
+                </button>
+              );
+            else
+             //未選取
+              return (
+                <button
+                  key={item}
+                  onClick={() => setOnHandle(item.Id)}
+                  style={{
+                    background: "none",
+                    border: 0,
+                    padding: "4rem 1.5rem 0",
+                    // boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: "1.5rem",
+                      color: "#dddddd",
+                      margin: 0,
+                    }}
+                  >
+                    {item.TabTitle}
+                  </p>
+                </button>
+              );
+            
           })}
-        </div>
+        </Grid>
         {/* 內容 */}
-        <div
+        {/* <div
           style={{
             backgroundColor: "#fff",
             padding: "2rem",
@@ -71,73 +116,50 @@ function TraksTab() {
             alignItems: "center",
             width: "100%",
           }}
+        > */}
+        {/* 輪播照片 */}
+        <div
+          style={{
+            width: "60%",
+            margin: "2rem",
+          }}
         >
-          <h3
-            style={{
-              padding: 0,
-              marginBottom: "3rem",
-              justifyContent: "center",
-            }}
-          >
-            {
-              TraksTabInform.filter((item) => item.Id === onHandle)[0]
-                .ContentTitle
+          <PhotoSlider
+            images={
+              TraksTabInform.filter((item) => item.Id === onHandle)[0].Img
             }
-          </h3>
-          {/* 輪播照片 */}
-          <div
-            style={{
-              width: "60%",
-              margin: "2rem",
-            }}
-          >
-            <PhotoSlider
-              images={
-                TraksTabInform.filter((item) => item.Id === onHandle)[0].Img
-              }
-            />
-          </div>
-          {/* 內容選單 */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "100%",
-            }}
-          >
-            {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
-              (item, i) => {
-                return (
-                  <div>
-                    <button
-                      style={{
-                        height: "2rem",
-                        width: "100%",
-                        border: "none",
-                        borderRadius: "0.3rem",
-                        background: "#7AACA9",
-                        margin: "1rem",
-                        padding: "0.3rem",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                      onClick={() => setClick(item.id)}
-                      key={item.id}
-                    >
-                      {item.Sc}
-                      {Click === item.id ? (
-                        <GoTriangleDown />
-                      ) : (
-                        <GoTriangleUp />
-                      )}
-                    </button>
-                  </div>
-                );
-              }
-            )}
-          </div>
+          />
         </div>
-      </div>
+        {/* 內容選單 */}
+
+        <Grid item style={{ width: "80%" }}>
+          {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
+            (item, i) => {
+              return (
+                <div>
+                  <button
+                    style={{
+                      height: "2rem",
+                      width: "80%",
+                      border: "none",
+                      borderBottom: "#000 1px solid",
+                      margin: " 1rem 0",
+                      padding: "0.3rem",
+                    }}
+                    onClick={() => setClick(item.id)}
+                    key={item.id}
+                  >
+                    {item.Sc}
+                    {Click === item.id ? <GoTriangleDown /> : <GoTriangleUp />}
+                  </button>
+                </div>
+              );
+            }
+          )}
+        </Grid>
+        {/* </div> */}
+      </Grid>
+      {/* </div> */}
     </>
   );
 }

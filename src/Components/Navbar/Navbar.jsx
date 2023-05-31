@@ -8,7 +8,7 @@ import { routerList } from "../RouterList";
 const Navbar = () => {
   const [collapse, setCollapse] = useState("nav__menu");
   const [toggleIcon, setToggleIcon] = useState("toggler__icon");
-
+  const [onhandle,setOnHandle] =useState()
   const onToggle = () => {
     collapse === "nav__menu"
       ? setCollapse("nav__menu nav__collapse")

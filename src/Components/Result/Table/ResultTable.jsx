@@ -4,8 +4,7 @@ import { Table } from "antd";
 import "./ResultTable.css";
 import { useEffect } from "react";
 
-function Trak1Table({id}) {
-  
+function Trak1Table({ id }) {
   //const [track, setTrack] = useState(1);
   const [tableData, setTableData] = useState([]);
   useEffect(() => {
@@ -14,33 +13,24 @@ function Trak1Table({id}) {
   const bt = Object.keys(TRACK);
   return (
     <>
-     {/* {bt.map((item) => {
+      {/* {bt.map((item) => {
         return <button onClick={() => setTrack(item)}
         style={{background:"none",border:"none"}}
         >{item}</button>;
       })} */}
-{bt.map((item) => {
-
-      {tableData.map(({ column, data }) => {
-
-    if (id===item)
-
-      return(
-        <>
-        
-        <Table
-          columns={column}
-          dataSource={data}
-          pagination={false}
-          bordered
-          size="large"
-        />
-        </>
-      )
-      }
-       
-      )}
-    })}
+      {tableData.map(({ column, data }, index) => {
+        return (
+          <div key={index}>
+            <Table
+              columns={column}
+              dataSource={data}
+              pagination={false}
+              bordered
+              size="large"
+            />
+          </div>
+        );
+      })}
 
       {/* <Table
     columns={Track1Colums}

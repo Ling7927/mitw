@@ -7,7 +7,7 @@
   justify-content: space-between;
   height: 15%;
   width: 100%;
-  padding:20px 0;
+  padding: 20px 0;
   /* position: absolute; */
 }
 
@@ -26,20 +26,24 @@
 .nav__item:hover {
   transform: scale(1);
   transition: all 0.3s ease;
-  border-bottom: #fff 2px solid;
+  /* border-bottom: #fff 2px solid; */
 }
 
 .nav__menu {
   display: flex;
-  align-items:end;
+  align-items: end;
   justify-content: space-around;
   gap: 3rem;
-  margin:0;
-  z-index:999;
+  margin: 0;
+  z-index: 999;
 }
 
 .nav__link {
-  color: #ddd;
+  color: #DDD;
+  text-decoration: none;
+}
+.nav__link:hover {
+  color: #DDD;
   text-decoration: none;
 }
 
@@ -50,22 +54,19 @@
 
 .toggler__icon div {
   position: absolute;
-  margin:0;
+  margin: 0;
   font-size: 2.5rem;
   color: #ddd;
   width: 40px;
   height: 35px;
   right: 10px;
-  top:0;
+  top: 0;
   transition: 0.3s ease;
 }
 
 @media screen and (max-width: 930px) {
- 
   .toggler__icon {
     display: block;
-   
-
   }
   .nav__menu {
     display: flex;
@@ -82,7 +83,57 @@
     transition: 0.5s ease;
   }
 }
+.nav_li {
+  list-style: none;
+  display: none;
+}
+.nav_lihover {
+  background: #fff;
+  /* position: relative; */
+  top: 10rem;
+}
+
+.nav_content {
+  position: absolute;
+  padding: 10px 0px;
+  background: #fff;
+}
 
 .nav__collapse {
   transform: translateX(0%);
 }
+/* --------------------------------- */
+.dropbtn {
+  background-color: #000;
+  padding: 1.5rem 0.5rem;
+  font-size: 20px;
+  color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1.5rem 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #000;}

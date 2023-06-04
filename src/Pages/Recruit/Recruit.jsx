@@ -38,7 +38,7 @@ function Recruit() {
           }}
         /> */}
 
-        <div style={{ margin: "3rem"}}>
+        <div style={{ margin: "3rem" }}>
           {WorkGrop.map((item, index) => {
             if (index === 0)
               return (
@@ -46,20 +46,24 @@ function Recruit() {
                   <div
                     style={{
                       margin: "3rem",
-                      paddingLeft:"2rem",
-                      borderRadius:"1rem",
+                      paddingLeft: "2rem",
+                      borderRadius: "1rem",
                       background:
                         "linear-gradient(90deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0) 65%)",
-
                     }}
                   >
                     <Grid container spacing={1} gap={10}>
                       <Grid item sm={12} md={12} lg={6}>
                         <Part>
                           {/* 小組及說明 */}
-                          <h4 key={item.title}>{item.title}</h4>
+                          <h4 key={item.title} style={{ paddingTop: "1rem" }}>
+                            {item.title}
+                          </h4>
                           <p>{item.instructions}</p>
-                          <img src={item.img} style={{width:"50%",filter:" invert(100%)"}}  />
+                          <img
+                            src={item.img}
+                            style={{ width: "50%", filter: " invert(100%)" }}
+                          />
                         </Part>
                       </Grid>
                       <Grid item sm={12} md={12} lg={5}>
@@ -68,7 +72,7 @@ function Recruit() {
                           <div
                             style={{
                               background: "#f0f4f6",
-                              padding: "2rem",
+                              padding: "2rem 1rem",
                               borderRadius: "3rem",
                             }}
                           >
@@ -89,7 +93,7 @@ function Recruit() {
                         background:
                           "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0) 65%)",
                         margin: "3rem",
-                        borderRadius:"1rem",
+                        borderRadius: "1rem",
                       }}
                     >
                       <Grid container spacing={1} gap={10}>
@@ -97,7 +101,7 @@ function Recruit() {
                           <div
                             style={{
                               background: "#f0f4f6",
-                              padding: "2rem",
+                              padding: "2rem 1rem",
                               borderRadius: "3rem",
                             }}
                           >
@@ -108,9 +112,14 @@ function Recruit() {
                         </Grid>
                         <Grid item xs={12} sm={12} md={6}>
                           {/* 小組及說明 */}
-                          <h4 key={item.title}>{item.title}</h4>
+                          <h4 key={item.title} style={{ paddingTop: "1rem" }}>
+                            {item.title}
+                          </h4>
                           <p>{item.instructions}</p>
-                          <img src={item.img} style={{width:"50%",filter:" invert(100%)"}} />
+                          <img
+                            src={item.img}
+                            style={{ width: "50%", filter: " invert(100%)" }}
+                          />
                         </Grid>
 
                         {/* <Part> */}

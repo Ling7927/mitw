@@ -13,17 +13,6 @@ function TraksTab() {
 
   return (
     <>
-      {/* <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "5% ",
-          width: "80%",
-          background:"#f1f1f1"
-        }}
-      > */}
       <Grid
         container
         spacing={1}
@@ -34,7 +23,7 @@ function TraksTab() {
       >
         {/* 上面按鈕 */}
 
-        <Grid item>
+        <Grid item style={{}}>
           {TraksTabInform.map((item) => {
             //已選取
             if (onHandle === item.Id)
@@ -44,8 +33,8 @@ function TraksTab() {
                   onClick={() => setOnHandle(item.Id)}
                   style={{
                     position: "absolute",
-                    top: "10%",
-                    left: "10%",
+                    top: "25%",
+                    left: "15%",
                     background: "none",
                     border: 0,
                     padding: 0,
@@ -76,8 +65,8 @@ function TraksTab() {
                   </p>
                 </button>
               );
+            //未選取
             else
-             //未選取
               return (
                 <button
                   key={item}
@@ -100,23 +89,10 @@ function TraksTab() {
                   </p>
                 </button>
               );
-            
           })}
         </Grid>
         {/* 內容 */}
-        {/* <div
-          style={{
-            backgroundColor: "#fff",
-            padding: "2rem",
-            marginBottom: "10px",
-            borderRadius: "10px 10px 10px 10px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-          }}
-        > */}
+
         {/* 輪播照片 */}
         <div
           style={{
@@ -132,7 +108,7 @@ function TraksTab() {
         </div>
         {/* 內容選單 */}
 
-        <Grid item style={{ width: "80%" }}>
+        <Grid item style={{ width: "80%", paddingBottom: "3rem" }}>
           {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
             (item, i) => {
               return (
@@ -140,7 +116,7 @@ function TraksTab() {
                   <button
                     style={{
                       height: "2rem",
-                      width: "80%",
+                      width: "100%",
                       border: "none",
                       borderBottom: "#000 1px solid",
                       margin: " 1rem 0",
@@ -157,9 +133,7 @@ function TraksTab() {
             }
           )}
         </Grid>
-        {/* </div> */}
       </Grid>
-      {/* </div> */}
     </>
   );
 }

@@ -10,15 +10,17 @@ function Traks() {
         background: "#d9d9d9",
       }}
     >
-       <Grid container spacing={1} 
-      direction="column"
-      alignItems="center"
-      justify="center">
-        <Grid item sm={12} md={12} lg={12} style={{width:"80%"}}>
-        <Tab />
+      <Grid
+        container
+        spacing={1}
+        direction="column"
+        alignItems="center"
+        justify="center"
+      >
+        <Grid item sm={12} md={12} lg={12} style={{ width: "80%",marginTop:"10px" ,position:"relative"}}>
+          <Tab />
+        </Grid>
       </Grid>
-      </Grid>
-      
     </div>
   );
 }

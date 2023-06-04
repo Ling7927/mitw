@@ -19,7 +19,7 @@ function News() {
       <div
         style={{
           background:
-            "linear-gradient( to bottom, #20413F 20%, transparent 70%)",
+            "linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(32, 65, 63, 0.7) 100%)",
           color: "#000",
           // display:"flex"
         }}
@@ -46,17 +46,17 @@ function News() {
 
         <div
           className="p1"
-          style={{ margin: "2rem 1rem", background: "#f1f1f1" }}
+          style={{ margin: "2rem 5rem", background: "#f1f1f1" }}
         >
-          <Grid container direction="row" height="30rem">
-            <Grid item lg={4} >
-              <img src={p1Img} alt="p1img" height="20%"  />
+          <Grid container direction="row"  >
+            <Grid item lg={4} style={{ display: "flex"}}>
+              <img src={p1Img} alt="p1img" style={{width: "90%" ,height: "90%", objectFit:"cover"   }} height="30%"  />
             </Grid>
-            <Grid item lg={8}>
+            <Grid item lg={8} padding="2rem">
               <h2 style={{ textAlign: "center", justifyContent: "center" }}>
                 {NewsInform.title.p1}
               </h2>
-              <ul>
+              <ul style={{margin:0}}>
                 <p>{NewsInform.p1.hash1}</p>
                 <p>{NewsInform.p1.hash2}</p>
                 {NewsInform.p1.context.map((item) => {

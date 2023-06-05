@@ -23,7 +23,7 @@ function TraksTab() {
       >
         {/* 上面按鈕 */}
 
-        <Grid item style={{}}>
+        <Grid item  xs={2} md={2} lg={2} columns={20} style={{}}>
           {TraksTabInform.map((item) => {
             //已選取
             if (onHandle === item.Id)
@@ -33,8 +33,8 @@ function TraksTab() {
                   onClick={() => setOnHandle(item.Id)}
                   style={{
                     position: "absolute",
-                    top: "25%",
-                    left: "15%",
+                    top: "5%",
+                    left: "5rem",
                     background: "none",
                     border: 0,
                     padding: 0,

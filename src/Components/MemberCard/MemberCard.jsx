@@ -193,7 +193,7 @@ function MemberCard() {
           <Grid container spacing={1}>
           {Mem.filter(({ Id }) => Id === clickId).map((item) => {
             return (
-              <Grid item >
+              <Grid item  sm={6} md={6} lg={6}>
                 <div
                   style={{
                     background: "#fff",

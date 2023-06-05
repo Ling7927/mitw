@@ -55,7 +55,7 @@ function Recruit() {
                     <Grid container spacing={1} gap={10}>
                       <Grid item sm={12} md={12} lg={6}>
                         <Part>
-                          {/* 小組及說明 */}
+                          {/* 小組及說明(左) */}
                           <h4 key={item.title} style={{ paddingTop: "1rem" }}>
                             {item.title}
                           </h4>
@@ -68,11 +68,11 @@ function Recruit() {
                       </Grid>
                       <Grid item sm={12} md={12} lg={5}>
                         <Part>
-                          {/* 細項規則 */}
+                          {/* 細項規則(右) */}
                           <div
                             style={{
                               background: "#f0f4f6",
-                              padding: "2rem 1rem",
+                              padding: "1.5rem 1rem",
                               borderRadius: "3rem",
                             }}
                           >
@@ -92,7 +92,8 @@ function Recruit() {
                       style={{
                         background:
                           "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0) 65%)",
-                        margin: "3rem",
+                        margin: "3rem 4rem 3rem 3rem",
+
                         borderRadius: "1rem",
                       }}
                     >
@@ -105,13 +106,13 @@ function Recruit() {
                               borderRadius: "3rem",
                             }}
                           >
-                            {/* 細項規則 */}
+                            {/* 細項規則 (左*/}
 
                             {item.li}
                           </div>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6}>
-                          {/* 小組及說明 */}
+                          {/* 小組及說明(右) */}
                           <h4 key={item.title} style={{ paddingTop: "1rem" }}>
                             {item.title}
                           </h4>
@@ -131,6 +132,14 @@ function Recruit() {
               );
           })}
         </div>
+        <div
+          style={{
+            background:
+              "  repeating-linear-gradient(to right, transparent 0 100px,#a79d8388 400px 200px), repeating-linear-gradient(to top, transparent 0 100px,#a79d8388 400px 200px), rgba(0, 249, 255, 0) ",
+            width: "40rem",
+            height: "40rem",
+          }}
+        />
       </div>
     </>
   );

@@ -9,7 +9,8 @@ function Member() {
        {/* <MemberSlider/>  */}
         <MemberCard/>
      </div>
-   
+
+   <MemberSlider/>
     </>
   );
 }

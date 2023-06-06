@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import MemberCard from "./MemberCard";
+import SliderCard from "./SliderCard";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Mem } from "../../Pages/Member/Inform";
 
@@ -35,7 +35,7 @@ function MemberSlider() {
     </div> */}
       <Slider {...settings}>
         {Mem.map((item) => {
-          return <MemberCard item={item} key={item} />;
+          return <SliderCard item={item} key={item} />;
         })}
       </Slider>
     </div>

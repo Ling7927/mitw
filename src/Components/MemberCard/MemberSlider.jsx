@@ -1,19 +1,29 @@
-import React, { useRef } from "react";
+import React, { useState,useRef } from "react";
 import Slider from "react-slick";
 import SliderCard from "./SliderCard";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Mem } from "../../Pages/Member/Inform";
 
-function MemberSlider() {
+function MemberSlider(props) {
+  const {TabId}=props
+const [Id,setId]=useState(TabId);
   const settings = {
-    dots: true,
     infinite: true,
     slidesToShow: 2,
-    slidesToScroll: 1,
+    // slidesToScroll: 1,
     autoplay: true,
     speed: 10000,
     autoplaySpeed: 0.0000001,
     cssEase: "linear",
+    customPaging:(i)=>{
+      return(
+        <div>
+          <div style={{width:"10rem"}}>
+        {i==TabId?{TabId}:Id}
+          </div>
+        </div>
+      )
+    }
   };
   // const arrowRef = useRef(null);
   // const Member="";

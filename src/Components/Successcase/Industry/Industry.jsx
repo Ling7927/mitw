@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 function Industry() {
   return (
     <>
+    {/* --------產業產品-------- */}
       {IndustryInform.map((item, i) => {
         return (
           <div
@@ -35,7 +36,8 @@ function Industry() {
                 >
                   <h3>{item.name}</h3>
                 </a>
-                <div style={{ whiteSpace: "pre-line" ,marginTop:"1rem"}}>{item.traks}</div>
+                
+                <div style={{ whiteSpace: "pre-line" ,marginTop:"1rem"}}>{item.tracks}</div>
               </Grid>
               {/* 下半 */}
               <div style={{ margin:"1rem 3rem 0 1rem"}}>{item.introduce}</div>

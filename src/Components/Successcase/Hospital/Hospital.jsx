@@ -4,6 +4,7 @@ import { Grid } from "@mui/material";
 function Hospital() {
   return (
     <>
+    {/* -------醫院應用--------- */}
       {HospitalInform.map((item, i) => {
         return (
           <Grid container spacing={1} marginBottom="2rem" alignItems= "center" key={i}>
@@ -20,7 +21,7 @@ function Hospital() {
               >
                 <h3>{item.name}</h3>
               </a>
-              <div style={{ whiteSpace: "pre-line",marginTop:"1rem" }}>{item.traks}</div>
+              <div style={{ whiteSpace: "pre-line",marginTop:"1rem" }}>{item.tracks}</div>
             </Grid>
 
             <div style={{margin:"2rem 1rem 0 0"}}>{item.introduce}</div>

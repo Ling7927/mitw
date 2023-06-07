@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 function Goverment() {
   return (
     <>
+    {/* --------政府專案--------- */}
       {GovernmentInform.map((item, i) => {
         return (
           <motion.div
@@ -36,7 +37,7 @@ function Goverment() {
               >
                 <h3>{item.name}</h3>
               </a>
-              <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
+              <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
 
               </Grid>
               

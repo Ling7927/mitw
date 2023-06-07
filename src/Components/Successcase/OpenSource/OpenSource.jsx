@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 function OpenSource() {
   return (
     <>
+    {/* --------開源產品---------- */}
       {OpenSourceInform.map((item, i) => {
         return (
           <motion.div
@@ -54,7 +55,7 @@ function OpenSource() {
                 >
                   <h3>{item.name}</h3>
                 </a>
-                <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
+                <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
               </Grid>
             </Grid>
             {/* 下半 */}

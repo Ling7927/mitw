@@ -52,6 +52,7 @@ function Successcase() {
                       fontSize: onHandle === item.id ? "15px" : "5px",
                       margin: 0,
                       color: onHandle === item.id ? "#000" : "#949494",
+                      marginBottom:"0.5rem"
                     }}
                     key={i}
                   >

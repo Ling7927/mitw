@@ -11,6 +11,8 @@ import G1 from "../../assets/ALOVAS.png";
 import G2 from "../../assets/CIMS.gif";
 import c1 from "../../assets/c1.png";
 import c2 from "../../assets/c2.png";
+import f1 from "../../assets/f1.jpeg";
+import f2 from "../../assets/f2.jpeg";
 
 
 import OpenSource from "../../Components/Successcase/OpenSource/OpenSource";
@@ -57,6 +59,8 @@ const GovernmentInform=[
 ];
 
 const CrosssystemInform=[
-{title:"DICOM互通情境",img:[<img src={c1} style={{width:"100%"}}/>,<img src={c2} style={{width:"100%"}}/>]}
+{title:"DICOM互通情境",img:[<img src={c1} style={{width:"100%"}}/>,<img src={c2} style={{width:"100%"}}/>]},
+{title:"FHIR互通情境",img:[<img src={f1} style={{width:"100%"}}/>,<img src={f2} style={{width:"100%"}}/>]}
+
 ];
 export {ListTitle,List,OpenSourceInform,IndustryInform,HospitalInform,GovernmentInform,CrosssystemInform}

@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 function OpenSource() {
   return (
     <>
-      {OpenSourceInform.map((item,i) => {
+      {OpenSourceInform.map((item, i) => {
         return (
           <motion.div
-          key={i}
+            key={i}
             style={{ marginTop: "1rem" }}
             initial={{
               x: "-150%",
@@ -22,13 +22,7 @@ function OpenSource() {
             transition={{ delay: 0.7, duration: 0.7 }}
           >
             {/* 上半 */}
-            <a
-              href={item.link}
-              target="_blank"
-              style={{ textDecoration: "none ", color: "#0081a7" }}
-            >
-              <h3>{item.name}</h3>
-            </a>
+
             <Grid container spacing={1}>
               <Grid item xs={12} sm={12} md={4}>
                 <div
@@ -53,12 +47,22 @@ function OpenSource() {
                 </div>
               </Grid>
               <Grid item sx={12} sm={12} md={8}>
-                {item.introduce}
+                <a
+                  href={item.link}
+                  target="_blank"
+                  style={{ textDecoration: "none ", color: "#0081a7" }}
+                >
+                  <h3>{item.name}</h3>
+                </a>
+                <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
               </Grid>
             </Grid>
             {/* 下半 */}
-            <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
-            <hr />
+            <p style={{ margin: "2rem 0 1rem 3rem" }}>
+              {item.introduce}
+
+              <hr />
+            </p>
           </motion.div>
         );
       })}

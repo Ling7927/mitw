@@ -5,15 +5,18 @@ function Crosssystem() {
     <>
       {CrosssystemInform.map((item,i) => {
         return (
-          <div key={i} style={{marginTop:"1rem" ,
+          <div key={i} style={{marginTop:"1rem" ,display:"flex",flexDirection:"column",alignItems: "center"
           // border:"2px solid #fff0"
           }}>
-            <div>
-                <h3>
+               
+             <h3 style={{marginBottom:"2rem"}}>
                     {item.title}
                 </h3>
+            <div style={{width:"70%"}}>
+              
+                          {item.img}
+
             </div>
-            {item.img}
             
           </div>
         );

@@ -8,7 +8,7 @@ function Goverment() {
         return (
           <motion.div
           key={i}
-          style={{ marginTop: "1rem",border:"2px solid #fff" }}
+          style={{ marginTop: "1rem",border:"2px solid #orange" }}
           initial={{
             x: "-150%",
           }}
@@ -23,7 +23,7 @@ function Goverment() {
             <a
               href={item.link}
               target="_blank"
-              style={{ textDecoration: "none ", color: "#fff" }}
+              style={{ textDecoration: "none ", color: "#000" }}
             >
               <h3>{item.name}</h3>
             </a>

@@ -12,7 +12,7 @@ function Industry() {
         return (
           <motion.div
           key={i}
-          style={{marginTop:"1rem" ,border:"2px solid #fff"}} initial={ {
+          style={{marginTop:"1rem" ,border:"2px solid orange"}} initial={ {
             y: "150%",
         }}
         animate={ {
@@ -25,11 +25,11 @@ function Industry() {
             <a
               href={item.link}
               target="_blank"
-              style={{ textDecoration: "none ", color: "#fff" }}
+              style={{ textDecoration: "none ", color: "#000" }}
             >
               <h3>{item.name}</h3>
             </a>
-            <div style={{ display: "flex", position: "relative" ,border:"2px dotted yellow",gap:"2rem" }}>
+            <div style={{ display: "flex", position: "relative" ,gap:"2rem" }}>
               <div style={{width:"30%", zIndex: 1}}>
                 {item.img}
               </div>
@@ -49,7 +49,9 @@ function Industry() {
             </div>
             {/* 下半 */}
             <div style={{ whiteSpace: "pre-line" }}>{item.traks}</div>
+          <br/>
           </motion.div>
+          
         );
       })}
     </motion.div>

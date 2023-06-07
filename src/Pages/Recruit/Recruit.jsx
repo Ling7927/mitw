@@ -92,7 +92,7 @@ function Recruit() {
                       style={{
                         background:
                           "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0) 65%)",
-                        margin: "3rem 4rem 3rem 3rem",
+                        margin: "3rem ",
 
                         borderRadius: "1rem",
                       }}
@@ -111,7 +111,7 @@ function Recruit() {
                             {item.li}
                           </div>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={6}>
+                        <Grid item xs={12} sm={12} md={6} lg={5} >
                           {/* 小組及說明(右) */}
                           <h4 key={item.title} style={{ paddingTop: "1rem" }}>
                             {item.title}
@@ -123,9 +123,7 @@ function Recruit() {
                           />
                         </Grid>
 
-                        {/* <Part> */}
                       </Grid>
-                      {/* </Part> */}
                     </div>
                   </Part>
                 </>

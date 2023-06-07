@@ -5,7 +5,7 @@ function Crosssystem() {
     <>
       {CrosssystemInform.map((item,i) => {
         return (
-          <div key={i} style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
+          <div key={i} style={{marginTop:"1rem" ,border:"2px solid #fff0"}}>
             <div>
                 <h3>
                     {item.title}

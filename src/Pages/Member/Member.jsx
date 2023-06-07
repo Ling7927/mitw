@@ -10,10 +10,10 @@ function Member() {
      
      <div style={{margin:"3rem"}}>
        {/* <MemberSlider/>  */}
-        {/* <MemberCard/> */}
+        <MemberCard/>
 
      </div>
-     <Grid container spacing={1}>
+     {/* <Grid container spacing={1}>
       <Grid item lg={1}>
 
       <TrackTab/>
@@ -22,7 +22,7 @@ function Member() {
 
    <MemberSlider/>
    </Grid>
-     </Grid>
+     </Grid> */}
 
     </>
   );

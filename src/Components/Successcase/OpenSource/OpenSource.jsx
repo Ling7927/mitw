@@ -25,7 +25,7 @@ function OpenSource() {
             <a
               href={item.link}
               target="_blank"
-              style={{ textDecoration: "none ", color: "#fff" }}
+              style={{ textDecoration: "none ", color: "#0081a7" }}
             >
               <h3>{item.name}</h3>
             </a>

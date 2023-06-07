@@ -10,7 +10,9 @@ function ResultTab() {
       {/* Tab */}
       <Grid container spacing={1} >
         <Grid item lg={2} >
-          <h3 style={{ margin: 0, padding: 0,position:"relative",top:"4.5rem" }}>Track</h3>
+          <h3
+          //  style={{ margin: 0, padding: 0,position:"relative",top:"4.5rem" }}
+          >Track</h3>
         </Grid>
         <Grid item>
           {ResultTabInform.map((item) => {
@@ -24,20 +26,20 @@ function ResultTab() {
                   <h4
                     style={{
                       fontSize: track === item.Id ? "3rem" : "2rem",
-                      color: track === item.Id ? "#fff" : "#dcdcdc",
-                      textShadow:
-                        track === item.Id
-                          ? "0 0 0.3em #00F9FF, 0 0 0.3em #00F9FF,0 0 0.3em #00F9FF"
-                          : "",
-                      zIndex: "0",
-                      position:"relative",
-                      top:"2rem"
+                      color: track === item.Id ? "#000" : "#dcdcdc",
+                      // textShadow:
+                      //   track === item.Id
+                      //     ? "0 0 0.3em #00F9FF, 0 0 0.3em #00F9FF,0 0 0.3em #00F9FF"
+                      //     : "",
+                      // zIndex: "0",
+                      // position:"relative",
+                      // top:"2rem"
                     }}
                   >
                     {item.TabTitle}
                   </h4>
                   {/* 滑動圈圈 */}
-                  <div
+                  {/* <div
                     style={{
                       display:"flex",
                       justifyContent: "center",
@@ -68,13 +70,13 @@ function ResultTab() {
                         padding: "1rem",
                       }}
                     />
-                  </div>
+                  </div> */}
                 </button>
               </>
             );
           })}
           {/* 槓槓 */}
-          <div
+          {/* <div
             style={{
               width: "100%",
               height: "0.5rem",
@@ -83,7 +85,7 @@ function ResultTab() {
               position: "relative",
               bottom: "2rem",
             }}
-          />
+          /> */}
         </Grid>
       </Grid>
 

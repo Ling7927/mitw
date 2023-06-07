@@ -5,12 +5,12 @@ function Hospital() {
     <>
     {HospitalInform.map((item,i) => {
         return (
-      <div key={i} style={{marginTop:"1rem" ,border:"2px solid #fff"}}>
+      <div key={i} style={{marginTop:"1rem" ,border:"2px solid orange"}}>
             {/* 上半 */}
             <a
               href={item.link}
               target="_blank"
-              style={{ textDecoration: "none ", color: "#fff" }}
+              style={{ textDecoration: "none ", color: "#000" }}
             >
               <h3>{item.name}</h3>
             </a>

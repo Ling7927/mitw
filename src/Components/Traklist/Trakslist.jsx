@@ -29,18 +29,17 @@ function Trakslist() {
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
+            
             margin: "1rem 2rem",
             width: "100%",
             // textShadow:
             //   "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
           }}
         >
-          <Grid container spacing={1}>
+          <Grid container spacing={1} gap="3" justifyContent= "space-evenly">
             {TraksInform.map((item, i) => {
               return (
-                <Grid item xs={6} md={4} lg={2.25}>
+                <Grid item xs={6} md={4} lg={2.25}   >
                   <div
                     key={i}
                     onMouseEnter={() => setIsHover(item.id)}

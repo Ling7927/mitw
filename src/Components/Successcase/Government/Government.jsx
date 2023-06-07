@@ -8,7 +8,9 @@ function Goverment() {
         return (
           <motion.div
           key={i}
-          style={{ marginTop: "1rem",border:"2px solid #orange" }}
+          style={{ marginTop: "1rem",
+          // border:"2px solid #orange" 
+        }}
           initial={{
             x: "-150%",
           }}
@@ -27,7 +29,9 @@ function Goverment() {
             >
               <h3>{item.name}</h3>
             </a>
-            <div style={{ display: "flex", position: "relative" ,border:"2px dotted yellow",gap:"2rem" }}>
+            <div style={{ display: "flex", position: "relative" ,
+            // border:"2px dotted yellow",
+            gap:"2rem" }}>
               <div style={{width:"30%", zIndex: 1}}>
                 {item.img}
               </div>

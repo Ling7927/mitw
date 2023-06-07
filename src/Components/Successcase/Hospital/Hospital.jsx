@@ -5,7 +5,9 @@ function Hospital() {
     <>
     {HospitalInform.map((item,i) => {
         return (
-      <div key={i} style={{marginTop:"1rem" ,border:"2px solid orange"}}>
+      <div key={i} style={{marginTop:"1rem" ,
+      // border:"2px solid orange"
+      }}>
             {/* 上半 */}
             <a
               href={item.link}
@@ -14,7 +16,9 @@ function Hospital() {
             >
               <h3>{item.name}</h3>
             </a>
-            <div style={{ display: "flex", position: "relative" ,border:"2px dotted yellow",gap:"2rem" }}>
+            <div style={{ display: "flex", position: "relative" ,
+            // border:"2px dotted yellow",
+            gap:"2rem" }}>
               <div style={{width:"30%", zIndex: 1}}>
                 {item.img}
               </div>

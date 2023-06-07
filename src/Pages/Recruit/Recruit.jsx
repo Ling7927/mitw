@@ -130,14 +130,14 @@ function Recruit() {
               );
           })}
         </div>
-        <div
+        {/* <div
           style={{
             background:
               "  repeating-linear-gradient(to right, transparent 0 100px,#a79d8388 400px 200px), repeating-linear-gradient(to top, transparent 0 100px,#a79d8388 400px 200px), rgba(0, 249, 255, 0) ",
             width: "40rem",
             height: "40rem",
           }}
-        />
+        /> */}
       </div>
     </>
   );

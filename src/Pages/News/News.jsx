@@ -32,59 +32,76 @@ function News() {
             style={{ width: "100%", height: "5%", display: "flex" }}
           />
         </div> */}
-
-        <div>
-          <img
-            src={time}
-            alt="time"
-            style={{ width: "60%", margin: "5% 20% 3%" }}
-          />
-        </div>
-
-        {/* <hr style={{ border: 0, height: "1px", background: "#000" }} /> */}
-        {/* 意見小組 */}
-
-        <div
-          className="p1"
-          style={{ margin: "2rem 5rem", background: "#f1f1f1" }}
-        >
-          <Grid container direction="row"  >
-            <Grid item lg={4} style={{ display: "flex"}}>
-              <img src={p1Img} alt="p1img" style={{width: "90%" ,height: "90%", objectFit:"cover"   }} height="30%"  />
-            </Grid>
-            <Grid item lg={8} padding="2rem">
-              <h2 style={{ textAlign: "center", justifyContent: "center" }}>
-                {NewsInform.title.p1}
-              </h2>
-              <ul style={{margin:0}}>
-                <p>{NewsInform.p1.hash1}</p>
-                <p>{NewsInform.p1.hash2}</p>
-                {NewsInform.p1.context.map((item) => {
-                  return <li>{item}</li>;
-                })}
-              </ul>
-            </Grid>
+        <Grid container spacing={1} direction="column">
+          {/* -----------------時程規劃--------------------- */}
+          <Grid item  display="flex" justifyContent="center">
+            <div  style={{display:"flex" ,justifyContent:"center",marginTop:"5rem"}}>
+              <img src={time} alt="time" style={{ width: "80%" }} />
+            </div>
           </Grid>
-        </div>
-        {/* ----------------預計賽道------------------- */}
-        <div
-          style={{
-            // background: "#90a09f",
-            // border: "solid",
-            // borderRadius: "5rem 5rem",
-            margin: " 10rem 10rem 0 10rem",
-            padding: "3rem 0",
-          }}
-        >
-          <div
-            className="p2"
-            style={{ textAlign: "center", justifyContent: "center" }}
-          >
-            <Traks />
-          </div>
 
-          {/* 預計時程 */}
-          {/*  <hr />
+          {/* <hr style={{ border: 0, height: "1px", background: "#000" }} /> */}
+
+          {/*----------- 意見小組 -----------*/}
+          <Grid item sm={12} md={12} lg={12} style={{display:"flex",justifyContent: "center", alignItems: "center",marginTop:"2rem"}}>
+            
+              <Grid container direction="row"style={{background: "#f1f1f1",width:"80%"}} >
+                <Grid item sm={4} md={4} lg={4} style={{display:"flex",justifyContent: "flex-start"}}>
+                  <img
+                    src={p1Img}
+                    alt="p1img"
+                    style={{ objectFit: "cover",height:"36rem" }}
+                  />
+                </Grid>
+                <Grid
+                  item
+                  sm={7}
+                  md={7}
+                  lg={7}
+                  padding="2rem"
+                  marginTop="2rem"
+                  height="90%"
+                >
+                  <h2
+                    style={{
+                      marginBottom: "3rem",
+                      textAlign: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {NewsInform.title.p1}
+                  </h2>
+                  <ul style={{ margin: 0 }}>
+                    <p>{NewsInform.p1.hash1}</p>
+                    <p>{NewsInform.p1.hash2}</p>
+                    {NewsInform.p1.context.map((item) => {
+                      return <li style={{ margin: "2rem 0" }}>{item}</li>;
+                    })}
+                  </ul>
+                </Grid>
+              </Grid>
+          </Grid>
+
+          {/* ----------------預計賽道------------------- */}
+          <Grid item>
+            <div
+              style={{
+                // background: "#90a09f",
+                // border: "solid",
+                // borderRadius: "5rem 5rem",
+                margin: " 2rem 10rem 0 10rem",
+                padding: "3rem 0",
+              }}
+            >
+              <div
+                className="p2"
+                style={{ textAlign: "center", justifyContent: "center" }}
+              >
+                <Traks />
+              </div>
+
+              {/* ---------預計時程------------*/}
+              {/*  <hr />
 
            <div className="p3">
             <h2 style={{ textAlign: "center", justifyContent: "center" }}>
@@ -116,7 +133,9 @@ function News() {
               </div>
             </div>
           </div> */}
-        </div>
+            </div>
+          </Grid>
+        </Grid>
       </div>
     </>
   );

@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
+    <Box style={{}}>
       <Grid container spacing={1}>
         <nav className="nav">
           <Grid item xs={12} sm={12} md={3}>
@@ -89,7 +89,7 @@ const Navbar = () => {
           </Grid>
         </nav>
       </Grid>
-    </>
+    </Box>
     //   </div>
     // </div>
   );

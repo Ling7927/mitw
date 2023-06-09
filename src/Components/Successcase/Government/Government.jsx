@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function Goverment() {
   return (
     <>
-    {/* --------政府專案--------- */}
+      {/* --------政府專案--------- */}
       {GovernmentInform.map((item, i) => {
         return (
           <motion.div
@@ -24,27 +24,32 @@ function Goverment() {
             }}
             transition={{ delay: 0.7, duration: 0.7 }}
           >
-            <Grid container spacing={1} marginBottom="2rem" alignItems= "center" key={i}>
+            <Grid
+              container
+              spacing={1}
+              marginBottom="2rem"
+              alignItems="center"
+              key={i}
+            >
               <Grid item sm={12} md={3} lg={3}>
-                <div style={{ width: "60%" }}>{item.img}</div>
+                <img src={item.img} style={{ width: "100%" }} />
               </Grid>
               <Grid item sm={12} md={9} lg={9}>
                 {/* 上半 */}
-              <a
-                href={item.link}
-                target="_blank"
-                style={{ textDecoration: "none ", color: "#000" }}
-              >
-                <h3>{item.name}</h3>
-              </a>
-              <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
-
+                <a
+                  href={item.link}
+                  target="_blank"
+                  style={{ textDecoration: "none ", color: "#000" }}
+                >
+                  <h3>{item.name}</h3>
+                </a>
+                <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
               </Grid>
-              
-              
-              {/* 下半 */}
-              <div style={{margin:"2rem 1rem 1rem 1rem"}}>{item.introduce}</div>
 
+              {/* 下半 */}
+              <div style={{ margin: "2rem 1rem 1rem 1rem" }}>
+                {item.introduce}
+              </div>
             </Grid>
           </motion.div>
         );

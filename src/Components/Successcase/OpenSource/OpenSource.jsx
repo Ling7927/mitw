@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function OpenSource() {
   return (
     <>
-    {/* --------開源產品---------- */}
+      {/* --------開源產品---------- */}
       {OpenSourceInform.map((item, i) => {
         return (
           <motion.div

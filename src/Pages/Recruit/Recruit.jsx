@@ -111,18 +111,19 @@ function Recruit() {
                             {item.li}
                           </div>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={6} lg={5} >
+                        <Grid item xs={12} sm={12} md={6} lg={6}>
                           {/* 小組及說明(右) */}
                           <h4 key={item.title} style={{ paddingTop: "1rem" }}>
                             {item.title}
                           </h4>
-                          <p>{item.instructions}</p>
+                          <p style={{ paddingRight: "1rem" }}>
+                            {item.instructions}
+                          </p>
                           <img
                             src={item.img}
                             style={{ width: "50%", filter: " invert(100%)" }}
                           />
                         </Grid>
-
                       </Grid>
                     </div>
                   </Part>

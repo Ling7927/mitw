@@ -23,7 +23,7 @@ function OpenSource() {
             transition={{ delay: 0.7, duration: 0.7 }}
           >
             {/* 左 */}
-            <Grid container spacing={1}>
+            {/* <Grid container spacing={1}>
               <Grid item xs={12} sm={12} md={4}>
                 <div
                   style={{
@@ -46,9 +46,9 @@ function OpenSource() {
                   />
                 </div>
                 <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
-              </Grid>
-              {/* 右 */}
-              <Grid item sx={12} sm={12} md={8}>
+              </Grid> */}
+            {/* 右 */}
+            {/* <Grid item sx={12} sm={12} md={8}>
                 <Grid container spacing={1} direction="column">
                   <Grid item marginBottom="1rem">
                     <a
@@ -65,7 +65,79 @@ function OpenSource() {
                 </Grid>
               </Grid>
             </Grid>{" "}
-            <hr />
+            <hr /> */}
+
+            {/* -----------------------------上下布局-------------------------------- */}
+            <Grid container spacing={1}>
+              {/* 上 */}
+              <Grid item>
+                <Grid container spacing={1} direction="row">
+                  {/* 照片 */}
+                  <Grid
+                    itemitem
+                    sx={4}
+                    sm={4}
+                    md={4}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "50%",
+                        paddingBottom: "50%",
+                        height: "0",
+                        background: "#dcdcdc",
+                        borderRadius: "50%",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                      }}
+                    >
+                      <img
+                        src={item.img}
+                        style={{
+                          marginTop: "10%",
+                          marginLeft: "10%",
+                          width: "80%",
+                        }}
+                      />
+                    </div>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      style={{ textDecoration: "none ", color: "#0081a7" }}
+                    >
+                      {item.linkName}
+                    </a>
+                  </Grid>
+                  {/* 名稱 */}
+
+                  <Grid
+                    item
+                    sx={8}
+                    sm={8}
+                    md={8}
+                    style={{ display: "flex", alignItems: "center" }}
+                  >
+                    <h3>{item.name}</h3>
+                  </Grid>
+                </Grid>
+              </Grid>
+
+              {/* 下 */}
+              <Grid item>
+                <Grid container spacing={1} direction="row">
+                  <Grid item sx={4} sm={4} md={4}>
+                    <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
+                  </Grid>
+                  <Grid item sx={8} sm={8} md={8}>
+                    {item.introduce}
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>
           </motion.div>
         );
       })}

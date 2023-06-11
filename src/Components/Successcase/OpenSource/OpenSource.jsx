@@ -22,8 +22,7 @@ function OpenSource() {
             }}
             transition={{ delay: 0.7, duration: 0.7 }}
           >
-            {/* 上半 */}
-
+            {/* 左 */}
             <Grid container spacing={1}>
               <Grid item xs={12} sm={12} md={4}>
                 <div
@@ -46,24 +45,27 @@ function OpenSource() {
                     }}
                   />
                 </div>
-              </Grid>
-              <Grid item sx={12} sm={12} md={8}>
-                <a
-                  href={item.link}
-                  target="_blank"
-                  style={{ textDecoration: "none ", color: "#0081a7" }}
-                >
-                  <h3>{item.name}</h3>
-                </a>
                 <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
               </Grid>
-            </Grid>
-            {/* 下半 */}
-            <p style={{ margin: "2rem 0 1rem 3rem" }}>
-              {item.introduce}
-
-              <hr />
-            </p>
+              {/* 右 */}
+              <Grid item sx={12} sm={12} md={8}>
+                <Grid container spacing={1} direction="column">
+                  <Grid item marginBottom="1rem">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      style={{ textDecoration: "none ", color: "#0081a7" }}
+                    >
+                      <h3>{item.name}</h3>
+                    </a>
+                  </Grid>
+                  <Grid item>
+                    <p>{item.introduce}</p>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Grid>{" "}
+            <hr />
           </motion.div>
         );
       })}

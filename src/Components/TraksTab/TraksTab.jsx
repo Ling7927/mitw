@@ -23,33 +23,52 @@ function TraksTab() {
       >
         {/* 上面按鈕 */}
 
-        <Grid item xs={2} md={2} lg={2} columns={20} style={{ justifyContent:"center",width: "100%" }}>
+        <Grid
+          item
+          xs={2}
+          md={2}
+          lg={2}
+          columns={20}
+          style={{ justifyContent: "center", width: "100%" }}
+        >
           <Grid container spacing={1} direction="row" style={{ width: "100%" }}>
             <Grid item sm={12} md={3} lg={3}>
+              {/* 目前賽道 */}
               {TraksTabInform.filter((item) => item.Id === onHandle).map(
                 (item) => {
                   return (
                     <Box
                       key={item}
                       style={{
-                        display:"flex",
-                        flexDirection:"column",
+                        display: "flex",
+                        flexDirection: "column",
                         border: 0,
                         width: "100%",
                         alignItems: "center",
                         justifyContent: "center",
                       }}
                     >
-                      <Box
+                      <div
                         style={{
                           fontSize: "3rem",
                         }}
                       >
                         {item.TabTitle}
-                      </Box>
-                      <Box style={{ fontSize: "1rem" }}>
+                      </div>
+                      <div
+                        style={{
+                          fontSize: "1rem",
+                          fontSize: "15px",
+                          color: "#1e1e1e",
+                          margin: 0,
+                          padding : "1rem",
+                          background: "#f1f1f1",
+                          position: "relative",
+                          top: "-2rem",
+                        }}
+                      >
                         {item.ContentTitle}
-                      </Box>
+                      </div>
                     </Box>
                   );
                 }
@@ -71,12 +90,11 @@ function TraksTab() {
                   return (
                     <button
                       key={item}
-                      
                       onClick={() => setOnHandle(item.Id)}
                       style={{
                         background: "none",
                         border: 0,
-                       
+
                         // boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
                       }}
                     >

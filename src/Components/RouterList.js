@@ -32,9 +32,7 @@ const routerList = [
     path: "",
     Component: "",
     li: [
-      { liname: "賽道工作小組",
-        lipath: "/Member",
-        liComponent: <Member /> },
+      { liname: "賽道工作小組", lipath: "/Member", liComponent: <Member /> },
       {
         liname: "工作小組志工與聯測督察員招募",
         lipath: "/Recruit",
@@ -73,17 +71,19 @@ const routerList = [
     path: "",
     Component: "",
     li: [
-      { liname: "2022年 MI-TW 聯測工作坊",
-        lipath: "/",
-        liComponent: ""},
+      {
+        liname: "2022年 MI-TW 聯測工作坊",
+        lipath: "https://mitw.dicom.org.tw/2022/",
+        liComponent: "",
+      },
       {
         liname: "2021年 MI-TW 聯測工作坊",
-        lipath: "/",
+        lipath: "https://mitw.dicom.org.tw/2021/",
         liComponent: "",
       },
       {
         liname: "2020年 MI-TW 聯測工作坊",
-        lipath: "/",
+        lipath: "https://mitw.dicom.org.tw/2020/",
         liComponent: "",
       },
     ],
@@ -94,9 +94,7 @@ const routerList = [
     path: "",
     Component: "",
     li: [
-      { liname: "工作小組",
-        lipath: "/",
-        liComponent: "" },
+      { liname: "工作小組", lipath: "/", liComponent: "" },
       {
         liname: "相關活動",
         lipath: "/",

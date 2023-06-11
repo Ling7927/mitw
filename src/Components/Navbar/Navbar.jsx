@@ -64,9 +64,7 @@ const Navbar = () => {
                 } else {
                   return (
                     <div className="dropdown" style={{ float: "left" }}>
-                      <button className="dropbtn">
-                        {item.name} {item.icon}
-                      </button>
+                      <button className="dropbtn">{item.name}</button>
                       <div className="dropdown-content" style={{ left: "0" }}>
                         {item.li.map((li, index) => {
                           return (

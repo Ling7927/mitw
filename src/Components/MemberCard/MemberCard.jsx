@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogContentText } from "@mui/material";
 import { Tabs, Mem } from "../../Pages/Member/Inform";
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import MemberSlider from "./MemberSlider";
 function MemberCard() {
   // const { Id, Traks, Img, Members, Tollger } = props.item;
@@ -152,17 +152,16 @@ function MemberCard() {
 
       </div> 
        */}
-      <Grid container spacing={1} >
+      <Grid container spacing={1}>
         <Grid item sm={12} md={12} lg={12}>
           <h4>賽道工作小組</h4>
           <hr />
         </Grid>
         <Grid item sm={1} md={1} lg={2}>
-          <p style={{ fontSize:"2rem"}}>Track</p>
+          <p style={{ fontSize: "2rem" }}>Track</p>
           {Tabs.map((item) => {
             return (
-              <div style={{ display: "flex" }}
-              >
+              <div style={{ display: "flex" }}>
                 <button
                   style={{
                     background: "none",
@@ -176,9 +175,10 @@ function MemberCard() {
                   <p
                     key={item.id}
                     style={{
-                      paddingLeft:"10px",
+                      paddingLeft: "10px",
                       fontSize: clickId === item.id ? "1.5rem" : "1rem",
-                      borderLeft:clickId === item.id ? "2px solid #000" : "none",
+                      borderLeft:
+                        clickId === item.id ? "2px solid #000" : "none",
                     }}
                   >
                     {item.title}
@@ -189,81 +189,92 @@ function MemberCard() {
           })}
         </Grid>
 
-        <Grid item sm={8} md={8} lg={10} >
+        <Grid item sm={8} md={8} lg={10}>
           <Grid container spacing={1}>
-          {Mem.filter(({ Id }) => Id === clickId).map((item) => {
-            return (
-              <Grid item  sm={6} md={6} lg={6}>
-                <div
-                  style={{
-                    background: "#fff",
-                    width: "40rem",
-                    height: "60rem",
-                    margin: "1rem",
-                    display: "flex",
-                    boxShadow: "3px 3px 13px #dad7cd",
-                    flexDirection: "column",
-                  }}
-                >
-                  <div style={{ fontSize: "100px" }}>
-                    {item.Track}
-
-                    <hr style={{ width: "10%", margin: "0 0 1rem" }} />
-                  </div>
-
-                  <h2>{item.TraksTitle}</h2>
-
-                  <h5 style={{margin:"1rem 0 0",paddingBottom:"1rem", color: "#3ABCBF" }}>{item.Name}</h5>
-
-                  <img
-                  onClick={() => {
-                    handleClickOpen();}}
-                    src={`assets/${item.Img}`}
+            {Mem.filter(({ Id }) => Id === clickId).map((item) => {
+              return (
+                <Grid item sm={6} md={6} lg={6}>
+                  <Grid
+                    container
+                    spacing={1}
+                    direction="column"
                     style={{
-                      height: "100%",
-                      width: "95%",
-                      objectFit: "contain",
-                    }}
-                  />
-                  <span
-                    style={{
-                      display: "flex",
-                      flexDirection: "row-reverse",
+                      background: "#fff",
+                      width: "100%",
+                      margin: "1rem",
+                      boxShadow: "3px 3px 13px #dad7cd",
                     }}
                   >
-                    <h4
+                    <Grid item>
+                      <div style={{ fontSize: "100px" }}>
+                        {item.Track}
+
+                        <hr style={{ width: "10%", margin: "0 0 1rem" }} />
+                      </div>
+
+                      <h2>{item.TraksTitle}</h2>
+                    </Grid>
+                    <Grid item height="5rem">
+                      <h5
+                        style={{
+                          color: "#3ABCBF",
+                        }}
+                      >
+                        {item.Name}
+                      </h5>
+                    </Grid>
+
+                    <img
+                      onClick={() => {
+                        handleClickOpen();
+                      }}
+                      src={`assets/${item.Img}`}
+                      style={{
+                        height: "100%",
+                        width: "95%",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <span
                       style={{
                         display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        position: "relative",
-                        bottom: "3rem",
-                        right: "0.5px",
-                        padding: "0 2rem ",
-                        height: "3rem",
-                        right: "-1px",
-                        background: "#3ABCBF",
-                        color: "#fff",
-                        boxShadow: "2px 0px 3px #d6ccc2",
+                        flexDirection: "row-reverse",
                       }}
                     >
-                      {item.Position}
-                    </h4>
-                  </span>
-                </div>
-                <Dialog open={Open} onClose={handleClose}>
-                  <DialogContent>
-                    <DialogContentText>
-                      {item.Tollger}
-                      {/* {id !== null
+                      <h4
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          position: "relative",
+                          bottom: "3rem",
+                          right: "0.5px",
+                          padding: "0 2rem ",
+                          height: "3rem",
+                          right: "-1px",
+                          background: "#3ABCBF",
+                          color: "#fff",
+                          boxShadow: "2px 0px 3px #d6ccc2",
+                        }}
+                      >
+                        {item.Position}
+                      </h4>
+                    </span>
+                  </Grid>
+
+                  <Dialog open={Open} onClose={handleClose}>
+                    <DialogContent>
+                      <DialogContentText>
+                        {item.Tollger}
+                        {/* {id !== null
                         ? Mem.filter((item) => item.Id === id)[0].Tollger
                         : null} */}
-                    </DialogContentText>
-                  </DialogContent>
-                </Dialog>
+                      </DialogContentText>
+                    </DialogContent>
+                  </Dialog>
                 </Grid>
-            );
-          })}
+              );
+            })}
           </Grid>
         </Grid>
 

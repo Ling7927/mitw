@@ -53,72 +53,75 @@ function SliderCard(props) {
         <Grid item sm={8} md={8} lg={10}>
           <Grid container spacing={1}>
             <Grid item sm={6} md={6} lg={6}>
-              <div
+              <Grid
+                container
+                spacing={1}
+                direction="column"
                 style={{
                   background: "#fff",
-                  width: "40rem",
-                  height: "60rem",
+                  width: "100%",
                   margin: "1rem",
-                  display: "flex",
                   boxShadow: "3px 3px 13px #dad7cd",
-                  flexDirection: "column",
                 }}
               >
-                <div style={{ fontSize: "100px" }}>
-                  {Track}
+                <Grid item>
+                  <div style={{ fontSize: "100px" }}>
+                    {Track}
 
-                  <hr style={{ width: "10%", margin: "0 0 1rem" }} />
-                </div>
+                    <hr style={{ width: "10%", margin: "0 0 1rem" }} />
+                  </div>
 
-                <h2>{TraksTitle}</h2>
-
-                <h5
-                  style={{
-                    margin: "1rem 0 0",
-                    paddingBottom: "1rem",
-                    color: "#3ABCBF",
-                  }}
-                >
-                  {Name}
-                </h5>
-
-                <img
-                  onClick={() => {
-                    handleClickOpen();
-                  }}
-                  src={`assets/${Img}`}
-                  style={{
-                    height: "100%",
-                    width: "95%",
-                    objectFit: "contain",
-                  }}
-                />
-                <span
-                  style={{
-                    display: "flex",
-                    flexDirection: "row-reverse",
-                  }}
-                >
-                  <h4
+                  <h2>{TraksTitle}</h2>
+                </Grid>
+                <Grid item>
+                  <h5
                     style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      position: "relative",
-                      bottom: "3rem",
-                      right: "0.5px",
-                      padding: "0 2rem ",
-                      height: "3rem",
-                      right: "-1px",
-                      background: "#3ABCBF",
-                      color: "#fff",
-                      boxShadow: "2px 0px 3px #d6ccc2",
+                      color: "#3ABCBF",
+                      height: "5%",
                     }}
                   >
-                    {Position}
-                  </h4>
-                </span>
-              </div>
+                    {Name}
+                  </h5>
+                </Grid>
+                <Grid item>
+                  <img
+                    onClick={() => {
+                      handleClickOpen();
+                    }}
+                    src={`assets/${Img}`}
+                    style={{
+                      height: "100%",
+                      width: "95%",
+                      objectFit: "contain",
+                    }}
+                  />
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row-reverse",
+                    }}
+                  >
+                    <h4
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        position: "relative",
+                        bottom: "3rem",
+                        right: "0.5px",
+                        padding: "0 2rem ",
+                        height: "3rem",
+                        right: "-1px",
+                        background: "#3ABCBF",
+                        color: "#fff",
+                        boxShadow: "2px 0px 3px #d6ccc2",
+                      }}
+                    >
+                      {Position}
+                    </h4>
+                  </span>
+                </Grid>
+              </Grid>
               <Dialog open={Open} onClose={handleClose}>
                 <DialogContent>
                   <DialogContentText>{Tollger}</DialogContentText>

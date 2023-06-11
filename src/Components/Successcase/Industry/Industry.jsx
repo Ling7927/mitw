@@ -27,55 +27,121 @@ function Industry() {
       {/* --------產業產品-------- */}
       {IndustryInform.map((item, i) => {
         return (
-          <div
-          //   key={i}
-          //   style={{marginTop:"1rem" ,
-          //   // border:"2px solid orange"
-          // }} initial={ {
-          //     y: "150%",
-          // }}
-          // animate={ {
-          //     y: "0%",
-          // }}
-          // transition={{delay:0.5,
-          //   duration: 1,
-          // }}
-          >
-            <Grid
-              container
-              spacing={1}
-              marginBottom="2rem"
-              alignItems="center"
-              key={i}
-            >
-              {/* 上半 */}
-              <Grid item xs={12} sm={12} md={4} lg={4}>
-                <img
-                  src={item.img}
-                  style={{ width: "100%", objectFit: "cover" }}
-                />
-              </Grid>
-              <Grid item xs={12} sm={12} md={8} lg={8}>
-                <a
-                  href={item.link}
-                  target="_blank"
-                  style={{
-                    textDecoration: "none ",
-                    color: "#000",
-                    width: "100%",
-                  }}
-                >
-                  <h3>{item.name}</h3>
-                </a>
+          // <div>
+          //   <Grid container spacing={1} key={i}>
+          //     {/* 上 */}
+          //     <Grid item>
+          //       <Grid container spacing={1} gap={8} direction="row">
+          //         <Grid item sm={3} md={3} lg={3} width="100%">
+          //           <img
+          //             src={item.img}
+          //             style={{ width: "100%", objectFit: "cover" }}
+          //           />
+          //           <a
+          //             href={item.link}
+          //             target="_blank"
+          //             style={{ textDecoration: "none ", color: "#0081a7" }}
+          //           >
+          //             {item.linkName}
+          //           </a>
+          //         </Grid>
+          //         <Grid item sm={8} md={8} lg={8}>
+          //           <h3>{item.name}</h3>
+          //         </Grid>
+          //       </Grid>
+          //     </Grid>
+          //     {/* 下 */}
+          //     <Grid item>
+          //       <Grid container spacing={1} direction="row">
+          //         <Grid item sm={4} md={4} lg={4}>
+          //           <div
+          //             style={{
+          //               whiteSpace: "pre-line",
+          //               border: "2px solid yellow",
+          //             }}
+          //           >
+          //             {item.tracks}
+          //           </div>
+          //         </Grid>
+          //         <Grid item sm={8} md={8} lg={8}>
+          //           <SeeMore introduce={item.introduce} />
+          //         </Grid>
+          //       </Grid>
+          //     </Grid>
+          //   </Grid>{" "}
+          //   <hr />
+          // </div>
+          // {/*------------------------------左右----------------------------*/}
 
-                <div style={{ whiteSpace: "pre-line", marginTop: "1rem" }}>
-                  {item.tracks}
-                </div>
+          <div
+            key={i}
+            style={{
+              border: "2px solid orange",
+            }}
+            initial={{
+              y: "150%",
+            }}
+            animate={{
+              y: "0%",
+            }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            <Grid container spacing={1} key={i}>
+              {/* 左 */}
+              <Grid item xs={12} sm={12} md={4} lg={4}>
+                <Grid container direction="column">
+                  <Grid item>
+                    <img
+                      src={item.img}
+                      style={{
+                        width: "80%",
+                        objectFit: "cover",
+                        marginBottom: "1rem",
+                      }}
+                    />
+                  </Grid>
+
+                  <Grid item>
+                    {item.linkName.map((link) => {
+                      return (
+                        <a
+                          key={link}
+                          href={link.l}
+                          target="_blank"
+                          style={{
+                            textDecoration: "none ",
+                            color: "#0081a7",
+                            width: "100%",
+                            marginRight: "3rem",
+                          }}
+                        >
+                          {link.lname}
+                        </a>
+                      );
+                    })}
+                  </Grid>
+                  <Grid item>
+                    <div style={{ whiteSpace: "pre-line", marginTop: "1rem" }}>
+                      {item.tracks}
+                    </div>
+                  </Grid>
+                </Grid>
               </Grid>
-              {/* 下半 */}
-              <div style={{ margin: "1rem 3rem 0 1rem" }}>
-                <SeeMore introduce={item.introduce} />
-              </div>
+              {/* 右 */}
+
+              <Grid item xs={12} sm={12} md={8} lg={8}>
+                <Grid container spacing={1} direction="column">
+                  <Grid item>
+                    <h3>{item.name}</h3>
+                  </Grid>
+                  <Grid item>
+                    <div style={{}}>
+                      <SeeMore introduce={item.introduce} />
+                    </div>
+                  </Grid>
+                </Grid>
+              </Grid>
+
               <br />
             </Grid>
           </div>

@@ -5,7 +5,7 @@ import RedPanda from "../../assets/RedPandaLogo.png";
 import Power from "../../assets/2.SYSPOWER.png";
 import EBM from "../../assets/EBM.jpeg";
 import Advance from "../../assets/wiAdvance.jpg";
-import Artwork from "../../assets/ItunesArtwork.png";
+import Artwork from "../../assets/ItunesArtwork.jpg";
 import Hospital1 from "../../assets/TzuChiHospital.png";
 import DHP from "../../assets/DHP.png";
 import CGM from "../../assets/CGM.png";
@@ -55,7 +55,7 @@ const OpenSourceInform = [
   {
     img: BlueLight,
     linkName: "專案程式碼",
-    link: "https://mitw.dicom.org.tw/pdf/2.%E5%A5%87%E5%94%AF%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%80%8B%E6%A1%88%E5%B0%8E%E5%90%91%E9%86%AB%E7%99%82%E8%B3%87%E6%BA%90%E8%A8%88%E7%95%AB%E6%95%B4%E5%90%88%E5%B9%B3%E5%8F%B0(POMRP)+%E5%BA%B7%E5%B0%8F%E7%BE%8E.pdf",
+    link: "https://github.com/cylab-tw/bluelight",
     name: "藍光(BlueLight) - Web-based DICOM Viewer",
     tracks:
       "參加賽道  \n TRACK#4 - DICOMWeb查詢與調閱 \n TRACK#5 - DICOM數位全幅病理顯微鏡影像查詢與調閱 \n TRACK#7 - 影像檢查流程",
@@ -96,11 +96,13 @@ const OpenSourceInform = [
 const IndustryInform = [
   {
     img: Power,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/2.%E5%A5%87%E5%94%AF%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%80%8B%E6%A1%88%E5%B0%8E%E5%90%91%E9%86%AB%E7%99%82%E8%B3%87%E6%BA%90%E8%A8%88%E7%95%AB%E6%95%B4%E5%90%88%E5%B9%B3%E5%8F%B0(POMRP)+%E5%BA%B7%E5%B0%8F%E7%BE%8E.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/2.%E5%A5%87%E5%94%AF%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%80%8B%E6%A1%88%E5%B0%8E%E5%90%91%E9%86%AB%E7%99%82%E8%B3%87%E6%BA%90%E8%A8%88%E7%95%AB%E6%95%B4%E5%90%88%E5%B9%B3%E5%8F%B0(POMRP)+%E5%BA%B7%E5%B0%8F%E7%BE%8E.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>奇唯科技股份有限公司</h3>{" "}
@@ -114,11 +116,13 @@ const IndustryInform = [
   },
   {
     img: EBM,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/8.%E5%95%86%E4%B9%8B%E5%99%A8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_UDE%20%E8%A1%8C%E5%8B%95%E9%86%AB%E7%99%82%E5%BD%B1%E5%83%8F%E4%BC%BA%E6%9C%8D%E5%99%A8%20App.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        1: "https://mitw.dicom.org.tw/pdf/8.%E5%95%86%E4%B9%8B%E5%99%A8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_UDE%20%E8%A1%8C%E5%8B%95%E9%86%AB%E7%99%82%E5%BD%B1%E5%83%8F%E4%BC%BA%E6%9C%8D%E5%99%A8%20App.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>商之器科技股份有限公司</h3> <h4>UDE / 行動醫療影像伺服器 App</h4>
@@ -131,10 +135,11 @@ const IndustryInform = [
   },
   {
     img: Advance,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/12.%E7%B7%AF%E8%AC%99%E7%A7%91%E6%8A%80_FHIR%20%E8%B3%87%E6%96%99%E4%BA%A4%E6%8F%9B%E5%B9%B3%E5%8F%B0.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/12.%E7%B7%AF%E8%AC%99%E7%A7%91%E6%8A%80_FHIR%20%E8%B3%87%E6%96%99%E4%BA%A4%E6%8F%9B%E5%B9%B3%E5%8F%B0.pdf",
+      },
     ],
     name: (
       <div>
@@ -147,11 +152,13 @@ const IndustryInform = [
   },
   {
     img: Artwork,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/14.%E9%81%A0%E5%82%B3%E9%9B%BB%E4%BF%A1%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E9%81%A0%E5%82%B3%20Health+%E9%81%A0%E8%B7%9D%E8%A8%BA%E7%99%82.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/14.%E9%81%A0%E5%82%B3%E9%9B%BB%E4%BF%A1%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E9%81%A0%E5%82%B3%20Health+%E9%81%A0%E8%B7%9D%E8%A8%BA%E7%99%82.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>遠傳電信股份有限公司</h3> <h4>遠傳 Health+遠距診療</h4>
@@ -164,11 +171,13 @@ const IndustryInform = [
   },
   {
     img: DHP,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/15.%E7%9D%BF%E5%82%B3%E6%95%B8%E6%93%9A%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%81%A5%E5%BA%B7%E5%B0%8F%E8%9C%9C%E8%9C%82%E6%95%B8%E4%BD%8D%E5%81%A5%E5%BA%B7%E5%B9%B3%E5%8F%B0,%20HealthBee%20Digital%20Health%20Platform(DHP).pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/15.%E7%9D%BF%E5%82%B3%E6%95%B8%E6%93%9A%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%81%A5%E5%BA%B7%E5%B0%8F%E8%9C%9C%E8%9C%82%E6%95%B8%E4%BD%8D%E5%81%A5%E5%BA%B7%E5%B9%B3%E5%8F%B0,%20HealthBee%20Digital%20Health%20Platform(DHP).pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>睿傳數據股份有限公司</h3>{" "}
@@ -179,9 +188,9 @@ const IndustryInform = [
       "參加賽道  \n TRACK#1 - 病人基本資料互通 \n TRACK#4 - DICOMWeb查詢與調閱 \n TRACK#7 - 影像檢查流程",
     introduce: (
       <>
+        「健康小蜜蜂數位健康平台/HealthBee
+        DHP」是補充醫療健康難及之處，提供健康管理機構及企業職場，聯合照護客戶與員工的生態環境，平台提供：
         <ol>
-          「健康小蜜蜂數位健康平台/HealthBee
-          DHP」是補充醫療健康難及之處，提供健康管理機構及企業職場，聯合照護客戶與員工的生態環境，平台提供：
           <li>
             健檢機構1+364天的健康管理照護：平台提供全面數位化的客戶服務，節省每年龐大的郵寄、光碟等無意義浪費，升級客戶體驗全年貼身數位分身服務；健管師任務自動派工及快速便利的記錄方式，完整不漏接的服務客戶，並直接與服務的企業數位對接，全面自動化提高服務水平；實時匯集客戶提供的多元數據，透過演算實現精準健康管理服務、推薦客戶最佳保健措施，成為客戶心中之AI健康管理師，徹底領先同業、獲致本平台提供最高性價比的服務。
           </li>
@@ -198,11 +207,13 @@ const IndustryInform = [
   },
   {
     img: CGM,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>長庚醫學科技股份有限公司</h3> <h4>U-Dr遠距醫療產品</h4>
@@ -212,15 +223,15 @@ const IndustryInform = [
       "參加賽道 \n TRACK#1 - 病人基本資料互通 \n TRACK#2 - 生理量測數據互通 \n TRACK#3 - 用藥及疫苗接種紀錄",
     introduce: (
       <>
+        長庚醫科U-Dr遠距醫療產品特色：
         <ol>
-          長庚醫科U-Dr遠距醫療產品特色：
           <li>提供一般門診可支援多點連線遠距會診服務應用。</li>
           <li>多元醫儀IoT設備介接服務。</li>
           <li>即時雙通道影音傳輸進行視訊診察應用，醫病親臨互動。</li>
           <li>整合介接各家HIS醫囑系統與遠距會診服務。</li>
         </ol>
+        醫療服務面特色優勢：
         <ol>
-          醫療服務面特色優勢：
           <li>
             對民眾端的服務，提供不定點多科別的診療服務，改善偏鄉醫療服務專科別種類及時間的限制，提供醫院對專科醫師服務安排的彈性，醫師看診中即可進行會診，提升醫療服務可近性。
           </li>
@@ -237,11 +248,17 @@ const IndustryInform = [
   },
   {
     img: Med,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/7.%E9%86%AB%E5%90%88%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_An%20architecture%20and%20management%20platform.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/7.%E9%86%AB%E5%90%88%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>醫合股份有限公司</h3>{" "}
@@ -259,11 +276,13 @@ const IndustryInform = [
 
   {
     img: Adv,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/4.%E5%85%88%E9%80%B2%E9%86%AB%E8%B3%87%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E4%BA%AB%E5%81%A5%E5%BA%B7%E9%98%B2%E7%96%AB%E5%A4%A7%E5%B8%AB.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>先進醫資股份有限公司 </h3> <h4>享健康防疫大師</h4>
@@ -283,11 +302,17 @@ const IndustryInform = [
   },
   {
     img: How,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/4.%E6%98%8A%E6%85%A7%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_AI%20Clerk%20Platform%20%E7%97%85%E6%AD%B7%E7%B5%90%E6%A7%8B%E5%8C%96%E5%B7%A5%E5%85%B7.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/4.%E6%98%8A%E6%85%A7%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>昊慧股份有限公司 </h3>{" "}
@@ -305,11 +330,13 @@ const IndustryInform = [
 
   {
     img: ACME,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/6.%E6%85%B6%E6%97%BA%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_AI%20Clerk%20Platform.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>慶旺科技股份有限公司</h3> <h4>QED2000</h4>
@@ -317,7 +344,7 @@ const IndustryInform = [
     ),
     tracks: "參加賽道 \n TRACK#2 - 生理量測數據互通 \n TRACK#7 - 影像檢查流程",
     introduce: (
-      <ul>
+      <>
         QED2000 能快速準確完成12導程心電圖量測。
         它具有先進的設計和人體工程學,使醫護人員能夠快速方便地控制設備。其特點如下:
         <li>15.6吋大尺寸全高清觸控式顯示螢幕</li>
@@ -329,17 +356,19 @@ const IndustryInform = [
         <li>支援USB介面印表機</li>
         <li>支援 DICOM 上傳</li>
         <li>設計材質通過抗菌測試</li>
-      </ul>
+      </>
     ),
   },
 
   {
     img: Kenkone,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/7.%E5%BA%B7%E7%B5%B1%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80_Bless%E5%81%A5%E5%BA%B7%E8%AD%B7%E7%85%A7.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>康統醫學科技</h3> <h4>Bless健康護照</h4>
@@ -355,11 +384,17 @@ const IndustryInform = [
   },
   {
     img: Kenkone,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/3.%E5%BA%B7%E7%B5%B1%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_EVAS%E5%85%A7%E8%A6%96%E9%8F%A1%E6%99%BA%E8%83%BD%E5%8A%A9%E7%90%86%E7%B3%BB%E7%B5%B1.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/3.%E5%BA%B7%E7%B5%B1%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>康統醫學科技 </h3> <h4>EVAS內視鏡智能助理系統</h4>
@@ -375,11 +410,13 @@ const IndustryInform = [
 
   {
     img: Vaccine,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/9.%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E8%B3%87%E8%A8%8A%E5%B7%A5%E6%A5%AD%E7%AD%96%E9%80%B2%E6%9C%83_Vaccine%20QRCode%20Passport.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>財團法人資訊工業策進會 </h3> <h4>Vaccine QRCode Passport</h4>
@@ -398,11 +435,13 @@ const IndustryInform = [
 
   {
     img: Vaccine2,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/10.%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E8%B3%87%E8%A8%8A%E5%B7%A5%E6%A5%AD%E7%AD%96%E9%80%B2%E6%9C%83_%E7%94%9F%E9%86%AB%E8%B3%87%E6%96%99%E5%95%86%E7%94%A8%E6%99%BA%E6%85%A7%E5%8C%96%E5%B7%A5%E5%85%B7.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3> 財團法人資訊工業策進會</h3> <h4>生醫資料商用智慧化工具</h4>
@@ -421,11 +460,13 @@ const IndustryInform = [
 
   {
     img: V5,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/13.%E5%80%8D%E5%88%A9%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E2%80%9C%E5%80%8D%E5%88%A9%E2%80%9D%E8%82%BA%E9%83%A8%E5%BD%B1%E5%83%8F%E8%BC%94%E5%8A%A9%E5%88%A4%E8%AE%80%E8%BB%9F%E9%AB%94.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>倍利科技股份有限公司</h3> <h4>大心高智能成人尿布</h4>
@@ -438,11 +479,17 @@ const IndustryInform = [
   },
   {
     img: DAXIN,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/1.%E5%A4%A7%E5%BF%83%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%A4%A7%E5%BF%83%E9%AB%98%E6%99%BA%E8%83%BD%E6%88%90%E4%BA%BA%E5%B0%BF%E5%B8%83.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/1.%E5%A4%A7%E5%BF%83%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>大心生物科技股份有限公司 </h3> <h4>大心高智能成人尿布</h4>
@@ -455,11 +502,17 @@ const IndustryInform = [
 
   {
     img: Moooore,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/5.%E6%91%A9%E7%88%BE%E8%B3%87%E9%80%9A%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E5%AE%89%E5%BF%83%E6%91%A9%E7%88%BE.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/5.%E6%91%A9%E7%88%BE%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>摩爾資通有限公司</h3> <h4>安心摩爾 </h4>
@@ -473,11 +526,17 @@ const IndustryInform = [
 
   {
     img: Sitatech,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/6.%E7%9F%BD%E5%A1%94%E8%B3%87%E8%A8%8A%E6%9C%8D%E5%8B%99%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_%E7%9F%BD%E5%A1%94%20FHIR%20%E6%99%BA%E6%85%A7%E9%86%AB%E7%99%82%E6%95%B8%E6%93%9A%E6%9C%8D%E5%8B%99%E4%B8%AD%E5%8F%B0.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/6.%E7%9F%BD%E5%A1%94%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>矽塔資訊服務有限公司 </h3> <h4>U矽塔 FHIR 智慧醫療數據服務中台</h4>
@@ -497,11 +556,17 @@ const IndustryInform = [
 
   {
     img: Doctor,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/8.%E9%9C%8D%E6%81%A9%E5%AF%A6%E6%A5%AD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_DocterWatch.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/8.%E9%9C%8D%E6%81%A9%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>霍恩實業有限公司</h3> <h4>DocterWatch</h4>
@@ -525,11 +590,17 @@ const IndustryInform = [
   },
   {
     img: iCare,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/9.%E5%BE%8B%E6%B3%B0%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_iCare%20%E5%80%8B%E4%BA%BA%E5%81%A5%E5%BA%B7%E7%AE%A1%E7%90%86%E7%85%A7%E8%AD%B7%E5%B9%B3%E5%8F%B0.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/9.%E5%BE%8B%E6%B3%B0%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>律泰科技有限公司 </h3> <h4>iCare 個人健康管理照護平台</h4>
@@ -546,11 +617,17 @@ const IndustryInform = [
   },
   {
     img: Minicoon,
-    linkName: ["產品介紹", ""],
-    link: [
-      "https://mitw.dicom.org.tw/pdf/16.%E9%95%B7%E5%BA%9A%E9%86%AB%E5%AD%B8%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_U-Dr%E9%81%A0%E8%B7%9D%E9%86%AB%E7%99%82%E7%94%A2%E5%93%81.pdf",
-      "",
+    linkName: [
+      {
+        lname: "產品介紹",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E4%BB%8B%E7%B4%B9/10.%E7%8E%B3%E5%BA%B7%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8_Minicoon%20%E6%95%B8%E4%BD%8D%E7%97%85%E7%90%86%E5%BD%B1%E5%83%8F%E8%88%87%E5%A0%B1%E5%91%8A%E5%84%B2%E5%AD%98%E8%88%87%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1.pdf",
+      },
+      {
+        lname: "產品海報",
+        l: "https://mitw.dicom.org.tw/pdf/%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1/10.%E7%8E%B3%E5%BA%B7%E7%94%A2%E5%93%81%E6%B5%B7%E5%A0%B1.pdf",
+      },
     ],
+
     name: (
       <div>
         <h3>玳康科技有限公司 </h3>{" "}

@@ -71,7 +71,7 @@ function OpenSource() {
             <Grid container spacing={1}>
               {/* 上 */}
               <Grid item>
-                <Grid container spacing={1} direction="row">
+                <Grid container spacing={1} direction="row" key={i}>
                   {/* 照片 */}
                   <Grid
                     itemitem
@@ -129,15 +129,18 @@ function OpenSource() {
               {/* 下 */}
               <Grid item>
                 <Grid container spacing={1} direction="row">
+                  {/* 參與賽道 */}
                   <Grid item sx={4} sm={4} md={4}>
                     <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
                   </Grid>
+                  {/* 介紹 */}
                   <Grid item sx={8} sm={8} md={8}>
                     {item.introduce}
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
+            <hr />
           </motion.div>
         );
       })}

@@ -7,7 +7,7 @@ function SeeMore({ introduce }) {
     <>
       {introduce.length > SeeMore ? (
         <>
-          {introduce.substr(1, 50)}...
+          {introduce.substr(1, 180)}...
           <a onClick={() => setSeeMore(introduce.length)}>顯示更多</a>
         </>
       ) : (

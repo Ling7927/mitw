@@ -81,8 +81,8 @@ function Successcase() {
         <div
           style={{
             padding: "0 15%",
-            position: "relative",
-            top: "-5rem",
+            // position: "relative",
+            // top: "-5rem",
           }}
         >
           {List.filter((item) => onHandle === item.id)[0].cases}

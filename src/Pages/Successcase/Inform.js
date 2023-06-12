@@ -659,6 +659,7 @@ const IndustryInform = [
 const HospitalInform = [
   {
     img: Hospital1,
+    linkname: "產品介紹",
     link: "https://mitw.dicom.org.tw/pdf/11.%E4%BD%9B%E6%95%99%E6%85%88%E6%BF%9F%E9%86%AB%E7%99%82%E8%B2%A1%E5%9C%98%E6%B3%95%E4%BA%BA%E8%8A%B1%E8%93%AE%E6%85%88%E6%BF%9F%E9%86%AB%E9%99%A2_%E5%81%A5%E5%BA%B7%E7%A6%8F%E7%A5%89%E7%A7%91%E6%8A%80%E6%95%B4%E5%90%88%E7%85%A7%E8%AD%B7%E7%A4%BA%E7%AF%84%E5%A0%B4%E5%9F%9F%E6%8E%A8%E5%8B%95%E8%A8%88%E7%95%AB.pdf",
     name: (
       <div>

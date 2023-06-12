@@ -52,7 +52,7 @@ function Successcase() {
                       fontSize: onHandle === item.id ? "15px" : "5px",
                       margin: 0,
                       color: onHandle === item.id ? "#000" : "#949494",
-                      marginBottom:"0.5rem"
+                      marginBottom: "0.5rem",
                     }}
                     key={i}
                   >
@@ -80,7 +80,9 @@ function Successcase() {
         {/* 案例 */}
         <div
           style={{
-            padding: "2rem 15%",
+            padding: "0 15%",
+            position: "relative",
+            top: "-5rem",
           }}
         >
           {List.filter((item) => onHandle === item.id)[0].cases}

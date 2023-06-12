@@ -50,9 +50,9 @@ function SliderCard(props) {
           </div>
         </Grid> */}
 
-        <Grid item sm={8} md={8} lg={10}>
+        <Grid item sm={8} md={8} lg={12}>
           <Grid container spacing={1}>
-            <Grid item sm={6} md={6} lg={6}>
+            <Grid item sm={6} md={12} lg={12}>
               <Grid
                 container
                 spacing={1}

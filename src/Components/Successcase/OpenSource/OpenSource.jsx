@@ -70,11 +70,11 @@ function OpenSource() {
             {/* -----------------------------上下布局-------------------------------- */}
             <Grid container spacing={1}>
               {/* 上 */}
-              <Grid item>
+              <Grid item sx={12} sm={12} md={12}>
                 <Grid container spacing={1} direction="row" key={i}>
                   {/* 照片 */}
                   <Grid
-                    itemitem
+                    item
                     sx={4}
                     sm={4}
                     md={4}
@@ -112,7 +112,7 @@ function OpenSource() {
                       {item.linkName}
                     </a>
                   </Grid>
-                  {/* 名稱 */}
+                  {/* 產品名稱 */}
 
                   <Grid
                     item

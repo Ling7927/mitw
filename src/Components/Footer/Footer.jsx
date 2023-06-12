@@ -1,46 +1,97 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { Grid } from "@mui/material";
 import "./Footer.css";
-import { FooterContext } from "./FooterContext";
-import { Connection } from "./Connection";
+import { FooterContext, Connection } from "./Inform";
 function Footer() {
   return (
     <>
-      <div className="footer">
-        <div style={{marginLeft:"5rem"}} >
-          {FooterContext.map((item) => {
-            return (
-              <>
-                  <p style={{display:"flex",margin: 0,padding:0}}>{item.title}</p>
+      <Grid
+        container
+        spacing={1}
+        gap={5}
+        style={{
+          background: "#000",
+          paddingTop: "1rem",
+          justifyContent: "center",
+        }}
+      >
+        {/* 左 */}
+        <Grid item sm={5} md={5} lg={5}>
+          <Grid container>
+            {FooterContext.map((item) => {
+              return (
+                <>
+                  <Grid
+                    item
+                    sm={4}
+                    md={4}
+                    lg={4}
+                    style={{ display: "flex", justifyContent: "flex-end" }}
+                  >
+                    <p key={item} style={{ color: "#fff" }}>
+                      {item.title}
+                    </p>
+                  </Grid>
+                  <Grid
+                    item
+                    sm={8}
+                    md={8}
+                    lg={8}
+                    style={{ display: "flex", margin: "1rem 0" }}
+                  >
+                    <ul style={{ margin: "0 0 1rem", flexDirection: "column" }}>
+                      {item.data.map((item) => {
+                        return (
+                          <li
+                            key={item}
+                            style={{
+                              listStyle: "none",
+                              marginBottom: "0.3rem",
+                            }}
+                          >
+                            <Link to={item.path} style={{ color: "#fff" }}>
+                              {item.name}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </Grid>
+                </>
+              );
+            })}
+          </Grid>
+        </Grid>
 
-                <ul style={{display:"flex",margin:"1rem 0 1rem 5rem ",padding:0,flexDirection: "column" }}>
-                  {item.data.map((index) => {
-                    return (
-                      <li style={{ listStyle: "none" }}>
-                        <Link to={index.path} style={{ color: "#fff" }}>
-                          {index.name}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </>
-            );
-          })}
-        </div>
-        <div className="connection">
-          <h2 style={{display:"flex",margin:0,justifyContent:"start",padding:"2rem 0 2rem 0"}}>聯絡我們</h2>
+        {/* 右 */}
+        <Grid item sm={5} md={5} lg={5}>
+          <h2
+            style={{
+              color: "#fff",
+              display: "flex",
+              margin: "0 0 0.5rem",
+              justifyContent: "start",
+            }}
+          >
+            聯絡我們
+          </h2>
           {Connection.map((item) => {
             return (
-              <p>
+              <p
+                key={item}
+                style={{
+                  color: "#fff",
+                  marginBottom: "0.5rem",
+                }}
+              >
                 {item.title}
                 {item.context}
               </p>
             );
           })}
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     </>
   );
 }

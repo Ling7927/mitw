@@ -25,121 +25,141 @@ function Part({ children }) {
 function Recruit() {
   return (
     <>
-      <div style={{ background: "#FEFEFA" }}>
-        {/* <div
-          style={{
-            position: "absolute",
-            zIndex: "0",
-            width: "60rem",
-            height: "50rem",
-            background:
-              "linear-gradient(180deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0) 100%)",
-            boxShadow: "inset -40px 0px  30px -20px #fff",
-          }}
-        /> */}
-
-        <div style={{ margin: "3rem" }}>
-          {WorkGrop.map((item, index) => {
-            if (index === 0)
-              return (
-                <>
+      {/* <div style={{ background: "#FEFEFA", display: "flex" }}> */}
+      <Grid container spacing={1}>
+        {WorkGrop.map((item, index) => {
+          if (index === 0)
+            // 第一區塊
+            return (
+              <Grid item sm={12} md={12} lg={12}>
+                <Part>
+                  {/* <div style={{ margin: "1.5rem 3rem" }}> */}
                   <div
                     style={{
-                      margin: "3rem",
-                      paddingLeft: "2rem",
-                      borderRadius: "1rem",
                       background:
-                        "linear-gradient(90deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0) 65%)",
+                        "linear-gradient(90deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
+                      margin: "3rem ",
+
+                      borderRadius: "3rem",
                     }}
                   >
-                    <Grid container spacing={1} gap={10}>
-                      <Grid item sm={12} md={12} lg={6}>
-                        <Part>
-                          {/* 小組及說明(左) */}
-                          <h4 key={item.title} style={{ paddingTop: "1rem" }}>
-                            {item.title}
-                          </h4>
-                          <p>{item.instructions}</p>
-                          <img
-                            src={item.img}
-                            style={{ width: "50%", filter: " invert(100%)" }}
-                          />
-                        </Part>
+                    <Grid container spacing={1}>
+                      {/* 小組及說明(左) */}
+                      <Grid
+                        item
+                        sm={12}
+                        md={12}
+                        lg={7}
+                        style={{
+                          // padding: 0,
+                          padding: "1rem 2rem 0",
+                        }}
+                      >
+                        <h4 key={item.title} style={{ padding: "1rem 0 2rem" }}>
+                          {item.title}
+                        </h4>
+                        <p
+                          style={{
+                            letterSpacing: "1px",
+                            lineHeight: "1.7",
+                            paddingLeft: "1rem",
+                          }}
+                        >
+                          {item.instructions}
+                        </p>
+                        <img
+                          src={item.img}
+                          style={{ width: "50%", filter: " invert(100%)" }}
+                        />
                       </Grid>
-                      <Grid item sm={12} md={12} lg={5}>
-                        <Part>
-                          {/* 細項規則(右) */}
-                          <div
-                            style={{
-                              background: "#f0f4f6",
-                              padding: "1.5rem 1rem",
-                              borderRadius: "3rem",
-                            }}
-                          >
-                            {item.li}
-                          </div>
-                        </Part>
+                      {/* 細項規則(右) */}
+                      <Grid item sm={12} md={12} lg={5} style={{ padding: 0 }}>
+                        <div
+                          style={{
+                            background: "#f0f4f6",
+                            padding: "2rem 1rem",
+                            borderRadius: "3rem",
+                          }}
+                        >
+                          {item.li}
+                        </div>
                       </Grid>
                     </Grid>
                   </div>
-                </>
-              );
-            else
-              return (
-                <>
-                  <Part>
-                    <div
-                      style={{
-                        background:
-                          "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0) 65%)",
-                        margin: "3rem ",
+                </Part>
+              </Grid>
+            );
+          // 第二區塊
+          else
+            return (
+              <Grid item sm={12} md={12} lg={12}>
+                <Part>
+                  <div
+                    style={{
+                      background:
+                        "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
+                      margin: "3rem ",
 
-                        borderRadius: "1rem",
-                      }}
-                    >
-                      <Grid container spacing={1} gap={10}>
-                        <Grid item sm={12} md={8} lg={5}>
-                          <div
-                            style={{
-                              background: "#f0f4f6",
-                              padding: "2rem 1rem",
-                              borderRadius: "3rem",
-                            }}
-                          >
-                            {/* 細項規則 (左*/}
+                      borderRadius: "3rem",
+                    }}
+                  >
+                    <Grid container spacing={1}>
+                      <Grid item sm={12} md={5} lg={5} style={{ padding: 0 }}>
+                        <div
+                          style={{
+                            background: "#f0f4f6",
+                            padding: "2rem 1rem",
+                            borderRadius: "3rem",
+                          }}
+                        >
+                          {/* 細項規則 (左*/}
 
-                            {item.li}
-                          </div>
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={6} lg={6}>
-                          {/* 小組及說明(右) */}
-                          <h4 key={item.title} style={{ paddingTop: "1rem" }}>
-                            {item.title}
-                          </h4>
-                          <p style={{ paddingRight: "1rem" }}>
-                            {item.instructions}
-                          </p>
+                          {item.li}
+                        </div>
+                      </Grid>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={7}
+                        lg={7}
+                        style={{ padding: "1rem 2rem" }}
+                      >
+                        {/* 小組及說明(右) */}
+                        <h4 key={item.title} style={{ padding: "1rem 0 2rem" }}>
+                          {item.title}
+                        </h4>
+                        <p
+                          style={{
+                            paddingRight: "1rem",
+                            letterSpacing: "1px",
+                            lineHeight: "1.7",
+                          }}
+                        >
+                          {item.instructions}
+                        </p>
+                        <div
+                          style={{
+                            display: "flex",
+                            paddingRight: "3rem",
+                            flexDirection: " row-reverse",
+                          }}
+                        >
                           <img
                             src={item.img}
                             style={{ width: "50%", filter: " invert(100%)" }}
                           />
-                        </Grid>
+                        </div>
                       </Grid>
-                    </div>
-                  </Part>
-                </>
-              );
-          })}
-        </div>
-        {/* <div
-          style={{
-            background:
-              "  repeating-linear-gradient(to right, transparent 0 100px,#a79d8388 400px 200px), repeating-linear-gradient(to top, transparent 0 100px,#a79d8388 400px 200px), rgba(0, 249, 255, 0) ",
-            width: "40rem",
-            height: "40rem",
-          }}
-        /> */}
-      </div>
+                    </Grid>
+                  </div>
+                </Part>
+              </Grid>
+            );
+        })}
+      </Grid>
+
+      {/* </div> */}
     </>
   );
 }

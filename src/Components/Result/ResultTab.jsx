@@ -8,13 +8,15 @@ function ResultTab() {
   return (
     <>
       {/* Tab */}
-      <Grid container spacing={1} >
-        <Grid item lg={2} >
-          <h3
-          //  style={{ margin: 0, padding: 0,position:"relative",top:"4.5rem" }}
-          >Track</h3>
+      <Grid container spacing={1} alignItems= "center">
+        <Grid item sm={2} md={2} lg={2} style={{display:"flex",justifyContent: "flex-end"}}>
+          <p
+          style={{ margin: 0, padding: 0,fontSize:"2vw"
+           // position:"relative",top:"4.5rem" 
+          }}
+          >Track</p>
         </Grid>
-        <Grid item>
+        <Grid item sm={10} md={10} lg={10} style={{display:"flex",justifyContent: "space-evenly",marginBottom:"2rem"}}>
           {ResultTabInform.map((item) => {
             return (
               <>
@@ -25,7 +27,7 @@ function ResultTab() {
                 >
                   <h4
                     style={{
-                      fontSize: track === item.Id ? "3rem" : "2rem",
+                      fontSize: track === item.Id ? "3vw" : "2vw",
                       color: track === item.Id ? "#000" : "#dcdcdc",
                       // textShadow:
                       //   track === item.Id

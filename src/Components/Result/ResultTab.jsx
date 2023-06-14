@@ -8,32 +8,35 @@ function ResultTab() {
   return (
     <>
       {/* Tab */}
-      <Grid container spacing={1} alignItems= "center">
-        <Grid item sm={2} md={2} lg={2} style={{display:"flex",justifyContent: "flex-end"}}>
+      <Grid container spacing={1} alignItems="center" style={{ marginBottom: "2rem" }}>
+        <Grid item sm={2} md={2} lg={2} style={{ display: "flex", justifyContent: "flex-end" }}>
           <p
-          style={{ margin: 0, padding: 0,fontSize:"2vw"
-           // position:"relative",top:"4.5rem" 
-          }}
+            style={{
+              margin: 0, padding: 0, fontSize: "2vw", color: "#090908"
+              // position:"relative",top:"4.5rem" 
+            }}
           >Track</p>
         </Grid>
-        <Grid item sm={10} md={10} lg={10} style={{display:"flex",justifyContent: "space-evenly",marginBottom:"2rem"}}>
-          {ResultTabInform.map((item) => {
+        <Grid item sm={10} md={10} lg={10} >
+        <Grid container spacing={1} style={{ justifyContent: "space-around"}}>
+          {ResultTabInform.map((item, i) => {
             return (
               <>
+               <Grid item style={{ display: "flex", alignItems: "center"     }}>
                 <button
-                  key={item}
-                  style={{ background: "none", border: "none" }}
+                  key={i}
+                  style={{ background: "none", border: "none", display: "flex", flexDirection: "column", alignItems: "center" }}
                   onClick={() => setTrack(item.Id)}
                 >
                   <h4
                     style={{
-                      fontSize: track === item.Id ? "3vw" : "2vw",
-                      color: track === item.Id ? "#000" : "#dcdcdc",
-                      // textShadow:
-                      //   track === item.Id
-                      //     ? "0 0 0.3em #00F9FF, 0 0 0.3em #00F9FF,0 0 0.3em #00F9FF"
-                      //     : "",
-                      // zIndex: "0",
+                      fontSize: track === item.Id ? "4.5vw" : "2vw",
+                      color: track === item.Id ? "#fff" : "#dcdcdc",
+                      textShadow:
+                        track === item.Id
+                          ? "0 0 0.3em #00F9FF, 0 0 0.3em #00F9FF,0 0 0.3em #00F9FF"
+                          : "",
+                      //  zIndex: "5",
                       // position:"relative",
                       // top:"2rem"
                     }}
@@ -41,44 +44,77 @@ function ResultTab() {
                     {item.TabTitle}
                   </h4>
                   {/* 滑動圈圈 */}
-                  {/* <div
+                  <div
                     style={{
-                      display:"flex",
-                      justifyContent: "center",
-                      width: "3rem",
-                      height: "3rem",
-                      background: "#fff",
+                      display: "flex",
+                      alignItems: track === item.Id
+                        ? "flex-end"
+                        : "",
+                      justifyContent: track === item.Id
+                        ? "center"
+                        : "",
+                      width: track === item.Id
+                        ? "5vw"
+                        : "2vw",
+                      height: track === item.Id
+                        ? "4vw"
+                        : "2vw",
                       position: "relative",
-                      top: "-20%",
-                      zIndex: "1",
-                      padding: "10px",
-                      margin: "1rem 1rem 0",
+                      top: track === item.Id
+                        ? "-5vh"
+                        : 0,
+                     
+                      zIndex: "9",
+                      background:track === item.Id
+                      ? "#fff"
+                      :"none",
+                      boxShadow:
+                          track === item.Id
+                            ? "20px 0px  #fff,-20px 0px  #fff"
+                            : " ",
+                      // padding: "10px",
+                      // margin: "1rem 1rem 0",
+
+
                     }}
                   >
                     <div
                       style={{
-                        width: "2rem",
-                        height: "2rem",
+                        display: "flex",
+                        position: "relative",
+
+                        width: track === item.Id
+                          ? "3vw"
+                          : "2vw",
+                        height: track === item.Id
+                          ? "3vw"
+                          : "2vw",
                         borderRadius: "50%",
-                        border:
-                          track === item.Id
-                            ? "#00F9FF 5px solid"
-                            : "#dcdcdc 5px solid",
+                        background: "#fffff0",
+                        // border:
+                        //   track === item.Id
+                        //     ? "#00F9FF 4px solid"
+                        //     : "#dcdcdc 4px solid",
                         filter:
                           track === item.Id
-                            ? " drop-shadow( 0px 0px 3px #00F9FF)"
+                            ? " drop-shadow( 0px 0px 4px #00F9FF) drop-shadow( 0px 0px 4px #00F9FF) drop-shadow( 0px 0px 6px #00F9FF) drop-shadow( 0px 0px 7px #00F9FF)"
                             : " ",
-                        margin: 0,
-                        padding: "1rem",
+                        boxShadow: track === item.Id
+                          ? "-0.1px -0.5px 1px 1px rgba(20%,20%,40%,0.5) inset"
+                          : "-0.1px -0.5px 1px 1px rgba(9%,9%,8%,0.4) inset",
+                        // padding: "1vw",
                       }}
                     />
-                  </div> */}
+                  </div>
                 </button>
+                </Grid>
               </>
             );
           })}
-          {/* 槓槓 */}
-          {/* <div
+           <Grid item sm={12} md={12} lg={12}>
+
+           {/* 槓槓 */}
+          <div
             style={{
               width: "100%",
               height: "0.5rem",
@@ -87,8 +123,12 @@ function ResultTab() {
               position: "relative",
               bottom: "2rem",
             }}
-          /> */}
+          />
+           </Grid>
         </Grid>
+        </Grid>
+         
+        
       </Grid>
 
       {/* 表格 */}

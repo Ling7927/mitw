@@ -8,7 +8,7 @@ function ResultTab() {
   return (
     <>
       {/* Tab */}
-      <Grid container spacing={1} alignItems="center" style={{ marginBottom: "2rem" }}>
+      <Grid container spacing={1} gap={1} alignItems="center" style={{ marginBottom: "2rem" }}>
         <Grid item sm={2} md={2} lg={2} style={{ display: "flex", justifyContent: "flex-end" }}>
           <p
             style={{
@@ -17,7 +17,7 @@ function ResultTab() {
             }}
           >Track</p>
         </Grid>
-        <Grid item sm={10} md={10} lg={10} >
+        <Grid item sm={9} md={9} lg={9} >
         <Grid container spacing={1} style={{ justifyContent: "space-around"}}>
           {ResultTabInform.map((item, i) => {
             return (
@@ -36,13 +36,12 @@ function ResultTab() {
                         track === item.Id
                           ? "0 0 0.3em #00F9FF, 0 0 0.3em #00F9FF,0 0 0.3em #00F9FF"
                           : "",
-                      //  zIndex: "5",
+                        zIndex: "5",
                       // position:"relative",
                       // top:"2rem"
                     }}
                   >
                     {item.TabTitle}
-                  </h4>
                   {/* 滑動圈圈 */}
                   <div
                     style={{
@@ -61,21 +60,19 @@ function ResultTab() {
                         : "2vw",
                       position: "relative",
                       top: track === item.Id
-                        ? "-5vh"
+                        ? "-4vh"
                         : 0,
                      
-                      zIndex: "9",
+                      zIndex: "7",
                       background:track === item.Id
                       ? "#fff"
                       :"none",
+                     
                       boxShadow:
                           track === item.Id
-                            ? "20px 0px  #fff,-20px 0px  #fff"
+                            ? " -10px -2px  10px #fff,20px -2px  5px #000,0px -2px  10px #fff,"//左外,右外,上外,上內
                             : " ",
-                      // padding: "10px",
-                      // margin: "1rem 1rem 0",
-
-
+                          
                     }}
                   >
                     <div
@@ -102,26 +99,28 @@ function ResultTab() {
                         boxShadow: track === item.Id
                           ? "-0.1px -0.5px 1px 1px rgba(20%,20%,40%,0.5) inset"
                           : "-0.1px -0.5px 1px 1px rgba(9%,9%,8%,0.4) inset",
+                          zIndex: "9",
                         // padding: "1vw",
                       }}
                     />
                   </div>
+                  </h4>
                 </button>
                 </Grid>
               </>
             );
           })}
-           <Grid item sm={12} md={12} lg={12}>
+           <Grid item sm={12} md={12} lg={12} style={{position:"relative",top:"-3rem"}}>
 
            {/* 槓槓 */}
           <div
             style={{
               width: "100%",
-              height: "0.5rem",
+              height: "0.45rem",
               borderRadius: "5px",
               border: "#00F9FF solid 1px",
-              position: "relative",
               bottom: "2rem",
+              zIndex: "6",
             }}
           />
            </Grid>

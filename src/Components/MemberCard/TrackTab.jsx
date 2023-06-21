@@ -5,15 +5,15 @@ import { Tabs, Mem } from "../../Pages/Member/Inform";
 
 function TrackTab() {
   const [clickId, setClickId] = useState(1);
-  const [mem, setMem] = useState([]);
-  const [Open, setOpen] = useState(false);
-  const [id, setId] = useState(null);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const [mem, setMem] = useState([]);
+  // const [Open, setOpen] = useState(false);
+  // const [id, setId] = useState(null);
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
   return (
     <>
       <Grid container spacing={1}>

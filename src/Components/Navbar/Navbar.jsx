@@ -63,7 +63,10 @@ const Navbar = () => {
                   );
                 } else {
                   return (
-                    <div className="dropdown" style={{ float: "left" }}>
+                    <div
+                      className="dropdown"
+                      style={{ float: "left", zIndex: " 999" }}
+                    >
                       <button className="dropbtn">{item.name}</button>
                       <div className="dropdown-content" style={{ left: "0" }}>
                         {item.li.map((li, index) => {

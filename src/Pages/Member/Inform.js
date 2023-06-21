@@ -1,5 +1,3 @@
-
-
 const Tabs = [
   { id: 1, title: "#01" },
   { id: 2, title: "#02" },
@@ -18,10 +16,11 @@ const Mem = [
     Id: 1,
     Track: "01",
     TraksTitle: " 病人基本資料",
-    Img: 'wg1_1.jpg',
+    Img: "wg1_1f.png",
     Position: "召集人",
     Name: "楊宇凡 | 矽塔資訊服務有限公司 執行長",
-    Tollger: (<>
+    Tollger: (
+      <>
         <b>1.　現職：</b>
         <ul>
           <li>(2016 - Present) 矽塔資訊服務有限公司 執行長</li>
@@ -46,18 +45,19 @@ const Mem = [
         醫學資訊交換標準專家，具多年醫學資訊相關系統開發與教育訓練經驗。
         他的研究領域是醫學資訊，專長協助系統整合與產業創新，協助醫療院所、企業與政府以開源解決方案進行創新，提升產業綜效競爭力。
         他長期活躍於開放原始碼社群，並致力於推廣標準化醫療資訊教育對國高中的向下扎根。
-      </>),
-     
+      </>
+    ),
   },
 
   {
     Id: 2,
     Track: "02",
     TraksTitle: " 生理量測數據互通",
-    Img: 'wg2_1.jpg',
+    Img: "wg2_1f.png",
     Position: "召集人",
     Name: "莊舒雅 | 慈濟大學 醫學資訊學系碩士班 研究生",
-    Tollger: <>
+    Tollger: (
+      <>
         <b>1. 現職：</b>
         <ul>慈濟大學 醫學資訊學系碩士班 研究生</ul>
         <b>2. 經歷：</b>
@@ -67,17 +67,16 @@ const Mem = [
         </ul>
         <b>3. 簡介：</b>
         畢業於慈濟大學醫學資訊學系，目前就讀慈濟大學醫學資訊學系碩士班。主要研究主題為FHIR在雲端儲存應用。積極參與FHIR標準應用的討論和推廣。
-      </>,
-    
-      
+      </>
+    ),
   },
   {
     Id: 2,
     Track: "02",
     TraksTitle: " 生理量測數據互通",
-    Img: 'wg2_2.jpg',
+    Img: "wg2_2f.png",
     Position: "召集人&聯繫窗口",
-    Name: "洪彬彬 | Medical Informatics Standard"+ " <br> " +"Application Consortium (MISAC) 執行首席",
+    Name: "洪彬彬 | Medical Informatics Standard Application Consortium (MISAC) 執行首席",
     Tollger: (
       <>
         <b>1.　現職：</b>
@@ -104,7 +103,7 @@ const Mem = [
     Id: 3,
     Track: "03",
     TraksTitle: " 處方用藥及文件打包",
-    Img: 'wg3_1.jpg',
+    Img: "wg3_1f.png",
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",
     Tollger: (
@@ -158,7 +157,7 @@ const Mem = [
     Id: 3,
     Track: "03",
     TraksTitle: " 處方用藥及文件打包",
-    Img: 'wg3_2.jpg',
+    Img: "wg3_2.jpg",
     Position: "聯繫窗口",
     Name: "吳宇婷 | 仁寶電腦工業股份有限公司 雲端工程師",
     Tollger: (
@@ -191,7 +190,7 @@ const Mem = [
     Id: 4,
     Track: "04",
     TraksTitle: " 醫學影像與病理",
-    Img: 'wg4_1.jpg',
+    Img: "wg4_1.jpg",
     Position: "召集人",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -223,7 +222,7 @@ const Mem = [
     Id: 4,
     Track: "04",
     TraksTitle: " 醫學影像與病理",
-    Img: 'wg4_2.jpg',
+    Img: "wg4_2.jpg",
     Position: "聯絡窗口",
     Name: "丁子芸 | 國立臺北護理健康大學資訊管理系 碩士生",
     Tollger: (
@@ -250,7 +249,7 @@ const Mem = [
     Id: 5,
     Track: "05",
     TraksTitle: " 偕同照護",
-    Img: 'wg3_1.jpg',
+    Img: "wg3_1.jpg",
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",
     Tollger: (
@@ -303,7 +302,7 @@ const Mem = [
     Id: 6,
     Track: "06",
     TraksTitle: " 基因體標記",
-    Img: 'wg4_1.jpg',
+    Img: "wg4_1.jpg",
     Position: "召集人(暫定)",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -335,7 +334,7 @@ const Mem = [
     Id: 6,
     Track: "06",
     TraksTitle: " 基因體標記",
-    Img: 'wg6_2.jpg',
+    Img: "wg6_2.jpg",
     Position: "聯絡窗口",
     Name: "李建興 | 國立陽明交通大學生物醫學資訊所 碩士生",
     Tollger: (
@@ -361,7 +360,7 @@ const Mem = [
     Id: 7,
     Track: "07",
     TraksTitle: " 緊急醫療救護",
-    Img: 'wg1_1.jpg',
+    Img: "wg1_1.jpg",
     Position: "召集人",
     Name: "楊宇凡 | 矽塔資訊服務有限公司 執行長",
     Tollger: (
@@ -397,7 +396,7 @@ const Mem = [
     Id: 7,
     Track: "07",
     TraksTitle: " 緊急醫療救護",
-    Img: 'wg7_2.jpeg',
+    Img: "wg7_2.jpeg",
     Position: "召集人",
     Name: "李修安 | 國家衛生研究院 - 癌症研究所 博士後研究員",
     Tollger: (
@@ -442,7 +441,7 @@ const Mem = [
     Id: 8,
     Track: "08",
     TraksTitle: " 醫療收據與診斷證明書",
-    Img: 'wg4_1.jpg',
+    Img: "wg4_1.jpg",
     Position: "召集人",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -474,7 +473,7 @@ const Mem = [
     Id: 8,
     Track: "08",
     TraksTitle: " 醫療收據與診斷證明書",
-    Img: 'wg8_2.jpg',
+    Img: "wg8_2.jpg",
     Position: "聯繫窗口",
     Name: "彭群芳 | 國泰金控數位發展數據暨科技發展中心 商業規劃師",
     Tollger: (
@@ -502,7 +501,7 @@ const Mem = [
     Id: 9,
     Track: "09",
     TraksTitle: " 遠距醫療",
-    Img: 'wg3_1.jpg',
+    Img: "wg3_1.jpg",
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",
     Tollger: (
@@ -555,7 +554,7 @@ const Mem = [
     Id: 10,
     Track: "10",
     TraksTitle: " 癌症登記",
-    Img: 'wg4_1.jpg',
+    Img: "wg4_1.jpg",
     Position: "召集人",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -587,7 +586,7 @@ const Mem = [
     Id: 10,
     Track: "10",
     TraksTitle: " 癌症登記",
-    Img: 'wg10_2.jpg',
+    Img: "wg10_2.jpg",
     Position: "聯絡窗口",
     Name: "郭俐君 | 國立臺北護理健康大學資訊管理系 碩士生",
     Tollger: (

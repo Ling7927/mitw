@@ -16,13 +16,25 @@ function MemberSlider(props) {
     // autoplaySpeed: 0.0000001,
     dots: true,
     cssEase: "linear",
-    customPaging: (i) => {
-      return (
-        <div>
-          <div style={{ width: "10rem" }}>{i == TabId ? { TabId } : Id}</div>
-        </div>
-      );
-    },
+    appendDots: (dots) => <ul style={{ margin: "0px" }}> {dots} </ul>,
+    customPaging: (TabId) => (
+      <div
+        style={{
+          width: "30px",
+          color: "blue",
+          border: "1px blue solid",
+        }}
+      >
+        {TabId}
+      </div>
+    ),
+    // customPaging: (i) => {
+    //   return (
+    //     <div>
+    //       <div style={{ width: "10rem" }}>{i == TabId ? { TabId } : Id}</div>
+    //     </div>
+    //   );
+    // },
   };
   // const arrowRef = useRef(null);
   // const Member="";

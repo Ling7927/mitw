@@ -10,15 +10,15 @@ function Member() {
         // <MemberSlider />
         //  <MemberCard /> 
        // </div>  */}
-      <Grid container spacing={1} gap={1} style={{ margin: "1rem" }}>
-        <Grid item lg={12}>
+      <Grid container spacing={1} style={{ padding: "2rem " }}>
+        <Grid item sm={12} md={12} lg={12}>
           <h4>賽道工作小組</h4>
           <hr />
         </Grid>
-        <Grid item lg={1}>
+        <Grid item sm={1} md={1} lg={1}>
           <TrackTab />
         </Grid>
-        <Grid item lg={10}>
+        <Grid item sm={10} md={10} lg={10}>
           <MemberSlider />
         </Grid>
       </Grid>

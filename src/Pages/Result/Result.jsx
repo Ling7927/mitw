@@ -9,7 +9,7 @@ function Result() {
         //"linear-gradient(180deg, #000000 0%, #20413F 20.83%, rgba(217, 217, 217, 0) 100%), #F0F0F0"
       }}
     >
-      <div style={{ padding: "3vw 10vw 2vw", background: "#fff" }}>
+      <div style={{ background: "#fff" }}>
         <ResultTab />
       </div>
     </div>

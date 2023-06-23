@@ -1,16 +1,33 @@
 .ant-table-thead .ant-table-cell {
-    background-color: #89cbce !important;
+  background-color: #89cbce !important;
+}
+.ant-table-tbody .ant-table-cell {
+  background-color: rgba(141, 180, 169, 0.3) !important;
+}
+.ant-table-wrapper .ant-table-thead > tr > th {
+  border-bottom: 1px solid #fff;
+}
+.ant-table-wrapper .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #fff;
+}
+
+.ant-spin-container {
+  display: flex;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #21838e6c, #00fbff5e);
+  margin-bottom: 5vh;
+}
+
+@media (min-width: 1000px) {
+  table {
+    table-layout: fixed !important; /*均分*/
+    font-size: 1rem;
   }
- .ant-table-tbody .ant-table-cell {
-    background-color:rgba(141, 180, 169, 0.3) !important;
- }
- .ant-table-wrapper .ant-table-thead >tr>th{
-    border-bottom: 1px solid #fff;
- }
- .ant-table-wrapper .ant-table-tbody >tr >td{
-    border-bottom: 1px solid #fff;
- }
- .ant-table table { 
-    font-size: 18px;
-    margin-bottom: 3rem;
+}
+@media (max-width: 844px) {
+  table {
+    table-layout: fixed !important; /*均分*/
+    font-size: 1vw;
+  }
 }

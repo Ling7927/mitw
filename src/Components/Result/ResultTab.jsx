@@ -14,7 +14,11 @@ function ResultTab() {
         spacing={1}
         gap={1}
         alignItems="center"
-        style={{ marginBottom: "2rem" }}
+        style={{
+          marginBottom: "2rem",
+          padding: "3vw 10vw 2vw",
+          justifyContent: "center",
+        }}
       >
         <Grid
           item
@@ -180,7 +184,7 @@ function ResultTab() {
         </Grid>
       </Grid>
 
-      {/* 表格 */}
+      {/* 表格賽道 */}
       <div style={{ display: "flex", justifyContent: "center" }}>
         <h2
           style={{
@@ -194,6 +198,7 @@ function ResultTab() {
           {ResultTabInform.filter((item) => item.Id === track)[0].ContentTitle}
         </h2>
       </div>
+      {/* 表格 */}
 
       <ResultTable id={track} />
     </>

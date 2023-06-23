@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { ResultTabInform } from "./Inform";
 import ResultTable from "../Result/Table/ResultTable";
-import { Grid } from "@mui/material";
+import { motion } from "framer-motion";
+import { Grid, duration } from "@mui/material";
 function ResultTab() {
   const [track, setTrack] = useState(1);
 
@@ -47,30 +48,63 @@ function ResultTab() {
                     <button
                       key={i}
                       style={{
+                        // background: track === item.Id ? " #00F9FF" : "none",
+                        // boxShadow:
+                        //   track === item.Id
+                        //     ? "0 0.5rem 2rem #00F9FF, 0 0 1rem #00F9FF,0 0 1rem #53F3D3"
+                        //     : "",
+                        // height: track === item.Id ? "5vw" : "3vw",
+                        // width: track === item.Id ? "5vw" : "3vw",
+                        // borderRadius: "50%",
                         background: "none",
                         border: "none",
                         display: "flex",
                         flexDirection: "column",
+                        justifyContent: "center",
                         alignItems: "center",
+                        position: "relative",
                       }}
                       onClick={() => setTrack(item.Id)}
                     >
+                      {/* 背景 */}
+
+                      {track === item.Id && (
+                        <motion.div
+                          layoutId="active-pill"
+                          transition={{ duration: 0.6 }}
+                          style={{
+                            background: track === item.Id ? " #00F9FF" : "none",
+                            boxShadow:
+                              track === item.Id
+                                ? "0 0.5rem 2rem #00F9FF, 0 0 1rem #00F9FF,0 0 1rem #53F3D3"
+                                : "",
+                            height: track === item.Id ? "5vw" : "3vw",
+                            width: track === item.Id ? "5vw" : "3vw",
+                            borderRadius: "50%",
+                            position: "absolute",
+                            top: 0,
+                          }}
+                        />
+                      )}
                       <h4
                         style={{
-                          fontSize: track === item.Id ? "4.5vw" : "2vw",
-                          color: track === item.Id ? "#fff" : "#dcdcdc",
+                          margin: 0,
+                          fontSize: track === item.Id ? "4vw" : "2vw",
+                          // color: track === item.Id ? "#fff" : "#dcdcdc",
+                          color: "#fff",
                           textShadow:
                             track === item.Id
-                              ? "0 0 0.3em #00F9FF, 0 0 0.3em #00F9FF,0 0 0.3em #00F9FF"
-                              : "",
-                          zIndex: "5",
-                          // position:"relative",
+                              ? "1px 1px #dcdcdc,1px 2px #23f0c7, 2px 1px #108998"
+                              : "1px 1px #dcdcdc,1px 2px #00F9FF, 2px 1px #53F3D3",
+
+                          position: "relative",
                           // top:"2rem"
                         }}
                       >
                         {item.TabTitle}
+
                         {/* 滑動圈圈背景 */}
-                        <div
+                        {/* <div
                           style={{
                             display: "flex",
                             alignItems: track === item.Id ? "flex-end" : "",
@@ -88,10 +122,10 @@ function ResultTab() {
                                 ? " -20px -2px  10px #fff,20px -2px  5px #000,0px -2px  10px #fff," //左外,右外,上外,上內
                                 : " ",
                           }}
-                        >
-                          {/* 滑動圈圈 */}
+                        > */}
+                        {/* 滑動圈圈 */}
 
-                          <div
+                        {/* <div
                             style={{
                               display: "flex",
                               position: "relative",
@@ -116,7 +150,7 @@ function ResultTab() {
                               // padding: "1vw",
                             }}
                           />
-                        </div>
+                        </div> */}
                       </h4>
                     </button>
                   </Grid>

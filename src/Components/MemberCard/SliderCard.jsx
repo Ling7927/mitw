@@ -58,7 +58,7 @@ function SliderCard(props) {
               </h5>
             </Grid>
             {/* 照片 */}
-            <Grid item style={{ display: "flex" }}>
+            <Grid item style={{ display: "flex", height: "60%", width: "90%" }}>
               <img
                 onClick={() => {
                   handleClickOpen();
@@ -66,8 +66,8 @@ function SliderCard(props) {
                 src={`assets/${Img}`}
                 style={{
                   height: "100%",
-                  width: "95%",
-                  objectFit: "contain",
+                  width: "100%",
+                  objectFit: "fill",
                 }}
               />
               {/* <span

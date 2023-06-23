@@ -182,7 +182,15 @@ function ResultTab() {
 
       {/* 表格 */}
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <h2>
+        <h2
+          style={{
+            borderStyle: " solid ",
+            borderWidth: " 4px",
+            padding: "1vw",
+            borderImage: "linear-gradient(#23f0c7, #108998,#00F9FF) 20 ",
+            //   #23f0c7 #108998 #00F9FF #53F3D3",
+          }}
+        >
           {ResultTabInform.filter((item) => item.Id === track)[0].ContentTitle}
         </h2>
       </div>

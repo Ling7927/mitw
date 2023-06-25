@@ -8,9 +8,9 @@ function Specification() {
       <div style={{ background: "#dcdcdc" }}>
         <div
           style={{
-            margin: "0 5rem 1rem",
+            margin: "0 5vw 1vw",
             background: "#fdfdfd",
-            paddingTop: "2rem",
+            paddingTop: "2vw",
           }}
         >
           {/* 公開意見徵求 */}
@@ -26,8 +26,8 @@ function Specification() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              padding: "1rem",
-              margin: "2rem 5rem 1rem 5rem",
+              padding: "2vw",
+              margin: "2vw 5vw",
               // border: "4px dotted #fff"  ,
             }}
           >
@@ -39,7 +39,13 @@ function Specification() {
           </motion.div>
 
           {/* 說明 */}
-          <div style={{ display: "flex", padding: "5rem 5rem" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              margin: "0 5vw",
+            }}
+          >
             {/* 選單 */}
             <motion.div
               initial={{ x: -200 }}
@@ -54,13 +60,14 @@ function Specification() {
                       onClick={() => setOnHandle(item.id)}
                       key={item}
                       style={{
+                        margin: 0,
                         backgroundColor: "Transparent",
                         backgroundRepeat: "no-repeat",
+                        whiteSpace: "nowrap", //不換行
                         border: "none",
-                        cursor: "pointer",
+                        //cursor: "pointer",//鼠標形狀改變
                         overflow: "hidden",
                         fontSize: onHandle === item.id ? "15px" : "5px",
-                        margin: 0,
                         color: onHandle === item.id ? "#fff" : "#949494",
                       }}
                     >
@@ -71,7 +78,9 @@ function Specification() {
               })}
             </motion.div>
             {/* 說明內容 */}
-            <div style={{ width: "75%" }}>
+            <div
+              style={{ width: "75%", display: "flex", flexDirection: "column" }}
+            >
               <motion.h5
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -88,6 +97,7 @@ function Specification() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
+                style={{ fontSize: "1vw" }}
               >
                 {List.filter((item) => item.id === onHandle)[0].content}
               </motion.p>

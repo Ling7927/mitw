@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
-import "./Footer.css";
 import { FooterContext, Connection } from "./Inform";
 function Footer() {
   return (
@@ -9,7 +8,6 @@ function Footer() {
       <Grid
         container
         spacing={1}
-        gap={5}
         style={{
           background: "#000",
           paddingTop: "1rem",
@@ -17,55 +15,70 @@ function Footer() {
         }}
       >
         {/* 左 */}
-        <Grid item sm={5} md={5} lg={5}>
-          <Grid container>
-            {FooterContext.map((item) => {
-              return (
-                <>
-                  <Grid
-                    item
-                    sm={4}
-                    md={4}
-                    lg={4}
-                    style={{ display: "flex", justifyContent: "flex-end" }}
+        <Grid item sm={6} md={6} lg={6}>
+          {FooterContext.map((item) => {
+            return (
+              <Grid container alignItems="baseline" columns={12}>
+                <Grid
+                  item
+                  sm={3}
+                  md={3}
+                  lg={3}
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <p key={item} style={{ color: "#fff" }}>
+                    {item.title}
+                  </p>
+                </Grid>
+                <Grid
+                  item
+                  sm={8}
+                  md={8}
+                  lg={8}
+                  style={{ display: "flex", margin: "1vh 0" }}
+                >
+                  <ul
+                    style={{
+                      margin: "0 0 1rem",
+                      padding: "0 0 0 1vw ",
+                      flexDirection: "column",
+                    }}
                   >
-                    <p key={item} style={{ color: "#fff" }}>
-                      {item.title}
-                    </p>
-                  </Grid>
-                  <Grid
-                    item
-                    sm={8}
-                    md={8}
-                    lg={8}
-                    style={{ display: "flex", margin: "1rem 0" }}
-                  >
-                    <ul style={{ margin: "0 0 1rem", flexDirection: "column" }}>
-                      {item.data.map((item) => {
-                        return (
-                          <li
-                            key={item}
+                    {item.data.map((item) => {
+                      return (
+                        <li
+                          key={item}
+                          style={{
+                            listStyle: "none",
+                            marginBottom: "0.3rem",
+                          }}
+                        >
+                          <Link
+                            to={item.path}
                             style={{
-                              listStyle: "none",
-                              marginBottom: "0.3rem",
+                              color: "#fff",
+                              maxWidth: "100%",
+                              whiteSpace: "nowrap",
                             }}
                           >
-                            <Link to={item.path} style={{ color: "#fff" }}>
-                              {item.name}
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </Grid>
-                </>
-              );
-            })}
-          </Grid>
+                            {item.name}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </Grid>
+              </Grid>
+            );
+          })}
         </Grid>
 
         {/* 右 */}
-        <Grid item sm={5} md={5} lg={5}>
+        <Grid item sm={6} md={6} lg={6}>
           <h2
             style={{
               color: "#fff",
@@ -83,6 +96,7 @@ function Footer() {
                 style={{
                   color: "#fff",
                   marginBottom: "0.5rem",
+                  wordWrap: "break-word", //空格換行
                 }}
               >
                 {item.title}

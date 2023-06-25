@@ -1,14 +1,12 @@
-*{
-    box-sizing: border-box;
-
+* {
+  box-sizing: border-box;
 }
-.footer{
-    background-color:  #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color:#fff ;
-
+.footer {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
 }
 /* .footer ul{
     // display:contents; 
@@ -24,9 +22,9 @@
 
 } */
 
-.connection{
-    margin: 1rem 6rem;
+.connection {
+  margin: 1rem 6rem;
 }
-.connection h2{
-    color: #fff;
+.connection h2 {
+  color: #fff;
 }

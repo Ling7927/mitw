@@ -62,7 +62,7 @@ function Recruit() {
                           style={{
                             letterSpacing: "1px",
                             lineHeight: "1.7",
-                            paddingLeft: "1rem",
+                            // paddingLeft: "1rem",
                           }}
                         >
                           {item.instructions}

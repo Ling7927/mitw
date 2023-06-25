@@ -32,7 +32,13 @@ function News() {
             style={{ width: "100%", height: "5%", display: "flex" }}
           />
         </div> */}
-        <Grid container spacing={1} direction="column">
+        <Grid
+          container
+          spacing={1}
+          direction="column"
+          alignContent="center"
+          alignItems="center"
+        >
           {/* -----------------時程規劃--------------------- */}
           <Grid item display="flex" justifyContent="center">
             <div
@@ -76,7 +82,7 @@ function News() {
                 <img
                   src={p1Img}
                   alt="p1img"
-                  style={{ objectFit: "cover",  width: "100%" }}
+                  style={{ objectFit: "cover", width: "100%" }}
                 />
               </Grid>
               <Grid
@@ -110,24 +116,10 @@ function News() {
 
           {/* ----------------預計賽道------------------- */}
           <Grid item>
-            <div
-              style={{
-                // background: "#90a09f",
-                // border: "solid",
-                // borderRadius: "5rem 5rem",
-                margin: " 2rem 10rem 0 10rem",
-                padding: "3rem 0",
-              }}
-            >
-              <div
-                className="p2"
-                style={{ textAlign: "center", justifyContent: "center" }}
-              >
-                <Traks />
-              </div>
+            <Traks />
 
-              {/* ---------預計時程------------*/}
-              {/*  <hr />
+            {/* ---------預計時程------------*/}
+            {/*  <hr />
 
            <div className="p3">
             <h2 style={{ textAlign: "center", justifyContent: "center" }}>
@@ -159,7 +151,6 @@ function News() {
               </div>
             </div>
           </div> */}
-            </div>
           </Grid>
         </Grid>
       </div>

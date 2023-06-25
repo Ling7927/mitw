@@ -8,19 +8,20 @@ function Traks() {
     <div
       style={{
         background: "#d9d9d9",
+        padding: "0 5vh",
       }}
     >
-      <Grid
-        container
-        spacing={1}
-        direction="column"
-        alignItems="center"
-        justify="center"
-      >
-        <Grid item sm={12} md={12} lg={12} style={{ width: "80%",marginTop:"10px" ,position:"relative"}}>
-          <Tab />
-        </Grid>
-      </Grid>
+      {/* // <Grid
+    //   container
+    //   spacing={1}
+    //   direction="column"
+    //   alignItems="center"
+    //   justify="center"
+    //   style={{ background: "#d9d9d9" }}
+    // > */}
+      <Tab />
+
+      {/* </Grid> */}
     </div>
   );
 }

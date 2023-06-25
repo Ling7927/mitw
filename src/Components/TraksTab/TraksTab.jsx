@@ -19,6 +19,7 @@ function TraksTab() {
         direction="column"
         alignItems="center"
         justify="center"
+        position="relative"
         style={{ background: "#f1f1f1" }}
       >
         {/* 上面按鈕 */}
@@ -61,10 +62,10 @@ function TraksTab() {
                           fontSize: "15px",
                           color: "#1e1e1e",
                           margin: 0,
-                          padding : "1rem",
+                          padding: "1rem",
                           background: "#f1f1f1",
                           position: "relative",
-                          top: "-2rem",
+                          top: "-25px",
                         }}
                       >
                         {item.ContentTitle}
@@ -83,6 +84,7 @@ function TraksTab() {
               style={{
                 display: "flex",
                 overflowX: "auto",
+                paddingBottom: "2vw",
               }}
             >
               {TraksTabInform.filter((item) => item.Id !== onHandle).map(

@@ -4,7 +4,7 @@ function IntroductionTab() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div style={{width:"80%",margin:" auto"}}>
+      <div style={{ width: "80%", margin: " auto" }}>
         {/* 上方按鈕 */}
         <div
           style={{
@@ -21,7 +21,7 @@ function IntroductionTab() {
                   backgroundColor: onHandle === item.id ? "#f0f0f0" : "#7AACA9",
                   color: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
-                  width:"15%",
+                  width: "20vh",
                   borderRadius: "10px 10px 0px 0px",
                   boxShadow: " 0px 0px 1px rgba(0, 0, 0, 0.5)",
                 }}
@@ -31,8 +31,8 @@ function IntroductionTab() {
                     fontSize: "40px",
                     color: onHandle === item.id ? "#7AACA9" : "#fff",
                     stroke: "white",
-                    margin:"auto",
-                    padding:"5% 0"
+                    margin: "auto",
+                    padding: "5% 0",
                   }}
                 >
                   {item.icon}
@@ -40,7 +40,10 @@ function IntroductionTab() {
 
                 <div style={{ padding: "15% 0" }}>
                   <h5
-                    style={{ color: onHandle === item.id ? "#7AACA9" : "#fff" ,margin:"0 0 0 0"}}
+                    style={{
+                      color: onHandle === item.id ? "#7AACA9" : "#fff",
+                      margin: "0 0 0 0",
+                    }}
                   >
                     {item.Tabtitle}
                   </h5>
@@ -49,7 +52,7 @@ function IntroductionTab() {
             );
           })}
         </div>
-          {/* 下方內容 */}
+        {/* 下方內容 */}
         <div
           style={{
             // display:"flex",
@@ -57,11 +60,11 @@ function IntroductionTab() {
             fontColor: "black",
             // padding: "2px",
             borderRadius: "0px 0px 1rem 1rem",
-            justifyContent: "center",alignItems:"center",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
-        
-            {Inform.filter((item) => item.id === onHandle)[0].content}
+          {Inform.filter((item) => item.id === onHandle)[0].content}
         </div>
       </div>
     </>

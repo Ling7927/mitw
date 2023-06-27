@@ -14,7 +14,7 @@ const Tabs = [
 const Mem = [
   {
     Id: 1,
-    Track: "01",
+    Track: 1,
     TraksTitle: " 病人基本資料",
     Img: "wg1_1f.png",
     Position: "召集人",
@@ -51,7 +51,7 @@ const Mem = [
 
   {
     Id: 2,
-    Track: "02",
+    Track: 2,
     TraksTitle: " 生理量測數據互通",
     Img: "wg2_1f.png",
     Position: "召集人",
@@ -72,7 +72,7 @@ const Mem = [
   },
   {
     Id: 2,
-    Track: "02",
+    Track: 2,
     TraksTitle: " 生理量測數據互通",
     Img: "wg2_2f.png",
     Position: "召集人&聯繫窗口",
@@ -101,7 +101,7 @@ const Mem = [
   },
   {
     Id: 3,
-    Track: "03",
+    Track: 3,
     TraksTitle: " 處方用藥及文件打包",
     Img: "wg3_1f.png",
     Position: "召集人",
@@ -155,7 +155,7 @@ const Mem = [
 
   {
     Id: 3,
-    Track: "03",
+    Track: 3,
     TraksTitle: " 處方用藥及文件打包",
     Img: "wg3_2.jpg",
     Position: "聯繫窗口",
@@ -188,7 +188,7 @@ const Mem = [
   },
   {
     Id: 4,
-    Track: "04",
+    Track: 4,
     TraksTitle: " 醫學影像與病理",
     Img: "wg4_1.jpg",
     Position: "召集人",
@@ -220,7 +220,7 @@ const Mem = [
   },
   {
     Id: 4,
-    Track: "04",
+    Track: 4,
     TraksTitle: " 醫學影像與病理",
     Img: "wg4_2.jpg",
     Position: "聯絡窗口",
@@ -247,7 +247,7 @@ const Mem = [
   },
   {
     Id: 5,
-    Track: "05",
+    Track: 5,
     TraksTitle: " 偕同照護",
     Img: "wg3_1.jpg",
     Position: "召集人",
@@ -300,7 +300,7 @@ const Mem = [
   },
   {
     Id: 6,
-    Track: "06",
+    Track: 6,
     TraksTitle: " 基因體標記",
     Img: "wg4_1.jpg",
     Position: "召集人(暫定)",
@@ -332,7 +332,7 @@ const Mem = [
   },
   {
     Id: 6,
-    Track: "06",
+    Track: 6,
     TraksTitle: " 基因體標記",
     Img: "wg6_2.jpg",
     Position: "聯絡窗口",
@@ -358,7 +358,7 @@ const Mem = [
   },
   {
     Id: 7,
-    Track: "07",
+    Track: 7,
     TraksTitle: " 緊急醫療救護",
     Img: "wg1_1.jpg",
     Position: "召集人",
@@ -394,7 +394,7 @@ const Mem = [
   },
   {
     Id: 7,
-    Track: "07",
+    Track: 7,
     TraksTitle: " 緊急醫療救護",
     Img: "wg7_2.jpeg",
     Position: "召集人",
@@ -439,7 +439,7 @@ const Mem = [
   },
   {
     Id: 8,
-    Track: "08",
+    Track: 8,
     TraksTitle: " 醫療收據與診斷證明書",
     Img: "wg4_1.jpg",
     Position: "召集人",
@@ -471,7 +471,7 @@ const Mem = [
   },
   {
     Id: 8,
-    Track: "08",
+    Track: 8,
     TraksTitle: " 醫療收據與診斷證明書",
     Img: "wg8_2.jpg",
     Position: "聯繫窗口",
@@ -499,7 +499,7 @@ const Mem = [
   },
   {
     Id: 9,
-    Track: "09",
+    Track: 9,
     TraksTitle: " 遠距醫療",
     Img: "wg3_1.jpg",
     Position: "召集人",
@@ -552,7 +552,7 @@ const Mem = [
   },
   {
     Id: 10,
-    Track: "10",
+    Track: 10,
     TraksTitle: " 癌症登記",
     Img: "wg4_1.jpg",
     Position: "召集人",
@@ -584,7 +584,7 @@ const Mem = [
   },
   {
     Id: 10,
-    Track: "10",
+    Track: 10,
     TraksTitle: " 癌症登記",
     Img: "wg10_2.jpg",
     Position: "聯絡窗口",

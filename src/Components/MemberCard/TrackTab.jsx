@@ -1,5 +1,6 @@
 import { useState, React } from "react";
 import MemberSlider from "./MemberSlider";
+import MemberCard from "./MemberCard";
 import { Grid } from "@mui/material";
 import { Tabs, Mem } from "../../Pages/Member/Inform";
 
@@ -53,7 +54,7 @@ function TrackTab() {
           })}
         </Grid>
 
-        <MemberSlider id={clickId} />
+        {/* <MemberSlider id={clickId} /> */}
       </Grid>
     </>
   );

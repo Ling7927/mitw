@@ -94,7 +94,7 @@ const routerList = [
     path: "",
     Component: "",
     li: [
-      { liname: "工作小組", lipath: "/", liComponent: "" },
+      { liname: "工作小組", lipath: "/Workgroupactivity", liComponent: "" },
       {
         liname: "相關活動",
         lipath: "/",

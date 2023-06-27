@@ -13,6 +13,7 @@ import Recruit from "./Pages/Recruit/Recruit";
 import Successcase from "./Pages/Successcase/Successcase";
 import Member from "./Pages/Member/Member";
 import Workgroupactivity from "./Pages/Workgroupactivity/Workgroupactivity";
+import Relatedactivity from "./Pages/Relatedactivity/Relatedactivity";
 import Test from "./Pages/Test";
 import { Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
@@ -45,6 +46,7 @@ function App() {
         <Route path="/Recruit" element={<Recruit />} />
         <Route path="/Member" element={<Member />} />
         <Route path="/Workgroupactivity" element={<Workgroupactivity />} />
+        <Route path="/Relatedactivity" element={<Relatedactivity />} />
 
         <Route path="/Test" element={<Test />} />
       </Routes>

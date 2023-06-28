@@ -192,7 +192,7 @@ function ResultTab() {
             borderWidth: " 4px",
             padding: "1vw",
             borderImage: "linear-gradient(#23f0c7, #108998,#00F9FF) 20 ",
-            fontSize: "4vw",
+            fontSize: "4vh",
           }}
         >
           {ResultTabInform.filter((item) => item.Id === track)[0].ContentTitle}

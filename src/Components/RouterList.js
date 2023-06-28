@@ -102,7 +102,7 @@ const routerList = [
       },
       {
         liname: "教育訓練",
-        lipath: "/",
+        lipath: "/training",
         liComponent: "",
       },
     ],

@@ -71,7 +71,7 @@ const Mem = [
     ),
   },
   {
-    Id: 2,
+    Id: 3,
     Track: 2,
     TraksTitle: " 生理量測數據互通",
     Img: "wg2_2f.png",
@@ -100,7 +100,7 @@ const Mem = [
     ),
   },
   {
-    Id: 3,
+    Id: 4,
     Track: 3,
     TraksTitle: " 處方用藥及文件打包",
     Img: "wg3_1f.png",
@@ -154,7 +154,7 @@ const Mem = [
   },
 
   {
-    Id: 3,
+    Id: 5,
     Track: 3,
     TraksTitle: " 處方用藥及文件打包",
     Img: "wg3_2.jpg",
@@ -187,7 +187,7 @@ const Mem = [
     ),
   },
   {
-    Id: 4,
+    Id: 6,
     Track: 4,
     TraksTitle: " 醫學影像與病理",
     Img: "wg4_1.jpg",
@@ -219,7 +219,7 @@ const Mem = [
     ),
   },
   {
-    Id: 4,
+    Id: 7,
     Track: 4,
     TraksTitle: " 醫學影像與病理",
     Img: "wg4_2.jpg",
@@ -246,7 +246,7 @@ const Mem = [
     ),
   },
   {
-    Id: 5,
+    Id: 8,
     Track: 5,
     TraksTitle: " 偕同照護",
     Img: "wg3_1.jpg",
@@ -299,7 +299,7 @@ const Mem = [
     ),
   },
   {
-    Id: 6,
+    Id: 9,
     Track: 6,
     TraksTitle: " 基因體標記",
     Img: "wg4_1.jpg",
@@ -331,7 +331,7 @@ const Mem = [
     ),
   },
   {
-    Id: 6,
+    Id: 10,
     Track: 6,
     TraksTitle: " 基因體標記",
     Img: "wg6_2.jpg",
@@ -357,7 +357,7 @@ const Mem = [
     ),
   },
   {
-    Id: 7,
+    Id: 11,
     Track: 7,
     TraksTitle: " 緊急醫療救護",
     Img: "wg1_1.jpg",
@@ -393,7 +393,7 @@ const Mem = [
     ),
   },
   {
-    Id: 7,
+    Id: 12,
     Track: 7,
     TraksTitle: " 緊急醫療救護",
     Img: "wg7_2.jpeg",
@@ -438,7 +438,7 @@ const Mem = [
     ),
   },
   {
-    Id: 8,
+    Id: 13,
     Track: 8,
     TraksTitle: " 醫療收據與診斷證明書",
     Img: "wg4_1.jpg",
@@ -470,7 +470,7 @@ const Mem = [
     ),
   },
   {
-    Id: 8,
+    Id: 14,
     Track: 8,
     TraksTitle: " 醫療收據與診斷證明書",
     Img: "wg8_2.jpg",
@@ -498,7 +498,7 @@ const Mem = [
     ),
   },
   {
-    Id: 9,
+    Id: 15,
     Track: 9,
     TraksTitle: " 遠距醫療",
     Img: "wg3_1.jpg",
@@ -551,7 +551,7 @@ const Mem = [
     ),
   },
   {
-    Id: 10,
+    Id: 16,
     Track: 10,
     TraksTitle: " 癌症登記",
     Img: "wg4_1.jpg",
@@ -583,7 +583,7 @@ const Mem = [
     ),
   },
   {
-    Id: 10,
+    Id: 17,
     Track: 10,
     TraksTitle: " 癌症登記",
     Img: "wg10_2.jpg",

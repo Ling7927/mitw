@@ -6,6 +6,8 @@ import { Tabs, Mem } from "../../Pages/Member/Inform";
 
 function TrackTab() {
   const [clickId, setClickId] = useState(1);
+  console.log(clickId, "aaa");
+
   // const [mem, setMem] = useState([]);
   // const [Open, setOpen] = useState(false);
   // const [id, setId] = useState(null);
@@ -18,15 +20,15 @@ function TrackTab() {
   return (
     <>
       <Grid container spacing={1}>
-        {/* <Grid item sm={12} md={12} lg={12}>
+        <Grid item sm={12} md={12} lg={12}>
           <h4>賽道工作小組</h4>
           <hr />
-        </Grid> */}
+        </Grid>
         <Grid item sm={1} md={1} lg={2}>
           <p style={{ fontSize: "2rem" }}>Track</p>
           {Tabs.map((item) => {
             return (
-              <div style={{ display: "flex" }}>
+              <div key={item} style={{ display: "flex" }}>
                 <button
                   style={{
                     background: "none",
@@ -53,7 +55,7 @@ function TrackTab() {
             );
           })}
         </Grid>
-
+        <MemberCard TabId={clickId} />
         {/* <MemberSlider id={clickId} /> */}
       </Grid>
     </>

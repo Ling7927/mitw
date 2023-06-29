@@ -6,7 +6,7 @@ import { Box, Grid } from "@mui/material";
 import MemberSlider from "./MemberSlider";
 function MemberCard() {
   // const { Id, Traks, Img, Members, Tollger } = props.item;
-  const [clickId, setClickId] = useState(1);
+  const [clickTrackId, setclickTrackId] = useState(1);
   const [memId, setMemId] = useState(null);
   const [Open, setOpen] = useState(false);
   const [id, setId] = useState(null);
@@ -18,8 +18,8 @@ function MemberCard() {
     setOpen(false);
   };
   //   useEffect(()=>{
-  // setMem(Mem.Id===clickId)
-  //   },[clickId])
+  // setMem(Mem.Id===clickTrackId)
+  //   },[clickTrackId])
   return (
     <>
       <Grid container spacing={1}>
@@ -40,16 +40,16 @@ function MemberCard() {
                     border: "none",
                   }}
                   onClick={() => {
-                    setClickId(item.id);
+                    setclickTrackId(item.id);
                   }}
                 >
                   <p
                     key={item.id}
                     style={{
                       paddingLeft: "10px",
-                      fontSize: clickId === item.id ? "1.5rem" : "1rem",
+                      fontSize: clickTrackId === item.id ? "1.5rem" : "1rem",
                       borderLeft:
-                        clickId === item.id ? "2px solid #000" : "none",
+                        clickTrackId === item.id ? "2px solid #000" : "none",
                     }}
                   >
                     {item.title}
@@ -63,7 +63,7 @@ function MemberCard() {
         {/* 卡片 */}
         <Grid item sm={8} md={8} lg={10}>
           <Grid container spacing={1} style={{ width: "100%" }}>
-            {Mem.filter(({ Track }) => Track === clickId).map((item) => {
+            {Mem.filter(({ Track }) => Track === clickTrackId).map((item) => {
               return (
                 <Grid item sm={6} md={6} lg={6}>
                   <Grid
@@ -119,6 +119,8 @@ function MemberCard() {
                       <img
                         onClick={() => {
                           handleClickOpen();
+                          setMemId(item.Id);
+                          console.log(memId, "mem");
                         }}
                         src={`assets/${item.Img}`}
                         style={{
@@ -190,7 +192,7 @@ function MemberCard() {
           <Grid container spacing={1}>
             <div style={{}}>
               {Mem.map((item) => {
-                if(clickId===item.Id)
+                if(clickTrackId===item.Id)
                 return (
                   <div
                   key={item.Id}

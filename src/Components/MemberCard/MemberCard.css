@@ -1,0 +1,31 @@
+.CardContainer {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0 1rem;
+  padding: 0 1vw;
+  box-shadow: 3px 3px 13px #dad7cd;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  /* 600~1000 */
+  .ImgContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* 1000以上 */
+  .ImgContainer {
+    height: 60%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

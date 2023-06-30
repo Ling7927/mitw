@@ -76,7 +76,8 @@ function Industry() {
           <div
             key={i}
             style={{
-              border: "2px solid orange",
+              marginBottom: "2vw",
+              //border: "2px solid orange",
             }}
             initial={{
               y: "150%",

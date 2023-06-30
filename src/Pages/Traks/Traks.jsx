@@ -8,7 +8,7 @@ function Traks() {
     <div
       style={{
         background: "#d9d9d9",
-        padding: "0 5vh",
+        padding: "1.5vh 5vh",
       }}
     >
       {/* // <Grid

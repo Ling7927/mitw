@@ -9,9 +9,13 @@ function Introduction() {
     <>
       <div
         style={{
-          background: "linear-gradient( to bottom, #20413F 20%, transparent 70%)",
+          background:
+            " linear-gradient(180deg, #000000 0%, #6AADD9 20.83%, rgba(240, 240, 240, 0) 100%),          linear-gradient(0deg, #F0F0F0, #F0F0F0)",
+          //           background: linear-gradient(180deg, #000000 0%, #6AADD9 20.83%, rgba(240, 240, 240, 0) 100%),
+          // linear-gradient(0deg, #F0F0F0, #F0F0F0);
+
           margin: 0,
-          padding:"5rem 0"
+          padding: "5rem 0",
         }}
       >
         {/* <div style={{ color: "#fff" }}>

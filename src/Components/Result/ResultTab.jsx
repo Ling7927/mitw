@@ -92,7 +92,6 @@ function ResultTab() {
                       )}
                       <h4
                         style={{
-                          margin: 0,
                           fontSize: track === item.Id ? "4vw" : "2vw",
                           // color: track === item.Id ? "#fff" : "#dcdcdc",
                           color: "#fff",
@@ -188,6 +187,7 @@ function ResultTab() {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <p
           style={{
+            margin: 0,
             borderStyle: " solid ",
             borderWidth: " 4px",
             padding: "1vw",

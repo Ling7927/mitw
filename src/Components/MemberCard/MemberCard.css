@@ -8,9 +8,23 @@
   padding: 0 1vw;
   box-shadow: 3px 3px 13px #dad7cd;
 }
-
-@media screen and (min-width: 600px) and (max-width: 1200px) {
-  /* 600~1000 */
+.Bluetag {
+  margin: 0;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  right: -1vw;
+  background: #3abcbf;
+  color: #fff;
+  box-shadow: 2px 0px 3px #d6ccc2;
+}
+@media screen and (min-width: 600px) and (max-width: 740px) {
+  /* 600~740 */
+  .CardContainer {
+    margin-top: 5vh;
+  }
   .ImgContainer {
     height: 100%;
     width: 100%;
@@ -18,14 +32,32 @@
     flex-direction: column;
     align-items: center;
   }
+  .Bluetag {
+    font-size: 1.5vw;
+    height: 2.5vw;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 1200px) {
+  /* 740~1200 */
+  .Bluetag {
+    font-size: 1.5vw;
+    height: 2.5vw;
+  }
 }
 @media screen and (min-width: 1200px) {
-  /* 1000以上 */
+  /* 1200以上 */
+  .CardContainer {
+    width: 80%;
+  }
   .ImgContainer {
-    height: 60%;
-    width: 60%;
+    height: 80%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .Bluetag {
+    font-size: 1.5vw;
+    height: 2vw;
   }
 }

@@ -56,7 +56,7 @@ function Trakslist() {
                     textShadow:
                       isHover === item.id
                         ? item.onhover
-                        : "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
+                        : "0 0 0.7em #00F9FF, 0 0 0.7em #00F9FF,0 0 0.8em #53F3D3",
                   }}
                 >
                   <Link

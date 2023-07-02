@@ -1,6 +1,8 @@
 import React, { useState, MouseEvent } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import Background from "../assets/Background.png";
+import { Grid } from "@mui/material";
+
 import T2023 from "../assets/T2023.png";
 import Ttext from "../assets/Titletext.png";
 
@@ -43,10 +45,55 @@ function Test() {
   const isInView = useInView(ref, { once: true });
   return (
     <>
-    <div>
-
-      
-    </div>
+      <Grid container>
+        <Grid item></Grid>
+        <Grid item>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5, x: 0 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              background: "pink",
+              width: "10rem",
+              height: "10rem",
+              x: 100,
+            }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001,
+              },
+            }}
+          >
+            dd
+          </motion.div>
+        </Grid>
+        <motion.p
+          style={{
+            color: "#fff",
+            marginLeft: "5rem",
+            padding: 0,
+            fontSize: "2rem",
+            textShadow:
+              "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3",
+          }}
+          initial={{ y: -200 }}
+          animate={{ y: 0 }}
+          whileHover={{
+            scale: 1.3,
+            color: "#fff",
+            textShadow: "0 0 0.7em black, 0 0 0.7em black,0 0 0.7em black",
+          }}
+          exit={{ color: "blue", y: "-30px" }}
+        >
+          aa
+        </motion.p>
+      </Grid>
+      <div></div>
       <div
         style={{
           background: "yellow",
@@ -58,7 +105,12 @@ function Test() {
         <div>jgre</div>
       </div>
       <div
-        style={{ display: "flex", flexDirection: "row", textAlign: "center",overflow:"hidden" }}
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          textAlign: "center",
+          overflow: "hidden",
+        }}
       >
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -98,7 +150,7 @@ function Test() {
             color: "#fff",
             textShadow: "0 0 0.7em black, 0 0 0.7em black,0 0 0.7em black",
           }}
-          exit={{color:"blue",y:"-30px"}}
+          exit={{ color: "blue", y: "-30px" }}
         >
           dnksl
         </motion.p>
@@ -133,11 +185,17 @@ function Test() {
           transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
         <motion.div
-          style={{width:"20rem",height:"20rem",background:" radial-gradient(#FF8000, transparent 70%)",}}
-          animate={{x:[-50,150,600,700,1300,1200,1400,1450,900,100,50],y:[100,-300,-400,-500,-450,300,600,900,800,750,300]}}
-          transition={{duration:25 ,repeat:Infinity}}
-          
-          />
+          style={{
+            width: "20rem",
+            height: "20rem",
+            background: " radial-gradient(#FF8000, transparent 70%)",
+          }}
+          animate={{
+            x: [-50, 150, 600, 700, 1300, 1200, 1400, 1450, 900, 100, 50],
+            y: [100, -300, -400, -500, -450, 300, 600, 900, 800, 750, 300],
+          }}
+          transition={{ duration: 25, repeat: Infinity }}
+        />
       </div>
       {/* <div style={{ border:"1px solid yellow"}}>
           <svg
@@ -150,37 +208,41 @@ function Test() {
             <circle cx="260.5" cy="260.5" r="260.5" fill="white" />
           </svg>
       </div> */}
-      <div style={{backgroundColor:"#000"}}>
+      <div style={{ backgroundColor: "#000" }}>
         <div
-        style={{
-          backgroundSize: window.innerWidth,
-          backgroundImage: `url(${Background})`,
-          backgroundAttachment: "fixed",
-          objectFit: "scale-down",
-          height: "30rem",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <motion.img ref={ref}
-          src={T2023}
           style={{
-          transform: isInView ? "translateX(10rem)" : "translateX(-200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s" }}
-          
-        ></motion.img>
-        <motion.img ref={ref}
-          src={Ttext}
-          style={{ position: "relative", top: "-2rem",
-          transform: isInView ? "translateX(-3rem)" : "translateX(300px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s" }}
-        ></motion.img>
+            backgroundSize: window.innerWidth,
+            backgroundImage: `url(${Background})`,
+            backgroundAttachment: "fixed",
+            objectFit: "scale-down",
+            height: "30rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <motion.img
+            ref={ref}
+            src={T2023}
+            style={{
+              transform: isInView ? "translateX(10rem)" : "translateX(-200px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          ></motion.img>
+          <motion.img
+            ref={ref}
+            src={Ttext}
+            style={{
+              position: "relative",
+              top: "-2rem",
+              transform: isInView ? "translateX(-3rem)" : "translateX(300px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            }}
+          ></motion.img>
+        </div>
       </div>
-      </div>
-      
     </>
   );
 }

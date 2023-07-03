@@ -5,13 +5,11 @@ function Result() {
   return (
     <div
       style={{
-        background: "rgb(220, 220, 220)",
-        //"linear-gradient(180deg, #000000 0%, #20413F 20.83%, rgba(217, 217, 217, 0) 100%), #F0F0F0"
+        background:
+          "linear-gradient(180deg, #000000 0%, #6AADD9 0.01%, rgba(0, 249, 255, 0) 56.56%, rgba(240, 240, 240, 0) 100%),linear-gradient(0deg, #F0F0F0, #F0F0F0)",
       }}
     >
-      <div style={{ background: "#fff" }}>
-        <ResultTab />
-      </div>
+      <ResultTab />
     </div>
   );
 }

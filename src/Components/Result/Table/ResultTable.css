@@ -2,7 +2,7 @@
   background-color: #89cbce !important;
 }
 .ant-table-tbody .ant-table-cell {
-  background-color: rgba(141, 180, 169, 0.3) !important;
+  background-color: rgb(209, 233, 233) !important;
 }
 .ant-table-wrapper .ant-table-thead > tr > th {
   border-bottom: 1px solid #fff;

@@ -32,7 +32,9 @@ function ResultTab() {
               margin: 0,
               padding: 0,
               fontSize: "2vw",
-              color: "#090908",
+              color: "#fff",
+              textShadow:
+                "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
               // position:"relative",top:"4.5rem"
             }}
           >
@@ -77,10 +79,13 @@ function ResultTab() {
                           layoutId="active-pill"
                           transition={{ duration: 0.6 }}
                           style={{
-                            background: track === item.Id ? " #00F9FF" : "none",
+                            background:
+                              track === item.Id
+                                ? " rgba(0, 249, 255,0.75)"
+                                : "none",
                             boxShadow:
                               track === item.Id
-                                ? "0 0.5rem 2rem #00F9FF, 0 0 1rem #00F9FF,0 0 1rem #53F3D3"
+                                ? "0 1rem 2rem rgba(0, 249, 255,0.75),0 0.5rem 2rem #00F9FF, 0 0 1rem #00F9FF,0 0 1rem #53F3D3"
                                 : "",
                             height: track === item.Id ? "5vw" : "3vw",
                             width: track === item.Id ? "5vw" : "3vw",
@@ -98,7 +103,7 @@ function ResultTab() {
                           textShadow:
                             track === item.Id
                               ? "1px 1px #dcdcdc,1px 2px #23f0c7, 2px 1px #108998"
-                              : "1px 1px #dcdcdc,1px 2px #00F9FF, 2px 1px #53F3D3",
+                              : "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
 
                           position: "relative",
                           // top:"2rem"
@@ -183,15 +188,23 @@ function ResultTab() {
         </Grid>
       </Grid>
 
-      {/* 表格賽道 */}
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      {/* 表格賽道標題 */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          textShadow:
+            "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
+        }}
+      >
         <p
           style={{
             margin: 0,
-            borderStyle: " solid ",
-            borderWidth: " 4px",
-            padding: "1vw",
-            borderImage: "linear-gradient(#23f0c7, #108998,#00F9FF) 20 ",
+            // borderStyle: " solid ",
+            // borderWidth: " 4px",
+            // padding: "1vw",
+            // borderImage: "linear-gradient(#23f0c7, #108998,#00F9FF) 20 ",
+            color: "#fff",
             fontSize: "4vh",
           }}
         >

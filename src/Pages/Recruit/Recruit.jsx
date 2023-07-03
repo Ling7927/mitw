@@ -36,8 +36,11 @@ function Recruit() {
                   {/* <div style={{ margin: "1.5rem 3rem" }}> */}
                   <div
                     style={{
+                      // background:
+                      //   "linear-gradient(90deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
                       background:
-                        "linear-gradient(90deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
+                        "linear-gradient(0deg, rgba(28, 198, 190, 0.41) 0%, #84BADD 99.99%)",
+
                       margin: "3rem ",
 
                       borderRadius: "3rem",
@@ -96,8 +99,11 @@ function Recruit() {
                 <Part>
                   <div
                     style={{
+                      // background:
+                      //   "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
                       background:
-                        "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
+                        "linear-gradient(180deg, rgba(28, 198, 190, 0.41) 0%, #84BADD 99.99%)",
+
                       margin: "3rem ",
 
                       borderRadius: "3rem",

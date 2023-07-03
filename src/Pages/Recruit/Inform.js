@@ -168,7 +168,7 @@ const WorkGrop = [
     li: [
       <p>以下為招募條件以及資訊整理:</p>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #FF8C00" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #BED9F4" }}>
           條件
         </h5>
         <ul style={{ margin: 0 }}>
@@ -180,7 +180,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #FF9D24" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #7CB2E9" }}>
           領域
         </h5>
         <ul style={{ margin: 0 }}>
@@ -188,7 +188,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #FFAD49" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #73ade7" }}>
           責任與工作
         </h5>
         <ul style={{ margin: 0 }}>
@@ -199,7 +199,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #FFC680" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #3E8EDE" }}>
           利益迴避
         </h5>
         <ul style={{ margin: 0 }}>

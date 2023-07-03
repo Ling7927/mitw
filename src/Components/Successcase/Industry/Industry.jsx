@@ -77,7 +77,8 @@ function Industry() {
             key={i}
             style={{
               marginBottom: "2vw",
-              //border: "2px solid orange",
+              paddingBottom: "2vw",
+              borderBottom: "1px solid #dfdfdf",
             }}
             initial={{
               y: "150%",
@@ -142,8 +143,6 @@ function Industry() {
                   </Grid>
                 </Grid>
               </Grid>
-
-              <br />
             </Grid>
           </div>
         );

@@ -12,7 +12,7 @@ function Goverment() {
             key={i}
             style={{
               marginTop: "1rem",
-              // border:"2px solid #orange"
+              borderBottom: "1px solid #dfdfdf",
             }}
             initial={{
               x: "-150%",

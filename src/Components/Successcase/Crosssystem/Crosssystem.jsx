@@ -13,7 +13,7 @@ function Crosssystem() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              // border:"2px solid #fff0"
+              borderBottom: "1px solid #dfdfdf",
             }}
           >
             <h3 style={{ marginBottom: "2rem" }}>{item.title}</h3>

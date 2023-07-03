@@ -19,8 +19,8 @@ function Specification() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             style={{
-              border: "2px outset #fff",
-              boxShadow: "1px 1px 2px 1px #76bdd5",
+              // border: "2px outset #fff",
+              // boxShadow: "1px 1px 2px 1px #76bdd5",
               display: "flex",
               position: "relative",
               flexDirection: "column",
@@ -28,7 +28,6 @@ function Specification() {
               alignItems: "center",
               padding: "2vw",
               margin: "2vw 5vw",
-              // border: "4px dotted #fff"  ,
             }}
           >
             <h4 style={{ marginBottom: "2rem" }}> {P1.title}</h4>
@@ -36,6 +35,7 @@ function Specification() {
             <a href={P1.link} target="_blank" style={{ color: "#000" }}>
               {P1.linkTitle}
             </a>
+            <hr style={{ width: "100%" }} />
           </motion.div>
 
           {/* 說明 */}

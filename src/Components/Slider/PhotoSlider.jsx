@@ -51,7 +51,7 @@ function PhotoSlider({ images }) {
   return (
     <div style={{ width: "100%" }}>
       <Slider {...settings}>
-        {images.map((item,i) => {
+        {images.map((item, i) => {
           return (
             <div style={{ width: "100%" }} key={i}>
               <img src={item.img} style={{ width: "100%" }} />

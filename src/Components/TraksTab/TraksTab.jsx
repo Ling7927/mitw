@@ -3,7 +3,7 @@ import { TraksTabInform } from "./TraksTabInform";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import PhotoSlider from "../../Components/Slider/PhotoSlider";
 import { Grid, Box } from "@mui/material";
-
+import "./TraksTab.css";
 import { useParams } from "react-router-dom";
 
 function TraksTab() {
@@ -20,7 +20,7 @@ function TraksTab() {
         alignItems="center"
         justify="center"
         position="relative"
-        style={{ background: "#f1f1f1" }}
+        style={{ background: "#fdfdfd" }}
       >
         {/* 上面按鈕 */}
 
@@ -51,21 +51,22 @@ function TraksTab() {
                     >
                       <div
                         style={{
-                          fontSize: "3rem",
+                          fontSize: "4rem",
                         }}
                       >
                         {item.TabTitle}
                       </div>
                       <div
                         style={{
+                          fontWeight: "bold",
                           fontSize: "1rem",
                           fontSize: "15px",
                           color: "#1e1e1e",
                           margin: 0,
                           padding: "1rem",
-                          background: "#f1f1f1",
+                          background: "#fdfdfd",
                           position: "relative",
-                          top: "-25px",
+                          top: "-30px",
                         }}
                       >
                         {item.ContentTitle}
@@ -80,112 +81,32 @@ function TraksTab() {
               sm={12}
               md={9}
               lg={9}
-              gap={3}
               style={{
                 display: "flex",
-                overflowX: "auto",
-                paddingBottom: "2vw",
+                // overflowX: "auto",
+                paddingBottom: "3vw",
+                justifyContent: "center",
+                alignItems: "flex-end",
               }}
             >
-              {TraksTabInform.filter((item) => item.Id !== onHandle).map(
-                (item) => {
-                  return (
-                    <button
-                      key={item}
-                      onClick={() => setOnHandle(item.Id)}
-                      style={{
-                        background: "none",
-                        border: 0,
-
-                        // boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
-                      }}
-                    >
-                      <p
-                        style={{
-                          fontSize: "1.5rem",
-                          color: "#dddddd",
-                          margin: 0,
-                        }}
-                      >
-                        {item.TabTitle}
-                      </p>
-                    </button>
-                  );
-                }
-              )}
+              <Grid container columns={18}>
+                {TraksTabInform.filter((item) => item.Id !== onHandle).map(
+                  (item) => {
+                    return (
+                      <Grid item xs={2} sm={2}>
+                        <button
+                          className="Tabsbutton"
+                          key={item}
+                          onClick={() => setOnHandle(item.Id)}
+                        >
+                          {item.TabTitle}
+                        </button>
+                      </Grid>
+                    );
+                  }
+                )}
+              </Grid>
             </Grid>
-
-            {/* {TraksTabInform.map((item) => {
-              //已選取
-              if (onHandle === item.Id)
-                return (
-                  <Grid item sm={2} md={2} lg={2}>
-                    <button
-                      key={item}
-                      onClick={() => setOnHandle(item.Id)}
-                      style={{
-                        position: "absolute",
-                        top: "5%",
-                        left: "5%",
-                        background: "none",
-                        border: 0,
-                        padding: 0,
-                        // boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
-                      }}
-                    >
-                      <p
-                        style={{
-                          fontSize: "4rem",
-                          color: "#1e1e1e",
-                          margin: 0,
-                        }}
-                      >
-                        {item.TabTitle}
-                      </p>
-                      <p
-                        style={{
-                          fontSize: "15px",
-                          color: "#1e1e1e",
-                          margin: 0,
-                          padding: "1rem",
-                          background: "#f1f1f1",
-                          position: "relative",
-                          top: "-2rem",
-                        }}
-                      >
-                        {item.ContentTitle}
-                      </p>
-                    </button>
-                  </Grid>
-                );
-              //未選取
-              else
-                return (
-                  <Grid item sm={1} md={1} lg={1}>
-                    <button
-                      key={item}
-                      s
-                      onClick={() => setOnHandle(item.Id)}
-                      style={{
-                        background: "none",
-                        border: 0,
-                        padding: "4rem 1.5rem 0",
-                        // boxShadow: " 0px 3px 1px rgba(0, 0, 0, 0.5)",
-                      }}
-                    >
-                      <p
-                        style={{
-                          fontSize: "1.5rem",
-                          color: "#dddddd",
-                          margin: 0,
-                        }}
-                      >
-                        {item.TabTitle}
-                      </p>
-                    </button>
-                  </Grid>
-                );
-            })} */}
           </Grid>
         </Grid>
         {/* 內容 */}

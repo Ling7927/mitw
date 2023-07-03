@@ -5,7 +5,7 @@ function Specification() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div style={{ background: "#dcdcdc" }}>
+      <div style={{ background: "#d9d9d9" }}>
         <div
           style={{
             margin: "0 5vw 1vw",

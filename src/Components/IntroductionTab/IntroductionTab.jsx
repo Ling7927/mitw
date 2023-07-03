@@ -21,7 +21,7 @@ function IntroductionTab() {
                   backgroundColor: onHandle === item.id ? "#f0f0f0" : "#7AACA9",
                   color: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
-                  width: "20vh",
+                  width: "30vh",
                   borderRadius: "10px 10px 0px 0px",
                   boxShadow: " 0px 0px 1px rgba(0, 0, 0, 0.5)",
                 }}
@@ -38,7 +38,7 @@ function IntroductionTab() {
                   {item.icon}
                 </p>
 
-                <div style={{ padding: "15% 0" }}>
+                <div style={{ padding: "10% 0" }}>
                   <h5
                     style={{
                       color: onHandle === item.id ? "#7AACA9" : "#fff",

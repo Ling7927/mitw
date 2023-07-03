@@ -136,7 +136,9 @@ function Industry() {
                     <h3>{item.name}</h3>
                   </Grid>
                   <Grid item>
-                    <div style={{}}>
+                    <div
+                    //style={{ whiteSpace: "pre-line" }}
+                    >
                       <SeeMore introduce={item.introduce} />
                     </div>
                   </Grid>

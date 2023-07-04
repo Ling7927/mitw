@@ -267,8 +267,245 @@ export const TraksTabInform = [
         Sc: "涉及系統(Systems Affected)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <ul style={{ margin: 0 }}>
+              本規範涉及涉及的系统有：
+              <li>醫院資訊系統(Hosptial Information System, HIS)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                針對HIS開立影像檢查單，以HL7 v2訊息(HL7
+                message)標準提供造影工作清單(Modality
+                Worklist)上的造影檢查單之新增、刪除、修改等功能。影像調閱至門診或是HIS系統，以DICOMweb方式調閱影像並呈現在HIS系統。
+              </li>
+              <li>放射科資訊系統(Radiology Information Systm, RIS)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                用於放射科檢查流程管理，包含: 造影檢查排程管理(DICOM Modality
+                Performed Procedure Step
+                (MPPS)、造影工作清單(Worklist)主機、影像傳輸確認機制(Storage
+                Commitment)、{" "}
+              </li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                針對PACS產品包含: Modality Worklist, Image Manager, Image
+                Archive, Image
+                Display等功能進行驗證，與醫療儀器廠商針對影像上傳，例如:
+                C-STORE, STOW, 等方式進行介接測試驗證。
+              </li>
+              <li>報告儲存系統(Report Repository)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                用於儲存與管理影像報告的資料庫，支援標準化FHIR
+                DiagnosticReport以及ImagingStudy查詢與調閱。
+              </li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                亦可支援FHIR格式之影像發現以及影像標記註。
+              </li>
+              <li>報告顯示/編輯系統(Reporting System)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                用於顯示以及編影像報告，可支援標準化FHIR
+                診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)的查詢與調閱以及上傳，影像整合報告部分，可透過影像索引(ImagingStudy)組合影像對應的WADO連結，並可向影像儲存系統以DICOM/DICOMweb的方式調閱影像以及影像的標記註解至影像顯示系統顯示。
+                影像發現以及影像標記註解亦可支援FHIR格式儲存，可從報告儲存系統中調閱影像發現以及影像標記並顯示在影像顯示系統中。
+              </li>
+              <li>影像儲存系統(Image Manager/Archive, IM)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                {" "}
+                此系統也稱為PACS
+                Server，用於符合DICOM標準格式之影像、波型、結構化報告、標記註解等類型的儲存與管理，並支援標準化DICOM、DICOMweb查詢與調閱協定。DICOM協定常用支援為C-STORE,
+                C-FIND, C-MOVE,
+                C-GET等；DICOMweb支援QIDO-RS、WADO-RS/WAOD-URI、STOW-RS等。
+              </li>
+              <li>(數位病理)影像顯示系統(Image Display, ID)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                {" "}
+                提供DICOM數位病理影像或一般醫學影像之顯示、影像處理，標記註解等功能，此系統通常結合影像報告系統，影像從影像儲存系統調閱後，用來提供病理科醫師或是臨床醫師查看影像以及對應報告。
+              </li>
+              <li>證據產生系統(Evidence Creator, EC)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                在醫學資訊整合系統中，產生已完成檢查的相關影像、關鍵影像(key
+                Image
+                Noate)、標記註解、結構化報告等，並可將結果傳送至影像儲存系統。此系統大多由輔助決策系統或是人工智慧模型產生標準化之DICOM
+                AI結果(AI Resutls)，例如: GSPS, RTSS,
+                SEG等，上傳至影像儲存系統，並提供影像檢視器之顯示。其驗證包含:
+                格式驗證以及傳輸協定驗證(請參考 醫療儀器設備說明)
+              </li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                {" "}
+                影像標記註解亦可支援FHIR格式儲存，可將結果以FHIR方式上傳報告儲存系統中。
+              </li>
+              <li>醫療儀器設備(Modality, MOD)</li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                參加對象以國內外醫療儀器製造商在台灣銷售為主，包含:
+                超音波、心電圖、X光機、內視鏡等。主要驗證儀器是否符合DICOM以下規格
+              </li>
+              <li style={{ marginLeft: "30px" }}>
+                影像格式驗證: 針對儀器製造商提供之符合性宣稱(Conformance
+                Statement)，針對儀器端產生之DICOM物件進行格式驗證，以符合DICOM
+                PS 3.3 SOP Class
+                UID定義的格式規範。例如:產生的超音波影像是否符合DICOM格式、具備必要欄位、儲存的數值符合欄位規範、OID與UID之正確性等。
+              </li>
+              <li style={{ marginLeft: "30px" }}>
+                {" "}
+                傳輸協定驗證: 針對儀器製造商提供之符合性宣稱(Conformance
+                Statement)，驗證傳輸功能是否符合DICOM規範，例如: C-STORE,
+                Storage Commitment, MPPS, C-FIND-MWL等功能。
+              </li>
+            </ul>
+            <ul style={{ margin: 0 }}>
+              本工作小組制定的使用情境依序說明如下:
+              <h5 style={{ fontWeight: "bold" }}>情境1:影像與標記互通</h5>
+              <li>
+                測試一般影像以及病理影像儲存管理主機(Source)以及顯示端(Consumer)能依照DICOMweb標準查詢與調閱。能夠正確顯示影像以及標記註解，根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Dispaly
+                Consistency)。
+              </li>
+              <li>
+                使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，依照DICOM階層式架構回傳結果。可選擇使用DICOM(C-STORE)或是使用WADO-URI或WADO-RS調閱影像，並顯示結果。
+              </li>
+              <li>
+                影像標記與註解格式可能是影像分割形式的點陣圖型、透過座標定義輪廓之向量圖型等，本情境主要針對註解標示影像的關注區(regions
+                of interest,
+                ROIs)的標準化進行驗證。亦希望參加者能提供簡單的標記，作為標準化醫學影像以及病理影像的示範案例，提供異質性系統互通。
+              </li>
+              <li>
+                影像標記註解部分，DICOM支援標記規格，例如: GSPS, RTSS,
+                SEG等。FHIR標記註解部分支援SVG格式。
+              </li>
+              <li>
+                病理影像部分能夠支援顯示DICOM Supplement
+                145定義的超大尺寸數位病理影像(Whole Slide Image,
+                WSI)，並能正確顯示。
+              </li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                使用DICOMweb階層式查詢方式查詢DICOMweb主機，依照DICOM階層式架構回傳結果。使用WADO-URI或WADO-RS調閱影像。
+              </li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                產生DICOM數位病理影像並透過DICOM標準協定上傳至PACS Servers
+              </li>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                產生TID 1500結構化報告或是DIOCM ANN (DICOM Supplement 222: Whole
+                Slide Microscopy Bulk Annotations Storage SOP
+                Class格式作為標記註解格式
+              </li>
+              <li style={{ fontWeight: "bold" }}>
+                情境1-1: 醫學影像及DICOM標記呈現
+              </li>
+              <p>
+                使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳影像以及標記註解，且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Dispaly
+                Consistency)。
+              </p>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                使用資料:
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  醫學影像(DICOM)
+                </li>
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  影像標記與註解(FHIR Observation)
+                </li>
+              </li>
+              <li style={{ fontWeight: "bold" }}>
+                情境1-2: 醫學影像及FHIR標記呈現
+              </li>
+              <p>
+                使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳影像，且能從FHIR影像報告儲存中心
+                (Report
+                Repository)調閱FHIR標記且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Dispaly
+                Consistency)。
+              </p>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                使用資料:
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  醫學影像(DICOM)
+                </li>
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  影像標記與註解(FHIR Observation)
+                </li>
+              </li>
+              <h5 style={{ fontWeight: "bold" }}>情境2:報告及影像整合</h5>
+              <p>
+                製作FHIR放射影像索引及放射報告並上傳至影像報告儲存中心 (Report
+                Repository) 結合影像報告與DICOM影像整合情境，以臺灣核心實作指引
+                (TW core
+                IG)為基礎向上設計，成為電子病歷交換中心(EEC)之跨院調閱單張「醫療影像及報告」設計案例。
+              </p>
+              <li>
+                針對影像報告以及對應的DICOM影像、DICOM標記註解解進行存取調閱、並能正確顯示。
+              </li>
+              <li>
+                產生FHIR
+                診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)並以FHIR方式上傳至報告儲存系統。
+              </li>
+              <li>
+                使用FHIR方式用於查尋與調閱診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)，並能整合報告對應的影像，且適當使用影像檢視器開啟影像與標記。
+              </li>
+              <li style={{ fontWeight: "bold" }}>
+                情境2-1: 醫學影像報告及影像整合
+              </li>
+              <p>
+                製作FHIR放射影像索引及放射報告並上傳至影像報告儲存中心 (Report
+                Repository) 結合影像報告與DICOM影像整合情境
+              </p>
+              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
+                使用資料:
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  病理影像報告 (FHIR DiagnosticReport)
+                </li>
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  影像索引(FHIR ImagingStudy)
+                </li>
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  WSI影像(DICOM)
+                </li>
+                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
+                  WSI影像標記與註解(DICOM ANN, DICOM SR)
+                </li>
+              </li>
+              <p>
+                下圖為影像報告的Profile設計結構，包含: (1)
+                放射影像報告/病理影像報告 (FHIR
+                DiagnosticReport)、(2)影像索引(FHIR ImagingStudy)。
+              </p>
+              <p style={{ fontWeight: "bold" }}>
+                放射影像報告/病理影像報告 (FHIR DiagnosticReport)設計結構示意圖
+              </p>
+              <img />
+              <p style={{ fontWeight: "bold" }}>
+                影像索引(FHIR ImagingStudy)設計結構示意圖
+              </p>
+              <img />
+              <li>
+                {" "}
+                <a
+                  target="_blank"
+                  href="https://build.fhir.org/imagingstudy-mappings.html"
+                >
+                  DICOM TAG與FHIR對照表
+                </a>
+              </li>
+              <h5 style={{ fontWeight: "bold" }}>
+                情境1與情境2角色與交易關係圖
+              </h5>
+              <img />
+              <h5 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h5>
+              <ul style={{ margin: 0, listStyleType: "disc" }}>
+                <span>
+                  此情境為建立一個醫學影像的造影檢查流程，此情境完全依照
+                </span>
+                <a
+                  target="_blank"
+                  href="https://wiki.ihe.net/index.php/Scheduled_Workflow"
+                >
+                  IHE Scheduled Workflow Profile
+                </a>
+                <span>的聯測規範提供參加者驗證系統與產品。</span>
+                <li>ADT</li>
+                <li>Order Palcer</li>
+                <li>DDS/Order Filler</li>
+                <li>Acquisition Modality</li>
+                <li>Image Manager/Image Archive</li>
+                <li>Image Display</li>
+                <li>Performed Procedure Step Manage</li>
+                <li>Evidence Creator</li>
+                <p>
+                  備註:
+                  此情境採用互通性聯測機制，同一情境測試項目需滿足IHE聯測規範，即需三家不同公司或是機構進行交互驗證方可通過聯測。
+                </p>
+              </ul>
+            </ul>
           </>
         ),
       },

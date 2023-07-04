@@ -24,32 +24,35 @@ function Goverment() {
             }}
             transition={{ delay: 0.7, duration: 0.7 }}
           >
-            <Grid
-              container
-              spacing={1}
-              marginBottom="2rem"
-              alignItems="center"
-              key={i}
-            >
-              <Grid item sm={12} md={3} lg={3}>
+            <Grid container spacing={1} marginBottom="2rem" key={i}>
+              <Grid item sm={12} md={3} lg={3} style={{ padding: 0 }}>
                 <img src={item.img} style={{ width: "100%" }} />
-              </Grid>
-              <Grid item sm={12} md={9} lg={9}>
-                {/* 上半 */}
                 <a
                   href={item.link}
                   target="_blank"
-                  style={{ textDecoration: "none ", color: "#000" }}
+                  style={{
+                    textDecoration: "none ",
+                    color: "#0081a7",
+                  }}
                 >
-                  <h3>{item.name}</h3>
+                  {item.linkname}
                 </a>
+              </Grid>
+              <Grid
+                item
+                sm={12}
+                md={9}
+                lg={9}
+                style={{ display: "flex", flexDirection: "column" }}
+              >
+                {/* 上半 */}
+
+                <h3>{item.name}</h3>
                 <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
               </Grid>
 
               {/* 下半 */}
-              <div style={{ margin: "2rem 1rem 1rem 1rem" }}>
-                {item.introduce}
-              </div>
+              <div style={{ margin: "2rem 1rem 1rem 0" }}>{item.introduce}</div>
             </Grid>
           </motion.div>
         );

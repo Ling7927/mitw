@@ -565,6 +565,7 @@ const HospitalInform = [
 const GovernmentInform = [
   {
     img: G1,
+    linkname: "產品介紹",
     link: "https://mitw.dicom.org.tw/pdf/1.%E5%9C%8B%E7%AB%8B%E6%88%90%E5%8A%9F%E5%A4%A7%E5%AD%B8%20-%20%E6%99%BA%E6%85%A7%E5%9E%8B%E5%AA%92%E9%AB%94%E8%88%87%E7%94%9F%E6%B4%BB%E5%AF%A6%E9%A9%97%E5%AE%A4_ALOVAS%20%E6%95%B8%E4%BD%8D%E7%97%85%E7%90%86%E5%88%87%E7%89%87%E5%BD%B1%E5%83%8F%E5%88%86%E6%9E%90%E7%B3%BB%E7%B5%B1.pdf",
     name: (
       <div>
@@ -579,6 +580,7 @@ const GovernmentInform = [
   },
   {
     img: G2,
+    linkname: "產品介紹",
     link: "https://mitw.dicom.org.tw/pdf/17.CIMS%E5%9C%98%E9%9A%8A_%E8%87%A8%E5%BA%8A%E7%A0%94%E7%A9%B6%E8%B3%87%E8%A8%8A%E7%B3%BB%E7%B5%B1(CSIS)%E8%88%87CSIS-APP.pdf",
     name: (
       <div>
@@ -592,6 +594,7 @@ const GovernmentInform = [
   },
   {
     img: G2,
+    linkname: "產品介紹",
     link: "https://mitw.dicom.org.tw/pdf/18.CIMS%E6%9C%8D%E5%8B%99%E5%9C%98%E9%9A%8A_%E8%87%A8%E5%BA%8A%E7%A0%94%E7%A9%B6%E8%B3%87%E8%A8%8A%E7%B3%BB%E7%B5%B1%20(Clinical%20Study%20Information%20System,%20CSIS).pdf",
     name: (
       <div>

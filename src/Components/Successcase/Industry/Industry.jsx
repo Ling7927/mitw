@@ -92,11 +92,12 @@ function Industry() {
               {/* 左 */}
               <Grid item xs={12} sm={12} md={4} lg={4}>
                 <Grid container direction="column">
-                  <Grid item>
+                  <Grid item width="65%">
                     <img
                       src={item.img}
                       style={{
-                        width: "80%",
+                        width: "30vh",
+
                         objectFit: "cover",
                         marginBottom: "1rem",
                       }}

@@ -43,15 +43,7 @@ const Navbar = () => {
               />
             </Link>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={8}
-            lg={8}
-            style={{ display: "flex", justifyContent: " space-evenly" }}
-            className={collapse}
-          >
+          <Grid item xs={12} sm={12} md={8} lg={8} className={collapse}>
             {routerList.map((item) => {
               if (item.icon === null) {
                 return (
@@ -69,12 +61,12 @@ const Navbar = () => {
                 return (
                   <div
                     className="dropdown"
-                    style={{ float: "left", zIndex: " 999" }}
+                    style={{ float: "left", zIndex: " 900" }}
                   >
                     <button className="dropbtn">{item.name}</button>
                     <div
                       className="dropdown-content"
-                      style={{ left: "0", padding: 0 }}
+                      style={{ left: "32px", padding: 0 }}
                     >
                       {item.li.map((li, index) => {
                         return (
@@ -88,18 +80,17 @@ const Navbar = () => {
                 );
               }
             })}
-
-            <div
-              className={toggleIcon}
-              onClick={() => {
-                onToggle();
-              }}
-            >
-              <div>
-                <AiOutlineMenu />
-              </div>
-            </div>
           </Grid>
+          <div
+            className={toggleIcon}
+            onClick={() => {
+              onToggle();
+            }}
+          >
+            <div>
+              <AiOutlineMenu />
+            </div>
+          </div>
         </nav>
       </Grid>
     </Box>

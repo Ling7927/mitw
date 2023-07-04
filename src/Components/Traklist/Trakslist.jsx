@@ -14,7 +14,7 @@ function Trakslist() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          padding: "2vh 10vw 5vh",
+          padding: "2vh 10vw 15vh",
         }}
       >
         <h2
@@ -22,6 +22,7 @@ function Trakslist() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            margin: "5rem 0",
           }}
         >
           預計賽道(Track)

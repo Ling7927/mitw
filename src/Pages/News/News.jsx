@@ -117,40 +117,6 @@ function News() {
           {/* ----------------預計賽道------------------- */}
           <Grid item>
             <Traks />
-
-            {/* ---------預計時程------------*/}
-            {/*  <hr />
-
-           <div className="p3">
-            <h2 style={{ textAlign: "center", justifyContent: "center" }}>
-              {NewsInform.title.p3}
-            </h2>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-betwee",
-                gap: "5rem",
-              }}
-            >
-              <div style={{ width: "50%" }}>
-                <img
-                  src={Title}
-                  style={{ width: "100%", margin: "0.5rem" }}
-                ></img>
-              </div>
-              <div style={{ width: "50%" }}>
-                <ul style={{ margin: 0 }}>
-                  {NewsInform.p3.context.map((item, i) => {
-                    return (
-                      <li style={{ margin: "0.5rem" }} key={i}>
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
-          </div> */}
           </Grid>
         </Grid>
       </div>

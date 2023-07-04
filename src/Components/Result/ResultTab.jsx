@@ -25,7 +25,7 @@ function ResultTab() {
           sm={2}
           md={2}
           lg={2}
-          style={{ display: "flex", justifyContent: "flex-end" }}
+          style={{ display: "flex", justifyContent: "center" }}
         >
           <p
             style={{
@@ -192,7 +192,9 @@ function ResultTab() {
       <div
         style={{
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
+          alignItems: "center",
           textShadow:
             "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
         }}
@@ -210,10 +212,9 @@ function ResultTab() {
         >
           {ResultTabInform.filter((item) => item.Id === track)[0].ContentTitle}
         </p>
+        <ResultTable id={track} />
       </div>
       {/* 表格 */}
-
-      <ResultTable id={track} />
     </>
   );
 }

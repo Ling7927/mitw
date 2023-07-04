@@ -8,8 +8,9 @@ import { useParams } from "react-router-dom";
 
 function TraksTab() {
   const { id } = useParams();
-  const [onHandle, setOnHandle] = useState(id || "1");
-  const [Click, setClick] = useState("0");
+  const [onHandle, setOnHandle] = useState(id || "1"); //Trackbutton
+  const [Click, setClick] = useState("0"); //section
+  const [Section, setSection] = useState(false);
 
   return (
     <>
@@ -130,7 +131,7 @@ function TraksTab() {
           {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
             (item, i) => {
               return (
-                <div>
+                <div key={item.id}>
                   <button
                     style={{
                       height: "2rem",
@@ -140,12 +141,14 @@ function TraksTab() {
                       margin: " 1rem 0",
                       padding: "0.3rem",
                     }}
-                    onClick={() => setClick(item.id)}
-                    key={item.id}
+                    onClick={() => {
+                      setClick(item.id);
+                    }}
                   >
                     {item.Sc}
                     {Click === item.id ? <GoTriangleDown /> : <GoTriangleUp />}
                   </button>
+                  {Click === item.id ? <div>{item.content}</div> : ""}
                 </div>
               );
             }

@@ -11,10 +11,46 @@ export const TraksTabInform = [
     ContentTitle: "病人基本資料",
     Img: [{ img: T1_1 }, { img: T1_2 }, { img: T1_3 }, { img: T1_4 }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -28,10 +64,46 @@ export const TraksTabInform = [
     ContentTitle: "生理量測資訊",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -45,10 +117,46 @@ export const TraksTabInform = [
     ContentTitle: "處方用藥及文件打包",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -62,10 +170,128 @@ export const TraksTabInform = [
     ContentTitle: "醫學影像與病理",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "簡介 (Summary)",
+        content: (
+          <>
+            {" "}
+            <h3>影像與標記互通 </h3>
+            <p>
+              測試醫學影像以及數位病理影像儲存管理主機 (Source)以及顯示端
+              (Consumer)能依照DICOM或DICOMweb標準查詢與調閱DICOM影像以及能正確顯示影像以及標記，已達到影像顯示一致性(Display
+              Consistency)。影像包含:
+              (1)一般醫學影像如:X光、磁振造影、電腦斷層、超音波等、以及(2)超大尺寸數位病理影像(Whole
+              Slide
+              Image)。在影像標記註解部分，透過影像與標記標準化，用來解決影像與標記異質性系統之互通性。標註格式可能是影像分割形式的點陣圖型、透過座標定義輪廓之向量圖型等，本賽道主要針對註解標示影像的關注區(regions
+              of interest,
+              ROIs)的標準化進行驗證。亦希望參加者能提供簡單的標記，作為標準化影像的示範案例，提供異質性系統互通，作為加速影像標準化。
+            </p>
+            <h3>影像報告與影像整合 </h3>
+            <p>
+              本工作小組提出一個基礎文字(Basic
+              Text)的影像報告格式，結合此報告有關的資訊，包含:
+              病患、檢查資訊、影像連結等，以此來產生一個可交換的影像報告格式，作為電子病歷交換需求。本賽道將以HL7
+              FHIR為核心架構設計不同的Profile，並以FHIR
+              IG方式呈現。本賽以臺灣核心實作指引 (TW core
+              IG)為基礎向上設計，透過HL7 FHIR格式設計醫學影像(包含content:
+              放射影像以及數位病理影像)之影像索以及影像報告(包含:
+              放射影像以及數位病理影像)並上傳至影像報告儲存中心 (Report
+              Repository)，結合影像報告與DICOM影像之整合情境，建構電子病歷交換中心(EEC)之跨院調閱單張「醫療影像及報告」設計案例，作為FHIR以及DICOM整合的使用情境。{" "}
+            </p>
+            <h3>影像檢查流程 </h3>{" "}
+            <p>
+              提供場域針對DICOM相關的醫療儀器與HIS、PACS互通之應用驗證。例如:
+              國內廠商自行研發超音波儀器，但苦於現有PACS與HIS廠商進行驗證，每次需要都需要在個別的醫院進行介接測試，本情境提供一個良好的技術交流場域，讓國內外多家廠商聯合測試，已證明產品符合國際醫學資訊標準規範。聯測驗證標準比照國際IHE聯測規格，提供測試IHE
+              SWF(Scheduled Worflow)規範，讓國內業者能依據IHE
+              SWF實作產品作為開拓國際市場前的產品標準化驗證。
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "效益 (Benefits) ",
+        content: (
+          <>
+            <p>
+              隨著人工智慧與機器學習(AI/ML)的快速發展，需要加快標準化的醫學影像分析工作流程的軟體開發流程(SDLC)，以及採取更加敏捷的開發方法。參加單位可使用實際或是產品雛型參加此賽道，由於這需要大量的前期開發工作，因此參加者需要具備較高的技術門檻。這也鼓勵參加單位早期投資，希望此標準足夠成熟，進而早期布局，以證明投資的合理性。早日切入醫學影像市場。為了簡化標準化開發流程並鼓勵產業早期實施和測試。透過聯測提供實證場域，鼓勵醫學影像分析專家、軟體工程師、開源工作者參加，並投入開發開源試驗，建立提供醫學影像標準化系統的產品概念驗證(Proof
+              of Concept)。
+              透過自動化排程檢查確保特定數據僅輸入一次來防止手動數據輸入錯誤，用來
+              <span style={{ fontWeight: "bold", margin: 0 }}>
+                減少錯誤並增加醫護人員效率
+              </span>
+              ，且自動化排程可由統一的檢查單號(申請序號)，可作為檢查流程中的追蹤與識別目前檢查的狀態，減少操作人員在跨系統之間的溝通成本的時間，且能減少病人丟失、或是檢查漏失等情況發生，來
+              <span style={{ fontWeight: "bold" }}>提高檢查量。</span>
+            </p>
+            <p>
+              透過導入標準作業流程以及病歷格式導入國際標準，避免業者與醫院資訊系統進行系統整合時，採用自訂的界接規格，減少自訂規格的時間與成本以及減少測試的時間以及因為跨系統之間的整合產生的費用，例如:維護費、界接費、系統修改等。透過此賽道的驗測，提供一個良好的實證場域，讓業者在產品與系統導入到醫院之前，能有效地域同業進行實際系統驗證，可大幅
+              <span style={{ fontWeight: "bold" }}>降低部屬的成本與時間。</span>{" "}
+            </p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "詳細資訊(Details) ",
+        content: (
+          <>
+            <ul style={{ listStyleType: "decimal", margin: 0 }}>
+              本賽道的情境描述如下:
+              <li>
+                <span style={{ fontWeight: "bold" }}>影像與標記互通:</span>
+                目的在於驗證DICOM格式之醫學影像以及數位病理影像以及人工智慧標記與註解之呈現，利用DICOM與FHIR的傳輸協定進行跨系統間的查詢與調閱，並能夠在不同的系統重呈現影像與標記註解顯示的一致性。影像的標記註解支援ICOM以及FHIR
+                SVG格式，使用者可透過自選的格式來驗證影像與標記註解的互通性。
+              </li>
+              <li>
+                <span style={{ fontWeight: "bold" }}>影像報告與影像整合:</span>
+                提供一個影像與報告交換情境，從製作FHIR放射影像索引及放射報告並上傳至影像報告儲存中心
+                (Report Repository)
+                結合影像報告與DICOM影像整合情境，以FHIR以及DICOMweb機制作為傳輸協定。採用以臺灣核心實作指引
+                (TW core
+                IG)為基礎向上設計，設計成電子病歷交換中心(EEC)之跨院調閱單張
+                「醫療影像及報告」 設計案例。
+              </li>
+              <li>
+                <span style={{ fontWeight: "bold" }}>影像檢查流程:</span>
+                影像檢查流程情境為提供場域針對DICOM相關的醫療儀器與HIS、PACS互通之應用驗證。
+                例:
+                國內廠商自行研發超音波儀器，但苦於現有PACS與HIS廠商進行驗證，每次需要都需要在個別的醫院進行介接測試。此情境提供提供一個良好的實證場域，讓國內外多家廠商聯合測試，已證明產品符合國際醫學資訊標準規範。此項目將與影像與AI結果結合，提供HIS、儀器製造商以及PACS互通之應用驗證。
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "5",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -79,10 +305,46 @@ export const TraksTabInform = [
     ContentTitle: "偕同照護",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -96,10 +358,46 @@ export const TraksTabInform = [
     ContentTitle: "基因體標記",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -113,10 +411,46 @@ export const TraksTabInform = [
     ContentTitle: "緊急醫療救護",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -130,10 +464,46 @@ export const TraksTabInform = [
     ContentTitle: "醫療保險",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -147,10 +517,46 @@ export const TraksTabInform = [
     ContentTitle: "遠距醫療",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -164,10 +570,46 @@ export const TraksTabInform = [
     ContentTitle: "癌症登記",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
-      { id: "1", Sc: "Scenario 1 病人身分確認用" },
-      { id: "2", Sc: "Scenario 2 聯繫病人用 " },
-      { id: "3", Sc: "Scenario 3：院外系統 " },
-      { id: "4", Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) " },
+      {
+        id: "1",
+        Sc: "Scenario 1 病人身分確認用",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "2",
+        Sc: "Scenario 2 聯繫病人用 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "Scenario 3：院外系統 ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
     ],
     Sc1: (
       <div>
@@ -237,4 +679,12 @@ const Scenarios = [
     S4: <></>,
   },
   { Id: "2", S1: <></> },
+  { Id: "3", S1: <></> },
+  { Id: "4", S1: <></> },
+  { Id: "5", S1: <></> },
+  { Id: "6", S1: <></> },
+  { Id: "7", S1: <></> },
+  { Id: "8", S1: <></> },
+  { Id: "9", S1: <></> },
+  { Id: "10", S1: <></> },
 ];

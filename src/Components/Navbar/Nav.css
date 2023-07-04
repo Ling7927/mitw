@@ -16,7 +16,6 @@
   color: #ddd;
 }
 .nav__item {
-  display: flex;
   color: #fff;
   font-size: 1rem;
   text-decoration: none;
@@ -81,15 +80,6 @@
     right: 0%;
     transform: translateX(-210%);
   }
-}
-.nav_li {
-  list-style: none;
-  display: none;
-}
-.nav_lihover {
-  background: #fff;
-  /* position: relative; */
-  top: 10rem;
 }
 
 .nav_content {

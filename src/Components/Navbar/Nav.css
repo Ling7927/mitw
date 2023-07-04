@@ -4,7 +4,6 @@
   background: #000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 15%;
   width: 100%;
   padding: 20px 0;
@@ -31,7 +30,7 @@
 
 .nav__menu {
   display: flex;
-  align-items: end;
+  align-items: stretch;
   justify-content: space-around;
   gap: 2rem;
   margin: 0;
@@ -78,6 +77,7 @@
     align-items: flex-start;
     top: 5.3rem;
     width: 50%;
+
     right: 0%;
     transform: translateX(-210%);
   }
@@ -104,6 +104,7 @@
 /* --------------------------------- */
 .dropbtn {
   background-color: #000;
+  padding: 0;
   font-size: 1rem;
   color: #ddd;
   border: none;
@@ -113,6 +114,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 0;
 }
 
 .dropdown-content {

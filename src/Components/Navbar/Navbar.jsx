@@ -9,6 +9,7 @@ const Navbar = () => {
   const [collapse, setCollapse] = useState("nav__menu");
   const [toggleIcon, setToggleIcon] = useState("toggler__icon");
   const [OnHover, setOnHover] = useState("");
+  const [Hamburger, setHamburger] = useState(false);
 
   const onToggle = () => {
     collapse === "nav__menu"
@@ -46,7 +47,7 @@ const Navbar = () => {
               />
             </Link>
           </Grid>
-          <Grid item xs={12} sm={12} md={9}>
+          <Grid item xs={12} sm={12} md={9} style={{ display: "flex" }}>
             <ul className={collapse}>
               {routerList.map((item) => {
                 if (item.icon === null) {
@@ -68,7 +69,10 @@ const Navbar = () => {
                       style={{ float: "left", zIndex: " 999" }}
                     >
                       <button className="dropbtn">{item.name}</button>
-                      <div className="dropdown-content" style={{ left: "0" }}>
+                      <div
+                        className="dropdown-content"
+                        style={{ left: "0", padding: 0 }}
+                      >
                         {item.li.map((li, index) => {
                           return (
                             <NavLink to={li.lipath} key={index}>
@@ -82,7 +86,12 @@ const Navbar = () => {
                 }
               })}
             </ul>
-            <div className={toggleIcon} onClick={onToggle}>
+            <div
+              className={toggleIcon}
+              onClick={() => {
+                onToggle();
+              }}
+            >
               <div>
                 <AiOutlineMenu />
               </div>

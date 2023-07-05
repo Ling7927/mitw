@@ -66,7 +66,7 @@ const Navbar = () => {
                     <button className="dropbtn">{item.name}</button>
                     <div
                       className="dropdown-content"
-                      style={{ left: "32px", padding: 0 }}
+                      style={{ left: "10px", padding: 0 }}
                     >
                       {item.li.map((li, index) => {
                         return (

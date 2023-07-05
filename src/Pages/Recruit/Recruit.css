@@ -1,0 +1,20 @@
+@media screen and (min-width: 500px) {
+  .Background_first {
+    /* background:
+             "linear-gradient(90deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",*/
+
+    margin: 3rem;
+    border-radius: 3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Background_first {
+    background: linear-gradient(
+      0deg,
+      rgba(28, 198, 190, 0.41) 0%,
+      #84badd 99.99%
+    );
+    margin: 0;
+    border-radius: 3rem;
+  }
+}

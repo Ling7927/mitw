@@ -20,6 +20,7 @@
   font-size: 1rem;
   text-decoration: none;
   list-style: none;
+  white-space: nowrap;
 }
 .nav__item:hover {
   transform: scale(1);
@@ -75,6 +76,7 @@
   .nav__menu {
     display: flex;
     flex-direction: column !important;
+
     padding: 10px 0 15px 15px;
     position: absolute;
     background: #000;
@@ -103,6 +105,7 @@
   color: #ddd;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .dropdown {

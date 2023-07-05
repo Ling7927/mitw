@@ -14,7 +14,7 @@ function Main() {
   return (
     <>
       {/* 主視覺 */}
-      <div style={{ backgroundColor: "#1f4140" }}>
+      {/* <div style={{ backgroundColor: "#1f4140" }}> */}
         {/* <div
             style={{
               backgroundSize: window.innerWidth,
@@ -52,17 +52,22 @@ function Main() {
           </div> */}
         <div
           style={{
-            backgroundSize: window.innerWidth,
+            //backgroundSize: window.innerWidth,
             backgroundImage: `url(${Main1})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
             backgroundAttachment: "fixed",
-            objectFit: "scale-down",
-            height: "20rem",
+            // objectFit: "scale-down",
+            objectFit: "fill",
+            height: "30rem",
+            width:"100%",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
           }}
         />
-      </div>
+      {/* </div> */}
 
       {/* -------------------DM下載--------------------- */}
       <div

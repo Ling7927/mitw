@@ -1,3 +1,15 @@
+import wg1 from "../../assets/wg1_1.jpg";
+import wg2_1 from "../../assets/wg2_1.jpg";
+import wg2_2 from "../../assets/wg2_2.jpg";
+import wg3_1 from "../../assets/wg3_1.jpg";
+import wg3_2 from "../../assets/wg3_2.jpg";
+import wg4_1 from "../../assets/wg4_1.jpg";
+import wg4_2 from "../../assets/wg4_2.jpg";
+import wg6_2 from "../../assets/wg6_2.jpg";
+import wg7_2 from "../../assets/wg7_2.jpeg";
+import wg8_2 from "../../assets/wg8_2.jpg";
+import wg10_2 from "../../assets/wg10_2.jpg";
+
 const Tabs = [
   { id: 1, title: "#01" },
   { id: 2, title: "#02" },
@@ -16,7 +28,7 @@ const Mem = [
     Id: 1,
     Track: 1,
     TraksTitle: " 病人基本資料",
-    Img: "wg1_1f.png",
+    Img: wg1,
     Position: "召集人",
     Name: "楊宇凡 | 矽塔資訊服務有限公司 執行長",
     Tollger: (
@@ -53,7 +65,7 @@ const Mem = [
     Id: 2,
     Track: 2,
     TraksTitle: " 生理量測數據互通",
-    Img: "wg2_1f.png",
+    Img: wg2_1,
     Position: "召集人",
     Name: "莊舒雅 | 慈濟大學 醫學資訊學系碩士班 研究生",
     Tollger: (
@@ -74,7 +86,7 @@ const Mem = [
     Id: 3,
     Track: 2,
     TraksTitle: " 生理量測數據互通",
-    Img: "wg2_2f.png",
+    Img: wg2_2,
     Position: "召集人&聯繫窗口",
     Name: "洪彬彬 | Medical Informatics Standard Application Consortium (MISAC) 執行首席",
     Tollger: (
@@ -103,7 +115,7 @@ const Mem = [
     Id: 4,
     Track: 3,
     TraksTitle: " 處方用藥及文件打包",
-    Img: "wg3_1f.png",
+    Img: wg3_1,
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",
     Tollger: (
@@ -157,7 +169,7 @@ const Mem = [
     Id: 5,
     Track: 3,
     TraksTitle: " 處方用藥及文件打包",
-    Img: "wg3_2.jpg",
+    Img: wg3_2,
     Position: "聯繫窗口",
     Name: "吳宇婷 | 仁寶電腦工業股份有限公司 雲端工程師",
     Tollger: (
@@ -190,7 +202,7 @@ const Mem = [
     Id: 6,
     Track: 4,
     TraksTitle: " 醫學影像與病理",
-    Img: "wg4_1.jpg",
+    Img: wg4_1,
     Position: "召集人",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -222,7 +234,7 @@ const Mem = [
     Id: 7,
     Track: 4,
     TraksTitle: " 醫學影像與病理",
-    Img: "wg4_2.jpg",
+    Img: wg4_2,
     Position: "聯絡窗口",
     Name: "丁子芸 | 國立臺北護理健康大學資訊管理系 碩士生",
     Tollger: (
@@ -249,7 +261,7 @@ const Mem = [
     Id: 8,
     Track: 5,
     TraksTitle: " 偕同照護",
-    Img: "wg3_1.jpg",
+    Img: wg3_1,
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",
     Tollger: (
@@ -302,7 +314,7 @@ const Mem = [
     Id: 9,
     Track: 6,
     TraksTitle: " 基因體標記",
-    Img: "wg4_1.jpg",
+    Img: wg4_1,
     Position: "召集人(暫定)",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -334,7 +346,7 @@ const Mem = [
     Id: 10,
     Track: 6,
     TraksTitle: " 基因體標記",
-    Img: "wg6_2.jpg",
+    Img: wg6_2,
     Position: "聯絡窗口",
     Name: "李建興 | 國立陽明交通大學生物醫學資訊所 碩士生",
     Tollger: (
@@ -360,7 +372,7 @@ const Mem = [
     Id: 11,
     Track: 7,
     TraksTitle: " 緊急醫療救護",
-    Img: "wg1_1.jpg",
+    Img: wg1,
     Position: "召集人",
     Name: "楊宇凡 | 矽塔資訊服務有限公司 執行長",
     Tollger: (
@@ -396,7 +408,7 @@ const Mem = [
     Id: 12,
     Track: 7,
     TraksTitle: " 緊急醫療救護",
-    Img: "wg7_2.jpeg",
+    Img: wg7_2,
     Position: "召集人",
     Name: "李修安 | 國家衛生研究院 - 癌症研究所 博士後研究員",
     Tollger: (
@@ -441,7 +453,7 @@ const Mem = [
     Id: 13,
     Track: 8,
     TraksTitle: " 醫療收據與診斷證明書",
-    Img: "wg4_1.jpg",
+    Img: wg4_1,
     Position: "召集人",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -473,7 +485,7 @@ const Mem = [
     Id: 14,
     Track: 8,
     TraksTitle: " 醫療收據與診斷證明書",
-    Img: "wg8_2.jpg",
+    Img: wg8_2,
     Position: "聯繫窗口",
     Name: "彭群芳 | 國泰金控數位發展數據暨科技發展中心 商業規劃師",
     Tollger: (
@@ -501,7 +513,7 @@ const Mem = [
     Id: 15,
     Track: 9,
     TraksTitle: " 遠距醫療",
-    Img: "wg3_1.jpg",
+    Img: wg3_1,
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",
     Tollger: (
@@ -554,7 +566,7 @@ const Mem = [
     Id: 16,
     Track: 10,
     TraksTitle: " 癌症登記",
-    Img: "wg4_1.jpg",
+    Img: wg4_1,
     Position: "召集人",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
     Tollger: (
@@ -586,7 +598,7 @@ const Mem = [
     Id: 17,
     Track: 10,
     TraksTitle: " 癌症登記",
-    Img: "wg10_2.jpg",
+    Img: wg10_2,
     Position: "聯絡窗口",
     Name: "郭俐君 | 國立臺北護理健康大學資訊管理系 碩士生",
     Tollger: (

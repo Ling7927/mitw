@@ -480,31 +480,33 @@ export const TraksTabInform = [
                 情境1與情境2角色與交易關係圖
               </h5>
               <img />
-              <h5 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h5>
-              <ul style={{ margin: 0, listStyleType: "disc" }}>
-                <span>
-                  此情境為建立一個醫學影像的造影檢查流程，此情境完全依照
-                </span>
-                <a
-                  target="_blank"
-                  href="https://wiki.ihe.net/index.php/Scheduled_Workflow"
-                >
-                  IHE Scheduled Workflow Profile
-                </a>
-                <span>的聯測規範提供參加者驗證系統與產品。</span>
-                <li>ADT</li>
-                <li>Order Palcer</li>
-                <li>DDS/Order Filler</li>
-                <li>Acquisition Modality</li>
-                <li>Image Manager/Image Archive</li>
-                <li>Image Display</li>
-                <li>Performed Procedure Step Manage</li>
-                <li>Evidence Creator</li>
-                <p>
-                  備註:
-                  此情境採用互通性聯測機制，同一情境測試項目需滿足IHE聯測規範，即需三家不同公司或是機構進行交互驗證方可通過聯測。
-                </p>
-              </ul>
+              <div>
+                <h5 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h5>
+                <ul style={{ margin: 0, listStyleType: "disc" }}>
+                  <span>
+                    此情境為建立一個醫學影像的造影檢查流程，此情境完全依照
+                  </span>
+                  <a
+                    target="_blank"
+                    href="https://wiki.ihe.net/index.php/Scheduled_Workflow"
+                  >
+                    IHE Scheduled Workflow Profile
+                  </a>
+                  <span>的聯測規範提供參加者驗證系統與產品。</span>
+                  <li>ADT</li>
+                  <li>Order Palcer</li>
+                  <li>DDS/Order Filler</li>
+                  <li>Acquisition Modality</li>
+                  <li>Image Manager/Image Archive</li>
+                  <li>Image Display</li>
+                  <li>Performed Procedure Step Manage</li>
+                  <li>Evidence Creator</li>
+                  <p>
+                    備註:
+                    此情境採用互通性聯測機制，同一情境測試項目需滿足IHE聯測規範，即需三家不同公司或是機構進行交互驗證方可通過聯測。
+                  </p>
+                </ul>
+              </div>
             </ul>
           </>
         ),

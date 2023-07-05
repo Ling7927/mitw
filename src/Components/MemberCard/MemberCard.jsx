@@ -133,7 +133,7 @@ function MemberCard() {
                           handleClickOpen();
                           setMemId(item.Id);
                         }}
-                        src={`assets/${item.Img}`}
+                        src={item.Img}
                         style={{
                           height: "100%",
                           width: "100%",

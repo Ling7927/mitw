@@ -5,12 +5,7 @@ import { Grid } from "@mui/material";
 import Tab from "../../Components/TraksTab/TraksTab";
 function Traks() {
   return (
-    <div
-      style={{
-        background: "#d9d9d9",
-        padding: "1.5vh 5vh",
-      }}
-    >
+    <div className="Background">
       {/* // <Grid
     //   container
     //   spacing={1}

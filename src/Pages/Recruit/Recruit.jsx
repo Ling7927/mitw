@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { WorkGrop } from "./Inform";
+import "./Recruit.css";
 import { motion, useInView } from "framer-motion";
 import { Grid } from "@mui/material";
 
@@ -34,16 +35,7 @@ function Recruit() {
               <Grid item sm={12} md={12} lg={12}>
                 <Part>
                   {/* <div style={{ margin: "1.5rem 3rem" }}> */}
-                  <div
-                    style={{
-                      // background:
-                      //   "linear-gradient(90deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
-                      background:
-                        "linear-gradient(0deg, rgba(28, 198, 190, 0.41) 0%, #84BADD 99.99%)",
-                      margin: "3rem ",
-                      borderRadius: "3rem",
-                    }}
-                  >
+                  <div className="Background1">
                     <Grid container spacing={1}>
                       {/* 小組及說明(左) */}
                       <Grid
@@ -105,17 +97,7 @@ function Recruit() {
             return (
               <Grid item sm={12} md={12} lg={12}>
                 <Part>
-                  <div
-                    style={{
-                      // background:
-                      //   "linear-gradient(270deg, rgba(58, 188, 191, 0.71) 0%, rgba(0, 249, 255, 0.15) 65%,rgba(214, 255, 255,0)95%",
-                      background:
-                        "linear-gradient(180deg, rgba(28, 198, 190, 0.41) 0%, #84BADD 99.99%)",
-
-                      margin: "3rem ",
-                      borderRadius: "3rem",
-                    }}
-                  >
+                  <div className="Background2">
                     <Grid container spacing={1}>
                       <Grid item sm={12} md={5} lg={5} style={{ padding: 0 }}>
                         <div

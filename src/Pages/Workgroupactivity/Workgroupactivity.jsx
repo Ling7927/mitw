@@ -1,12 +1,14 @@
 import React from "react";
 import { active } from "./Inform";
+import "./Workgroupactivity.css";
 function Workgroupactivity() {
   return (
     <div
-      style={{
-        background: "rgb(220, 220, 220)",
-        padding: "0 5vw ",
-      }}
+      className="Background"
+      // style={{
+      //   background: "rgb(220, 220, 220)",
+      //   padding: "0 5vw ",
+      // }}
     >
       <div
         style={{

@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { P1, ListTitle, List } from "./SpecificationInform";
+import "./Specification.css";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
 function Specification() {
@@ -8,11 +9,12 @@ function Specification() {
     <>
       <div style={{ background: "#d9d9d9" }}>
         <div
-          style={{
-            margin: "0 5vw ",
-            background: "#fdfdfd",
-            padding: "2vw 0",
-          }}
+          className="Specification_background"
+          // style={{
+          //   margin: "0 5vw ",
+          //   background: "#fdfdfd",
+          //   padding: "2vw 0",
+          // }}
         >
           {/* 公開意見徵求 */}
           <motion.div

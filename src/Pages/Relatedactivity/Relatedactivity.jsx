@@ -1,15 +1,10 @@
 import React from "react";
 import { active } from "./Inform";
-
+import "./Relatedactivity.css";
 function Relatedactivity() {
   return (
     <>
-      <div
-        style={{
-          background: "rgb(220, 220, 220)",
-          padding: "0 5vw ",
-        }}
-      >
+      <div className="Background">
         <div
           style={{
             display: "flex",

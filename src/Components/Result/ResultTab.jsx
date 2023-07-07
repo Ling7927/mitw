@@ -27,11 +27,11 @@ function ResultTab() {
           lg={2}
           style={{ display: "flex", justifyContent: "center" }}
         >
-          <p
+          <h1
             style={{
               margin: 0,
               padding: 0,
-              fontSize: "2vw",
+
               color: "#fff",
               textShadow:
                 "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
@@ -39,7 +39,7 @@ function ResultTab() {
             }}
           >
             Track
-          </p>
+          </h1>
         </Grid>
         <Grid item sm={9} md={9} lg={9}>
           <Grid

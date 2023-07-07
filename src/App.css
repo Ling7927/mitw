@@ -13,6 +13,11 @@ body {
   height: 40vmin;
   pointer-events: none;
 }
+@media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 4vw;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

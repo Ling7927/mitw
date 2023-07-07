@@ -13,15 +13,14 @@ function TraksTab() {
   const [Section, setSection] = useState(false);
 
   return (
-    <>
+    <div>
       <Grid
         container
         spacing={1}
         direction="column"
         alignItems="center"
         justify="center"
-        position="relative"
-        style={{ background: "#fdfdfd" }}
+        style={{ background: "#fdfdfd", margin: 0 }}
       >
         {/* 上面按鈕 */}
 
@@ -34,7 +33,7 @@ function TraksTab() {
           style={{ justifyContent: "center", width: "100%" }}
         >
           <Grid container spacing={1} direction="row" style={{ width: "100%" }}>
-            <Grid item sm={12} md={3} lg={3}>
+            <Grid item xs={12} sm={12} md={3} lg={3}>
               {/* 目前賽道 */}
               {TraksTabInform.filter((item) => item.Id === onHandle).map(
                 (item) => {
@@ -79,6 +78,7 @@ function TraksTab() {
             </Grid>
             <Grid
               item
+              xs={12}
               sm={12}
               md={9}
               lg={9}
@@ -155,7 +155,7 @@ function TraksTab() {
           )}
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 }
 

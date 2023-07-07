@@ -22,6 +22,7 @@ function ResultTab() {
       >
         <Grid
           item
+          xs={2}
           sm={2}
           md={2}
           lg={2}
@@ -41,7 +42,7 @@ function ResultTab() {
             Track
           </h1>
         </Grid>
-        <Grid item sm={9} md={9} lg={9}>
+        <Grid item xs={9} sm={9} md={9} lg={9}>
           <Grid
             container
             spacing={1}
@@ -97,7 +98,7 @@ function ResultTab() {
                       )}
                       <h4
                         style={{
-                          fontSize: track === item.Id ? "4vw" : "2vw",
+                          fontSize: track === item.Id ? "4vw" : "2.5vw",
                           // color: track === item.Id ? "#fff" : "#dcdcdc",
                           color: "#fff",
                           textShadow:
@@ -199,7 +200,7 @@ function ResultTab() {
             "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
         }}
       >
-        <p
+        <h3
           style={{
             margin: 0,
             // borderStyle: " solid ",
@@ -207,11 +208,12 @@ function ResultTab() {
             // padding: "1vw",
             // borderImage: "linear-gradient(#23f0c7, #108998,#00F9FF) 20 ",
             color: "#fff",
-            fontSize: "4vh",
+            marginBottom: "2vw",
+            // fontSize: "4vw",
           }}
         >
           {ResultTabInform.filter((item) => item.Id === track)[0].ContentTitle}
-        </p>
+        </h3>
         <ResultTable id={track} />
       </div>
       {/* 表格 */}

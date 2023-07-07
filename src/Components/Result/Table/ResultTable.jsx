@@ -19,7 +19,10 @@ function TraksTable({ id }) {
             pagination={false} //不要表格頁數
             bordered //圓角
             size="small"
-            style={{ margin: "5vw 20vh 0" }}
+            style={{
+              //margin: "5vw 20vh 0"
+              width: "80%",
+            }}
             key={index}
           />
         );

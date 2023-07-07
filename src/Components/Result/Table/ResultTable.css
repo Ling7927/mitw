@@ -19,7 +19,7 @@
   margin-bottom: 5vh;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 845px) {
   table {
     table-layout: fixed !important; /*均分*/
     font-size: 1rem;

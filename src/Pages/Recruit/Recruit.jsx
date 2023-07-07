@@ -42,13 +42,14 @@ function Recruit() {
                         item
                         xs={12}
                         sm={12}
-                        md={12}
+                        md={7}
                         lg={7}
                         style={{
                           // padding: 0,
                           padding: "1rem 2rem 0",
-                          height: "100%",
                           width: "100%",
+                          display: "flex",
+                          flexDirection: "column",
                         }}
                       >
                         <h4 key={item.title} style={{ padding: "1rem 0 2rem" }}>
@@ -63,17 +64,27 @@ function Recruit() {
                         >
                           {item.instructions}
                         </p>
-                        <img
-                          src={item.img}
-                          style={{ width: "50%", filter: " invert(100%)" }}
-                        />
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "flex-end",
+                          }}
+                        >
+                          <img
+                            src={item.img}
+                            style={{
+                              width: "50%",
+                              filter: " invert(100%)",
+                            }}
+                          />
+                        </div>
                       </Grid>
                       {/* 細項規則(右) */}
                       <Grid
                         item
                         xs={12}
                         sm={12}
-                        md={12}
+                        md={5}
                         lg={5}
                         style={{ padding: 0 }}
                       >

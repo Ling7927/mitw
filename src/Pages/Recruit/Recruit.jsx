@@ -99,13 +99,21 @@ function Recruit() {
                 <Part>
                   <div className="Background2">
                     <Grid container spacing={1}>
-                      <Grid item sm={12} md={5} lg={5} style={{ padding: 0 }}>
+                      <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={5}
+                        lg={5}
+                        style={{ padding: 0 }}
+                      >
                         <div
                           style={{
                             background: "#f0f4f6",
                             padding: "2rem 1rem",
                             borderRadius: "3rem",
                             height: "100%",
+                            width: "100%",
                           }}
                         >
                           {/* 細項規則 (左*/}

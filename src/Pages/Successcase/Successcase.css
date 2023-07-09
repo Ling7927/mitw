@@ -1,0 +1,10 @@
+.SuccessBackground {
+  background: #dcdcdc;
+  color: #000;
+  padding: 0 5vw;
+}
+@media screen and (max-width: 500px) {
+  .SuccessBackground {
+    padding: 0;
+  }
+}

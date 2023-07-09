@@ -4,9 +4,12 @@
 body {
   margin: 0;
 }
+p {
+  text-align: justify;
+}
 
 .App {
-  text-align: center;
+  text-align: justify;
 }
 
 .App-logo {

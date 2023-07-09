@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { ListTitle, List } from "./Inform";
+import "./Successcase.css";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
 
@@ -9,13 +10,7 @@ function Successcase() {
 
   // }
   return (
-    <div
-      style={{
-        background: "#dcdcdc",
-        color: "#000",
-        padding: "0 5rem",
-      }}
-    >
+    <div className="SuccessBackground">
       {/*格局 左|上下*/}
 
       <Grid
@@ -23,11 +18,16 @@ function Successcase() {
         spacing={1}
         direction="row"
         gap={5}
-        style={{ background: "#fff", padding: "2rem 0" }}
+        style={{
+          background: "#fff",
+          padding: "2rem 0",
+          justifyContent: "center",
+        }}
       >
         {/*左--選單 */}
         <motion.Grid
           item
+          xs={4}
           sm={4}
           md={4}
           lg={4}
@@ -70,7 +70,7 @@ function Successcase() {
           })}
         </motion.Grid>
         {/* 上--目前案例 */}
-        <Grid item sm={8} md={8} lg={9}>
+        <Grid item xs={11} sm={8} md={8} lg={9}>
           <Grid container spacing={1} direction="column">
             <Grid
               item
@@ -78,7 +78,8 @@ function Successcase() {
                 // width: "85%",
                 borderLeft: "5px solid orange",
                 // height: "50px",
-                // paddingLeft: "1rem",
+                paddingLeft: "1rem",
+                marginLeft: "1vw",
                 // marginTop: "2%",
                 alignItems: "flex-end",
               }}
@@ -86,7 +87,19 @@ function Successcase() {
               <h3>{List.filter((item) => onHandle === item.id)[0].title}</h3>
             </Grid>
             {/*下--案例們 */}
-            <Grid item lg={12}>
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
               {List.filter((item) => onHandle === item.id)[0].cases}
             </Grid>
           </Grid>

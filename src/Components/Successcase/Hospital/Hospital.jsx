@@ -51,7 +51,9 @@ function Hospital() {
                   <h3>{item.name}</h3>
                 </Grid>
                 <Grid item style={{ whiteSpace: "pre-line" }}>
-                  <SeeMore introduce={item.introduce} />
+                  <p>
+                    <SeeMore introduce={item.introduce} />
+                  </p>
                 </Grid>
               </Grid>
             </Grid>

@@ -124,9 +124,14 @@ function Industry() {
                     })}
                   </Grid>
                   <Grid item>
-                    <div style={{ whiteSpace: "pre-line", marginTop: "1rem" }}>
+                    <p
+                      style={{
+                        whiteSpace: "pre-line",
+                        marginTop: "1rem",
+                      }}
+                    >
                       {item.tracks}
-                    </div>
+                    </p>
                   </Grid>
                 </Grid>
               </Grid>
@@ -138,9 +143,9 @@ function Industry() {
                     <h3>{item.name}</h3>
                   </Grid>
                   <Grid item>
-                    <div style={{ whiteSpace: "pre-line" }}>
+                    <p style={{ whiteSpace: "pre-line" }}>
                       <SeeMore introduce={item.introduce} />
-                    </div>
+                    </p>
                   </Grid>
                 </Grid>
               </Grid>

@@ -75,7 +75,7 @@ function OpenSource() {
                   {/* 照片 */}
                   <Grid
                     item
-                    sx={4}
+                    sx={12}
                     sm={4}
                     md={4}
                     style={{
@@ -86,9 +86,9 @@ function OpenSource() {
                   >
                     <div
                       style={{
-                        width: "50%",
-                        paddingBottom: "50%",
-                        height: "0",
+                        width: "8rem",
+                        // paddingBottom: "50%",
+                        height: "8rem",
                         background: "#dcdcdc",
                         borderRadius: "50%",
                         marginLeft: "auto",
@@ -116,7 +116,7 @@ function OpenSource() {
 
                   <Grid
                     item
-                    sx={8}
+                    sx={12}
                     sm={8}
                     md={8}
                     style={{ display: "flex", alignItems: "center" }}
@@ -135,7 +135,7 @@ function OpenSource() {
                   </Grid>
                   {/* 介紹 */}
                   <Grid item sx={8} sm={8} md={8}>
-                    {item.introduce}
+                    <p>{item.introduce}</p>
                   </Grid>
                 </Grid>
               </Grid>

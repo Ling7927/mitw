@@ -52,7 +52,7 @@ function Goverment() {
               </Grid>
 
               {/* 下半 */}
-              <div style={{ margin: "2rem 1rem 1rem 0" }}>{item.introduce}</div>
+              <p style={{ margin: "2rem 1rem 1rem 0" }}>{item.introduce}</p>
             </Grid>
           </motion.div>
         );

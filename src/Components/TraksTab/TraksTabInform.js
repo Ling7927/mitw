@@ -580,8 +580,220 @@ export const TraksTabInform = [
         Sc: "規格(Specification)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>涉及到的角色 (Actors)以及交易(Transactions)，說明如下:</p>
+            <h4 style={{ fontWeight: "bold" }}>角色(Actors)</h4>
+            <p>1.影像、結構化影像報告(IMAGE)角色整理</p>
+            <table border="1" class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>編號</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RAD-18</td>
+                  <td>Creator Images Stored</td>
+                  <td>產生影像儲存至影像儲存庫</td>
+                </tr>
+                <tr>
+                  <td>RAD-16</td>
+                  <td>Retrieves Images</td>
+                  <td>從影像檢索資料提供者與影像儲存庫查詢與調閱影像</td>
+                </tr>
+                <tr>
+                  <td>RAD-107</td>
+                  <td>WADO-RS Retrieve</td>
+                  <td>使用WADO-RS調閱DICOM SOP實例</td>
+                </tr>
+                <tr>
+                  <td>MITW-29</td>
+                  <td>ImagingStudy Create</td>
+                  <td>新增影像索引</td>
+                </tr>
+                <tr>
+                  <td>MITW-30</td>
+                  <td>ImagingStudy Query/Retrieve</td>
+                  <td>查詢與調閱影像索引</td>
+                </tr>
+                <tr>
+                  <td>MITW-31</td>
+                  <td>Image Report Create</td>
+                  <td>新增影像報告</td>
+                </tr>
+                <tr>
+                  <td>MITW-32</td>
+                  <td>Image Report Query/Retrieve</td>
+                  <td>查詢與調閱影像報告</td>
+                </tr>
+                <tr>
+                  <td>MITW-35</td>
+                  <td>Observation-Annotation Create</td>
+                  <td>新增影像標記(FHIR)</td>
+                </tr>
+                <tr>
+                  <td>MITW-36</td>
+                  <td>Observation-annotation Query/Retrieve</td>
+                  <td>查詢與調閱影像標記(FHIR)</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>2.數位病理影像存取(PATH)角色整理</p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Keyword</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>WSI_ANN_CREATOR</td>
+                  <td>WSI Annotation Creator</td>
+                  <td>新增影像標記角色</td>
+                </tr>
+                <tr>
+                  <td>WSI_CONSUMER</td>
+                  <td>WSI Consumer</td>
+                  <td>查詢與調閱影像角色</td>
+                </tr>
+                <tr>
+                  <td>WSI_ANN_CONSUMER</td>
+                  <td>WSI ANN Consumer</td>
+                  <td>查詢與調閱影像標記(DICOM ANN)角色</td>
+                </tr>
+                <tr>
+                  <td>WSI_REPOSITORY</td>
+                  <td>WSI Repository</td>
+                  <td>影像與標記儲存庫</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 style={{ fontWeight: "bold" }}>交易(Transactions)</h4>
+            <p>1.影像、結構化影像報告(IMAGE)交易整理</p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>編號</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RAD-18</td>
+                  <td>Creator Images Stored</td>
+                  <td>產生影像儲存至影像儲存庫</td>
+                </tr>
+                <tr>
+                  <td>RAD-16</td>
+                  <td>Retrieves Images</td>
+                  <td>從影像檢索資料提供者與影像儲存庫查詢與調閱影像</td>
+                </tr>
+                <tr>
+                  <td>RAD-107</td>
+                  <td>WADO-RS Retrieve</td>
+                  <td>使用WADO-RS調閱DICOM SOP實例</td>
+                </tr>
+                <tr>
+                  <td>MITW-29</td>
+                  <td>ImagingStudy Create</td>
+                  <td>新增影像索引</td>
+                </tr>
+                <tr>
+                  <td>MITW-30</td>
+                  <td>ImagingStudy Query/Retrieve</td>
+                  <td>查詢與調閱影像索引</td>
+                </tr>
+                <tr>
+                  <td>MITW-31</td>
+                  <td>Image Report Create</td>
+                  <td>新增影像報告</td>
+                </tr>
+                <tr>
+                  <td>MITW-32</td>
+                  <td>Image Report Query/Retrieve</td>
+                  <td>查詢與調閱影像報告</td>
+                </tr>
+                <tr>
+                  <td>MITW-35</td>
+                  <td>Observation-Annotation Create</td>
+                  <td>新增影像標記(FHIR)</td>
+                </tr>
+                <tr>
+                  <td>MITW-36</td>
+                  <td>Observation-annotation Query/Retrieve</td>
+                  <td>查詢與調閱影像標記(FHIR)</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>2.影像、結構化影像報告(IMAGE)交易整理</p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>編號</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>RAD-129</td>
+                  <td>QIDO-RS Query</td>
+                  <td>使用QIDO-RS查詢DICOM SOP實例</td>
+                </tr>
+                <tr>
+                  <td>RAD-107</td>
+                  <td>WADO-RS Retrieve</td>
+                  <td>使用WADO-RS調閱DICOM SOP實例</td>
+                </tr>
+                <tr>
+                  <td>RAD-108</td>
+                  <td>Store Instances over the Web</td>
+                  <td>使用STOW-RS傳輸DICOM SOP實例</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4 style={{ fontWeight: "bold" }}>角色與交易關係圖</h4>
+            <ul>
+              <li>
+                醫學影像與DICOM標記互通之角色與交易關係圖
+                <img />
+              </li>
+              <li>
+                影像、結構化影像報告(IMAGE)、FHIR標記之角色與交易關係圖
+                <img />
+              </li>
+              <li>
+                數位病理影像存取(PATH)之角色與交易關係圖 <img />
+              </li>
+            </ul>
           </>
         ),
       },
@@ -590,8 +802,50 @@ export const TraksTabInform = [
         Sc: "其他(See Also)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <ul>
+              <li>
+                相關標準
+                <ul>
+                  <li>
+                    <a href="https://twcore.mohw.gov.tw/ig/">
+                      臺灣核心實作指引
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wiki.ihe.net/index.php/Scheduled_Workflow">
+                      IHE Scheduled Workflow Profle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wiki.ihe.net/index.php/Web-based_Image_Access">
+                      IHE Web-based Image Access Profle
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wiki.ihe.net/index.php/Digital_Pathology_Workflow_-_Image_Acquisition">
+                      Digital Pathology Workflow - Image Acquisition
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://mitw.dicom.org.tw/IG/NSCLC/Imageprofiles.html">
+                      醫療影像及報告實作指引
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>常見問題</li>
+              <li>
+                參考文章
+                <ul>
+                  <li>
+                    <a href="https://news.gbimonthly.com/tw/celebrity/show.php?num=37353">
+                      善用健保制定資料儲存標準，建置差異化影像資料庫
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>參考網址</li>
+            </ul>
           </>
         ),
       },

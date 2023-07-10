@@ -4,6 +4,15 @@ import T1_3 from "../../assets/T1_3.png";
 import T1_4 from "../../assets/T1_4.png";
 import Ts1 from "../../assets/Ts1.png";
 import logo from "../../assets/Logo.png";
+
+import track4_1 from "../../assets/track4_1.png";
+import track4_2 from "../../assets/track4_2.png";
+import track4_3 from "../../assets/track4_3.png";
+import track4_4 from "../../assets/track4_4.png";
+import track4_5 from "../../assets/track4_5.png";
+import track4_6 from "../../assets/track4_6.png";
+import track4_7 from "../../assets/track4_7.png";
+
 export const TraksTabInform = [
   {
     Id: "1",
@@ -168,7 +177,7 @@ export const TraksTabInform = [
     Id: "4",
     TabTitle: "04",
     ContentTitle: "醫學影像與病理",
-    Img: [{ img: logo }, { img: logo }, { img: logo }],
+    Img: [],
     List: [
       {
         id: "1",
@@ -520,7 +529,6 @@ export const TraksTabInform = [
                 </li>
               </li>
             </ul>
-
             <p>
               下圖為影像報告的Profile設計結構，包含: (1)
               放射影像報告/病理影像報告 (FHIR
@@ -528,12 +536,17 @@ export const TraksTabInform = [
             </p>
             <p style={{ fontWeight: "bold" }}>
               放射影像報告/病理影像報告 (FHIR DiagnosticReport)設計結構示意圖
-            </p>
-            <img />
+            </p>{" "}
+            <center>
+              {" "}
+              <img src={track4_1} style={{ width: "50%" }} />
+            </center>{" "}
             <p style={{ fontWeight: "bold" }}>
               影像索引(FHIR ImagingStudy)設計結構示意圖
             </p>
-            <img />
+            <center>
+              <img src={track4_2} style={{ width: "50%" }} />
+            </center>
             <li>
               {" "}
               <a
@@ -544,7 +557,9 @@ export const TraksTabInform = [
               </a>
             </li>
             <h5 style={{ fontWeight: "bold" }}>情境1與情境2角色與交易關係圖</h5>
-            <img />
+            <center>
+              <img src={track4_3} style={{ width: "50%" }} />
+            </center>
             <div>
               <h5 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h5>
               <span>
@@ -782,17 +797,25 @@ export const TraksTabInform = [
             </table>
             <h4 style={{ fontWeight: "bold" }}>角色與交易關係圖</h4>
             <ul>
-              <li>
-                醫學影像與DICOM標記互通之角色與交易關係圖
-                <img />
-              </li>
-              <li>
-                影像、結構化影像報告(IMAGE)、FHIR標記之角色與交易關係圖
-                <img />
-              </li>
-              <li>
-                數位病理影像存取(PATH)之角色與交易關係圖 <img />
-              </li>
+              <li>醫學影像與DICOM標記互通之角色與交易關係圖</li>{" "}
+              <center>
+                {" "}
+                <img src={track4_4} style={{ width: "50%" }} />
+              </center>
+              <li>影像、結構化影像報告(IMAGE)、FHIR標記之角色與交易關係圖</li>{" "}
+              <center>
+                <img src={track4_5} style={{ width: "80%" }} />
+              </center>{" "}
+              <li>數位病理影像存取(PATH)之角色與交易關係圖 </li>{" "}
+              <center>
+                {" "}
+                <img src={track4_6} style={{ width: "50%" }} />
+              </center>
+              <li>影像檢查流程之角色與交易關係圖</li>{" "}
+              <center>
+                {" "}
+                <img src={track4_7} style={{ width: "50%" }} />
+              </center>
             </ul>
           </>
         ),

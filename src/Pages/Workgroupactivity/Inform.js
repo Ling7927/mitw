@@ -1,4 +1,31 @@
+//最新活動從上面加入
 export const active = [
+  {
+    title: "PHR 及 EMR 互通所需人員組織",
+    content: (
+      <div>
+        【時間】2023/07/07(五) 15:00
+        <br />
+        【講者】慈濟大學醫學資訊學系 蕭嘉宏 副教授、莊舒雅
+        <br />
+        【主題】PHR 及 EMR 互通所需人員組織
+        <br />
+        【說明】
+        <br />
+        說明連結如下：
+        <br />
+        <a href="https://hackmd.io/vC8Nq7r4RG6E14Wk8pUf3w?view#Organization-person-and-device-management-for-EMR-and-PHR-sharing">
+          https://hackmd.io/vC8Nq7r4RG6E14Wk8pUf3w?view#Organization-person-and-device-management-for-EMR-and-PHR-sharing
+        </a>
+        <br />
+        【視訊連結】
+        <a href="https://meet.google.com/gie-hphd-zxd">
+          https://meet.google.com/gie-hphd-zxd
+        </a>
+        <br />
+      </div>
+    ),
+  },
   {
     title: "照護協調互通標準制定工作小組 Care Coodination WG 規格討論會議",
     content: (

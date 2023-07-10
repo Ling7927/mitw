@@ -1,9 +1,12 @@
+import logo from "../../assets/Logo.png";
+
 import T1_1 from "../../assets/T1_1.png";
 import T1_2 from "../../assets/T1_2.png";
 import T1_3 from "../../assets/T1_3.png";
 import T1_4 from "../../assets/T1_4.png";
+import T1_6 from "../../assets/wg1_6.png";
+import T1_7 from "../../assets/wg1_7.png";
 import Ts1 from "../../assets/Ts1.png";
-import logo from "../../assets/Logo.png";
 
 import track4_1 from "../../assets/track4_1.png";
 import track4_2 from "../../assets/track4_2.png";
@@ -13,6 +16,7 @@ import track4_5 from "../../assets/track4_5.png";
 import track4_6 from "../../assets/track4_6.png";
 import track4_7 from "../../assets/track4_7.png";
 
+//有需要輪播圖的話import後放入Img:[]
 export const TraksTabInform = [
   {
     Id: "1",
@@ -22,50 +26,293 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "Scenario 1、Scenario 2",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <ul style={{ margin: 0 }}>
+              <li>
+                Scenario 1 病人身分確認用
+                <ul>
+                  <li>
+                    執行各項護理技術、檢查、治療、手術等醫療處置前對病人做身分確認
+                  </li>
+                  <li>
+                    例如：在診療前，醫護人員請病人提供基本資訊如姓名、生日用以核對病人身分是否正確
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Scenario 2 聯繫病人用
+                <ul>
+                  <li>聯絡方式如手機、email…用以聯絡病人</li>
+                  <li>通訊地址如住家地址、工作地址</li>
+                </ul>
+              </li>
+              <li>
+                兩種用途的病人資料將共用相同的識別碼如身分證、護照、居留證、病歷號
+              </li>
+              <center>
+                {" "}
+                <img src={Ts1} style={{ width: "80%" }} />
+              </center>
+            </ul>
           </>
         ),
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "Scenario 3：院外系統",
         content: (
           <>
-            <h3></h3>
-            <p></p>
-          </>
-        ),
-      },
-      {
-        id: "3",
-        Sc: "Scenario 3：院外系統 ",
-        content: (
-          <>
-            <h3></h3>
-            <p></p>
-          </>
-        ),
-      },
-      {
-        id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
-        content: (
-          <>
-            <h3></h3>
-            <p></p>
+            <h5 style={{ fontWeight: "bold" }}>情境</h5>
+            <ul style={{ margin: 0 }}>
+              <li>Patient ID 串接其他兩種 Resource 資料並適當呈現</li>
+              <li>
+                病人保有自己的PHR Patient
+                ID，可透過PHR的授權機制授權醫護人員調用個人的健康資訊
+              </li>
+            </ul>
+            <h5>
+              <strong>範例</strong>
+            </h5>
+            <ul style={{ margin: 0 }}>
+              <li>
+                病人就醫時提供個人的PHR Patient
+                ID，並授權醫護人員可對此ID對應的PHR個案資料調用和操作
+              </li>
+            </ul>
+            <h5>
+              <strong>注意</strong>
+            </h5>
+            <ul style={{ margin: 0 }}>
+              <li>
+                參加 SC3 聯測時，產品必須同時通過 Track Observation(WG2) 或
+                Track Medication(WG3) 才算通過
+              </li>
+              <li>
+                範例：通過 WG1/SC3 + WG2 任一 SC、或 WG1/SC3 + WG3 任一 SC
+              </li>
+              <center>
+                <img src={T1_6} style={{ width: "80%" }} />
+              </center>
+              <center>
+                <img src={T1_7} style={{ width: "80%" }} />
+              </center>
+            </ul>
+            <div>
+              <h5>
+                <strong>Roles</strong>
+              </h5>
+              <ul style={{ margin: 0 }}>
+                <li>
+                  Patient Creator
+                  <ul style={{ margin: 0 }}>
+                    <li>
+                      病人基本資料建檔單位系統，可包含：醫療照護機構、藥局、消防局、第三方健康照護應用等
+                    </li>
+                    <li>
+                      檢核基準：成功新增資料後，測試系統要能正確回傳 id
+                      及病人資料
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Patient Consumer
+                  <ul style={{ margin: 0 }}>
+                    <li>
+                      病人基本資料使用單位系統，可包含：醫療照護機構、藥局、消防局、第三方健康照護應用、個人等
+                    </li>
+                    <li>
+                      檢核基準
+                      <ul style={{ margin: 0 }}>
+                        <li>
+                          調閱資料後，測試系統要能將回傳的病人資料以自行定義的
+                          UI、或以 JSON / XML 等原始文件格式正確呈現
+                        </li>
+                        <li>
+                          編輯資料後，測試系統要能將回傳的病人資料及 History ID
+                          以自行定義的 UI、或以 JSON / XML
+                          等原始文件格式正確呈現
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h5>
+                <strong>System Roles</strong>
+              </h5>
+              <ul style={{ margin: 0 }}>
+                <li>
+                  FHIR Client
+                  <ul style={{ margin: 0 }}>
+                    <li>
+                      發起處理請求，並能夠執行 Patient Resource
+                      的新增、查詢、修改、刪除操作 (CRUD Operations)
+                    </li>
+                    <li>必須使用 FHIR 定義的 REST API 來進行上述操作</li>
+                    <li>
+                      必須能針對 FHIR 定義的 Patient Search Parameters 進行搜尋
+                    </li>
+                    <li>必須能使用 FHIR 定義的 history 參數進行歷史記錄調閱</li>
+                  </ul>
+                </li>
+                <li>
+                  FHIR Server
+                  <ul style={{ margin: 0 }}>
+                    <li>
+                      實作或提供一個儲存機制 (repository
+                      storage)，並正確處理所接收的處理請求
+                    </li>
+                    <li>
+                      接收處理請求，並能夠執行 Patient Resource
+                      的新增、查詢、修改、刪除操作 (CRUD Operations)
+                    </li>
+                    <li>
+                      必須能夠支援 FHIR Client 使用 FHIR 定義的 REST API
+                      來進行上述操作
+                    </li>
+                    <li>
+                      必須能夠支援 FHIR Client 使用 FHIR 定義的 Patient Search
+                      Parameters 進行搜尋
+                    </li>
+                    <li>
+                      必須能夠支援 FHIR Client使用 FHIR 定義的 history
+                      參數進行歷史記錄調閱
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h5>
+                <strong>Levels and Bonus Points(Level 1 &amp; 1+)</strong>
+              </h5>
+              <ul style={{ margin: 0 }}>
+                <li>
+                  本次聯測比照國際 FHIR Connectathon 26，將測試項目劃分為若干
+                  Level，並新增 Bonus Point
+                </li>
+                <li>
+                  Level 1
+                  <ul style={{ margin: 0 }}>
+                    <li>能正確設定 Gazelle，並以 Gazelle 作為檢核依據</li>
+                    <li>測試系統完成各 Scenario 要求之項目</li>
+                    <li>能順利完成 Create、Read、Update、Delete 等動作</li>
+                    <li>能順利以 Search Parameters 搜尋指定的 Record</li>
+                  </ul>
+                </li>
+                <li>
+                  Level 1+
+                  <ul style={{ margin: 0 }}>
+                    <li>完成 Level 1 之檢核項目</li>
+                    <li>
+                      測試系統能以 history 參數調閱單筆 Record 的指定歷史記錄
+                    </li>
+                    <li>
+                      Bonus Point: 測試系統能正確顯示單筆 Record
+                      的歷史記錄清單，並能自由調閱歷史記錄
+                    </li>
+                    <li>
+                      Bonus Point: 測試系統搜尋指定 Record 時，能同時以多項
+                      Search Parameters 進行多條件搜索
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h5>
+                <strong>Levels and Bonus Points(Level 2)</strong>
+              </h5>
+              <ul style={{ margin: 0 }}>
+                <li>
+                  Level 2
+                  <ul style={{ margin: 0 }}>
+                    <li>
+                      測試系統新增 Patient 時，符合以下所有條件
+                      <ul style={{ margin: 0 }}>
+                        <li>HTTP Method 必須為 PUT</li>
+                        <li>
+                          HTTP Header Accept 必須為 ‘application/fhir+json’
+                        </li>
+                        <li>
+                          HTTP Header Content-Type 必須為
+                          ‘application/fhir+json’
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      測試系統編輯 Patient 時，符合以下所有條件
+                      <ul style={{ margin: 0 }}>
+                        <li>HTTP Method 必須為 PUT</li>
+                        <li>
+                          HTTP Header Accept 必須為 ‘application/fhir+json’
+                        </li>
+                        <li>
+                          HTTP Header Content-Type 必須為
+                          ‘application/fhir+json’
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      測試系統調閱 Patient 時，符合以下所有條件
+                      <ul style={{ margin: 0 }}>
+                        <li>HTTP Method 必須為 GET</li>
+                        <li>
+                          HTTP Header Accept 必須為 ‘application/fhir+json’
+                        </li>
+                        <li>
+                          HTTP Header Content-Type 必須為
+                          ‘application/fhir+json’
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      測試系統調閱 Patient Record 的歷史資料時，符合以下所有條件
+                      <ul style={{ margin: 0 }}>
+                        <li>HTTP Method 必須為 GET</li>
+                        <li>
+                          HTTP Header Accept 必須為 ‘application/fhir+json’
+                        </li>
+                        <li>HTTP Header Content-Type 不存在</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h5>
+                <strong>Levels and Bonus Points(Level 2)</strong>
+              </h5>
+              <ul style={{ margin: 0 }}>
+                <li>
+                  Level 2
+                  <ul style={{ margin: 0 }}>
+                    <li>
+                      測試系統以 Search Parameters 調閱 Patient
+                      時，符合以下所有條件
+                      <ul style={{ margin: 0 }}>
+                        <li>HTTP Method 必須為 GET</li>
+                        <li>
+                          HTTP Header Accept 必須為 ‘application/fhir+json’
+                        </li>
+                        <li>HTTP Header Content-Type 不存在</li>
+                      </ul>
+                    </li>
+                    <li>
+                      測試系統刪除 Patient 時，符合以下所有條件
+                      <ul style={{ margin: 0 }}>
+                        <li>HTTP Method 必須為 DELETE</li>
+                        <li>
+                          HTTP Header Accept 必須為 ‘application/fhir+json’
+                        </li>
+                        <li>HTTP Header Content-Type 不存在</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </>
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "2",
@@ -124,7 +371,7 @@ export const TraksTabInform = [
     Id: "3",
     TabTitle: "03",
     ContentTitle: "處方用藥及文件打包",
-    Img: [{ img: logo }, { img: logo }, { img: logo }],
+    Img: [],
     List: [
       {
         id: "1",
@@ -167,11 +414,6 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "4",
@@ -873,11 +1115,6 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "5",
@@ -989,13 +1226,59 @@ export const TraksTabInform = [
     Id: "7",
     TabTitle: "07",
     ContentTitle: "緊急醫療救護",
-    Img: [{ img: logo }, { img: logo }, { img: logo }],
+    Img: [],
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "說明",
         content: (
           <>
+            <ul style={{ margin: 0 }}>
+              <li>
+                <strong>說明:</strong>
+              </li>
+              <p>
+                本賽道主要目的在於測試緊急醫療救護情境中，跨系統間的資料交換。生理量測儀器可透過此賽道規範的情境回傳標準化的資料至急救端系統、救護車或責任醫院系統，透過將救護紀錄表及四大急重症表單標準化以解決急救資料互通性的問題。本賽道主要針對上述救護紀錄表與四大急重症表單／病摘使用的
+                Resource 進行驗證，並確保未來與電子病歷（TW Core
+                IG）進行資料互通的能力。
+              </p>
+              <li>
+                <strong>預期效益:</strong>
+              </li>
+              <p>
+                隨著智慧醫療的快速發展，及緊急醫療救護業務的規模增長，需要加快以標準化方式進行各系統與儀器間資料交換，縮短急救反應時間，以提升整體緊急照護醫療品質。參加單位可使用實際或是產品雛形參加此賽道，由於這是較新的賽道，並需要跨多個
+                Resource 進行資料交換，因此參加者須要具備較高的技術門檻。MISAT
+                鼓勵急救場域相關工作者（醫院急診單位、急重症醫師、EMT）、軟體工程師、開源工作者、儀器開發廠商、系統整合廠商參加，透過早期布局方式建構場域實證以完善本標準，並建立急救照護場域的產品概念驗證（Proof
+                of Concept）與服務驗證（Proof of Service）。
+              </p>
+              <li>
+                <strong>近期規劃:</strong>
+              </li>
+              <p>1.徵求工作小組成員（討論與制定 Profile、撰寫實作指引</p>
+              <p>2.徵求督察員 </p>
+              <p>3.徵求參測單位</p>
+              <li>
+                <strong>目標:</strong>
+                <p>
+                  <strong> 資料互通機制：</strong>
+                  整合現行急就照護情境中，包含消防局、醫院、醫療救護體系中的各單位，建立到院前的資料互通機制。
+                  跨單位系統介接：基於上述互通機制，介接各單位系統，達成資料互通。
+                </p>
+                <p>
+                  <strong>資料交換與整合：</strong>
+                  項目包括現場傷病患生命徵象與其他相關量測資料，並具備與電子病歷（臺灣核心規範，TW
+                  Core IG）進行資料互通的能力。
+                </p>
+                <p>
+                  <strong> 資料安全：</strong>
+                  因應存取傷病患個人資料，需要一個標準化認證授權機制，確保資料交換安全性（Security）。
+                </p>
+                <p>
+                  <strong> 院內外連線遠距醫療：</strong>
+                  若情況允許的話，支援現場與醫院連線實施遠距醫療。
+                </p>
+              </li>
+            </ul>
             <h3></h3>
             <p></p>
           </>
@@ -1003,40 +1286,289 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "測試情境(Scenarios)",
         content: (
           <>
-            <h3></h3>
+            <ul>
+              <li>
+                <strong>Scenario 1：核心資料交換(Core Resource)</strong>
+              </li>
+              救護紀錄表 FHIR 標準化，並整合核心救護流程
+              <li>
+                <strong>Scenario 2：重大傷病資料交換</strong>
+              </li>
+              四大急重症表單 FHIR 標準化（OHCA、Trauma、CVA、ACS）
+              <li>
+                <strong>Scenario 3：生理量測資料交換</strong>
+              </li>
+              救護車上儀器的生理量測資料
+            </ul>
             <p></p>
           </>
         ),
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "聯測範圍",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <h3>Scenario 1：核心資料交換</h3>
+            <p>
+              <strong>說明：</strong>
+              本情境參照內政部消防機關救護紀錄表欄位進行定義，可與 SC2、SC3
+              等應用情境進行連結，並保留對 TW Core IG 的相容性。
+            </p>
+            <img />
+            <ul style={{ margin: 0 }}>
+              <li>調閱傷病患資料與派遣任務，並顯示於畫面上</li>
+              <li>
+                新增救護紀錄表（以 Composition 表示），其中各 Resource
+                必須分別上傳至 FHIR Server 後，以 Reference
+                進行聯結，救護紀錄表須包含以下各部資料（R 為必填、O 為選擇性）：
+                <ul style={{ margin: 0 }}>
+                  <li>
+                    R: 派遣資料（Encounter)
+                    <ul>
+                      <li>R: 各流程時間</li>
+                      <li>O: 送往醫院或地點</li>
+                    </ul>
+                  </li>
+                  <li>
+                    R: 傷病患資料（Patient)
+                    <ul>
+                      <li>
+                        可引用 Track#1 SC3 建立的 Patient
+                        資料，惟須補上本情境要求的 Patient 必填欄位
+                      </li>
+                    </ul>
+                  </li>
+                  <li>R: 現場狀況 (Condition)</li>
+                  <li>O: 傷病患主訴（QuestionnaireResponse）</li>
+                  <li>R: 過去病史（Condition）</li>
+                  <li>R: 過敏史（AllergyIntolerance）</li>
+                  <li>O: 處置項目（Procedure）</li>
+                  <li>O: ALS 處置（Procedure）</li>
+                  <li>O: 給藥（MedicationAdministration）</li>
+                  <li>R: 生命跡象（Observation）</li>
+                  <li>
+                    急重症登錄
+                    <ul style={{ margin: 0 }}>
+                      <li>R: 心肺功能停止登錄（Observation）</li>
+                      <li>O: OHCA 事故地點型態（Observation）</li>
+                      <li>O: 疑似心肌梗塞登錄（Observation）</li>
+                      <li>O: 符合疑似腦中風指標（Observation）</li>
+                    </ul>
+                  </li>
+                  <li>O: 補述（Narrative）</li>
+                  <li>R: 檢傷分級（RiskAssessment）</li>
+                  <li>
+                    <strike>O: 簽名（Consent &amp; Provenance）</strike>2022
+                    不定義
+                    <ul>
+                      <li>僅記錄救護紀錄表填寫人員（Practitioner.name）</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                調閱救護紀錄表，並顯示於畫面上
+                <ul style={{ margin: 0 }}>
+                  <li>
+                    以傷病患名稱（Patient.name）或唯一識別碼（Patient.Identifier）調閱
+                  </li>
+                  <li>以救護紀錄表唯一識別碼（Composition.id）調閱</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Scenario 2：重大傷病資料交換</h3>
+            <p>
+              <strong>說明：</strong>
+              本情境今年度以 OHCA 及 Trauma
+              資料交換為主，參考衛福部公告的重大創傷病摘與到院前心跳停止病摘欄位定義聯測項目。其餘
+              ACS 與 CVA/Stroke
+              兩項待標準公告後納入聯測項目。病摘定義的是到院後針對四大急重症的資料交換，並保留對
+              TW Core IG 的相容性。參測單位須在 SC1
+              建立救護紀錄表後，方可在本情境單獨進行生理量測資料交換。若參測單位單獨參加本項情境者，也可以使用大會事先建立的範例救護紀錄表進行聯結。
+            </p>
+            <ul style={{ margin: 0 }}>
+              <li>
+                調閱救護紀錄表，並顯示於畫面上
+                <ul style={{ margin: 0 }}>
+                  <li>
+                    有參測 SC1 的單位，須先在 SC1 新增救護紀錄表後調閱該筆資料
+                  </li>
+                  <li>
+                    沒有參測 SC1 的單位，須調閱大會事先建立的範例救護紀錄表資料
+                  </li>
+                </ul>
+              </li>
+              <li>
+                新增重大傷病資料病摘（Composition），其中各 Resource
+                必須分別上傳至 FHIR Server 後以 Reference
+                進行聯結，下列至少須完成一項：
+                <ul style={{ margin: 0 }}>
+                  <li>到院前心跳停止病摘（OHCA）</li>
+                  <li>重大創傷病摘（Trauma）</li>
+                </ul>
+              </li>
+              <li>
+                調閱重大傷病資料表單，並顯示於畫面上
+                <ul style={{ margin: 0 }}>
+                  <li>
+                    以傷病患名稱（Patient.name）或唯一識別碼（Patient.Identifier）調閱
+                  </li>
+                  <li>以表單 id 調閱</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h3>Scenario 3：生理量測資料交換</h3>
+            <p>
+              <strong>說明：</strong>
+              本情境適用於儀器／設備廠商，主要針對救護車上的生理量測數據定義聯測項目。儀器經完成量測後直接上傳至
+              FHIR Server 並與派遣案件（救護紀錄表）聯結，後續可應用於與 EEC
+              進行資料交換的情境。參測單位須在 SC1
+              建立救護紀錄表後，方可在本情境單獨進行生理量測資料交換。若參測單位單獨參加本項情境者，也可以使用大會事先建立的範例救護紀錄表進行聯結。
+            </p>
+            <ul style={{ margin: 0 }}>
+              <li>
+                調閱救護紀錄表，並顯示於畫面上
+                <ul style={{ margin: 0 }}>
+                  <li>
+                    有參測 SC1 的單位，須先在 SC1 新增救護紀錄表後調閱該筆資料
+                  </li>
+                  <li>
+                    沒有參測 SC1 的單位，須調閱大會事先建立的範例救護紀錄表資料
+                  </li>
+                </ul>
+              </li>
+              <li>
+                新增生理量測資料（Observation），並至少須要完成以下其中一項：
+                <ul style={{ margin: 0 }}>
+                  <li>12 Leads ECG</li>
+                  <li>Body Temperature</li>
+                  <li>Respiratory Rate</li>
+                  <li>Oxygen saturation in Arterial blood by Pulse oximetry</li>
+                  <li>Capillary refill[Time] of Nail bed</li>
+                  <li>Glucose [Mass/volume] in Blood</li>
+                  <li>Heart rate by Pulse oximetry</li>
+                  <li>Blood Pressure Panel</li>
+                </ul>
+              </li>
+              <li>
+                調閱傷病患在單一救護紀錄表上的所有量測資料，並顯示於畫面上
+                <ul style={{ margin: 0 }}>
+                  <li>
+                    以傷病患名稱（Patient.name）或唯一識別碼（Patient.Identifier）調閱
+                  </li>
+                  <li>以表單 id 調閱</li>
+                </ul>
+              </li>
+            </ul>
           </>
         ),
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "賽道通過基準",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <ul>
+              <li>
+                本賽道各情境（Scenario）的通過基準為獨立判斷，參測單位完成所有標記為
+                R（必須）的聯測步驟時，才算完成該情境。
+              </li>
+              <li>
+                參測單位通過一情境時，將會於核發的通過證明上註記通過的情境。
+              </li>
+              <li>
+                僅完成部分項目者，核發的通過證明將註記「部分通過」與其通過項目，並於官網聯測松結果（Matrix）公告通過的項目。
+              </li>
+              <li>
+                例如 A 廠商通過 SC1（所有交換項目）、SC3（僅有 12 Leads
+                ECG），核發的通過證明將會如下註記：
+              </li>
+              <ul style={{ margin: 0 }}>
+                <li>參測單位： A 廠商</li>
+                <li>參測賽道： Track #7 緊急醫療救護情境賽道</li>
+                <li>
+                  通過項目： <br />
+                  Scenario 1（完全通過）：通過所有流程，及所有資料交換項目。{" "}
+                  <br />
+                  Scenario 3（部分通過）：通過所有流程，及以下資料交換項目： 12
+                  Leads ECG
+                </li>
+              </ul>
+            </ul>
+          </>
+        ),
+      },
+      {
+        id: "5",
+        Sc: "參考標準",
+        content: (
+          <>
+            <ol>
+              <li>
+                <a
+                  style={{ textDecoration: "none", color: "#6d6875" }}
+                  href="https://www.nfa.gov.tw/pro/index.php?code=list&amp;flag=detail&amp;ids=115&amp;article_id=6639"
+                >
+                  內政部消防署－消防機關救護紀錄表
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none", color: "#6d6875" }}
+                  target="_blank"
+                  href="https://emr.mohw.gov.tw/emr/doc/110/%E5%88%B0%E9%99%A2%E5%89%8D%E5%BF%83%E8%B7%B3%E5%81%9C%E6%AD%A2(OHCA)%E7%97%85%E6%91%98%E4%BA%A4%E6%8F%9B%E6%AC%84%E4%BD%8D%E8%88%87%E6%A0%BC%E5%BC%8F%E4%B9%8B%E6%A8%99%E6%BA%96%E8%A6%8F%E7%AF%84_1101213.pdf"
+                >
+                  EEC 到院前心跳停止病摘交換欄位與格式之標準規範
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none", color: "#6d6875" }}
+                  target="_blank"
+                  href="https://emr.mohw.gov.tw/emr/doc/110/%E9%87%8D%E5%A4%A7%E5%89%B5%E5%82%B7(TRAUMA)%E7%97%85%E6%91%98%E4%BA%A4%E6%8F%9B%E6%AC%84%E4%BD%8D%E8%88%87%E6%A0%BC%E5%BC%8F%E4%B9%8B%E6%A8%99%E6%BA%96%E8%A6%8F%E7%AF%84_1101213.pdf"
+                >
+                  EEC 重大創傷病摘交換欄位與格式之標準規範
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none", color: "#6d6875" }}
+                  target="_blank"
+                  href="https://emr.mohw.gov.tw/emr/doc/110/%E6%80%A5%E8%A8%BA%E7%97%85%E6%91%98%E4%BA%A4%E6%8F%9B%E6%AC%84%E4%BD%8D%E8%88%87%E6%A0%BC%E5%BC%8F%E4%B9%8B%E6%A8%99%E6%BA%96%E8%A6%8F%E7%AF%84_1101116.pdf"
+                >
+                  EEC 急診病摘交換欄位與格式之標準規範
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none", color: "#6d6875" }}
+                  target="_blank"
+                  href="https://fhir.ch/ig/ch-ems/index.html"
+                >
+                  瑞士緊急醫療實作指引 CH.EMS.IG
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ textDecoration: "none", color: "#6d6875" }}
+                  target="_blank"
+                  href="https://build.fhir.org/ig/HL7/fhir-ips/"
+                >
+                  FHIR IPS 實作指引
+                </a>
+              </li>
+              <li>臺灣核心規範實作指引</li>
+            </ol>
           </>
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "8",
@@ -1085,11 +1617,6 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "9",

@@ -9,6 +9,13 @@ function Submenu({ item, onToggle }) {
       <NavLink
         to={item.path}
         className="Menu"
+        onMouseEnter={() => {
+          if (item.li) {
+            showSubmenu();
+          } else {
+            return 0;
+          }
+        }}
         onClick={() => {
           if (item.li) {
             showSubmenu();
@@ -33,6 +40,13 @@ function Submenu({ item, onToggle }) {
                 key={index}
                 className="Subitems"
                 onClick={() => onToggle()}
+                onMouseLeave={() => {
+                  if (item.li) {
+                    showSubmenu();
+                  } else {
+                    return 0;
+                  }
+                }}
               >
                 {item.liname}
               </NavLink>

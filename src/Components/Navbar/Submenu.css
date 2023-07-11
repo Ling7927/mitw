@@ -10,15 +10,24 @@
   text-decoration: none;
   color: #ddd;
   margin-top: 2px;
-  margin-left: 2vw;
+  margin-left: 1vw;
 }
-
+/* 小於930px */
 @media screen and (max-width: 930px) {
   .Title {
-    padding-top: 2rem;
+    padding-top: 2vw;
   }
   .Menu {
-    margin: 2vw 2vw;
+    margin: 2vw 1vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Title {
+    padding-top: 2vw;
+    font-size: 3vw;
+  }
+  .Menu {
+    margin: 2vw 1vw;
   }
 }
 @media screen and (min-width: 930px) {

@@ -11,6 +11,9 @@ function TraksTab() {
   const [onHandle, setOnHandle] = useState(id || "1"); //Trackbutton
   const [Click, setClick] = useState("0"); //section
   const [Section, setSection] = useState(false);
+  const SectionClick = () => {
+    setSection(!Section);
+  };
 
   return (
     <div>
@@ -142,13 +145,23 @@ function TraksTab() {
                       padding: "0.3rem",
                     }}
                     onClick={() => {
+                      SectionClick();
                       setClick(item.id);
                     }}
                   >
                     {item.Sc}
-                    {Click === item.id ? <GoTriangleDown /> : <GoTriangleUp />}
+                    {Section && Click === item.id ? (
+                      <GoTriangleDown />
+                    ) : (
+                      <GoTriangleUp />
+                    )}
                   </button>
-                  {Click === item.id ? <div>{item.content}</div> : ""}
+                  {/* {Click === item.id ? <div>{item.content}</div> : ""} */}
+                  {Section && Click === item.id ? (
+                    <div>{item.content}</div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               );
             }

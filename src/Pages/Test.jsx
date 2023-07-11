@@ -2,7 +2,6 @@ import React, { useState, MouseEvent } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import Background from "../assets/Background.png";
 import { Grid } from "@mui/material";
-import Nav from "../Components/Navbar/Nav";
 import T2023 from "../assets/T2023.png";
 import Ttext from "../assets/Titletext.png";
 
@@ -43,9 +42,17 @@ function Test() {
   // }
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
+  const [open, setOpen] = useState(false);
+  const Click = () => {
+    setOpen(!open);
+    console.log(open);
+  };
   return (
     <>
-      <Nav />
+      <div>
+        <button onClick={Click}>aaa</button>
+        {open && <div>rjfvrs</div>}
+      </div>
       {/* <Grid container>
         <Grid item></Grid>
         <Grid item>

@@ -30,9 +30,10 @@
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-  gap: 2rem;
+  gap: 2vw;
   margin: 0;
   z-index: 999;
+  white-space: nowrap;
 }
 @media screen and (max-width: 930px) {
   .toggler__icon {

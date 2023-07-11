@@ -28,7 +28,7 @@ const routerList = [
   //   },
   {
     name: "招募",
-    icon: <AiFillCaretDown />,
+
     iconOpened: <AiFillCaretDown />,
     iconClosed: <AiFillCaretUp />,
     path: "",
@@ -69,7 +69,7 @@ const routerList = [
   },
   {
     name: "歷年活動",
-    icon: <AiFillCaretDown />,
+
     iconOpened: <AiFillCaretDown />,
     iconClosed: <AiFillCaretUp />,
     path: "",
@@ -94,7 +94,7 @@ const routerList = [
   },
   {
     name: "活動",
-    icon: <AiFillCaretDown />,
+
     iconOpened: <AiFillCaretDown />,
     iconClosed: <AiFillCaretUp />,
     path: "",

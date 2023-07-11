@@ -7,7 +7,7 @@ function SeeMore({ introduce }) {
     <>
       {introduce.length > SeeMore ? (
         <>
-          {introduce.substr(1, 180)}...
+          {introduce.substr(0, 180)}...
           <div
             style={{ cursor: "pointer", color: "#0081A7" }}
             onClick={() => setSeeMore(introduce.length)}

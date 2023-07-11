@@ -43,11 +43,12 @@ function Specification() {
 
           {/* 說明 */}
 
-          <Grid container style={{}}>
+          <Grid container>
             <Grid
               item
-              sm={12}
-              md={12}
+              xs={3}
+              sm={3}
+              md={3}
               lg={3}
               style={{ display: "flex", justifyContent: "center" }}
             >

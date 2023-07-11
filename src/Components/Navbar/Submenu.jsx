@@ -5,7 +5,7 @@ function Submenu({ item, onToggle }) {
   const [submenu, setSubmenu] = useState(false);
   const showSubmenu = () => setSubmenu(!submenu);
   return (
-    <li key={item.name}>
+    <li key={item.name} className="Title">
       <NavLink
         to={item.path}
         className="Menu"

@@ -1,7 +1,9 @@
 .nav {
   background: #000;
-  display: flex;
+  display: flex !important;
+  flex-wrap: nowrap !important;
   align-items: center;
+  justify-content: space-between;
   height: 15%;
   width: 100%;
   padding: 20px 0;
@@ -27,13 +29,14 @@
   justify-content: " space-evenly";
 }
 .nav__menu {
+  width: 100%;
   display: flex;
   align-items: stretch;
-  justify-content: space-around;
-  gap: 2vw;
+  /* gap: 2vw; */
   margin: 0;
   z-index: 999;
   white-space: nowrap;
+  justify-content: space-evenly;
 }
 @media screen and (max-width: 930px) {
   .toggler__icon {

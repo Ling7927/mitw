@@ -15,11 +15,12 @@ import Member from "./Pages/Member/Member";
 import Workgroupactivity from "./Pages/Workgroupactivity/Workgroupactivity";
 import Relatedactivity from "./Pages/Relatedactivity/Relatedactivity";
 import Test from "./Pages/Test";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
+  const location = useLocation();
   const [istop, setIstop] = useState(true);
 
   useEffect(() => {
@@ -39,8 +40,8 @@ function App() {
         <Route path="/News" element={<News />} />
         <Route path="/Introduction" element={<Introduction />} />
         <Route path="/Specification" element={<Specification />} />
-        <Route path="/Traks" element={<Traks />} />
-        <Route path="/Traks/:id" element={<Traks />} />
+        <Route path="/Tracks" element={<Traks />} />
+        <Route path="/Tracks/:id" element={<Traks />} />
         <Route path="/Result" element={<Result />} />
         <Route path="/Successcase" element={<Successcase />} />
         <Route path="/Recruit" element={<Recruit />} />
@@ -51,7 +52,7 @@ function App() {
         <Route path="/Test" element={<Test />} />
       </Routes>
 
-      <Footer />
+      {location.pathname === "/" ? null : <Footer />}
     </>
   );
 }

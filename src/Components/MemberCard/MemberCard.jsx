@@ -24,7 +24,7 @@ function MemberCard() {
   return (
     <>
       <Grid container style={{ justifyContent: "space-between" }}>
-        <Grid item sm={12} md={12} lg={12} height="10vh">
+        <Grid item xs={12} sm={12} md={12} lg={12} height="10vh">
           <h4>賽道工作小組</h4>
           <hr style={{ margin: "2vh 0 " }} />
         </Grid>

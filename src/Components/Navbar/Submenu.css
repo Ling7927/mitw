@@ -24,10 +24,12 @@
 @media screen and (min-width: 930px) {
   .Submenu {
     border-radius: 5px;
-    background-color: #ddd;
+    background-color: #fafdff;
     box-shadow: 2px 2px #dcdcdc;
     position: absolute;
     top: 60px;
+    height: 5rem;
+    justify-content: space-around;
   }
   .Subitems {
     margin: 0 1vw;

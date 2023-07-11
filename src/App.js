@@ -15,26 +15,31 @@ import Member from "./Pages/Member/Member";
 import Workgroupactivity from "./Pages/Workgroupactivity/Workgroupactivity";
 import Relatedactivity from "./Pages/Relatedactivity/Relatedactivity";
 import Test from "./Pages/Test";
+import Up from "./Components/ScrollUp/ScrollUp";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   const location = useLocation();
-  const [istop, setIstop] = useState(true);
+  // const [istop, setIstop] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY === 0) setIstop(true);
-      if (window.scrollY !== 0) setIstop(false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY === 0) setIstop(true);
+  //     if (window.scrollY !== 0) setIstop(false);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <>
-      <Nav istop={istop} />
+      <Nav
+      // istop={istop}
+      />
+      <Up />
+
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/News" element={<News />} />
@@ -51,7 +56,6 @@ function App() {
 
         <Route path="/Test" element={<Test />} />
       </Routes>
-
       {location.pathname === "/" ? null : <Footer />}
     </>
   );

@@ -198,6 +198,7 @@ function ResultTab() {
           alignItems: "center",
           textShadow:
             "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
+          paddingBottom: "2rem",
         }}
       >
         <h3
@@ -214,9 +215,10 @@ function ResultTab() {
         >
           {ResultTabInform.filter((item) => item.Id === track)[0].ContentTitle}
         </h3>
+
+        {/* 表格 */}
         <ResultTable id={track} />
       </div>
-      {/* 表格 */}
     </>
   );
 }

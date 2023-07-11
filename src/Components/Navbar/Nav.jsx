@@ -44,7 +44,7 @@ function Nav() {
             className={collapse}
           >
             {routerList.map((item, index) => {
-              return <Submenu item={item} key={index} />;
+              return <Submenu item={item} key={index} onToggle={onToggle} />;
             })}
           </Grid>
           <div

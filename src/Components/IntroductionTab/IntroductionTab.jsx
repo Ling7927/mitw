@@ -18,6 +18,10 @@ function IntroductionTab() {
               <button
                 onClick={() => setOnHandle(item.id)}
                 style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignContent: "center",
+                  alignItems: "center",
                   backgroundColor: onHandle === item.id ? "#f0f0f0" : "#7AACA9",
                   color: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
@@ -31,7 +35,7 @@ function IntroductionTab() {
                     fontSize: "40px",
                     color: onHandle === item.id ? "#7AACA9" : "#fff",
                     stroke: "white",
-                    margin: "auto",
+                    margin: 0,
                     padding: "5% 0",
                   }}
                 >
@@ -42,7 +46,7 @@ function IntroductionTab() {
                   <h5
                     style={{
                       color: onHandle === item.id ? "#7AACA9" : "#fff",
-                      margin: "0 0 0 0",
+                      margin: 0,
                     }}
                   >
                     {item.Tabtitle}

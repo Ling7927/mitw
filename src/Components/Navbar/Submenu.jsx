@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Submenu.css";
-function Submenu({ item }) {
+function Submenu({ item, onToggle }) {
   const [submenu, setSubmenu] = useState(false);
   const showSubmenu = () => setSubmenu(!submenu);
   return (
@@ -10,7 +10,17 @@ function Submenu({ item }) {
 
       //onMouseEnter={handleClose}
     >
-      <NavLink to={item.path} className="Menu" onClick={item.li && showSubmenu}>
+      <NavLink
+        to={item.path}
+        className="Menu"
+        onClick={() => {
+          if (item.li) {
+            showSubmenu();
+          } else {
+            onToggle();
+          }
+        }}
+      >
         {item.name}
         {item.li && submenu
           ? item.iconOpened
@@ -21,7 +31,12 @@ function Submenu({ item }) {
       {submenu &&
         item.li.map((item, index) => {
           return (
-            <NavLink to={item.lipath} key={index} className="Subitems">
+            <NavLink
+              to={item.lipath}
+              key={index}
+              className="Subitems"
+              onClick={() => onToggle()}
+            >
               {item.liname}
             </NavLink>
           );

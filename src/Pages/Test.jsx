@@ -2,7 +2,7 @@ import React, { useState, MouseEvent } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import Background from "../assets/Background.png";
 import { Grid } from "@mui/material";
-
+import Nav from "../Components/Navbar/Nav";
 import T2023 from "../assets/T2023.png";
 import Ttext from "../assets/Titletext.png";
 
@@ -21,15 +21,15 @@ function Test() {
   //   const number = Math.floor(Math.random() * a); //回傳一個0~a之間的隨機數
   //   return (setThisColor = colorlist[number]);
   // };
-  let mouseX = useMotionValue(0);
-  let mouseY = useMotionValue(0);
+  // let mouseX = useMotionValue(0);
+  // let mouseY = useMotionValue(0);
 
-  function handleMouseMove({ clientX, clientY, currentTarget }) {
-    let { left, top } = currentTarget.getBoundingClientRect();
-    let xPosition = clientX - left;
-    let yPosition = clientY - top;
-    console.log(xPosition, yPosition);
-  }
+  // function handleMouseMove({ clientX, clientY, currentTarget }) {
+  //   let { left, top } = currentTarget.getBoundingClientRect();
+  //   let xPosition = clientX - left;
+  //   let yPosition = clientY - top;
+  //   console.log(xPosition, yPosition);
+  // }
 
   // function handleMouseMove({
   //   currentTarget,
@@ -41,11 +41,12 @@ function Test() {
   //   mouseX.set(clientX - left);
   //  mouseY.set(clientY - top);
   // }
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  // const ref = useRef(null);
+  // const isInView = useInView(ref, { once: true });
   return (
     <>
-      <Grid container>
+      <Nav />
+      {/* <Grid container>
         <Grid item></Grid>
         <Grid item>
           <motion.div
@@ -92,9 +93,9 @@ function Test() {
         >
           aa
         </motion.p>
-      </Grid>
-      <div></div>
-      <div
+      </Grid> */}
+
+      {/* <div
         style={{
           background: "yellow",
           width: "10rem",
@@ -158,8 +159,8 @@ function Test() {
       <div
         style={{ height: "100rem", width: "100%", background: "#86608E" }}
         onMouseMove={handleMouseMove}
-      >
-        {/* <motion.div 
+      > */}
+      {/* <motion.div 
           style={{
             background: useMotionTemplate`
               radial-gradient(
@@ -173,7 +174,7 @@ function Test() {
           >
 
           </motion.div> */}
-        <motion.div
+      {/* <motion.div
           style={{
             width: "30rem",
             height: "30rem",
@@ -196,7 +197,7 @@ function Test() {
           }}
           transition={{ duration: 25, repeat: Infinity }}
         />
-      </div>
+      </div> */}
       {/* <div style={{ border:"1px solid yellow"}}>
           <svg
             width="521"
@@ -208,7 +209,7 @@ function Test() {
             <circle cx="260.5" cy="260.5" r="260.5" fill="white" />
           </svg>
       </div> */}
-      <div style={{ backgroundColor: "#000" }}>
+      {/* <div style={{ backgroundColor: "#000" }}>
         <div
           style={{
             backgroundSize: window.innerWidth,
@@ -242,7 +243,7 @@ function Test() {
             }}
           ></motion.img>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

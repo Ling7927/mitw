@@ -1,0 +1,10 @@
+.Menu {
+  text-decoration: none;
+  color: #ddd;
+}
+.Subitems {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #ddd;
+}

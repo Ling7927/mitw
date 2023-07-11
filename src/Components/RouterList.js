@@ -7,7 +7,7 @@ import Successcase from "../Pages/Successcase/Successcase";
 
 import Member from "../Pages/Member/Member";
 import Recruit from "../Pages/Recruit/Recruit";
-import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 const routerList = [
   {
     name: "最新消息",
@@ -29,6 +29,8 @@ const routerList = [
   {
     name: "招募",
     icon: <AiFillCaretDown />,
+    iconOpened: <AiFillCaretDown />,
+    iconClosed: <AiFillCaretUp />,
     path: "",
     Component: "",
     li: [
@@ -49,7 +51,7 @@ const routerList = [
   {
     name: "賽道",
     icon: null,
-    path: "/Traks",
+    path: "/Tracks",
     Component: <Traks />,
   },
 
@@ -68,6 +70,8 @@ const routerList = [
   {
     name: "歷年活動",
     icon: <AiFillCaretDown />,
+    iconOpened: <AiFillCaretDown />,
+    iconClosed: <AiFillCaretUp />,
     path: "",
     Component: "",
     li: [
@@ -91,6 +95,8 @@ const routerList = [
   {
     name: "活動",
     icon: <AiFillCaretDown />,
+    iconOpened: <AiFillCaretDown />,
+    iconClosed: <AiFillCaretUp />,
     path: "",
     Component: "",
     li: [

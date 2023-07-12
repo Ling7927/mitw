@@ -10,9 +10,9 @@ function TraksTab() {
   const { id } = useParams();
   const [onHandle, setOnHandle] = useState(id || "1"); //Trackbutton
   const [Click, setClick] = useState("0"); //section
-  const [Section, setSection] = useState(false);
+  const [SectionOpen, setSectionOpen] = useState(false);
   const SectionClick = () => {
-    setSection(!Section);
+    setSectionOpen(!SectionOpen);
   };
 
   return (
@@ -150,14 +150,14 @@ function TraksTab() {
                     }}
                   >
                     {item.Sc}
-                    {Section && Click === item.id ? (
+                    {SectionOpen && Click === item.id ? (
                       <GoTriangleDown />
                     ) : (
                       <GoTriangleUp />
                     )}
                   </button>
                   {/* {Click === item.id ? <div>{item.content}</div> : ""} */}
-                  {Section && Click === item.id ? (
+                  {SectionOpen && Click === item.id ? (
                     <div>{item.content}</div>
                   ) : (
                     ""

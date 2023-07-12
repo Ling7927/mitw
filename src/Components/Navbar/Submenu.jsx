@@ -16,13 +16,13 @@ function Submenu({ item, onToggle }) {
             return 0;
           }
         }}
-        onMouseLeave={() => {
-          if (item.li) {
-            showSubmenu();
-          } else {
-            return 0;
-          }
-        }}
+        // onMouseLeave={() => {
+        //   if (item.li) {
+        //     showSubmenu();
+        //   } else {
+        //     return 0;
+        //   }
+        // }}
         onClick={() => {
           if (item.li) {
             showSubmenu();

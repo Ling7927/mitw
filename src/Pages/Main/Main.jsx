@@ -3,7 +3,8 @@ import { AiOutlineDownload } from "react-icons/ai";
 // import Background from "../../assets/Background.png";
 // import T2023 from "../../assets/T2023.png";
 // import Ttext from "../../assets/Titletext.png";
-import Main1 from "../../assets/main.jpg";
+import Main1 from "../../assets/mainbackground.jpg";
+import maintitle from "../../assets/Title.png"
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
@@ -62,11 +63,26 @@ function Main() {
           objectFit: "fill",
           height: "60rem",
           width: "100%",
-          // display: "flex",
-          // alignItems: "center",
-          // justifyContent: "center",
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "flex-end",
         }}
-      />
+      >
+         <motion.img
+              ref={ref}
+              src={maintitle}
+              style={{
+                marginTop:"2vw",
+                width:"60%",
+                height:"60%",
+                transform: isInView
+                  ? "translateX(0)"
+                  : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}
+            ></motion.img>
+      </div>
       {/* </div> */}
 
       {/* -------------------DM下載--------------------- */}

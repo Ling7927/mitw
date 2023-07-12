@@ -10,7 +10,7 @@ function Member() {
         // <MemberSlider />
         //  <MemberCard /> 
        // </div>  */}
-      <Grid container spacing={1} style={{ padding: "2rem " }}>
+      <Grid container spacing={1} style={{ padding: "2rem  2rem 3rem" }}>
         {/* <Grid item sm={12} md={12} lg={12}>
           <h4>賽道工作小組</h4>
           <hr />

@@ -63,18 +63,19 @@ function MemberCard() {
         </Grid>
 
         {/* 卡片 */}
-        <Grid item sm={8} md={8} lg={10}>
+        <Grid item xs={12} sm={10} md={10} lg={10}>
           <Grid
             container
-            spacing={1}
+            gap={1}
             style={{
               width: "100%",
-              justifyContent: "flex-end",
+              // flexWrap: "nowrap",
+              justifyContent: "space-evenly",
             }}
           >
             {Mem.filter(({ Track }) => Track === clickTrackId).map((item) => {
               return (
-                <Grid item sm={6} md={6} lg={6}>
+                <Grid item xs={10} sm={5} md={5} lg={5}>
                   <div
                     // initial={{ x: 100 }}
                     // animate={{ x: -200, opacity: 1 }}
@@ -87,33 +88,17 @@ function MemberCard() {
                   >
                     {/* 賽道資訊 */}
                     <div>
-                      <p style={{ fontSize: "5vw", margin: 0 }}>{item.Track}</p>
-                      <div
-                        style={{
-                          width: "5vw",
-                          height: "3px",
-                          margin: "0 0 1rem",
-                          background: "pink",
-                        }}
-                      />
-                      <h2 style={{ fontSize: "2vw" }}>{item.TraksTitle}</h2>
-                      {/* <div style={{ fontSize: "100px" }}>
-                        {item.Track}
-
-                        <hr style={{ width: "10%", margin: "0 0 1rem" }} />
-                      </div>
-
-                      <h2>{item.TraksTitle}</h2> */}
+                      <p className="Tracks">{item.Track}</p>
+                      <h2 className="TracksTitle">{item.TraksTitle}</h2>
                     </div>
                     {/* 姓名 身分 */}
-
                     <h5
-                      style={{
-                        fontSize: "1.5vw",
-                        color: "#3ABCBF",
-                        height: "8vh",
-                        margin: 0,
-                      }}
+                      className="Name" // style={{
+                      //   fontSize: "1.5vw",
+                      //   color: "#3ABCBF",
+                      //   height: "8vh",
+                      //   margin: 0,
+                      // }}
                     >
                       {item.Name}
                     </h5>

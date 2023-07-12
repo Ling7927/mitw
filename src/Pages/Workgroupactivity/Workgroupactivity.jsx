@@ -4,78 +4,88 @@ import "./Workgroupactivity.css";
 function Workgroupactivity() {
   return (
     <div
-      className="Background"
-      // style={{
-      //   background: "rgb(220, 220, 220)",
-      //   padding: "0 5vw ",
-      // }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        background: "rgb(253, 253, 253)",
+      }}
     >
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          background: "rgb(253, 253, 253)",
+          alignItems: "center",
+          margin: "2vw 0 ",
         }}
       >
-        <div
+        <h3
           style={{
-            display: "flex",
-            justifyContent: "center",
-            margin: "2vw 0 ",
+            borderWidth: "2px",
+            padding: "1vw",
+            fontWeight: "bold",
+            margin: 0,
+            // borderStyle: "solid",
+
+            // boxShadow: " rgb(118, 189, 213) 2px 1px 3px 2px",
+
+            // borderImage:
+            //   "linear-gradient(rgb(35, 240, 199), rgb(16, 137, 152), rgb(16, 249, 255)) 20 / 1 / 0 stretch",
           }}
         >
-          <h3
+          工作小組
+        </h3>
+        <hr
+          style={{
+            width: "20%",
+            marginBottom: "2rem",
+            size: "10",
+            color: "rgb(118, 189, 213)",
+            border: "2px solid orange",
+          }}
+        />
+      </div>
+      {active.map((item) => {
+        return (
+          <div
             style={{
-              borderWidth: "2px",
-              padding: "1vw",
-              fontWeight: "bold",
-              borderStyle: "solid",
-
-              boxShadow: " rgb(118, 189, 213) 2px 1px 3px 2px",
-
-              borderImage:
-                "linear-gradient(rgb(35, 240, 199), rgb(16, 137, 152), rgb(16, 249, 255)) 20 / 1 / 0 stretch",
+              display: "flex",
+              justifyContent: "center",
             }}
           >
-            工作小組
-          </h3>
-        </div>
-        {active.map((item) => {
-          return (
             <div
+              key={item}
               style={{
+                background: "#f7f5f5",
+                // background: "rgb(253, 253, 253)",
+                // border: "2px outset rgb(255, 255, 255)",
+                // boxShadow: " rgb(118, 189, 213) 1px 1px 2px 1px",
+                padding: "2vw",
+                marginBottom: "2vw",
+                width: "50%",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
               }}
             >
-              <div
-                key={item}
+              <h3
                 style={{
-                  background: "rgb(253, 253, 253)",
-                  border: "2px outset rgb(255, 255, 255)",
-                  boxShadow: " rgb(118, 189, 213) 1px 1px 2px 1px",
-                  padding: "2vw",
-                  marginBottom: "5vw",
-                  width: "90%",
+                  display: "flex",
+                  justifyContent: "center",
+                  fontWeight: "bold",
+                  marginBottom: "2vw",
                 }}
               >
-                <h4
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {" "}
-                  {item.title}
-                </h4>
+                {" "}
+                {item.title}
+              </h3>
+              <div style={{ display: "flex", width: "100%" }}>
                 {item.content}
               </div>
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

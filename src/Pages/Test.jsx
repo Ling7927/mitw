@@ -1,4 +1,5 @@
 import React, { useState, MouseEvent } from "react";
+import ReactCardFlip from "react-card-flip";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import Background from "../assets/Background.png";
 import { Grid } from "@mui/material";
@@ -43,16 +44,39 @@ function Test() {
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true });
   const [open, setOpen] = useState(false);
+
   const Click = () => {
     setOpen(!open);
     console.log(open);
   };
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsFlipped((prevState) => !prevState);
+  };
+  //
+
   return (
     <>
-      <div>
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+        <div>
+          This is the front of the card.
+          <button onClick={handleClick}>Click to flip</button>
+        </div>
+
+        <div>
+          This is the back of the card.
+          <button onClick={handleClick}>Click to flip</button>
+        </div>
+      </ReactCardFlip>
+      {/*  */}
+
+      {/* <div>
         <button onClick={Click}>aaa</button>
         {open && <div>rjfvrs</div>}
-      </div>
+      </div> */}
+
       {/* <Grid container>
         <Grid item></Grid>
         <Grid item>

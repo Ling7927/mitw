@@ -3,7 +3,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 // import Background from "../../assets/Background.png";
 // import T2023 from "../../assets/T2023.png";
 // import Ttext from "../../assets/Titletext.png";
-import Main1 from "../../assets/main1.jpg";
+import Main1 from "../../assets/main.jpg";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
@@ -15,7 +15,7 @@ function Main() {
     <>
       {/* 主視覺 */}
       {/* <div style={{ backgroundColor: "#1f4140" }}> */}
-        {/* <div
+      {/* <div
             style={{
               backgroundSize: window.innerWidth,
               backgroundImage: `url(${Background})`,
@@ -50,23 +50,23 @@ function Main() {
               }}
             ></motion.img>
           </div> */}
-        <div
-          style={{
-            //backgroundSize: window.innerWidth,
-            backgroundImage: `url(${Main1})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: "fixed",
-            // objectFit: "scale-down",
-            objectFit: "fill",
-            height: "30rem",
-            width:"100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        />
+      <div
+        style={{
+          //backgroundSize: window.innerWidth,
+          backgroundImage: `url(${Main1})`,
+          // backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          // // objectFit: "scale-down",
+          objectFit: "fill",
+          height: "60rem",
+          width: "100%",
+          // display: "flex",
+          // alignItems: "center",
+          // justifyContent: "center",
+        }}
+      />
       {/* </div> */}
 
       {/* -------------------DM下載--------------------- */}

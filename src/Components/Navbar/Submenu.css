@@ -1,6 +1,7 @@
 .Menu {
   text-decoration: none;
   color: #ddd;
+  padding: 0 2rem;
 }
 .Submenu {
   display: flex;
@@ -16,18 +17,26 @@
 @media screen and (max-width: 930px) {
   .Title {
     padding-top: 2vw;
+    width: 5vw;
+    height: 5vw;
   }
   .Menu {
     margin: 2vw 1vw;
+    width: 5vw;
+    height: 5vw;
   }
 }
 @media screen and (max-width: 500px) {
   .Title {
     padding-top: 2vw;
     font-size: 3vw;
+    width: 5vw;
+    height: 5vw;
   }
   .Menu {
     margin: 2vw 1vw;
+    width: 5vw;
+    height: 5vw;
   }
 }
 @media screen and (min-width: 930px) {

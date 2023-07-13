@@ -49,6 +49,7 @@ function Test() {
     setOpen(!open);
     console.log(open);
   };
+
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClick = (e) => {
@@ -59,17 +60,20 @@ function Test() {
 
   return (
     <>
-      <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
-        <div>
+    <div style={{display:"flex"}}>
+       <ReactCardFlip isFlipped={isFlipped} style ={{height:"10rem",width:"10rem"}}>
+        <button onClick={handleClick} style ={{height:"10rem",width:"10rem"}}>
           This is the front of the card.
-          <button onClick={handleClick}>Click to flip</button>
-        </div>
+          {/* <button onClick={handleClick}>Click to flip</button> */}
+        </button>
 
-        <div>
+        <button onClick={handleClick} style ={{height:"10rem",width:"10rem",}}>
           This is the back of the card.
-          <button onClick={handleClick}>Click to flip</button>
-        </div>
+          {/* <button onClick={handleClick}>Click to flip</button> */}
+        </button>
       </ReactCardFlip>
+    </div>
+     
       {/*  */}
 
       {/* <div>

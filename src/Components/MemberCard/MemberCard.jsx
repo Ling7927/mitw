@@ -1,23 +1,23 @@
 import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogContentText } from "@mui/material";
 import { Tabs, Mem } from "../../Pages/Member/Inform";
-import { motion } from "framer-motion";
+import Card from "./Card";
 import { Box, Grid } from "@mui/material";
 import "./MemberCard.css";
 import MemberSlider from "./MemberSlider";
 function MemberCard() {
   // const { Id, Traks, Img, Members, Tollger } = props.item;
   const [clickTrackId, setclickTrackId] = useState(1);
-  const [memId, setMemId] = useState(null);
-  const [Open, setOpen] = useState(false);
-  const [id, setId] = useState(null);
+  // const [memId, setMemId] = useState(null);
+  // const [Open, setOpen] = useState(false);
+  // const [id, setId] = useState(null);
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
   //   useEffect(()=>{
   // setMem(Mem.Id===clickTrackId)
   //   },[clickTrackId])
@@ -68,111 +68,17 @@ function MemberCard() {
             container
             gap={1}
             style={{
+              height:"100%",
               width: "100%",
               // flexWrap: "nowrap",
               justifyContent: "space-evenly",
             }}
           >
-            {Mem.filter(({ Track }) => Track === clickTrackId).map((item) => {
+            {Mem.filter(({ Track }) => Track === clickTrackId).map((item,i) => {
               return (
-                <Grid item xs={10} sm={5} md={5} lg={5}>
-                  <div
-                    // initial={{ x: 100 }}
-                    // animate={{ x: -200, opacity: 1 }}
-                    // transition={{ duration: 1 }}
-                    className="CardContainer"
-                    onClick={() => {
-                      handleClickOpen();
-                      setMemId(item.Id);
-                    }}
-                  >
-                    {/* 賽道資訊 */}
-                    <div>
-                      <p className="Tracks">{item.Track}</p>
-                      <h2 className="TracksTitle">{item.TraksTitle}</h2>
-                    </div>
-                    {/* 姓名 身分 */}
-                    <h5
-                      className="Name" // style={{
-                      //   fontSize: "1.5vw",
-                      //   color: "#3ABCBF",
-                      //   height: "8vh",
-                      //   margin: 0,
-                      // }}
-                    >
-                      {item.Name}
-                    </h5>
-                    {/* 照片 */}
-                    <div
-                      className="ImgContainer"
-                      // style={{
-                      //   height: "60%",
-                      //   width: "60%",
-                      //   display: "flex",
-                      //   flexDirection: "column",
-                      //   alignItems: "center",
-                      // }}
-                    >
-                      <img
-                        onClick={() => {
-                          handleClickOpen();
-                          setMemId(item.Id);
-                        }}
-                        src={item.Img}
-                        style={{
-                          height: "100%",
-                          width: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
-                    {/* 藍色標標 */}
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "flex-end",
-                        width: "100%",
-                      }}
-                    >
-                      <span
-                        style={{
-                          display: "flex",
-                          flexDirection: "row-reverse",
-                        }}
-                      >
-                        <h4
-                          className="Bluetag"
-                          // style={{
-                          //   margin: 0,
-                          //   fontSize: "1.5vw",
-                          //   display: "flex",
-                          //   position: "relative",
-                          //   justifyContent: "center",
-                          //   alignItems: "center",
-                          //   padding: "0 2rem ",
-                          //   height: "2vh",
-                          //   right: "-1vw",
-                          //   background: "#3ABCBF",
-                          //   color: "#fff",
-                          //   boxShadow: "2px 0px 3px #d6ccc2",
-                          // }}
-                        >
-                          {item.Position}
-                        </h4>
-                      </span>
-                    </div>
-                  </div>
-
-                  <Dialog open={Open} onClose={handleClose}>
-                    <DialogContent>
-                      <DialogContentText>
-                        {/* {item.Tollger} */}
-                        {memId !== null
-                          ? Mem.filter((item) => item.Id === memId)[0].Tollger
-                          : null}
-                      </DialogContentText>
-                    </DialogContent>
-                  </Dialog>
+                <Grid item xs={10} sm={5} md={5} lg={5} key={i} sx={{display:"flex",}}>
+                  <Card item={item} />
+                 
                 </Grid>
               );
             })}

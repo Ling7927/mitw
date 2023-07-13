@@ -46,7 +46,7 @@ function Recruit() {
                         lg={7}
                         style={{
                           // padding: 0,
-                          padding: "1rem 2rem 0",
+                          padding: "1rem 2rem ",
                           width: "100%",
                           display: "flex",
                           flexDirection: "column",
@@ -146,7 +146,7 @@ function Recruit() {
                         </h4>
                         <p
                           style={{
-                            paddingRight: "1rem",
+                            // paddingRight: "1rem",
                             letterSpacing: "1px",
                             lineHeight: "1.7",
                           }}

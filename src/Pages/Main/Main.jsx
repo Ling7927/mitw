@@ -7,8 +7,8 @@ import Main1 from "../../assets/mainbackground.jpg";
 import maintitle from "../../assets/Title.png"
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-
+import { motion} from "framer-motion";
+import "./Main.css"
 function Main() {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -52,29 +52,19 @@ function Main() {
             ></motion.img>
           </div> */}
       <div
+      className="Mainbackground"
         style={{
           //backgroundSize: window.innerWidth,
           backgroundImage: `url(${Main1})`,
-          // backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-          // // objectFit: "scale-down",
-          objectFit: "fill",
-          height: "60rem",
-          width: "100%",
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "flex-end",
+         
         }}
       >
          <motion.img
               ref={ref}
               src={maintitle}
+              className="Maintitle"
               style={{
-                marginTop:"2vw",
-                width:"60%",
-                height:"60%",
+                
                 transform: isInView
                   ? "translateX(0)"
                   : "translateX(-200px)",
@@ -95,10 +85,8 @@ function Main() {
           fontSize: "25px",
         }}
       >
-        <a
-          href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
+        <a     href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
           target="_blank"
-          // onClick={onButtonClick}
           style={{ color: "#000" }}
         >
           MITW-DM 宣傳單下載 <AiOutlineDownload />

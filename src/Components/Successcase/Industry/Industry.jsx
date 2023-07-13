@@ -96,7 +96,7 @@ function Industry() {
                     <img
                       src={item.img}
                       style={{
-                        width: "30vh",
+                        width: "100%",
 
                         objectFit: "cover",
                         marginBottom: "1rem",

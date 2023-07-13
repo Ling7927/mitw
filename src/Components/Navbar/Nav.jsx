@@ -9,10 +9,10 @@ import { routerList } from "../RouterList";
 
 function Nav() {
   const [collapse, setCollapse] = useState("nav__menu");
-  // const [menuOpen, setMenuOpen] = useState(false);
+   const [menuOpen, setMenuOpen] = useState(false);
   const [toggleIcon, setToggleIcon] = useState("toggler__icon");
   const onToggle = () => {
-    // setMenuOpen(!menuOpen);
+     setMenuOpen(!menuOpen);
     collapse === "nav__menu"
       ? setCollapse("nav__menu nav__collapse")
       : setCollapse("nav__menu");

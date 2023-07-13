@@ -38,7 +38,13 @@ function Submenu({ item, onToggle }) {
           ? item.iconClosed
           : null}
       </NavLink>
-      <div className="Submenu">
+      <div className="Submenu"                onMouseLeave={() => {
+                  if (item.li) {
+                    showSubmenu();
+                  } else {
+                    return 0;
+                  }
+                }}>
         {submenu &&
           item.li.map((item, index) => {
             return (
@@ -54,6 +60,7 @@ function Submenu({ item, onToggle }) {
                     return 0;
                   }
                 }}
+
               >
                 {item.liname}
               </NavLink>

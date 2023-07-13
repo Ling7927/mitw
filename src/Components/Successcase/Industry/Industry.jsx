@@ -73,20 +73,23 @@ function Industry() {
           // </div>
           // {/*------------------------------左右----------------------------*/}
 
-          <div
-            key={i}
+          <motion.div
+          key={i}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2 }}
             style={{
               marginBottom: "2vw",
               paddingBottom: "2vw",
               borderBottom: "1px solid #dfdfdf",
             }}
-            initial={{
-              y: "150%",
-            }}
-            animate={{
-              y: "0%",
-            }}
-            transition={{ delay: 0.5, duration: 1 }}
+            // initial={{
+            //   y: "150%",
+            // }}
+            // animate={{
+            //   y: "0%",
+            // }}
+            // transition={{ delay: 0.5, duration: 1 }}
           >
             <Grid container spacing={1} key={i}>
               {/* 左 */}
@@ -150,7 +153,7 @@ function Industry() {
                 </Grid>
               </Grid>
             </Grid>
-          </div>
+          </motion.div>
         );
       })}
     </>

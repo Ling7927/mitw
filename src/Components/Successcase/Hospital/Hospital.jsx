@@ -1,6 +1,7 @@
 import React from "react";
 import { HospitalInform } from "../../../Pages/Successcase/Inform";
 import { Grid } from "@mui/material";
+import { motion } from "framer-motion";
 import SeeMore from "../../Function/SeeMore";
 function Hospital() {
   return (
@@ -9,6 +10,12 @@ function Hospital() {
       {HospitalInform.map((item, i) => {
         return (
           // -------左右---------
+          <motion.div
+          key={i}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2 }}>
+            
           <Grid container spacing={1} key={i}>
             {/* 左 */}
             <Grid item sm={12} md={4} lg={4}>
@@ -59,6 +66,7 @@ function Hospital() {
             </Grid>
           </Grid>
 
+          </motion.div>
           // <Grid
           //   container
           //   spacing={1}
@@ -87,6 +95,7 @@ function Hospital() {
           //   <div style={{ margin: "2rem 1rem 0 0" }}>{item.introduce}</div>
           //   {/* 下半 */}
           // </Grid>
+          
         );
       })}
     </>

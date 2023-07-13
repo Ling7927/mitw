@@ -14,15 +14,18 @@ function Goverment() {
               marginTop: "1rem",
               borderBottom: "1px solid #dfdfdf",
             }}
-            initial={{
-              x: "-150%",
-            }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            animate={{
-              x: "0%",
-            }}
-            transition={{ delay: 0.7, duration: 0.7 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.2 }}
+            // initial={{
+            //   x: "-150%",
+            // }}
+            // whileInView={{ opacity: 1 }}
+            // viewport={{ once: true }}
+            // animate={{
+            //   x: "0%",
+            // }}
+            // transition={{ delay: 0.7, duration: 0.7 }}
           >
             <Grid container spacing={1} marginBottom="2rem" key={i}>
               <Grid item sm={12} md={3} lg={3} style={{ padding: 0 }}>

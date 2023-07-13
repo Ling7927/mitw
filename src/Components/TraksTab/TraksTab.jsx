@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TraksTabInform } from "./TraksTabInform";
+import Section from "./Section";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import PhotoSlider from "../../Components/Slider/PhotoSlider";
 import { Grid, Box } from "@mui/material";
@@ -134,8 +135,8 @@ function TraksTab() {
           {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
             (item, i) => {
               return (
-                <div key={item.id}>
-                  <button
+                <div>
+                  {/* <button
                     style={{
                       height: "2rem",
                       width: "100%",
@@ -155,13 +156,16 @@ function TraksTab() {
                     ) : (
                       <GoTriangleUp />
                     )}
-                  </button>
+                  </button> */}
+<Section 
+// open={SectionOpen} 
+item={item} key={i}/>
                   {/* {Click === item.id ? <div>{item.content}</div> : ""} */}
-                  {SectionOpen && Click === item.id ? (
+                  {/* {SectionOpen && Click === item.id ? (
                     <div>{item.content}</div>
                   ) : (
                     ""
-                  )}
+                  )} */}
                 </div>
               );
             }

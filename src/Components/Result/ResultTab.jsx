@@ -86,7 +86,7 @@ function ResultTab() {
                                 : "none",
                             boxShadow:
                               track === item.Id
-                                ? "0 1rem 2rem rgba(0, 249, 255,0.75),0 0.5rem 2rem #00F9FF, 0 0 1rem #00F9FF,0 0 1rem #53F3D3"
+                                ? "0 1rem 4rem rgba(0, 249, 255,0.35),0 0.5rem 3rem #00F9FF, 0 0 3rem #00F9FF,0 0 3rem #53F3D3"
                                 : "",
                             height: track === item.Id ? "5vw" : "3vw",
                             width: track === item.Id ? "5vw" : "3vw",

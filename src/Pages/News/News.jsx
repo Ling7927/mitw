@@ -40,7 +40,7 @@ function News() {
           alignItems="center"
         >
           {/* -----------------時程規劃--------------------- */}
-          <Grid item display="flex" justifyContent="center">
+          <Grid item display="flex" justifyContent="center" marginBottom="3vw">
             <div
               style={{
                 display: "flex",
@@ -65,6 +65,7 @@ function News() {
               justifyContent: "center",
               alignItems: "center",
               marginTop: "2rem",
+              marginBottom: "3vw",
             }}
           >
             <Grid

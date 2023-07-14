@@ -101,6 +101,7 @@ function Specification() {
                     margin: "0.5rem 0",
                     padding: "0 1rem ",
                     borderLeft: "2px solid #F5CE85",
+                    fontWeight: "bold",
                   }}
                 >
                   {List.filter((item) => item.id === onHandle)[0].title}

@@ -46,13 +46,16 @@ function Recruit() {
                         lg={7}
                         style={{
                           // padding: 0,
-                          padding: "1rem 2rem ",
+                          padding: "3rem 3rem ",
                           width: "100%",
                           display: "flex",
                           flexDirection: "column",
                         }}
                       >
-                        <h4 key={item.title} style={{ padding: "1rem 0 2rem" }}>
+                        <h4
+                          key={item.title}
+                          style={{ padding: "1rem 0 1rem", fontWeight: "bold" }}
+                        >
                           {item.title}
                         </h4>
                         <p
@@ -138,15 +141,19 @@ function Recruit() {
                         sm={12}
                         md={7}
                         lg={7}
-                        style={{ padding: "1rem 2rem" }}
+                        style={{ padding: "3rem 3rem " }}
                       >
                         {/* 小組及說明(右) */}
-                        <h4 key={item.title} style={{ padding: "1rem 0 2rem" }}>
+                        <h4
+                          key={item.title}
+                          style={{ padding: "1rem 0 1rem", fontWeight: "bold" }}
+                        >
                           {item.title}
                         </h4>
                         <p
                           style={{
                             // paddingRight: "1rem",
+
                             letterSpacing: "1px",
                             lineHeight: "1.7",
                           }}

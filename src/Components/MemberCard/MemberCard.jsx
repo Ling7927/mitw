@@ -5,6 +5,7 @@ import Card from "./Card";
 import { Box, Grid } from "@mui/material";
 import "./MemberCard.css";
 import MemberSlider from "./MemberSlider";
+import { m } from "framer-motion";
 function MemberCard() {
   // const { Id, Traks, Img, Members, Tollger } = props.item;
   const [clickTrackId, setclickTrackId] = useState(1);
@@ -23,10 +24,10 @@ function MemberCard() {
   //   },[clickTrackId])
   return (
     <>
-      <Grid container style={{ justifyContent: "space-between" }}>
-        <Grid item xs={12} sm={12} md={12} lg={12} height="10vh">
+      <Grid container style={{ justifyContent: "center", margin: "0 2vw" }}>
+        <Grid item xs={12} sm={12} md={12} lg={12} height="10vh" sx={{}}>
           <h4>賽道工作小組</h4>
-          <hr style={{ margin: "2vh 2vw " }} />
+          <hr style={{ margin: "2vh 0 " }} />
         </Grid>
         {/* 選單 */}
         <Grid item sm={1} md={1} lg={2}>

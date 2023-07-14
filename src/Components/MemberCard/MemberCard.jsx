@@ -26,7 +26,7 @@ function MemberCard() {
       <Grid container style={{ justifyContent: "space-between" }}>
         <Grid item xs={12} sm={12} md={12} lg={12} height="10vh">
           <h4>賽道工作小組</h4>
-          <hr style={{ margin: "2vh 0 " }} />
+          <hr style={{ margin: "2vh 2vw " }} />
         </Grid>
         {/* 選單 */}
         <Grid item sm={1} md={1} lg={2}>
@@ -68,20 +68,29 @@ function MemberCard() {
             container
             gap={1}
             style={{
-              height:"100%",
+              height: "100%",
               width: "100%",
               // flexWrap: "nowrap",
               justifyContent: "space-evenly",
             }}
           >
-            {Mem.filter(({ Track }) => Track === clickTrackId).map((item,i) => {
-              return (
-                <Grid item xs={10} sm={5} md={5} lg={5} key={i} sx={{display:"flex",}}>
-                  <Card item={item} />
-                 
-                </Grid>
-              );
-            })}
+            {Mem.filter(({ Track }) => Track === clickTrackId).map(
+              (item, i) => {
+                return (
+                  <Grid
+                    item
+                    xs={10}
+                    sm={5}
+                    md={5}
+                    lg={5}
+                    key={i}
+                    sx={{ display: "flex" }}
+                  >
+                    <Card item={item} />
+                  </Grid>
+                );
+              }
+            )}
           </Grid>
         </Grid>
 

@@ -98,8 +98,8 @@ function Specification() {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1.2 }}
                   style={{
-                    margin: "0.5rem 0",
-                    padding: "0 1rem ",
+                    margin: "1rem 0",
+                    padding: "0 1rem  ",
                     borderLeft: "2px solid #F5CE85",
                     fontWeight: "bold",
                   }}

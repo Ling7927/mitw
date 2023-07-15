@@ -109,7 +109,7 @@ const WorkGrop = [
           style={{
             paddingBottom: "1vh",
             paddingBottom: "1vh",
-            borderBottom: "3px solid #257FDA",
+            borderBottom: "3px solid #000",
           }}
         >
           條件
@@ -120,7 +120,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #3E8EDE" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           工作內容
         </h5>
         <ul style={{ margin: 0 }}>
@@ -129,7 +129,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #5199E1" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           義務
         </h5>
         <ul style={{ margin: 0 }}>
@@ -139,7 +139,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #7CB2E9" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           權利
         </h5>
         <ul style={{ margin: 0 }}>
@@ -151,7 +151,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #BED9F4" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           榮譽
         </h5>
         <ul style={{ margin: 0 }}>
@@ -168,7 +168,7 @@ const WorkGrop = [
     li: [
       <p>以下為招募條件以及資訊整理:</p>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #BED9F4" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           條件
         </h5>
         <ul style={{ margin: 0 }}>
@@ -180,7 +180,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #7CB2E9" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           領域
         </h5>
         <ul style={{ margin: 0 }}>
@@ -188,7 +188,7 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #73ade7" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           責任與工作
         </h5>
         <ul style={{ margin: 0 }}>
@@ -199,13 +199,11 @@ const WorkGrop = [
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>
-        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #3E8EDE" }}>
+        <h5 style={{ paddingBottom: "1vh", borderBottom: "3px solid #000" }}>
           利益迴避
         </h5>
         <ul style={{ margin: 0 }}>
-          <li style={{ color: "#CE2029" }}>
-            督察員不可審核所屬單位與公司之產品
-          </li>
+          <li style={{ color: "#000" }}>督察員不可審核所屬單位與公司之產品</li>
         </ul>
       </div>,
     ],

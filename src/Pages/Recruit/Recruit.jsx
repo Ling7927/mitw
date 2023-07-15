@@ -93,8 +93,8 @@ function Recruit() {
                       >
                         <div
                           style={{
-                            background: "#f0f4f6",
-                            padding: "2rem 1rem",
+                            background: "#fff",
+                            padding: "2rem 3rem",
                             borderRadius: "3rem",
                           }}
                         >
@@ -123,8 +123,8 @@ function Recruit() {
                       >
                         <div
                           style={{
-                            background: "#f0f4f6",
-                            padding: "2rem 1rem",
+                            background: "#fff",
+                            padding: "2rem 3rem",
                             borderRadius: "3rem",
                             height: "100%",
                             width: "100%",

@@ -24,7 +24,7 @@ function MemberCard() {
   //   },[clickTrackId])
   return (
     <>
-      <Grid container style={{ justifyContent: "center", margin: "0 2vw" }}>
+      <Grid container style={{ justifyContent: "center", margin: "2vw 5vw" }}>
         <Grid item xs={12} sm={12} md={12} lg={12} height="10vh" sx={{}}>
           <h4>賽道工作小組</h4>
           <hr style={{ margin: "2vh 0 " }} />
@@ -85,7 +85,7 @@ function MemberCard() {
                     md={5}
                     lg={5}
                     key={i}
-                    sx={{ display: "flex" }}
+                    sx={{ display: "flex", height: "100%" }}
                   >
                     <Card item={item} />
                   </Grid>

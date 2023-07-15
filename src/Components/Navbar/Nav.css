@@ -3,11 +3,10 @@
   display: flex !important;
   flex-wrap: nowrap !important;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 15%;
   width: 100%;
   padding: 20px 0;
-  /* position: absolute; */
 }
 .toggler__icon {
   cursor: pointer;
@@ -26,39 +25,49 @@
 }
 .nav__collapse {
   display: "flex";
-  justify-content: " space-evenly";
+  /* justify-content: " space-evenly"; */
 }
 .nav__menu {
   width: 100%;
   display: flex;
-  align-items: stretch;
-  /* gap: 2vw; */
   margin: 0;
   z-index: 999;
   white-space: nowrap;
-  justify-content: space-evenly;
+}
+@media screen and (min-width: 930px) {
+  .nav__menu {
+    justify-content: space-evenly;
+  }
 }
 @media screen and (max-width: 930px) {
-  .toggler__icon {
-    font-size: 5rem;
-
-    display: block;
-    background-color: #fff;
-    font: #fff;
-  }
-  .nav__collapse {
-    transform: translateX(0%) !important;
-  }
   .nav__menu {
     display: flex;
     flex-direction: column !important;
     padding: 10px 0 15px 15px;
-    position: absolute;
     background: #000;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     top: 5.3rem;
     width: 50%;
     right: 0%;
-    transform: translateX(-210%);
+    /* transform: translateX(-210%); */
+
+    position: fixed;
+
+    transform: translateX(100%);
+    transition: 0.5s ease;
+  }
+  .nav__collapse {
+    transform: translateX(0%) !important;
+  }
+  .toggler__icon {
+    font-size: 5rem;
+    display: block;
+    background-color: #fff;
+    font: #fff;
+  }
+}
+@media screen and (max-width: 500px) {
+  .nav__menu {
+    font-size: 10px;
   }
 }

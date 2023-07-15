@@ -54,20 +54,7 @@ function Workgroupactivity() {
               justifyContent: "center",
             }}
           >
-            <div
-              key={item}
-              style={{
-                background: "#f7f5f5",
-                // background: "rgb(253, 253, 253)",
-                // border: "2px outset rgb(255, 255, 255)",
-                // boxShadow: " rgb(118, 189, 213) 1px 1px 2px 1px",
-                padding: "2vw",
-                marginBottom: "2vw",
-                width: "50%",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
+            <div key={item} className="ActiveBlock">
               <h3
                 style={{
                   display: "flex",

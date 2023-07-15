@@ -21,11 +21,11 @@ const routerList = [
     path: "/Introduction",
     Component: <Introduction />,
   },
-  // {
-  //     name: "招募",
-  //     path: "/Information",
-  //     Component: <Information />,
-  //   },
+  {
+    name: "報名",
+    path: "/Information",
+    Component: "",
+  },
   {
     name: "招募",
 

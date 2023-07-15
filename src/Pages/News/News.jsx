@@ -2,7 +2,7 @@ import React from "react";
 import "./News.css";
 import Title from "../../assets/Title.png";
 import time from "../../assets/date.png";
-import p1Img from "../../assets/圖片1.png";
+import p1Img from "../../assets/example.png";
 import Traks from "../../Components/Traklist/Trakslist";
 import NewsInform from "./NewsInform.json";
 

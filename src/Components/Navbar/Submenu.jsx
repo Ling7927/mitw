@@ -27,20 +27,6 @@ function Submenu({ item, onToggle }) {
               return 0;
             }
           }}
-          // onMouseLeave={() => {
-          //   if (item.li) {
-          //     setSubmenu(false);
-          //   } else {
-          //     return 0;
-          //   }
-          // }}
-          // onClick={() => {
-          //   if (item.li) {
-          //     showSubmenu();
-          //   } else {
-          //     onToggle();
-          //   }
-          // }}
         >
           {item.name}
           {item.li && submenu
@@ -65,27 +51,6 @@ function Submenu({ item, onToggle }) {
                   key={index}
                   className="Subitems"
                   onClick={() => onToggle()}
-                  // onMouseOver={() => {
-                  //   if (item.li) {
-                  //     setSubmenu(true);
-                  //   } else {
-                  //     return 0;
-                  //   }
-                  // }}
-                  // onMouseOut={() => {
-                  //   if (item.li) {
-                  //     setSubmenu(false);
-                  //   } else {
-                  //     return 0;
-                  //   }
-                  // }}
-                  // onMouseLeave={() => {
-                  //   if (item.li) {
-                  //     showSubmenu();
-                  //   } else {
-                  //     return 0;
-                  //   }
-                  // }}
                 >
                   {item.liname}
                 </NavLink>

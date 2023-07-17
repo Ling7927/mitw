@@ -53,11 +53,11 @@
 
     position: absolute;
 
-    transform: translateX(100%);
+    transform: translateY(-300%);
     transition: 0.5s ease;
   }
   .nav__collapse {
-    transform: translateX(0%) !important;
+    transform: translateY(0%) !important;
   }
   .toggler__icon {
     font-size: 5rem;

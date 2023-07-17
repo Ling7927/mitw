@@ -21,23 +21,20 @@ function TraksTab() {
       <Grid
         container
         spacing={1}
-        direction="column"
         alignItems="center"
         justify="center"
         style={{ background: "#fdfdfd", margin: 0 }}
       >
         {/* 上面按鈕 */}
 
-        <Grid
-          item
-          xs={2}
-          md={2}
-          lg={2}
-          columns={20}
-          style={{ justifyContent: "center", width: "100%" }}
-        >
-          <Grid container spacing={1} direction="row" style={{ width: "100%" }}>
-            <Grid item xs={12} sm={12} md={3} lg={3}>
+        <Grid item xs={2} md={2} lg={2}>
+          <Grid
+            container
+            spacing={1}
+            direction="column"
+            style={{ width: "100%" }}
+          >
+            <Grid item xs={12} sm={12} md={12} lg={12}>
               {/* 目前賽道 */}
               {TraksTabInform.filter((item) => item.Id === onHandle).map(
                 (item) => {
@@ -51,6 +48,7 @@ function TraksTab() {
                         width: "100%",
                         alignItems: "center",
                         justifyContent: "center",
+                        whiteSpace: "nowrap",
                       }}
                     >
                       <div
@@ -84,54 +82,77 @@ function TraksTab() {
               item
               xs={12}
               sm={12}
-              md={9}
-              lg={9}
+              md={12}
+              lg={12}
+              alignItems="center"
+              justify="center"
               style={{
                 display: "flex",
+                flexDirection: "column",
                 // overflowX: "auto",
                 paddingBottom: "3vw",
-                justifyContent: "center",
-                alignItems: "flex-end",
               }}
             >
-              <Grid container columns={18}>
-                {TraksTabInform.filter((item) => item.Id !== onHandle).map(
-                  (item) => {
-                    return (
-                      <Grid item xs={2} sm={2}>
-                        <button
-                          className="Tabsbutton"
-                          key={item}
-                          onClick={() => setOnHandle(item.Id)}
-                        >
-                          {item.TabTitle}
-                        </button>
-                      </Grid>
-                    );
-                  }
-                )}
-              </Grid>
+              {TraksTabInform.filter((item) => item.Id !== onHandle).map(
+                (item) => {
+                  return (
+                    <button
+                      className="Tabsbutton"
+                      key={item}
+                      onClick={() => setOnHandle(item.Id)}
+                    >
+                      {item.TabTitle}
+                    </button>
+                  );
+                }
+              )}
             </Grid>
           </Grid>
         </Grid>
-        {/* 內容 */}
 
-        {/* 輪播照片 */}
-        <div
-          style={{
-            width: "60%",
-            margin: "2rem",
+        {/* 內容 */}
+        <Grid
+          item
+          xs={10}
+          sm={10}
+          md={10}
+          lg={10}
+          // sx={{
+          //   display: "flex",
+          //   flexDirection: "column",
+          //   justifyContent: "center",
+          // }}
+        >
+          {/* 輪播照片 */}
+          <Grid item>
+            <div
+              style={{
+                width: "70%",
+                margin: " 2rem auto",
+              }}
+            >
+              <PhotoSlider
+                images={
+                  TraksTabInform.filter((item) => item.Id === onHandle)[0].Img
+                }
+              />
+            </div>
+          </Grid>
+        </Grid>
+
+        {/* 內容選單 */}
+        <Grid
+          item
+          xs={10}
+          sm={10}
+          md={10}
+          lg={10}
+          sx={{
+            width: "80%",
+            paddingBottom: "3rem",
+            margin: "auto",
           }}
         >
-          <PhotoSlider
-            images={
-              TraksTabInform.filter((item) => item.Id === onHandle)[0].Img
-            }
-          />
-        </div>
-        {/* 內容選單 */}
-
-        <Grid item style={{ width: "80%", paddingBottom: "3rem" }}>
           {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
             (item, i) => {
               return (
@@ -157,9 +178,11 @@ function TraksTab() {
                       <GoTriangleUp />
                     )}
                   </button> */}
-<Section 
-// open={SectionOpen} 
-item={item} key={i}/>
+                  <Section
+                    // open={SectionOpen}
+                    item={item}
+                    key={i}
+                  />
                   {/* {Click === item.id ? <div>{item.content}</div> : ""} */}
                   {/* {SectionOpen && Click === item.id ? (
                     <div>{item.content}</div>

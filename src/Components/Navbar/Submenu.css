@@ -2,27 +2,30 @@
   text-decoration: none;
   color: #ddd;
   /* padding: 0 2rem; */
+  &:hover {
+    color: #53d0e0d2;
+
+    .Submenu {
+      display: flex;
+    }
+  }
 }
 .Submenu {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
+
 .Subitems {
   text-decoration: none;
   color: #ddd;
-  /* margin-top: 2px;
-  margin-left: 1vw; */
+  flex-direction: column;
 }
-/* .Title {
- 
-} */
+.Title {
+  padding: 0 3px;
+}
 @media screen and (max-width: 930px) {
   /* 小於930px */
-  .Title {
-    padding-top: 2vw;
-    /* width: 5vw;
-    height: 5vw; */
-  }
+
   .Menu {
     margin: 2vw 1vw;
     width: 5vw;

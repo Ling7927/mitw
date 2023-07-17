@@ -11,6 +11,8 @@ function Nav() {
   const [collapse, setCollapse] = useState("nav__menu");
   const [menuOpen, setMenuOpen] = useState(false);
   const [toggleIcon, setToggleIcon] = useState("toggler__icon");
+  const [submenu, setSubmenu] = useState(false);
+  const showSubmenu = () => setSubmenu(!submenu);
   const onToggle = () => {
     setMenuOpen(!menuOpen);
     collapse === "nav__menu"

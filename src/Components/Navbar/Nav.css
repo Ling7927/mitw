@@ -51,7 +51,7 @@
     right: 0%;
     /* transform: translateX(-210%); */
 
-    position: fixed;
+    position: absolute;
 
     transform: translateX(100%);
     transition: 0.5s ease;
@@ -68,6 +68,6 @@
 }
 @media screen and (max-width: 500px) {
   .nav__menu {
-    font-size: 10px;
+    font-size: 20px;
   }
 }

@@ -1,55 +1,53 @@
 .Menu {
   text-decoration: none;
   color: #ddd;
-  /* padding: 0 2rem; */
   &:hover {
     color: #53d0e0d2;
+  }
 
+  .Subitems {
+    text-decoration: none;
+    color: #ddd;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 930px) {
+    /* 大於930px */
+    .Menu {
+      /* padding: 0 2rem; */
+
+      .Submenu {
+        display: flex;
+      }
+    }
+  }
+  .Submenu {
+    display: none;
+    flex-direction: column;
+  }
+  .Title {
+    padding: 0 3px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 930px) {
+  /* 小於930px */
+  .Menu {
+    margin: 2vw 1vw;
+    /* width: 5vw; */
+    /* height: 5vw; */
+  }
+  .Submenu {
+    display: none;
+  }
+  .Menu:focus {
     .Submenu {
       display: flex;
+      flex-direction: column;
+      margin-left: 1vw;
     }
   }
 }
-.Submenu {
-  display: none;
-  flex-direction: column;
-}
-
-.Subitems {
-  text-decoration: none;
-  color: #ddd;
-  flex-direction: column;
-}
-.Title {
-  padding: 0 3px;
-}
-@media screen and (max-width: 930px) {
-  /* 小於930px */
-
-  .Menu {
-    margin: 2vw 1vw;
-    width: 5vw;
-    height: 5vw;
-  }
-  .Submenu {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1vw;
-  }
-}
 @media screen and (max-width: 500px) {
-  /* .Title {
-    padding-top: 2vw;
-    font-size: 3vw;
-    width: 5vw;
-    height: 5vw;
-  }
-  .Menu {
-    /* margin: 2vw 1vw; */
-  /*  margin: 2vw 0;
-    width: 5vw;
-    height: 5vw;
-  } */
   .Title {
     padding-top: 2vw;
     /* width: 5vw;
@@ -60,25 +58,18 @@
     width: 5vw;
     height: 5vw;
   }
-  .Submenu {
-    display: flex;
-    flex-direction: column;
-    margin-left: 1vw;
+  .Menu:hover {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1vw;
+    }
   }
-}
-@media screen and (min-width: 930px) {
-  .Submenu {
-    border-radius: 5px;
-    background-color: #fafdff;
-    box-shadow: 2px 2px #dcdcdc;
-    position: absolute;
-    top: 60px;
-    height: 6rem;
-    padding: 2px 0;
-    justify-content: space-around;
-  }
-  .Subitems {
-    margin: 5px 10px;
-    color: #000;
+  .Menu:active {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1vw;
+    }
   }
 }

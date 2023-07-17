@@ -3,6 +3,27 @@
   color: #000;
   padding: 0 5vw;
 }
+/* .SuccessSectionTab {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 5px;
+
+  color: #949494;
+}
+.SuccessSectionTab:focus {
+  font-size: 15px;
+
+  color: #000;
+}
+.SuccessSectionTab:first-child {
+  font-size: 15px;
+  color: #000;
+} */
 @media screen and (max-width: 500px) {
   .SuccessBackground {
     padding: 0;

@@ -32,12 +32,12 @@ function Successcase() {
           md={4}
           lg={4}
           initial={{
-            x: "-100%",
+            x: -200,
           }}
           animate={{
-            x: "0%",
+            x: 0,
           }}
-          transition={{ delay: 0.5, duration: 0.3 }}
+          transition={{ duration: 0.8 }}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -50,13 +50,14 @@ function Successcase() {
               <>
                 <button
                   onClick={() => setOnHandle(item.id)}
+                  className="SuccessSectionTab"
                   style={{
                     backgroundColor: "Transparent",
                     backgroundRepeat: "no-repeat",
                     border: "none",
                     cursor: "pointer",
                     overflow: "hidden",
-                    fontSize: onHandle === item.id ? "15px" : "5px",
+                    fontSize: onHandle === item.id ? "1.25rem" : "1rem",
                     margin: 0,
                     color: onHandle === item.id ? "#000" : "#949494",
                     marginBottom: "0.5rem",

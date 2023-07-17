@@ -19,7 +19,8 @@ function News() {
       <div
         style={{
           background:
-            "linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(32, 65, 63, 0.7) 100%)",
+            // "linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(32, 65, 63, 0.7) 100%)",
+            "#000",
           color: "#000",
           // display:"flex"
         }}

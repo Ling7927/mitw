@@ -27,14 +27,15 @@ function TraksTab() {
       >
         {/* 上面按鈕 */}
 
-        <Grid item xs={2} md={2} lg={2}>
+        <Grid item xs={12} md={12} lg={12}>
           <Grid
             container
             spacing={1}
-            direction="column"
+            direction="row"
+            justifyContent="space-between"
             style={{ width: "100%" }}
           >
-            <Grid item xs={12} sm={12} md={12} lg={12}>
+            <Grid item xs={12} sm={12} md={2} lg={2}>
               {/* 目前賽道 */}
               {TraksTabInform.filter((item) => item.Id === onHandle).map(
                 (item) => {
@@ -82,47 +83,38 @@ function TraksTab() {
               item
               xs={12}
               sm={12}
-              md={12}
-              lg={12}
-              alignItems="center"
-              justify="center"
+              md={9}
+              lg={9}
               style={{
                 display: "flex",
-                flexDirection: "column",
+                flexDirection: "row",
                 // overflowX: "auto",
                 paddingBottom: "3vw",
               }}
             >
-              {TraksTabInform.filter((item) => item.Id !== onHandle).map(
-                (item) => {
-                  return (
-                    <button
-                      className="Tabsbutton"
-                      key={item}
-                      onClick={() => setOnHandle(item.Id)}
-                    >
-                      {item.TabTitle}
-                    </button>
-                  );
-                }
-              )}
+              <Grid container columns={20} alignItems="center" justify="center">
+                {TraksTabInform.filter((item) => item.Id !== onHandle).map(
+                  (item) => {
+                    return (
+                      <Grid item xs={2} sm={2}>
+                        <button
+                          className="Tabsbutton"
+                          key={item}
+                          onClick={() => setOnHandle(item.Id)}
+                        >
+                          {item.TabTitle}
+                        </button>
+                      </Grid>
+                    );
+                  }
+                )}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
 
         {/* 內容 */}
-        <Grid
-          item
-          xs={10}
-          sm={10}
-          md={10}
-          lg={10}
-          // sx={{
-          //   display: "flex",
-          //   flexDirection: "column",
-          //   justifyContent: "center",
-          // }}
-        >
+        <Grid item xs={12} sm={12} md={12} lg={12}>
           {/* 輪播照片 */}
           <Grid item>
             <div

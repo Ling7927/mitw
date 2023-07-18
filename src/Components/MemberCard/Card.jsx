@@ -39,6 +39,12 @@ function Card({ item }) {
           // animate={{ x: -200, opacity: 1 }}
           // transition={{ duration: 1 }}
           className="CardContainer"
+          onMouseEnter={() => {
+            //  handleClickOpen();
+            handleClick();
+
+            setMemId(item.Id);
+          }}
         >
           {/* 賽道資訊 */}
           <div>
@@ -68,12 +74,6 @@ function Card({ item }) {
             // }}
           >
             <img
-              onMouseEnter={() => {
-                //  handleClickOpen();
-                handleClick();
-
-                setMemId(item.Id);
-              }}
               src={item.Img}
               style={{
                 height: "100%",

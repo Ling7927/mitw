@@ -8,6 +8,7 @@ import News from "./Pages/News/News";
 import Introduction from "./Pages/Introduction/Introduction";
 import Specification from "./Pages/Specification/Specification";
 import Traks from "./Pages/Traks/Traks";
+import TraksTab from "./Components/TraksTab/TraksTab";
 import Result from "./Pages/Result/Result";
 import Recruit from "./Pages/Recruit/Recruit";
 import Successcase from "./Pages/Successcase/Successcase";
@@ -38,7 +39,7 @@ function App() {
       <Nav
       // istop={istop}
       />
-      <Up />
+      {/* <Up /> */}
 
       <Routes>
         <Route path="/" element={<Main />} />
@@ -46,7 +47,7 @@ function App() {
         <Route path="/Introduction" element={<Introduction />} />
         <Route path="/Specification" element={<Specification />} />
         <Route path="/Tracks" element={<Traks />} />
-        <Route path="/Tracks/:id" element={<Traks />} />
+        <Route path="/Tracks/:id" element={<TraksTab />} />
         <Route path="/Result" element={<Result />} />
         <Route path="/Successcase" element={<Successcase />} />
         <Route path="/Recruit" element={<Recruit />} />

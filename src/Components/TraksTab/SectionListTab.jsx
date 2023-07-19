@@ -2,7 +2,7 @@ import React from "react";
 import { TraksTabInform } from "./TraksTabInform";
 import { Grid, Box } from "@mui/material";
 
-function SectionListTab({ onHandle }) {
+function SectionListTab({ setClick, onHandle }) {
   return (
     <Grid
       item
@@ -18,9 +18,13 @@ function SectionListTab({ onHandle }) {
       }}
     >
       {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
-        (sectiontab, index) => {
+        (sectiontab) => {
           return (
-            <button style={{ border: "none", background: "none" }} key={index}>
+            <button
+              style={{ border: "none", background: "none" }}
+              key={sectiontab.id}
+              onClick={() => setClick(sectiontab.id)}
+            >
               {sectiontab.Sc}
             </button>
           );

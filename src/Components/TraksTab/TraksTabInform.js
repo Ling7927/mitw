@@ -361,11 +361,6 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "3",

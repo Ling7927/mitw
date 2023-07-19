@@ -11,9 +11,8 @@ import { useParams } from "react-router-dom";
 
 function TraksTab() {
   const { id } = useParams();
-  console.log({ id });
   const [onHandle, setOnHandle] = useState(id || "1"); //Trackbutton
-  const [Click, setClick] = useState("0"); //section
+  const [Click, setClick] = useState("1"); //section
   const [SectionOpen, setSectionOpen] = useState(false);
   const SectionClick = () => {
     setSectionOpen(!SectionOpen);
@@ -35,7 +34,7 @@ function TraksTab() {
 
         {/* 下半內容 */}
         {/* 左邊選單 */}
-        <SectionListTab onHandle={onHandle} />
+        <SectionListTab onHandle={onHandle} Click={Click} setClick={setClick} />
         {/* 內容 */}
         <Grid item xs={10} sm={10} md={10} lg={10}>
           {/* 輪播照片 */}
@@ -72,19 +71,38 @@ function TraksTab() {
               margin: "auto",
             }}
           >
-            {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
+            {/* {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
               (item, i) => {
                 return (
                   <div>
                     <Section
                       // open={SectionOpen}
+                      Click={Click}
                       item={item}
                       key={i}
                     />
                   </div>
                 );
               }
+            )} */}
+            {/* {TraksTabInform.List.find((item) => item.id === Click) ? (
+              <Section
+                // open={SectionOpen}
+                Click={Click}
+              />
+            ) : (
+              ""
             )}
+            
+            } */}
+            {console.log(Click)}
+            <div>
+              {
+                TraksTabInform.find((item) => item.Id === onHandle).List.find(
+                  (item) => item.id === Click
+                ).content
+              }
+            </div>
           </Grid>
         </Grid>
 

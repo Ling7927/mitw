@@ -71,31 +71,6 @@ function TraksTab() {
               margin: "auto",
             }}
           >
-            {/* {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
-              (item, i) => {
-                return (
-                  <div>
-                    <Section
-                      // open={SectionOpen}
-                      Click={Click}
-                      item={item}
-                      key={i}
-                    />
-                  </div>
-                );
-              }
-            )} */}
-            {/* {TraksTabInform.List.find((item) => item.id === Click) ? (
-              <Section
-                // open={SectionOpen}
-                Click={Click}
-              />
-            ) : (
-              ""
-            )}
-            
-            } */}
-            {console.log(Click)}
             <div>
               {
                 TraksTabInform.find((item) => item.Id === onHandle).List.find(

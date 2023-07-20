@@ -37,6 +37,7 @@
 @media screen and (min-width: 930px) {
   .nav__menu {
     justify-content: space-evenly;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 930px) {

@@ -7,7 +7,7 @@ function Specification() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div style={{ background: "#d9d9d9" }}>
+      <div style={{ background: "#d9d9d9", height: "100%" }}>
         <div
           className="Specification_background"
           // style={{

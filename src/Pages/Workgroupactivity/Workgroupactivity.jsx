@@ -9,6 +9,7 @@ function Workgroupactivity() {
         flexDirection: "column",
         justifyContent: "center",
         background: "rgb(253, 253, 253)",
+        height: "100%",
       }}
     >
       <div

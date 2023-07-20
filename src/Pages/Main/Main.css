@@ -1,47 +1,44 @@
-.Mainbackground{
-    
-    background-size:  cover ;
-    background-repeat:  no-repeat ;
-    background-attachment:  fixed ;
-     /* objectFit:  scale-down ;
+.Mainbackground {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* objectFit:  scale-down ;
     objectFit:  fill ; */
-    background-position: 'center center';
-    object-fit:  none ;
-   
-    display:  flex ;
-    align-items:  flex-start ;
-    justify-content:  flex-end ;
+  background-position: "center center";
+  object-fit: none;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
-.Maintitle{
-    
-    object-fit:  scale-down ;}
-    @media screen and (min-width:740px){
-        /* 740px以上 */
-        .Mainbackground{
-            height:  60rem ;
-            width:  100% ;
-        }
-        .Maintitle{
-            margin-top: 2vw ;
-            width: 60% ;
-            height: 60% ;
-        }
-    
-    }
-@media screen and (max-width:740px){
-            /* 740px以下 */
+.Maintitle {
+  object-fit: scale-down;
+}
+@media screen and (min-width: 740px) {
+  /* 740px以上 */
+  .Mainbackground {
+    height: 60rem;
+    width: 100%;
+  }
+  .Maintitle {
+    margin-top: 2vw;
+    width: 60%;
+    height: 60%;
+  }
+}
+@media screen and (max-width: 740px) {
+  /* 740px以下 */
 
-    .Mainbackground{
-        height:  30rem ;
-        width:  100% ;
-    }
-    .Maintitle{
-        margin-top: auto ;
-        margin-bottom: auto ;
+  .Mainbackground {
+    height: 30rem;
+    width: 100%;
+  }
+  .Maintitle {
+    margin-top: auto;
+    margin-bottom: auto;
 
-        width: 90% ;
-        height: 60% ;
-    }
-
-
+    width: 90%;
+    height: 60%;
+  }
 }

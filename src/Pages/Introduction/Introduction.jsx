@@ -10,6 +10,7 @@ function Introduction() {
 
           margin: 0,
           padding: "5rem 0",
+          height: "100%",
         }}
       >
         <Tab />

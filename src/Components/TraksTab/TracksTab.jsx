@@ -40,11 +40,11 @@ function TracksTab({ setOnHandle, onHandle }) {
               <div
                 style={{
                   fontWeight: "bold",
-                  fontSize: "1rem",
-                  fontSize: "15px",
+                  fontSize: "1.25rem",
+                  // fontSize: "15px",
                   color: "#1e1e1e",
                   margin: 0,
-                  padding: "1rem",
+                  padding: "0.75rem",
                   background: "#fdfdfd",
                   position: "relative",
                   top: "-30px",

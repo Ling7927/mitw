@@ -1,6 +1,7 @@
 import React from "react";
 import { TraksTabInform } from "./TraksTabInform";
 import { Grid, Box } from "@mui/material";
+import { HashLink as Link } from "react-router-hash-link"; //section nagetive on same page
 
 function SectionListTab({ Click, setClick, onHandle }) {
   return (
@@ -24,9 +25,8 @@ function SectionListTab({ Click, setClick, onHandle }) {
       {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
         (sectiontab) => {
           return (
-            <button
-              // a
-              // href={`#${sectiontab.id}`}
+            <Link
+              to={`#${sectiontab.id}`}
               style={{
                 border: "none",
                 background: "none",
@@ -34,9 +34,10 @@ function SectionListTab({ Click, setClick, onHandle }) {
               }}
               key={sectiontab.id}
               onClick={() => setClick(sectiontab.id)}
+              smooth
             >
               {sectiontab.Sc}
-            </button>
+            </Link>
           );
         }
       )}

@@ -36,6 +36,7 @@ function TraksTab() {
       {/* 下半內容 */}
       {/* 左邊選單 */}
       <SectionListTab onHandle={onHandle} Click={Click} setClick={setClick} />
+
       {/* 內容 */}
       <Grid item xs={10} sm={10} md={10} lg={10}>
         {/* 輪播照片 */}
@@ -66,6 +67,7 @@ function TraksTab() {
           ""
         )}
 
+        {/* 內容列表 */}
         <Grid
           item
           xs={12}
@@ -78,7 +80,7 @@ function TraksTab() {
             margin: "0 auto",
           }}
         >
-          {/* {TraksTabInform.find((item) => item.Id === onHandle).List.map(
+          {TraksTabInform.find((item) => item.Id === onHandle).List.map(
             (sc) => {
               return (
                 <section id={sc.id} key={sc.id}>
@@ -87,30 +89,14 @@ function TraksTab() {
                 </section>
               );
             }
-          )} */}
-          {
+          )}
+          {/* {
             TraksTabInform.find((item) => item.Id === onHandle).List.find(
               (item) => item.id === Click
             ).content
-          }
+          } */}
         </Grid>
       </Grid>
-
-      {/* 內容列表 */}
-      {/* <Grid
-          item
-          xs={10}
-          sm={10}
-          md={10}
-          lg={10}
-          sx={{
-            width: "80%",
-            paddingBottom: "3rem",
-            margin: "auto",
-          }}
-        >
-          
-        </Grid> */}
     </Grid>
   );
 }

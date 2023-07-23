@@ -11,16 +11,16 @@ import wg8_2 from "../../assets/wg8_2.jpg";
 import wg10_2 from "../../assets/wg10_2.jpg";
 
 const Tabs = [
-  { id: 1, title: "#01" },
-  { id: 2, title: "#02" },
-  { id: 3, title: "#03" },
-  { id: 4, title: "#04" },
-  { id: 5, title: "#05" },
-  { id: 6, title: "#06" },
-  { id: 7, title: "#07" },
-  { id: 8, title: "#08" },
-  { id: 9, title: "#09" },
-  { id: 10, title: "#10" },
+  { id: 1, title: "#01", name: "病人基本資料" },
+  { id: 2, title: "#02", name: "生理量測數據互通" },
+  { id: 3, title: "#03", name: "處方用藥及文件打包" },
+  { id: 4, title: "#04", name: "醫學影像與病理" },
+  { id: 5, title: "#05", name: "偕同照護" },
+  { id: 6, title: "#06", name: "基因體標記" },
+  { id: 7, title: "#07", name: "緊急醫療救護" },
+  { id: 8, title: "#08", name: "醫療保險理賠" },
+  { id: 9, title: "#09", name: "遠距醫療" },
+  { id: 10, title: "#10", name: "癌症登記" },
 ];
 
 const Mem = [
@@ -452,7 +452,7 @@ const Mem = [
   {
     Id: 13,
     Track: 8,
-    TraksTitle: " 醫療收據與診斷證明書",
+    TraksTitle: "醫療保險理賠",
     Img: wg4_1,
     Position: "召集人",
     Name: "連中岳 | 國立臺北護理健康大學 資管系助理教授",
@@ -484,7 +484,7 @@ const Mem = [
   {
     Id: 14,
     Track: 8,
-    TraksTitle: " 醫療收據與診斷證明書",
+    TraksTitle: " 醫療保險理賠",
     Img: wg8_2,
     Position: "聯繫窗口",
     Name: "彭群芳 | 國泰金控數位發展數據暨科技發展中心 商業規劃師",

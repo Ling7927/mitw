@@ -7,6 +7,8 @@ import Successcase from "../Pages/Successcase/Successcase";
 
 import Member from "../Pages/Member/Member";
 import Recruit from "../Pages/Recruit/Recruit";
+import Workgroupactivity from "../Pages/Workgroupactivity/Workgroupactivity";
+import Relatedactivity from "../Pages/Relatedactivity/Relatedactivity";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 const routerList = [
   {
@@ -100,11 +102,15 @@ const routerList = [
     path: "",
     Component: "",
     li: [
-      { liname: "工作小組", lipath: "/Workgroupactivity", liComponent: "" },
+      {
+        liname: "工作小組",
+        lipath: "/Workgroupactivity",
+        liComponent: <Workgroupactivity />,
+      },
       {
         liname: "相關活動",
         lipath: "/Relatedactivity",
-        liComponent: "",
+        liComponent: <Relatedactivity />,
       },
       {
         liname: "教育訓練",
@@ -114,41 +120,5 @@ const routerList = [
     ],
   },
 ];
-
-// const StoryDropDown = [
-//   {
-//     name: "2022年 MI-TW 聯測工作坊",
-//     path: "/2022",
-//     Component: <Story2022 />,
-//   },
-//   {
-//     name: "2021年 MI-TW 聯測工作坊",
-//     path: "/2021",
-//     Component: <Story2021 />,
-//   },
-//   {
-//     name: "2020年 MI-TW 聯測工作坊",
-//     path: "/2020",
-//     Component: <Story2020 />,
-//   },
-// ];
-
-// const ActivityDropDown = [
-//   {
-//     name: "工作小組",
-//     path: "/Workgroupactivity",
-//     Component: <Workgroupactivity />,
-//   },
-//   {
-//     name: "相關活動",
-//     path: "/Relatedactivity",
-//     Component: <Relatedactivity />,
-//   },
-//   {
-//     name: "教育訓練",
-//     path: "/Training",
-//     Component: <Training />,
-//   },
-// ];
 
 export { routerList };

@@ -3,9 +3,8 @@ import { TraksTabInform } from "./TraksTabInform";
 import Section from "./Section";
 import TracksTab from "./TracksTab";
 import SectionListTab from "./SectionListTab";
-import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import PhotoSlider from "../../Components/Slider/PhotoSlider";
-import { Grid, Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import "./TraksTab.css";
 import { useParams } from "react-router-dom";
 
@@ -88,7 +87,7 @@ function TraksTab() {
                     style={{
                       fontWeight: "bold",
                       borderLeft: "4px orange solid",
-                      paddingLeft: "4px",
+                      paddingLeft: "1rem",
                       margin: "2rem 0",
                     }}
                   >

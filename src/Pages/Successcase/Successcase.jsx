@@ -43,7 +43,7 @@ function Successcase() {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-            marginLeft: "2rem",
+            // marginLeft: "2rem",
           }}
         >
           {ListTitle.map((item, i) => {

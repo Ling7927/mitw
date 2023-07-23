@@ -53,7 +53,21 @@
   .Submenu {
     display: none;
   }
-  .Menu:focus {
+  /* .Menu:focus {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1vw;
+    }
+  } */
+  .Menu:hover {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1vw;
+    }
+  }
+  .Menu:active {
     .Submenu {
       display: flex;
       flex-direction: column;

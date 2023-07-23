@@ -25,7 +25,7 @@ function Part({ children }) {
 
 function Recruit() {
   return (
-    <Grid container spacing={1} style={{ height: "100%" }}>
+    <Grid container spacing={1}>
       {WorkGrop.map((item, index) => {
         if (index === 0)
           // 第一區塊

@@ -4,7 +4,14 @@ function IntroductionTab() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div style={{ width: "80%", margin: " auto" }}>
+      <div
+        style={{
+          width: "80%",
+          margin: " auto",
+          padding: "5rem 0",
+          // background: "#f6fcfffb",
+        }}
+      >
         {/* 上方按鈕 */}
         <div
           style={{
@@ -22,7 +29,8 @@ function IntroductionTab() {
                   flexDirection: "column",
                   alignContent: "center",
                   alignItems: "center",
-                  backgroundColor: onHandle === item.id ? "#f0f0f0" : "#7AACA9",
+                  backgroundColor:
+                    onHandle === item.id ? "#f6fcfffb" : "#7AACA9 ",
                   color: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
                   width: "30vh",
@@ -60,7 +68,7 @@ function IntroductionTab() {
         <div
           style={{
             // display:"flex",
-            backgroundColor: "#f0f0f0",
+            backgroundColor: "#f6fcfffb",
             fontColor: "black",
             // padding: "2px",
             borderRadius: "0px 0px 1rem 1rem",

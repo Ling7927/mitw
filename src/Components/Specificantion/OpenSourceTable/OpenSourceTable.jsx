@@ -5,16 +5,16 @@ import { Table } from "reactstrap";
 function OpenSourceTable() {
   return (
     <div>
-      <Table bordered style={{ backgroundColor: "#f1f4ec" }}>
+      <Table bordered style={{ backgroundColor: "#f2f8fd" }}>
         <thead>
           <tr>
-            {Title.map((item,i) => {
+            {Title.map((item, i) => {
               return <th key={i}>{item}</th>;
             })}
           </tr>
         </thead>
         <tbody style={{ justifyContent: "center", alignItems: "center" }}>
-          {TBody.map((item,i) => {
+          {TBody.map((item, i) => {
             return (
               <tr key={i}>
                 <th scope="row">

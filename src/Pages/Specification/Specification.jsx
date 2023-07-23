@@ -73,7 +73,7 @@ function Specification() {
                           border: "none",
                           //cursor: "pointer",//鼠標形狀改變
                           overflow: "hidden",
-                          fontSize: onHandle == item.id ? "15px" : "5px",
+                          fontSize: onHandle === item.id ? "1.25rem" : "1rem",
                           color: onHandle === item.id ? "#000" : "#949494",
                         }}
                       >
@@ -110,7 +110,6 @@ function Specification() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1 }}
-                  style={{ fontSize: "1vw" }}
                 >
                   {List.filter((item) => item.id === onHandle)[0].content}
                 </motion.p>

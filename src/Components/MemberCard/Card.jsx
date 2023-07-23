@@ -3,10 +3,10 @@ import "./MemberCard.css";
 import { Mem } from "../../Pages/Member/Inform";
 import ReactCardFlip from "react-card-flip";
 
-function Card({ item }) {
+function Card({ item, cardHeight, setCardHeight }) {
   const ref = useRef(null);
   const [memId, setMemId] = useState(null);
-  const [cardHeight, setCardHeight] = useState(0);
+  // const [cardHeight, setCardHeight] = useState(0);
   const [cardWidth, setcardWidth] = useState(0);
   //   const [Open, setOpen] = useState(false);
   //   const [id, setId] = useState(null);
@@ -38,12 +38,21 @@ function Card({ item }) {
           // initial={{ x: 100 }}
           // animate={{ x: -200, opacity: 1 }}
           // transition={{ duration: 1 }}
-          className="CardContainer"
           onMouseEnter={() => {
             //  handleClickOpen();
             handleClick();
 
             setMemId(item.Id);
+          }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            background: "#fff",
+            /* width: 100%;*/
+            height: "100%",
+            /* margin-top: 5vw; */
+            padding: " 0 1vw",
+            boxShadow: "3px 3px 13px #dad7cd",
           }}
         >
           {/* 賽道資訊 */}

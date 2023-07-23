@@ -9,6 +9,8 @@ import { m } from "framer-motion";
 function MemberCard() {
   // const { Id, Traks, Img, Members, Tollger } = props.item;
   const [clickTrackId, setclickTrackId] = useState(1);
+  const [cardHeight, setCardHeight] = useState(0);
+
   // const [memId, setMemId] = useState(null);
   // const [Open, setOpen] = useState(false);
   // const [id, setId] = useState(null);
@@ -24,17 +26,37 @@ function MemberCard() {
   //   },[clickTrackId])
   return (
     <>
-      <Grid container style={{ justifyContent: "center", margin: "2vw 5vw" }}>
+      <Grid
+        container
+        style={{
+          justifyContent: "center",
+          // margin: "2vw 5vw",
+
+          padding: "5vh 10vh",
+          background: "#fff",
+          minHeight: "80vh",
+        }}
+      >
         <Grid item xs={12} sm={12} md={12} lg={12} height="10vh" sx={{}}>
           <h4>賽道工作小組</h4>
           <hr style={{ margin: "2vh 0 " }} />
         </Grid>
         {/* 選單 */}
-        <Grid item sm={1} md={1} lg={2}>
+        <Grid
+          item
+          sm={1}
+          md={1}
+          lg={2}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
           <p style={{ fontSize: "2rem" }}>Track</p>
           {Tabs.map((item) => {
             return (
-              <div style={{ display: "flex" }}>
+              <div>
                 <button
                   style={{
                     background: "none",
@@ -52,7 +74,7 @@ function MemberCard() {
                       paddingLeft: "10px",
                       fontSize: clickTrackId === item.id ? "1.5rem" : "1rem",
                       borderLeft:
-                        clickTrackId === item.id ? "2px solid #000" : "none",
+                        clickTrackId === item.id ? "4px solid orange" : "none",
                     }}
                   >
                     {item.title}
@@ -87,7 +109,11 @@ function MemberCard() {
                     key={i}
                     sx={{ display: "flex", height: "100%" }}
                   >
-                    <Card item={item} />
+                    <Card
+                      item={item}
+                      cardHeight={cardHeight}
+                      setCardHeight={setCardHeight}
+                    />
                   </Grid>
                 );
               }

@@ -6,9 +6,18 @@ import { Grid } from "@mui/material";
 function Member() {
   return (
     <>
-      <Grid container spacing={1} style={{ padding: "2rem  2rem 3rem" }}>
+      <div
+        style={{
+          padding: "0  5vh 3vh",
+          minHeight: "100vh",
+          background:
+            "linear-gradient( 180deg, #ffffff 0%, #6aadd9 0.01%, rgba(0, 249, 255, 0) 56.56%, rgba(240, 240, 240, 0) 100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
         <MemberCard />
-      </Grid>
+      </div>
     </>
   );
 }

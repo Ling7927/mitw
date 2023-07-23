@@ -7,18 +7,20 @@ function SectionListTab({ Click, setClick, onHandle }) {
   return (
     <Grid
       item
-      xs={2}
-      sm={2}
-      md={2}
-      lg={2}
+      xs={2.5}
+      sm={2.5}
+      md={2.5}
+      lg={2.5}
       sx={{
         display: "flex",
         flexDirection: "column",
         flexWrap: "wrap",
         alignItems: "flex-start",
+        alignContent: "space-around",
         position: "sticky",
         // left: "3rem",
         height: "100%",
+        width: "100%",
         top: "5rem",
       }}
     >
@@ -31,6 +33,9 @@ function SectionListTab({ Click, setClick, onHandle }) {
                 border: "none",
                 background: "none",
                 fontSize: Click === sectiontab.id ? "1.25rem" : "1rem",
+                fontWeight: Click === sectiontab.id ? "bold" : "none",
+                color: "#000",
+                textDecoration: "none",
               }}
               key={sectiontab.id}
               onClick={() => setClick(sectiontab.id)}

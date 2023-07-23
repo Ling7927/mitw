@@ -7,7 +7,13 @@ function Specification() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div style={{ background: "#d9d9d9", minHeight: "100%" }}>
+      <div
+        style={{
+          background:
+            "linear-gradient(  180deg,  #ffffff 0%,  #6aadd9 0.01%,  rgba(0, 249, 255, 0) 56.56%,  rgba(240, 240, 240, 0) 100%)",
+          minHeight: "100%",
+        }}
+      >
         <div className="Specification_background">
           {/* 公開意見徵求 */}
           <motion.div
@@ -23,7 +29,7 @@ function Specification() {
               justifyContent: "center",
               alignItems: "center",
               padding: "2vw",
-              margin: "2vw 5vw 0",
+              margin: "2vw 5vh 0",
             }}
           >
             <h4 style={{ marginBottom: "2rem" }}> {P1.title}</h4>
@@ -36,7 +42,7 @@ function Specification() {
 
           {/* 說明 */}
 
-          <Grid container>
+          <Grid container sx={{ margin: 0 }}>
             <Grid
               item
               xs={3}

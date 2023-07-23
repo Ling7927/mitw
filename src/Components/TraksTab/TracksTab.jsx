@@ -14,7 +14,7 @@ function TracksTab({ setOnHandle, onHandle }) {
       justifyContent="space-between"
       style={{ width: "100%" }}
     >
-      <Grid item xs={12} sm={12} md={2} lg={2}>
+      <Grid item xs={12} sm={12} md={2} lg={2} style={{ width: "100%" }}>
         {/* 目前賽道 */}
         {TraksTabInform.filter((item) => item.Id === onHandle).map((item) => {
           return (

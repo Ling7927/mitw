@@ -22,6 +22,7 @@ function Successcase() {
           background: "#fff",
           padding: "2rem 0",
           justifyContent: "center",
+          minHeight: "100vh",
         }}
       >
         {/*左--選單 */}

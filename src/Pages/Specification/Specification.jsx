@@ -8,14 +8,7 @@ function Specification() {
   return (
     <>
       <div style={{ background: "#d9d9d9", minHeight: "100%" }}>
-        <div
-          className="Specification_background"
-          // style={{
-          //   margin: "0 5vw ",
-          //   background: "#fdfdfd",
-          //   padding: "2vw 0",
-          // }}
-        >
+        <div className="Specification_background">
           {/* 公開意見徵求 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -100,7 +93,7 @@ function Specification() {
                   style={{
                     margin: "1rem 0",
                     padding: "0 1rem  ",
-                    borderLeft: "2px solid #F5CE85",
+                    borderLeft: "4px solid #F5CE85",
                     fontWeight: "bold",
                   }}
                 >
@@ -113,9 +106,6 @@ function Specification() {
                 >
                   {List.filter((item) => item.id === onHandle)[0].content}
                 </motion.p>
-
-                {/* <h4>{item.title}</h4>
-              {item.content} */}
               </div>
             </Grid>
           </Grid>

@@ -44,8 +44,9 @@ function MemberCard() {
         {/* 選單 */}
         <Grid
           item
-          sm={1}
-          md={1}
+          xs={12}
+          sm={12}
+          md={2}
           lg={2}
           sx={{
             display: "flex",
@@ -72,12 +73,13 @@ function MemberCard() {
                     style={{
                       margin: 0,
                       paddingLeft: "10px",
-                      fontSize: clickTrackId === item.id ? "1.5rem" : "1rem",
+                      fontSize: clickTrackId === item.id ? "1.4rem" : "1.2rem",
                       borderLeft:
                         clickTrackId === item.id ? "4px solid orange" : "none",
                     }}
                   >
                     {item.title}
+                    {item.name}
                   </p>
                 </button>
               </div>
@@ -103,11 +105,14 @@ function MemberCard() {
                   <Grid
                     item
                     xs={10}
-                    sm={5}
+                    sm={10}
                     md={5}
                     lg={5}
                     key={i}
-                    sx={{ display: "flex", height: "100%" }}
+                    sx={{
+                      display: "flex",
+                      // , height: "100%"
+                    }}
                   >
                     <Card
                       item={item}

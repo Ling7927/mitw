@@ -1,0 +1,19 @@
+.Membackground {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 500px) {
+  .Membackground {
+    padding: 0 5vh 3vh;
+
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #6aadd9 0.01%,
+      rgba(0, 249, 255, 0) 56.56%,
+      rgba(240, 240, 240, 0) 100%
+    );
+  }
+}

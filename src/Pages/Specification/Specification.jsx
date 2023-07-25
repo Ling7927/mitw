@@ -1,4 +1,6 @@
 import { React, useState } from "react";
+import { HashLink as Link } from "react-router-hash-link"; //section nagetive on same page
+
 import { P1, ListTitle, List } from "./SpecificationInform";
 import "./Specification.css";
 import { Grid } from "@mui/material";
@@ -49,7 +51,10 @@ function Specification() {
               sm={3}
               md={3}
               lg={3}
-              style={{ display: "flex", justifyContent: "center" }}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+              }}
             >
               {/* 選單 */}
               <motion.div
@@ -58,12 +63,13 @@ function Specification() {
                 transition={{ duration: 0.8 }}
                 style={{ width: "20%" }}
               >
-                {ListTitle.map((item) => {
-                  return (
-                    <div>
-                      <button
+                <div style={{ position: "sticky", top: "3rem" }}>
+                  {ListTitle.map((item) => {
+                    return (
+                      <Link
+                        to={`#${item.id}`}
                         onClick={() => setOnHandle(item.id)}
-                        key={item}
+                        key={item.id}
                         style={{
                           margin: 0,
                           backgroundColor: "Transparent",
@@ -75,17 +81,54 @@ function Specification() {
                           fontSize: onHandle === item.id ? "1.25rem" : "1rem",
                           color: onHandle === item.id ? "#000" : "#949494",
                         }}
+                        smooth
                       >
                         {item.title}
-                      </button>
-                    </div>
-                  );
-                })}
+                      </Link>
+                    );
+                  })}
+                </div>
               </motion.div>
             </Grid>
             {/* 說明內容 */}
             <Grid item sm={12} md={12} lg={9}>
-              <div
+              {List.map((item) => {
+                return (
+                  <section
+                    key={item.id}
+                    id={item.id}
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "0 5vw 2vh",
+                    }}
+                  >
+                    <motion.h5
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1.2 }}
+                      style={{
+                        margin: "1rem 0",
+                        padding: "0 1rem  ",
+                        borderLeft: "4px solid #F5CE85",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {item.title}
+                    </motion.h5>
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 1 }}
+                    >
+                      {item.content}{" "}
+                    </motion.div>
+                  </section>
+                );
+              })}
+
+              {/* ===============origin================== */}
+              {/* <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -102,17 +145,17 @@ function Specification() {
                     borderLeft: "4px solid #F5CE85",
                     fontWeight: "bold",
                   }}
-                >
-                  {List.filter((item) => item.id === onHandle)[0].title}
-                </motion.h5>
-                <motion.p
+                >*/}
+              {/* {List.filter((item) => item.id === onHandle)[0].title} */}
+              {/* </motion.h5>
+                <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1 }}
                 >
                   {List.filter((item) => item.id === onHandle)[0].content}
-                </motion.p>
-              </div>
+                </motion.div>
+              </div> */}
             </Grid>
           </Grid>
         </div>

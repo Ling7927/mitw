@@ -28,7 +28,7 @@ function Goverment() {
             // transition={{ delay: 0.7, duration: 0.7 }}
           >
             <Grid container spacing={1} marginBottom="2rem" key={i}>
-              <Grid item sm={12} md={3} lg={3} style={{ padding: 0 }}>
+              <Grid item xs={6} sm={6} md={3} lg={3} style={{ padding: 0 }}>
                 <img src={item.img} style={{ width: "100%" }} />
                 <a
                   href={item.link}
@@ -51,7 +51,7 @@ function Goverment() {
                 {/* 上半 */}
 
                 <h3>{item.name}</h3>
-                <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
+                <p style={{ whiteSpace: "pre-line" }}>{item.tracks}</p>
               </Grid>
 
               {/* 下半 */}

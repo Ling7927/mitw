@@ -47,7 +47,7 @@ function Hospital() {
                     </a>
                   </Grid>
                   <Grid item>
-                    <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
+                    <p style={{ whiteSpace: "pre-line" }}>{item.tracks}</p>
                   </Grid>{" "}
                 </Grid>
               </Grid>

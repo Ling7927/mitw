@@ -89,7 +89,7 @@ function OpenSource() {
                 <Grid container spacing={1} direction="row">
                   {/* 參與賽道 */}
                   <Grid item sx={4} sm={4} md={4}>
-                    <div style={{ whiteSpace: "pre-line" }}>{item.tracks}</div>
+                    <p style={{ whiteSpace: "pre-line" }}>{item.tracks}</p>
                   </Grid>
                   {/* 介紹 */}
                   <Grid item sx={8} sm={8} md={8}>

@@ -74,6 +74,7 @@ function MemberCard() {
                       margin: 0,
                       paddingLeft: "10px",
                       fontSize: clickTrackId === item.id ? "1.4rem" : "1.2rem",
+                      fontWeight: clickTrackId === item.id ? "bold" : "normal",
                       borderLeft:
                         clickTrackId === item.id ? "4px solid orange" : "none",
                     }}

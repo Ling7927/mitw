@@ -33,7 +33,7 @@ function SectionListTab({ Click, setClick, onHandle }) {
                 border: "none",
                 background: "none",
                 fontSize: Click === sectiontab.id ? "1.25rem" : "1rem",
-                fontWeight: Click === sectiontab.id ? "bold" : "none",
+                fontWeight: Click === sectiontab.id ? "bold" : "normal",
                 color: "#000",
                 textDecoration: "none",
               }}

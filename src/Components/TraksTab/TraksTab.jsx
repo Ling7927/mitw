@@ -4,7 +4,7 @@ import Section from "./Section";
 import TracksTab from "./TracksTab";
 import SectionListTab from "./SectionListTab";
 import PhotoSlider from "../../Components/Slider/PhotoSlider";
-import { Grid } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import "./TraksTab.css";
 import { useParams } from "react-router-dom";
 
@@ -20,92 +20,96 @@ function TraksTab() {
     setClick("1");
   }, [onHandle]);
   return (
-    <Grid
-      container
-      spacing={1}
-      alignItems="flex-start"
-      justify="center"
-      style={{ background: "#fdfdfd", margin: 0, minHeight: "100vh" }}
-    >
+    <Box sx={{ background: "#fdfdfd", margin: 0, minHeight: "100vh" }}>
+      {/* <Grid
+        container
+        spacing={1}
+        alignItems="flex-start"
+        justify="center"
+        style={{ background: "#fdfdfd", margin: 0, minHeight: "100vh" }}
+      > */}
       {/* 上面按鈕 */}
-      <Grid item xs={12} md={12} lg={12}>
-        <TracksTab setOnHandle={setOnHandle} onHandle={onHandle} />
-      </Grid>
+
+      <TracksTab setOnHandle={setOnHandle} onHandle={onHandle} />
 
       {/* 下半內容 */}
       {/* 左邊選單 */}
-      <SectionListTab onHandle={onHandle} Click={Click} setClick={setClick} />
+      <Grid container>
+        <SectionListTab onHandle={onHandle} Click={Click} setClick={setClick} />
 
-      {/* 內容 */}
-      <Grid item xs={9.5} sm={9.5} md={9.5} lg={9.5}>
-        {/* 輪播照片 */}
-        {TraksTabInform.filter((item) => item.Id === onHandle)[0].Img.length >
-        0 ? (
+        {/* 內容 */}
+        <Grid item xs={9.5} sm={9.5} md={9.5} lg={9.5}>
+          {/* 輪播照片 */}
+          {TraksTabInform.filter((item) => item.Id === onHandle)[0].Img.length >
+          0 ? (
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              sx={{ marginBottom: "2rem" }}
+            >
+              <div
+                style={{
+                  width: "70%",
+                  margin: "auto",
+                }}
+              >
+                <PhotoSlider
+                  images={
+                    TraksTabInform.filter((item) => item.Id === onHandle)[0].Img
+                  }
+                />
+              </div>
+            </Grid>
+          ) : (
+            ""
+          )}
+
+          {/* 內容列表 */}
           <Grid
             item
             xs={12}
             sm={12}
             md={12}
             lg={12}
-            sx={{ marginBottom: "2rem" }}
+            sx={{
+              width: "80%",
+              paddingBottom: "3rem",
+              margin: "0 auto",
+            }}
           >
-            <div
-              style={{
-                width: "70%",
-                margin: "auto",
-              }}
-            >
-              <PhotoSlider
-                images={
-                  TraksTabInform.filter((item) => item.Id === onHandle)[0].Img
-                }
-              />
-            </div>
-          </Grid>
-        ) : (
-          ""
-        )}
-
-        {/* 內容列表 */}
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={12}
-          lg={12}
-          sx={{
-            width: "80%",
-            paddingBottom: "3rem",
-            margin: "0 auto",
-          }}
-        >
-          {TraksTabInform.find((item) => item.Id === onHandle).List.map(
-            (sc) => {
-              return (
-                <section id={sc.id} key={sc.id}>
-                  <h1
-                    style={{
-                      fontWeight: "bold",
-                      borderLeft: "4px orange solid",
-                      paddingLeft: "1rem",
-                      margin: "2rem 0",
-                    }}
-                  >
-                    {sc.Sc}
-                  </h1>
-                  {sc.content}{" "}
-                </section>
-              );
-            }
-          )}
-          {/* {
+            {TraksTabInform.find((item) => item.Id === onHandle).List.map(
+              (sc) => {
+                return (
+                  <section id={sc.id} key={sc.id}>
+                    <h1
+                      style={{
+                        fontWeight: "bold",
+                        borderLeft: "4px orange solid",
+                        paddingLeft: "1rem",
+                        margin: "2rem 0",
+                      }}
+                    >
+                      {sc.Sc}
+                    </h1>
+                    {sc.content}{" "}
+                  </section>
+                );
+              }
+            )}
+            {/* ===== */}
+            {/* {
             TraksTabInform.find((item) => item.Id === onHandle).List.find(
               (item) => item.id === Click
             ).content
           } */}
+            {/* </Grid>*/}
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </Box>
   );
 }
 

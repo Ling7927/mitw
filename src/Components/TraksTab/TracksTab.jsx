@@ -12,7 +12,7 @@ function TracksTab({ setOnHandle, onHandle }) {
       spacing={1}
       direction="row"
       justifyContent="space-between"
-      style={{ width: "100%" }}
+      style={{ width: "100%", margin: 0 }}
     >
       <Grid item xs={12} sm={12} md={2} lg={2} style={{ width: "100%" }}>
         {/* 目前賽道 */}

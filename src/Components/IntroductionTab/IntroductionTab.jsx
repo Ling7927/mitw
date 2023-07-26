@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import { Inform } from "./Inform";
+import "./Introduction.css";
 function IntroductionTab() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div
-        style={{
-          width: "80%",
-          margin: " auto",
-          padding: "5rem 0",
-          // background: "#f6fcfffb",
-        }}
-      >
+      <div className="IntroductionTabcontainer">
         {/* 上方按鈕 */}
         <div
           style={{

@@ -47,10 +47,10 @@ function Specification() {
           <Grid container sx={{ margin: 0 }}>
             <Grid
               item
-              xs={3}
-              sm={3}
-              md={3}
-              lg={3}
+              xs={2}
+              sm={2}
+              md={2}
+              lg={2}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -91,7 +91,7 @@ function Specification() {
               </motion.div>
             </Grid>
             {/* 說明內容 */}
-            <Grid item sm={12} md={12} lg={9}>
+            <Grid item xs={10} sm={10} md={10} lg={10}>
               {List.map((item) => {
                 return (
                   <section

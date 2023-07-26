@@ -12,10 +12,10 @@ import wg10_2 from "../../assets/wg10_2.jpg";
 
 const Tabs = [
   { id: 1, title: "#01", name: "病人基本資料" },
-  { id: 2, title: "#02", name: "生理量測數據互通" },
-  { id: 3, title: "#03", name: "處方用藥及文件打包" },
+  { id: 2, title: "#02", name: "生理量測數據" },
+  { id: 3, title: "#03", name: "用藥、文件打包及服務請求" },
   { id: 4, title: "#04", name: "醫學影像與病理" },
-  { id: 5, title: "#05", name: "偕同照護" },
+  { id: 5, title: "#05", name: "照護協調" },
   { id: 6, title: "#06", name: "基因體標記" },
   { id: 7, title: "#07", name: "緊急醫療救護" },
   { id: 8, title: "#08", name: "醫療保險理賠" },
@@ -64,7 +64,7 @@ const Mem = [
   {
     Id: 2,
     Track: 2,
-    TraksTitle: " 生理量測數據互通",
+    TraksTitle: " 生理量測數據",
     Img: wg2_1,
     Position: "召集人",
     Name: "莊舒雅 | 慈濟大學 醫學資訊學系碩士班 研究生",
@@ -85,7 +85,7 @@ const Mem = [
   {
     Id: 3,
     Track: 2,
-    TraksTitle: " 生理量測數據互通",
+    TraksTitle: " 生理量測數據",
     Img: wg2_2,
     Position: "召集人&聯繫窗口",
     Name: "洪彬彬 | Medical Informatics Standard Application Consortium (MISAC) 執行首席",
@@ -114,7 +114,7 @@ const Mem = [
   {
     Id: 4,
     Track: 3,
-    TraksTitle: " 處方用藥及文件打包",
+    TraksTitle: " 用藥、文件打包及服務請求",
     Img: wg3_1,
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",
@@ -168,7 +168,7 @@ const Mem = [
   {
     Id: 5,
     Track: 3,
-    TraksTitle: " 處方用藥及文件打包",
+    TraksTitle: " 用藥、文件打包及服務請求",
     Img: wg3_2,
     Position: "聯繫窗口",
     Name: "吳宇婷 | 仁寶電腦工業股份有限公司 雲端工程師",
@@ -260,7 +260,7 @@ const Mem = [
   {
     Id: 8,
     Track: 5,
-    TraksTitle: " 偕同照護",
+    TraksTitle: " 照護協調",
     Img: wg3_1,
     Position: "召集人",
     Name: "李祥豪 | 康統醫學科技股份有限公司 營運長",

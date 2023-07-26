@@ -317,7 +317,7 @@ export const TraksTabInform = [
   {
     Id: "2",
     TabTitle: "02",
-    ContentTitle: "生理量測資訊",
+    ContentTitle: "生理量測數據",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
       {
@@ -365,7 +365,7 @@ export const TraksTabInform = [
   {
     Id: "3",
     TabTitle: "03",
-    ContentTitle: "處方用藥及文件打包",
+    ContentTitle: "用藥、文件打包及服務請求",
     Img: [],
     List: [
       {
@@ -1114,7 +1114,7 @@ export const TraksTabInform = [
   {
     Id: "5",
     TabTitle: "05",
-    ContentTitle: "偕同照護",
+    ContentTitle: "照護協調",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
       {
@@ -1719,74 +1719,4 @@ export const TraksTabInform = [
       </div>
     ),
   },
-];
-
-const Scenarios = [
-  {
-    Id: "1",
-    S1: (
-      <>
-        <img src={Ts1} />
-        <h4>Scenario 1 病人身分確認用</h4>
-        <ul>
-          <li>
-            執行各項護理技術、檢查、治療、手術等醫療處置前對病人做身分確認
-          </li>
-          <li>
-            例如：在診療前，醫護人員請病人提供基本資訊如姓名、生日用以核對病人身分是否正確
-          </li>
-        </ul>
-      </>
-    ),
-    S2: (
-      <>
-        <h4>Scenario 2 聯繫病人用</h4>
-        <ul>
-          <li>聯絡方式如手機、email…用以聯絡病人</li>
-          <li>通訊地址如住家地址、工作地址</li>
-        </ul>
-        <h4>
-          兩種用途的病人資料將共用相同的識別碼如身分證、護照、居留證、病歷號
-        </h4>
-      </>
-    ),
-    S3: (
-      <>
-        <h4>院外系統</h4>
-        <h5>情境</h5>
-        <ul>
-          <li>Patient ID 串接其他兩種 Resource 資料並適當呈現</li>
-          <li>
-            病人保有自己的PHR Patient
-            ID，可透過PHR的授權機制授權醫護人員調用個人的健康資訊
-          </li>
-        </ul>
-        <h5>範例</h5>
-        <ul>
-          <li>
-            病人就醫時提供個人的PHR Patient
-            ID，並授權醫護人員可對此ID對應的PHR個案資料調用和操作
-          </li>
-        </ul>
-        <h5>注意</h5>
-        <ul>
-          <li>
-            參加 SC3 聯測時，產品必須同時通過 Track Observation(WG2) 或 Track
-            Medication(WG3) 才算通過
-          </li>
-          <li>範例：通過 WG1/SC3 + WG2 任一 SC、或 WG1/SC3 + WG3 任一 SC</li>
-        </ul>
-      </>
-    ),
-    S4: <></>,
-  },
-  { Id: "2", S1: <></> },
-  { Id: "3", S1: <></> },
-  { Id: "4", S1: <></> },
-  { Id: "5", S1: <></> },
-  { Id: "6", S1: <></> },
-  { Id: "7", S1: <></> },
-  { Id: "8", S1: <></> },
-  { Id: "9", S1: <></> },
-  { Id: "10", S1: <></> },
 ];

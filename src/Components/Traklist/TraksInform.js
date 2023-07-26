@@ -8,13 +8,13 @@ const TraksInform = [
   {
     id: "2",
     title: "Track #02",
-    context: "生理量測資訊",
+    context: "生理量測數據",
     onhover: "0 0 0.7em #72A0C1, 0 0 0.7em #72A0C1,0 0 0.7em #72A0C1",
   },
   {
     id: "3",
     title: "Track #03",
-    context: "處方用藥及文件打包",
+    context: "用藥、文件打包及服務請求",
     onhover: "0 0 0.7em #FFD700, 0 0 0.7em #FFD700,0 0 0.7em #FFD700",
   },
   {
@@ -26,7 +26,7 @@ const TraksInform = [
   {
     id: "5",
     title: "Track #05",
-    context: "偕同照護",
+    context: "照護協調",
     onhover: "0 0 0.7em #72A0C1, 0 0 0.7em #72A0C1,0 0 0.7em #72A0C1",
   },
   {

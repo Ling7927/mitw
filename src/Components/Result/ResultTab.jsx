@@ -103,8 +103,8 @@ function ResultTab() {
                           color: "#fff",
                           textShadow:
                             track === item.Id
-                              ? "1px 1px #dcdcdc,1px 2px #23f0c7, 2px 1px #108998"
-                              : "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
+                              ? "0.6px 0.6px #dcdcdc,1px 0.8px #23f0c7, 1.3px 1px #108998"
+                              : "0.5px 0.5px 0.6px #dcdcdc,0.6px 0.8px #00F9FF, 0.7px 0.7px #53F3D3",
 
                           position: "relative",
                           // top:"2rem"
@@ -197,7 +197,7 @@ function ResultTab() {
           justifyContent: "center",
           alignItems: "center",
           textShadow:
-            "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
+            "0.2px 0.2px #e6ebeb,0.2px 0.3px 0.3px #00F9FF, 0.2px 0.5px 0.5px #53F3D3",
           paddingBottom: "2rem",
         }}
       >

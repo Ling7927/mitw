@@ -50,7 +50,7 @@ function News() {
                 marginTop: "5rem",
               }}
             >
-              <img src={time} alt="time" style={{ width: "80%" }} />
+              <img src={time} alt="time" style={{ width: "90%" }} />
             </div>
           </Grid>
 
@@ -118,7 +118,7 @@ function News() {
           </Grid>
 
           {/* ----------------預計賽道------------------- */}
-          <Grid item>
+          <Grid item xs={10} sm={12} md={12} lg={12} sx={{ width: "80%" }}>
             <Traks />
           </Grid>
         </Grid>

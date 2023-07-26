@@ -14,7 +14,7 @@ const TraksInform = [
   {
     id: "3",
     title: "Track #03",
-    context: "用藥、文件打包及服務請求",
+    context: "用藥、文件打包\n及服務請求",
     onhover: "0 0 0.7em #FFD700, 0 0 0.7em #FFD700,0 0 0.7em #FFD700",
   },
   {

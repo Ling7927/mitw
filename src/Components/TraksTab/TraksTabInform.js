@@ -1568,7 +1568,7 @@ export const TraksTabInform = [
   {
     Id: "8",
     TabTitle: "08",
-    ContentTitle: "醫療保險",
+    ContentTitle: "醫療保險理賠",
     Img: [{ img: logo }, { img: logo }, { img: logo }],
     List: [
       {

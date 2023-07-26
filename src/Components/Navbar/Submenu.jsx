@@ -13,6 +13,13 @@ function Submenu({ item, onToggle }) {
       ) : (
         <div
           className="Menu"
+          onClick={() => {
+            if (item.li) {
+              setSubmenu(true);
+            } else {
+              return 0;
+            }
+          }}
           onMouseEnter={() => {
             if (item.li) {
               setSubmenu(true);

@@ -10,9 +10,18 @@
   color: #ddd;
   flex-direction: column;
 }
-
+.Submenu {
+  display: none;
+  flex-direction: column;
+}
+.Title {
+  padding: 0 3px;
+}
 @media screen and (min-width: 930px) {
   /* 大於930px */
+  .Menu {
+    font-size: 1.25rem;
+  }
 
   .Menu:hover {
     /* padding: 0 2rem; */
@@ -35,18 +44,14 @@
     }
   }
 }
-.Submenu {
-  display: none;
-  flex-direction: column;
-}
-.Title {
-  padding: 0 3px;
-}
 
 @media screen and (min-width: 500px) and (max-width: 930px) {
   /* 小於930px */
+  .Title {
+    margin: 2px 0;
+  }
   .Menu {
-    margin: 2vw 1vw;
+    margin-bottom: 1vw;
     /* width: 5vw; */
     /* height: 5vw; */
   }
@@ -64,14 +69,20 @@
     .Submenu {
       display: flex;
       flex-direction: column;
-      margin-left: 1vw;
+      /* margin-left: 1vw; */
     }
   }
   .Menu:active {
     .Submenu {
       display: flex;
       flex-direction: column;
-      margin-left: 1vw;
+      /* margin-left: 1vw; */
+    }
+  }
+  .Subitems {
+    padding: 2px 0;
+    &:hover {
+      color: #53d0e0d2;
     }
   }
 }
@@ -83,10 +94,27 @@
   }
   .Menu {
     margin: 2vw 1vw;
-    width: 5vw;
-    height: 5vw;
+  }
+
+  .Submenu {
+    display: none;
   }
   .Menu:hover {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      /* margin-left: 1vw; */
+    }
+  }
+  .Subitems {
+    font-size: 1rem;
+    white-space: pre;
+    padding: 2px 0;
+    &:hover {
+      color: #53d0e0d2;
+    }
+  }
+  /* .Menu:hover {
     .Submenu {
       display: flex;
       flex-direction: column;
@@ -99,5 +127,6 @@
       flex-direction: column;
       margin-left: 1vw;
     }
-  }
+  } */
+  /*  */
 }

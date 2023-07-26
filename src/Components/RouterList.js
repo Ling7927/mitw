@@ -38,7 +38,7 @@ const routerList = [
     li: [
       { liname: "賽道工作小組", lipath: "/Member", liComponent: <Member /> },
       {
-        liname: "工作小組志工與聯測督察員招募",
+        liname: "工作小組志工\n與聯測督察員招募",
         lipath: "/Recruit",
         liComponent: <Recruit />,
       },

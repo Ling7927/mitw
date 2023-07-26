@@ -5,7 +5,7 @@
   align-items: center;
   /* justify-content: space-between; */
   height: 15%;
-  width: 100%;
+  max-width: 100vw;
   padding: 20px 0;
 }
 .toggler__icon {
@@ -37,7 +37,7 @@
 @media screen and (min-width: 930px) {
   .nav__menu {
     justify-content: space-evenly;
-    font-size: 1.2rem;
+    /* font-size: 1.4rem; */
   }
 }
 @media screen and (max-width: 930px) {
@@ -69,6 +69,29 @@
 }
 @media screen and (max-width: 500px) {
   .nav__menu {
-    font-size: 20px;
+    display: flex;
+    flex-direction: column !important;
+    padding: 10px 0 15px 15px;
+    background: #000;
+    /* align-items: flex-start; */
+    top: 4rem;
+    width: 55%;
+    right: 0%;
+    height: 100%;
+    /* transform: translateX(-210%); */
+
+    position: absolute;
+
+    transform: translateY(-300%);
+    transition: 0.5s ease;
+  }
+  .nav__collapse {
+    transform: translateY(0%) !important;
+  }
+  .toggler__icon {
+    font-size: 5rem;
+    display: block;
+    background-color: #fff;
+    font: #fff;
   }
 }

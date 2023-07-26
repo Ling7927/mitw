@@ -11,7 +11,7 @@ function Submenu({ item, onToggle }) {
           {item.name}
         </NavLink>
       ) : (
-        <NavLink
+        <div
           className="Menu"
           onMouseEnter={() => {
             if (item.li) {
@@ -44,20 +44,34 @@ function Submenu({ item, onToggle }) {
             //   }
             // }}
           >
-            {item.li.map((item, index) => {
-              return (
-                <NavLink
-                  to={item.lipath}
-                  key={index}
-                  className="Subitems"
-                  onClick={() => onToggle()}
-                >
-                  {item.liname}
-                </NavLink>
-              );
-            })}{" "}
+            {/* ==============v1.0=================== */}
+            {item.li.map((sub, index) => {
+              if (item.name === "歷年活動")
+                return (
+                  <a
+                    href={sub.lipath}
+                    key={sub}
+                    target="_blank"
+                    className="Subitems"
+                    // onClick={() => onToggle()}
+                  >
+                    {sub.liname}
+                  </a>
+                );
+              else
+                return (
+                  <NavLink
+                    to={sub.lipath}
+                    key={index}
+                    className="Subitems"
+                    onClick={() => onToggle()}
+                  >
+                    {sub.liname}
+                  </NavLink>
+                );
+            })}
           </div>
-        </NavLink>
+        </div>
       )}
     </li>
   );

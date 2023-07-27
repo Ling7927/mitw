@@ -1,3 +1,14 @@
+@media screen and (min-width: 1400px) {
+  .Recruith4 {
+    font-size: 2.5rem;
+  }
+  .Lipart h5 {
+    font-size: 1.7rem;
+  }
+  .Lipart li {
+    font-size: 1.4rem;
+  }
+}
 @media screen and (min-width: 500px) {
   .Background1 {
     /* background: linear-gradient(

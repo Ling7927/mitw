@@ -52,6 +52,7 @@ function Recruit() {
                     >
                       <h4
                         key={item.title}
+                        className="Recruith4"
                         style={{ padding: "1rem 0 1rem", fontWeight: "bold" }}
                       >
                         {item.title}
@@ -90,6 +91,7 @@ function Recruit() {
                       style={{ padding: 0 }}
                     >
                       <div
+                        className="Lipart"
                         style={{
                           background: "#fff",
                           padding: "2rem 3rem",
@@ -120,6 +122,7 @@ function Recruit() {
                       style={{ padding: 0 }}
                     >
                       <div
+                        className="Lipart"
                         style={{
                           background: "#fff",
                           padding: "2rem 3rem",
@@ -143,6 +146,7 @@ function Recruit() {
                     >
                       {/* 小組及說明(右) */}
                       <h4
+                        className="Recruith4"
                         key={item.title}
                         style={{ padding: "1rem 0 1rem", fontWeight: "bold" }}
                       >

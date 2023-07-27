@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import Main from "./Pages/Main/Main";
 import News from "./Pages/News/News";
 import Introduction from "./Pages/Introduction/Introduction";
+import Signup from "./Pages/Signup/Signup";
 import Specification from "./Pages/Specification/Specification";
 import Traks from "./Pages/Traks/Traks";
 import TraksTab from "./Components/TraksTab/TraksTab";
@@ -45,6 +46,8 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/News" element={<News />} />
         <Route path="/Introduction" element={<Introduction />} />
+        <Route path="/Signup" element={<Signup />} />
+
         <Route path="/Specification" element={<Specification />} />
         <Route path="/Tracks" element={<Traks />} />
         <Route path="/Tracks/:id" element={<TraksTab />} />

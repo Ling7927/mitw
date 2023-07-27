@@ -6,7 +6,6 @@ body {
 }
 p {
   text-align: justify;
-  font-size: 20px;
 }
 ul {
   font-size: 18px;
@@ -15,6 +14,33 @@ li {
   font-size: 18px;
 }
 @media screen and (min-width: 1400px) {
+  h1 {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 2.3rem !important;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 930px) and (max-width: 1400px) {
+  h2 {
+    font-size: 2.3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 930px) {
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 500px) {
   h1 {
     font-size: 4vw;
   }

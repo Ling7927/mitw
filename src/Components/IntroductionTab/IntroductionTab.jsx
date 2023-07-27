@@ -61,13 +61,15 @@ function IntroductionTab() {
         {/* 下方內容 */}
         <div
           style={{
-            // display:"flex",
+            display: "flex",
+            flexDirection: "column",
             backgroundColor: "#f6fcfffb",
             fontColor: "black",
-            // padding: "2px",
+
             borderRadius: "0px 0px 1rem 1rem",
             justifyContent: "center",
             alignItems: "center",
+            padding: "3vw 5vw",
           }}
         >
           {Inform.filter((item) => item.id === onHandle)[0].content}

@@ -16,6 +16,7 @@ import track4_5 from "../../assets/track4_5.png";
 import track4_6 from "../../assets/track4_6.png";
 import track4_7 from "../../assets/track4_7.png";
 
+import ImgDialog from "../Dialog/Dialog";
 //有需要輪播圖的話import後放入Img:[]
 export const TraksTabInform = [
   {
@@ -53,7 +54,7 @@ export const TraksTabInform = [
               </li>
               <center>
                 {" "}
-                <img src={Ts1} style={{ width: "80%" }} />
+                <ImgDialog Img={Ts1} Width={"80%"} />
               </center>
             </ul>
           </>
@@ -93,10 +94,10 @@ export const TraksTabInform = [
                 範例：通過 WG1/SC3 + WG2 任一 SC、或 WG1/SC3 + WG3 任一 SC
               </li>
               <center>
-                <img src={T1_6} style={{ width: "80%" }} />
+                <ImgDialog Img={T1_6} Width={"80%"} />
               </center>
               <center>
-                <img src={T1_7} style={{ width: "80%" }} />
+                <ImgDialog Img={T1_7} Width={"80%"} />
               </center>
             </ul>
             <div>
@@ -322,7 +323,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <h3></h3>
@@ -332,7 +333,7 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
             <h3></h3>
@@ -342,7 +343,7 @@ export const TraksTabInform = [
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "詳細資訊(Details)",
         content: (
           <>
             <h3></h3>
@@ -352,7 +353,27 @@ export const TraksTabInform = [
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
         content: (
           <>
             <h3></h3>
@@ -370,7 +391,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <h3></h3>
@@ -380,7 +401,7 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
             <h3></h3>
@@ -390,7 +411,7 @@ export const TraksTabInform = [
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "詳細資訊(Details)",
         content: (
           <>
             <h3></h3>
@@ -400,7 +421,27 @@ export const TraksTabInform = [
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
         content: (
           <>
             <h3></h3>
@@ -776,13 +817,13 @@ export const TraksTabInform = [
             </p>{" "}
             <center>
               {" "}
-              <img src={track4_1} style={{ width: "50%" }} />
+              <ImgDialog Img={track4_1} Width={"50%"} />
             </center>{" "}
             <p style={{ fontWeight: "bold" }}>
               影像索引(FHIR ImagingStudy)設計結構示意圖
             </p>
             <center>
-              <img src={track4_2} style={{ width: "50%" }} />
+              <ImgDialog Img={track4_2} Width={"50%"} />
             </center>
             <li>
               {" "}
@@ -795,7 +836,7 @@ export const TraksTabInform = [
             </li>
             <h5 style={{ fontWeight: "bold" }}>情境1與情境2角色與交易關係圖</h5>
             <center>
-              <img src={track4_3} style={{ width: "50%" }} />
+              <ImgDialog Img={track4_3} Width={"50%"} />
             </center>
             <div>
               <h5 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h5>
@@ -1037,21 +1078,21 @@ export const TraksTabInform = [
               <li>醫學影像與DICOM標記互通之角色與交易關係圖</li>{" "}
               <center>
                 {" "}
-                <img src={track4_4} style={{ width: "50%" }} />
+                <ImgDialog Img={track4_4} Width={"50%"} />
               </center>
               <li>影像、結構化影像報告(IMAGE)、FHIR標記之角色與交易關係圖</li>{" "}
               <center>
-                <img src={track4_5} style={{ width: "80%" }} />
+                <ImgDialog Img={track4_5} Width={"80%"} />
               </center>{" "}
               <li>數位病理影像存取(PATH)之角色與交易關係圖 </li>{" "}
               <center>
                 {" "}
-                <img src={track4_6} style={{ width: "50%" }} />
+                <ImgDialog Img={track4_6} Width={"50%"} />
               </center>
               <li>影像檢查流程之角色與交易關係圖</li>{" "}
               <center>
                 {" "}
-                <img src={track4_7} style={{ width: "50%" }} />
+                <ImgDialog Img={track4_7} Width={"50%"} />
               </center>
             </ul>
           </>
@@ -1119,7 +1160,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <h3></h3>
@@ -1129,7 +1170,7 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
             <h3></h3>
@@ -1139,7 +1180,7 @@ export const TraksTabInform = [
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "詳細資訊(Details)",
         content: (
           <>
             <h3></h3>
@@ -1149,7 +1190,27 @@ export const TraksTabInform = [
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
         content: (
           <>
             <h3></h3>
@@ -1158,11 +1219,6 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "6",
@@ -1172,7 +1228,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <h3></h3>
@@ -1182,7 +1238,7 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
             <h3></h3>
@@ -1192,7 +1248,7 @@ export const TraksTabInform = [
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "詳細資訊(Details)",
         content: (
           <>
             <h3></h3>
@@ -1202,7 +1258,27 @@ export const TraksTabInform = [
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
         content: (
           <>
             <h3></h3>
@@ -1211,11 +1287,6 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "7",
@@ -1573,7 +1644,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <h3></h3>
@@ -1583,7 +1654,7 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
             <h3></h3>
@@ -1593,7 +1664,7 @@ export const TraksTabInform = [
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "詳細資訊(Details)",
         content: (
           <>
             <h3></h3>
@@ -1603,7 +1674,27 @@ export const TraksTabInform = [
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
         content: (
           <>
             <h3></h3>
@@ -1621,7 +1712,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <h3></h3>
@@ -1631,7 +1722,7 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
             <h3></h3>
@@ -1641,7 +1732,7 @@ export const TraksTabInform = [
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "詳細資訊(Details)",
         content: (
           <>
             <h3></h3>
@@ -1651,7 +1742,27 @@ export const TraksTabInform = [
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
         content: (
           <>
             <h3></h3>
@@ -1660,11 +1771,6 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
   {
     Id: "10",
@@ -1674,7 +1780,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1 病人身分確認用",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <h3></h3>
@@ -1684,7 +1790,7 @@ export const TraksTabInform = [
       },
       {
         id: "2",
-        Sc: "Scenario 2 聯繫病人用 ",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
             <h3></h3>
@@ -1694,7 +1800,7 @@ export const TraksTabInform = [
       },
       {
         id: "3",
-        Sc: "Scenario 3：院外系統 ",
+        Sc: "詳細資訊(Details)",
         content: (
           <>
             <h3></h3>
@@ -1704,7 +1810,27 @@ export const TraksTabInform = [
       },
       {
         id: "4",
-        Sc: "Scenario 4 (2022已移除，整併進Track #7緊急醫療救護) ",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
         content: (
           <>
             <h3></h3>
@@ -1713,10 +1839,5 @@ export const TraksTabInform = [
         ),
       },
     ],
-    Sc1: (
-      <div>
-        <img src={logo} />
-      </div>
-    ),
   },
 ];

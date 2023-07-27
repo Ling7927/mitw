@@ -3,7 +3,7 @@ import s4 from "../../assets/specification_4.png";
 import SpecificantionTable from "../../Components/Specificantion/SpecificantionTable/SpecificantionTable";
 import LevelTable from "../../Components/Specificantion/LevelTable/LevelTable";
 import OpenSourceTable from "../../Components/Specificantion/OpenSourceTable/OpenSourceTable";
-
+import ImgDialog from "../../Components/Dialog/Dialog";
 const P1 = {
   title: "公開徵求意見(Call for public comments)",
   context:
@@ -59,7 +59,7 @@ const List = [
             參加者通過聯測後，將提供成果展示活動，包含實體論壇、線上文宣以及網站公告等方式，展示聯測成果。聯測成果亦將作為醫院採購產品之參考依據。將聯測成果辦理應用推廣活動，推廣健康醫療資訊相關創新應用，推廣到產官學研機構、醫療院所單位團體、數據相關業者、與新創企業等。可透過每年的聯測松結果以及成果發表媒合有意提供健康醫療數據交換與加值應用之業者。
           </li>
           <p>聯測規格運作機制架構請參考下圖</p>
-          <img src={s1} style={{ width: "80%" }} />
+          <ImgDialog Img={s1} Width={"80%"} />
         </ul>
       </div>
     ),
@@ -175,7 +175,7 @@ const List = [
           下圖為聯測網路與伺服器服務架構，主要規劃分成兩個主機:
           (1)聯測控制主機以及(2)資料主機。
         </p>
-        <img src={s4} style={{ width: "80%" }} />
+        <ImgDialog Img={s4} Width={"80%"} />
       </div>
     ),
   },

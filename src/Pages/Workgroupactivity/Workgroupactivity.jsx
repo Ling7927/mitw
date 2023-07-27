@@ -4,6 +4,7 @@ import "./Workgroupactivity.css";
 function Workgroupactivity() {
   return (
     <div
+      className="Background"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -11,7 +12,6 @@ function Workgroupactivity() {
         // background: "rgb(253, 253, 253)",
         background:
           "linear-gradient(180deg, #000000 0%, #6AADD9 0.01%, rgba(0, 249, 255, 0) 56.56%, rgba(240, 240, 240, 0) 100%)",
-        padding: "0 5vh 5vh",
       }}
     >
       <div
@@ -88,6 +88,7 @@ function Workgroupactivity() {
                   {item.title}
                 </h3>
                 <div
+                  className="Content"
                   style={{
                     display: "flex",
                     width: "100%",

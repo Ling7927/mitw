@@ -36,6 +36,7 @@ import Industry from "../../Components/Successcase/Industry/Industry";
 import Hospital from "../../Components/Successcase/Hospital/Hospital";
 import Government from "../../Components/Successcase/Government/Government";
 import Crosssystem from "../../Components/Successcase/Crosssystem/Crosssystem";
+import ImgDialog from "../../Components/Dialog/Dialog";
 const ListTitle = [
   { id: "1", title: "開源專案" },
   { id: "2", title: "產業產品" },
@@ -613,15 +614,15 @@ const CrosssystemInform = [
   {
     title: "DICOM互通情境",
     img: [
-      <img src={c1} style={{ width: "100%" }} />,
-      <img src={c2} style={{ width: "100%" }} />,
+      <ImgDialog Img={c1} Width={"100%"} />,
+      <ImgDialog Img={c2} Width={"100%"} />,
     ],
   },
   {
     title: "FHIR互通情境",
     img: [
-      <img src={f1} style={{ width: "100%" }} />,
-      <img src={f2} style={{ width: "100%" }} />,
+      <ImgDialog Img={f1} Width={"100%"} />,
+      <ImgDialog Img={f2} Width={"100%"} />,
     ],
   },
 ];

@@ -12,7 +12,7 @@ function SimpleDialog({ Img, open, onClose }) {
       open={open}
       style={{ maxWidth: "100%", maxHeight: "100%" }}
     >
-      <img src={Img} style={{ width: "auto", height: "100%" }}></img>
+      <img src={Img} style={{ width: "100%", height: "80vh" }}></img>
     </Dialog>
   );
 }

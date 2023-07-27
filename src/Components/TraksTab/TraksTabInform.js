@@ -18,6 +18,9 @@ import track4_7 from "../../assets/track4_7.png";
 
 import ImgDialog from "../Dialog/Dialog";
 //有需要輪播圖的話import後放入Img:[]
+// 圖片放入<ImgDialog Img={Ts1} Width={"80%"} />頁面終能放大圖片顯示
+// Img={Ts1}裡面引入圖片
+// Width={"80%"}一般檢視頁面中的大小
 export const TraksTabInform = [
   {
     Id: "1",

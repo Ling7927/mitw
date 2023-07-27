@@ -34,11 +34,25 @@ function TraksTab() {
 
       {/* 下半內容 */}
       {/* 左邊選單 */}
-      <Grid container>
+      <Grid
+        container
+        sx={{
+          justifyContent: "space-around",
+        }}
+      >
         <SectionListTab onHandle={onHandle} Click={Click} setClick={setClick} />
 
         {/* 內容 */}
-        <Grid item xs={9.5} sm={9.5} md={9.5} lg={9.5}>
+        <Grid
+          item
+          xs={8}
+          sm={8}
+          md={8}
+          lg={10.5}
+          sx={{
+            margin: 0,
+          }}
+        >
           {/* 輪播照片 */}
           {TraksTabInform.filter((item) => item.Id === onHandle)[0].Img.length >
           0 ? (
@@ -75,9 +89,13 @@ function TraksTab() {
             md={12}
             lg={12}
             sx={{
-              width: "80%",
-              paddingBottom: "3rem",
-              margin: "0 auto",
+              // width: "80%",
+              padding: "0 3rem 3rem 0",
+              margin: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignContent: "center",
+              alignItems: "center",
             }}
           >
             {TraksTabInform.find((item) => item.Id === onHandle).List.map(

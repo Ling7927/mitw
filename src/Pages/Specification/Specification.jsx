@@ -50,10 +50,11 @@ function Specification() {
               xs={2}
               sm={2}
               md={2}
-              lg={2}
+              lg={1.5}
               style={{
                 display: "flex",
                 justifyContent: "center",
+                paddingLeft: "1vh",
               }}
             >
               {/* 選單 */}
@@ -61,37 +62,39 @@ function Specification() {
                 initial={{ x: -200 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ width: "20%" }}
+                //style={{ width: "20%" }}
               >
                 <div style={{ position: "sticky", top: "3rem" }}>
                   {ListTitle.map((item) => {
                     return (
-                      <Link
-                        to={`#${item.id}`}
-                        onClick={() => setOnHandle(item.id)}
-                        key={item.id}
-                        style={{
-                          margin: 0,
-                          backgroundColor: "Transparent",
-                          backgroundRepeat: "no-repeat",
-                          whiteSpace: "nowrap", //不換行
-                          border: "none",
-                          //cursor: "pointer",//鼠標形狀改變
-                          overflow: "hidden",
-                          fontSize: onHandle === item.id ? "1.25rem" : "1rem",
-                          color: onHandle === item.id ? "#000" : "#949494",
-                        }}
-                        smooth
-                      >
-                        {item.title}
-                      </Link>
+                      <div style={{ marginBottom: "5px" }}>
+                        <Link
+                          to={`#${item.id}`}
+                          onClick={() => setOnHandle(item.id)}
+                          key={item.id}
+                          style={{
+                            margin: 0,
+                            backgroundColor: "Transparent",
+                            backgroundRepeat: "no-repeat",
+                            //whiteSpace: "nowrap", //不換行
+                            border: "none",
+                            //cursor: "pointer",//鼠標形狀改變
+                            overflow: "hidden",
+                            fontSize: onHandle === item.id ? "1.25rem" : "1rem",
+                            color: onHandle === item.id ? "#000" : "#949494",
+                          }}
+                          smooth
+                        >
+                          {item.title}
+                        </Link>
+                      </div>
                     );
                   })}
                 </div>
               </motion.div>
             </Grid>
             {/* 說明內容 */}
-            <Grid item xs={10} sm={10} md={10} lg={10}>
+            <Grid item xs={10} sm={10} md={10} lg={10.5}>
               {List.map((item) => {
                 return (
                   <section
@@ -100,7 +103,7 @@ function Specification() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      padding: "0 5vw 2vh",
+                      padding: "0 5vw  2vh 0",
                     }}
                   >
                     <motion.h5

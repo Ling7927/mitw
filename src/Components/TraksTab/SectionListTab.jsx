@@ -7,10 +7,10 @@ function SectionListTab({ Click, setClick, onHandle }) {
   return (
     <Grid
       item
-      xs={2.5}
-      sm={2.5}
-      md={2.5}
-      lg={2.5}
+      xs={2}
+      sm={2}
+      md={2}
+      lg={1.5}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -22,6 +22,7 @@ function SectionListTab({ Click, setClick, onHandle }) {
         height: "100%",
         width: "100%",
         top: "5rem",
+        paddingLeft: "1vh",
       }}
     >
       {TraksTabInform.filter((item) => item.Id === onHandle)[0].List.map(
@@ -36,6 +37,7 @@ function SectionListTab({ Click, setClick, onHandle }) {
                 fontWeight: Click === sectiontab.id ? "bold" : "normal",
                 color: "#000",
                 textDecoration: "none",
+                marginBottom: "5px",
               }}
               key={sectiontab.id}
               onClick={() => setClick(sectiontab.id)}

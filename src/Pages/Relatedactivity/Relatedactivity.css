@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 930px) {
   .ActiveBlock {
-    width: 80%;
+    width: 60%;
   }
   .Content,
   .Content li {
@@ -23,11 +23,8 @@
   }
 }
 @media (min-width: 500px) and (max-width: 930px) {
-  .Background {
-    padding: 0;
-  }
   .ActiveBlock {
-    width: 80%;
+    width: 60%;
     padding: 0 5vh;
   }
   .Background {

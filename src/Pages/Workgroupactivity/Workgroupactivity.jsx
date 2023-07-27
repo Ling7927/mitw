@@ -65,43 +65,39 @@ function Workgroupactivity() {
           }}
         /> */}
         </div>
-        <div
+        {/* <div
           style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
           }}
-        >
-          {active.map((item) => {
-            return (
-              <div key={item} className="ActiveBlock">
-                <h3
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    fontWeight: "bold",
-                    marginBottom: "2vw",
-                  }}
-                >
-                  {" "}
-                  {item.title}
-                </h3>
-                <div
-                  className="Content"
-                  style={{
-                    display: "flex",
-                    width: "100%",
-                    whiteSpace: "normal",
-                  }}
-                >
-                  {item.content}
-                </div>
+        > */}
+        {active.map((item) => {
+          return (
+            <div key={item} className="WorkBlock">
+              <h3
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  fontWeight: "bold",
+                  marginBottom: "2vw",
+                }}
+              >
+                {" "}
+                {item.title}
+              </h3>
+              <div
+                className="Content"
+                style={{ display: "flex", width: "100%" }}
+              >
+                {item.content}
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
+      {/* </div> */}
     </div>
   );
 }

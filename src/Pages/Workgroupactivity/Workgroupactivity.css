@@ -1,15 +1,34 @@
-@media screen and (min-width: 500px) {
+.WorkBlock {
+  background: #f8fafd;
+  /* padding: 5vh;*/
+  margin-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 930px) {
+  .WorkBlock {
+    width: 60%;
+  }
+}
+@media (min-width: 500px) and (max-width: 930px) {
   .Background {
     background: #d9d9d9;
     padding: 0 5vw;
   }
-  .ActiveBlock {
-    display: flex;
-    justify-content: center;
+  .WorkBlock {
+    width: 60%;
+    padding: 0 5vh;
   }
 }
 @media screen and (max-width: 500px) {
+  .WorkBlock {
+    width: 100%;
+    padding: 2vh;
+  }
   .Background {
+    background: #d9d9d9;
     padding: 0;
   }
 }

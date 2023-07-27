@@ -1,5 +1,6 @@
 import News from "../Pages/News/News";
 import Introduction from "../Pages/Introduction/Introduction";
+import Signup from "../Pages/Signup/Signup";
 import Specification from "../Pages/Specification/Specification";
 import Traks from "../Pages/Traks/Traks";
 import Result from "../Pages/Result/Result";
@@ -25,8 +26,8 @@ const routerList = [
   },
   {
     name: "報名",
-    path: "https://mitwform.dicom.org.tw/",
-    Component: "",
+    path: "/Signup",
+    Component: <Signup />,
   },
   {
     name: "招募",

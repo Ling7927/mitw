@@ -73,6 +73,7 @@ function Trakslist() {
                       style={{ color: "#fff", textDecoration: "none" }}
                     >
                       <h3
+                        className="Newh3"
                         style={{
                           fontWeight: "bold",
                           marginBottom: "1vh",
@@ -83,6 +84,7 @@ function Trakslist() {
                         {item.title}
                       </h3>
                       <h5
+                        className="Newh5"
                         style={{
                           maxWidth: "100%",
                           whiteSpace: "pre", //遇到<br>或者換行符號(\n)才換行

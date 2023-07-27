@@ -102,6 +102,7 @@ function News() {
                     marginBottom: "3rem",
                     textAlign: "center",
                     justifyContent: "center",
+                    fontWeight: "bold",
                   }}
                 >
                   {NewsInform.title.p1}
@@ -110,7 +111,11 @@ function News() {
                   <p>{NewsInform.p1.hash1}</p>
                   <p>{NewsInform.p1.hash2}</p>
                   {NewsInform.p1.context.map((item) => {
-                    return <li style={{ margin: "2rem 0" }}>{item}</li>;
+                    return (
+                      <li style={{ margin: "2rem 0" }}>
+                        <p className="NewsP">{item}</p>
+                      </li>
+                    );
                   })}
                 </ul>
               </Grid>

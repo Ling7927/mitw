@@ -25,18 +25,18 @@ function Nav() {
   };
   return (
     <>
-      {/* <Grid container spacing={1}> */}
-      <nav className="nav">
-        {/* <Grid item xs={12} sm={12} md={3} lg={3}> */}
-        <Link to="/" style={{ borderBottom: "none" }}>
-          <img
-            src={Logo}
-            alt="Logo"
-            style={{ width: "10rem", marginLeft: " 1.5rem" }}
-          />
-        </Link>
-        {/* </Grid> */}
-        {/* <Grid
+      <Grid container spacing={1}>
+        <nav className="nav">
+          <Grid item xs={4} sm={4} md={3} lg={3}>
+            <Link to="/" style={{ borderBottom: "none" }}>
+              <img
+                src={Logo}
+                alt="Logo"
+                style={{ width: "80%", marginLeft: " 1.5rem" }}
+              />
+            </Link>
+          </Grid>
+          <Grid
             item
             xs={12}
             sm={12}
@@ -44,34 +44,35 @@ function Nav() {
             lg={8}
             //  style={{ display: "flex", justifyContent: "space-evenly" }}
             className={collapse}
-          > */}
-        {/* =================== */}
-        <div className={collapse}>
-          {routerList.map((item, index) => {
-            return <Submenu item={item} key={index} onToggle={onToggle} />;
-          })}
-        </div>
-        {/* =================== */}
-        {/* <div className={collapse}>
+          >
+            {" "}
+            \{/* =================== */}
+            <div className={collapse}>
+              {routerList.map((item, index) => {
+                return <Submenu item={item} key={index} onToggle={onToggle} />;
+              })}
+            </div>
+            {/* =================== */}
+            {/* <div className={collapse}>
           {routerList.map((item, index) => {
             return
              <Submenu item={item} key={index} onToggle={onToggle} />;
           })}
         </div> */}
-        {/* ==================================================================== */}
-        {/* </Grid> */}
-        <div
-          className={toggleIcon}
-          onClick={() => {
-            onToggle();
-          }}
-        >
-          <div>
-            <AiOutlineMenu />
+            {/* ==================================================================== */}
+          </Grid>
+          <div
+            className={toggleIcon}
+            onClick={() => {
+              onToggle();
+            }}
+          >
+            <div>
+              <AiOutlineMenu />
+            </div>
           </div>
-        </div>
-      </nav>
-      {/* </Grid> */}
+        </nav>
+      </Grid>
     </>
   );
 }

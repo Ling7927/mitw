@@ -3,6 +3,10 @@
     background: #d9d9d9;
     padding: 0 5vw;
   }
+  .ActiveBlock {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 500px) {
   .Background {

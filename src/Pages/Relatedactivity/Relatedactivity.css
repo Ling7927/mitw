@@ -1,15 +1,18 @@
 .ActiveBlock {
-  background: #f7f5f5;
-  padding: 2vw;
-  margin-bottom: 2vw;
+  background: #f8fafd;
+  padding: 5vh;
+  margin-bottom: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-@media screen and (min-width: 500px) {
-  .Background {
-    background: #d9d9d9;
-    padding: 0 5vw;
+.Background {
+  background: #d9d9d9;
+  padding: 0 5vw;
+}
+@media screen and (max-width: 500px) {
+  .ActiveBlock {
+    width: 100%;
   }
 }
 @media screen and (min-width: 930px) {
@@ -17,7 +20,7 @@
     width: 60%;
   }
 }
-@media screen and (max-width: 930px) {
+@media (min-width: 500px) and (max-width: 930px) {
   .Background {
     padding: 0;
   }

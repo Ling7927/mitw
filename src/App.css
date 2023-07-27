@@ -6,8 +6,14 @@ body {
 }
 p {
   text-align: justify;
+  font-size: 20px;
 }
-
+ul {
+  font-size: 18px;
+}
+li {
+  font-size: 18px;
+}
 @media screen and (min-width: 1400px) {
   h1 {
     font-size: 4vw;

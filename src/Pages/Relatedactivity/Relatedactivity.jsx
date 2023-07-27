@@ -10,7 +10,8 @@ function Relatedactivity() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          background: "rgb(253, 253, 253)",
+          background:
+            "linear-gradient(180deg, #000000 0%, #6AADD9 0.01%, rgba(0, 249, 255, 0) 56.56%, rgba(240, 240, 240, 0) 100%)",
         }}
       >
         <div
@@ -27,7 +28,10 @@ function Relatedactivity() {
               borderWidth: "2px",
               paddingTop: "1vw",
               fontWeight: "bold",
-              margin: 0,
+              marginBottom: "2rem",
+              color: "#fdfdfd",
+              padding: " 1rem 5rem 1.5rem",
+              borderBottom: "solid 4px #fbc170",
               // borderStyle: "solid",
 
               // boxShadow: " rgb(118, 189, 213) 2px 1px 3px 2px",
@@ -38,15 +42,6 @@ function Relatedactivity() {
           >
             相關活動
           </h3>
-          <hr
-            style={{
-              width: "20%",
-              marginBottom: "2rem",
-              size: "10",
-              color: "rgb(118, 189, 213)",
-              border: "2px solid orange",
-            }}
-          />
         </div>
 
         {active.map((item) => {

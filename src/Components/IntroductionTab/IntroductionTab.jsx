@@ -33,8 +33,8 @@ function IntroductionTab() {
                 }}
               >
                 <p
+                  className="IntroIcon"
                   style={{
-                    fontSize: "40px",
                     color: onHandle === item.id ? "#7AACA9" : "#fff",
                     stroke: "white",
                     margin: 0,

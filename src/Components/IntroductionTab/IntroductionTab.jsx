@@ -38,13 +38,12 @@ function IntroductionTab() {
                     color: onHandle === item.id ? "#7AACA9" : "#fff",
                     stroke: "white",
                     margin: 0,
-                    padding: "5% 0",
                   }}
                 >
                   {item.icon}
                 </p>
 
-                <div style={{ padding: "10% 0" }}>
+                <div style={{ padding: "2vw 0" }}>
                   <h5
                     style={{
                       color: onHandle === item.id ? "#7AACA9" : "#fff",

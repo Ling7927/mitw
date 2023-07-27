@@ -17,18 +17,21 @@
 .Title {
   padding: 0 3px;
 }
+/* Top */
 @media screen and (min-width: 1400px) {
   .Menu {
     font-size: 1.5rem;
   }
+
   .Menu:hover {
     /* padding: 0 2rem; */
 
     .Submenu {
       display: flex;
+      flex-direction: column;
       position: absolute;
-      top: 7rem;
-      padding: 1vh;
+      /* top: 7rem;
+      padding: 1vh; */
       border-radius: 3px;
       background-color: #f9ffff;
     }
@@ -53,8 +56,7 @@
     .Submenu {
       display: flex;
       position: absolute;
-      top: 4.2rem;
-      padding: 1vh;
+
       border-radius: 3px;
       background-color: #f9ffff;
     }
@@ -68,7 +70,7 @@
     }
   }
 }
-
+/* sidbar */
 @media screen and (min-width: 500px) and (max-width: 930px) {
   /* 小於930px */
   .Title {

@@ -11,36 +11,38 @@ function Submenu({ item, onToggle }) {
           {item.name}
         </NavLink>
       ) : (
-        <div
-          className="Menu"
-          onClick={() => {
-            if (item.li) {
-              setSubmenu(true);
-            } else {
-              return 0;
-            }
-          }}
-          onMouseEnter={() => {
-            if (item.li) {
-              setSubmenu(true);
-            } else {
-              return 0;
-            }
-          }}
-          onMouseOut={() => {
-            if (item.li) {
-              setSubmenu(false);
-            } else {
-              return 0;
-            }
-          }}
-        >
-          {item.name}
-          {item.li && submenu
-            ? item.iconOpened
-            : item.li
-            ? item.iconClosed
-            : null}
+        <div className="Menu">
+          <div
+            className="Menu"
+            onClick={() => {
+              if (item.li) {
+                setSubmenu(true);
+              } else {
+                return 0;
+              }
+            }}
+            onMouseEnter={() => {
+              if (item.li) {
+                setSubmenu(true);
+              } else {
+                return 0;
+              }
+            }}
+            onMouseOut={() => {
+              if (item.li) {
+                setSubmenu(false);
+              } else {
+                return 0;
+              }
+            }}
+          >
+            {item.name}
+            {item.li && submenu
+              ? item.iconOpened
+              : item.li
+              ? item.iconClosed
+              : null}
+          </div>
           <div
             className="Submenu"
             // onMouseLeave={() => {

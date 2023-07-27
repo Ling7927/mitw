@@ -25,7 +25,7 @@ function Nav() {
   };
   return (
     <>
-      <Grid container spacing={1}>
+      <Grid container>
         <nav className="nav">
           <Grid item xs={4} sm={4} md={3} lg={3}>
             <Link to="/" style={{ borderBottom: "none" }}>
@@ -46,7 +46,7 @@ function Nav() {
             className={collapse}
           >
             {" "}
-            \{/* =================== */}
+            {/* =================== */}
             {/* <div className={collapse}> */}
             {routerList.map((item, index) => {
               return <Submenu item={item} key={index} onToggle={onToggle} />;

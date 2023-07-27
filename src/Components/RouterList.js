@@ -25,7 +25,7 @@ const routerList = [
   },
   {
     name: "報名",
-    path: "/Information",
+    path: "https://mitwform.dicom.org.tw/",
     Component: "",
   },
   {

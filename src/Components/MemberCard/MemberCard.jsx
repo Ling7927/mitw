@@ -5,12 +5,16 @@ import Card from "./Card";
 import { Box, Grid } from "@mui/material";
 import "./MemberCard.css";
 import MemberSlider from "./MemberSlider";
-import { m } from "framer-motion";
 function MemberCard() {
   // const { Id, Traks, Img, Members, Tollger } = props.item;
   const [clickTrackId, setclickTrackId] = useState(1);
   const [cardHeight, setCardHeight] = useState(0);
-
+  const [Tracksopen, setTracksopen] = useState("MemSec");
+  const onToggle = () => {
+    Tracksopen === "MemSec"
+      ? setTracksopen("MemSec_click")
+      : setTracksopen("MemSec");
+  };
   // const [memId, setMemId] = useState(null);
   // const [Open, setOpen] = useState(false);
   // const [id, setId] = useState(null);
@@ -70,10 +74,15 @@ function MemberCard() {
                 >
                   <p
                     key={item.id}
+                    className={Tracksopen}
+                    onClick={() => {
+                      onToggle();
+                    }}
                     style={{
                       margin: 0,
                       paddingLeft: "10px",
                       fontSize: clickTrackId === item.id ? "1.4rem" : "1.2rem",
+
                       fontWeight: clickTrackId === item.id ? "bold" : "normal",
                       borderLeft:
                         clickTrackId === item.id ? "4px solid orange" : "none",

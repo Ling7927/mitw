@@ -98,8 +98,8 @@
     height: 2cm;
   }
 }
-@media screen and (min-width: 1200px) {
-  /* 1200以上 */
+@media screen and (min-width: 1600px) {
+  /* 1600以上 */
 
   .CardContainer {
     width: 80%;
@@ -116,5 +116,12 @@
     width: 3vw;
     font-size: 3.5vw;
     border-bottom: 3px solid pink;
+  }
+  /* font size */
+  .MemSec {
+    font-size: 1.5rem;
+  }
+  .MemSec_click {
+    font-size: 2rem;
   }
 }

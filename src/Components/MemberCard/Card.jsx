@@ -49,7 +49,7 @@ function Card({ item, cardHeight, setCardHeight }) {
             flexDirection: "column",
             background: "#fff",
             /* width: 100%;*/
-            height: "100%",
+            // height: "100%",
             /* margin-top: 5vw; */
             padding: " 0 1vw",
             boxShadow: "3px 3px 13px #dad7cd",

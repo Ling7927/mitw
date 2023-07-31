@@ -113,8 +113,17 @@ function News() {
                   {NewsInform.title.p1}
                 </h2>
                 <ul style={{ margin: 0 }}>
-                  <p>{NewsInform.p1.hash1}</p>
-                  <p>{NewsInform.p1.hash2}</p>
+                  <h5>
+                    {NewsInform.p1.hash1}
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfPNL-NWe_EWJ7pfYY74hIQr8kuNRFEXYbeROu3Sem8Cq8Qlw/viewform"
+                      style={{ color: "#3e78cf" }}
+                      target="_blank"
+                    >
+                      表單
+                    </a>
+                  </h5>
+                  <h5>{NewsInform.p1.hash2}</h5>
                   {NewsInform.p1.context.map((item) => {
                     return (
                       <li style={{ margin: "2rem 0" }}>

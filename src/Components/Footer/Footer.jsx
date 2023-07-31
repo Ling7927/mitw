@@ -15,7 +15,17 @@ function Footer() {
         }}
       >
         {/* 左 */}
-        <Grid item sm={6} md={6} lg={6}>
+        <Grid
+          item
+          sm={6}
+          md={6}
+          lg={6}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+          }}
+        >
           {FooterContext.map((item) => {
             return (
               <Grid container alignItems="baseline" columns={12}>
@@ -43,7 +53,7 @@ function Footer() {
                 >
                   <ul
                     style={{
-                      margin: "0 0 1rem",
+                      margin: 0,
                       padding: "0 0 0 1vw ",
                       flexDirection: "column",
                     }}
@@ -79,7 +89,7 @@ function Footer() {
 
         {/* 右 */}
         <Grid item sm={6} md={6} lg={6}>
-          <h2
+          <h4
             style={{
               color: "#fff",
               display: "flex",
@@ -88,7 +98,7 @@ function Footer() {
             }}
           >
             聯絡我們
-          </h2>
+          </h4>
           {Connection.map((item) => {
             return (
               <p

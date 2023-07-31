@@ -3,7 +3,7 @@ const FooterContext = [
     title: "主辦單位:",
     data: [
       {
-        name: "國泰金控、",
+        name: "國泰金控",
         path: "https://www.cathayholdings.com/holdings/",
       },
       {
@@ -25,7 +25,7 @@ const FooterContext = [
     title: "合作單位:",
     data: [
       {
-        name: "慈濟大學—醫學資訊學系、",
+        name: "慈濟大學—醫學資訊學系",
         path: "https://mi.tcu.edu.tw/",
       },
       {

@@ -5,14 +5,14 @@ import "./Signup.css";
 function Signup() {
   return (
     <div
-      className="Background"
+      className="AllBackground"
       style={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        background:
-          "linear-gradient(180deg, #000000 0%, #6AADD9 0.01%, rgba(0, 249, 255, 0) 56.56%, rgba(240, 240, 240, 0) 100%)",
+        // background:
+        //   "linear-gradient(180deg, #000000 0%, #6AADD9 0.01%, rgba(0, 249, 255, 0) 56.56%, rgba(240, 240, 240, 0) 100%)",
       }}
     >
       <div
@@ -57,13 +57,15 @@ function Signup() {
           container
           sx={{
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "center",
             alignContent: "center",
+            marginTop: "3rem",
           }}
+          gap={1}
         >
           {Inform.map((item) => {
             return (
-              <Grid item sx={6} sm={6} md={4} lg={4} className="Block">
+              <Grid item sx={5} sm={5} md={5} lg={5} className="Block">
                 {/* <div key={item} className="Block"> */}
                 <h3
                   style={{
@@ -71,7 +73,6 @@ function Signup() {
                     justifyContent: "flex-start",
                     alignContent: "center",
                     fontWeight: "bold",
-                    marginBottom: "2vw",
                     whiteSpace: "nowrap",
                   }}
                 >

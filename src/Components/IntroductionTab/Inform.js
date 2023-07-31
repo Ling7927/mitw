@@ -23,7 +23,7 @@ export const Inform = [
           src={p1}
           style={{ display: "flex", width: "90%", marginLeft: "5%" }}
         /> */}
-        <ImgDialog Img={p1} Width={"90%"} />
+        <img src={p1} Width={"80%"} />
       </>
     ),
   },
@@ -33,13 +33,13 @@ export const Inform = [
     Tabtitle: "聯測松機制",
     icon: <GiTargetDummy />,
     content: (
-      <>
+      <div style={{ padding: "2vw 0" }}>
         <ul style={{ margin: 0, padding: 0 }}>
           <li>
             聯測松(Connectathon)是由兩個名詞組成的組合字:
             互連性(Connectivity)以及以及馬拉松(Marathon)組成。運作方式是在連續幾天的時間(通常3-5天)，讓參加者以實體方式進行面對面(Face-to-face)的方式對於開發的系統進行互通性(Interoperability)測試。參加者針對特定的規格(Profile)以及情境(Scenario)進行系統開發。規格通常會結構化的方式將規格以角色(Actor)以及交易(Transaction)拆解，角色之間的交易通訊協定採用開放標準，例如:HL7,
             DICOM, IEEE, OSI,等國際標準或是工業標準規範。
-            <ImgDialog Img={p2} Width={"100%"} />
+            <img src={p2} Width={"100%"} />
           </li>
           <li>
             聯測目的在於針對依循指定規格開發的系統進行互通性驗證，參加聯測之前可事先使用開源工具或是開發的系統跟產品準備與測試。聯測提供一個有結構且嚴謹的驗證環境，讓參加者一起測試其彼此產品的互通性，並且可透過標準技術框架讓產品以實施或發佈的方式進行測試。
@@ -53,7 +53,7 @@ export const Inform = [
           <li>
             連測結束後，可透過連測結果陣列(Connectathon Results
             Matrix)查看。透過連測活動來達到產業之間的數據交換與互助，以合作的方式相互發展具備全球市場競爭力之產品。
-            <ImgDialog Img={p3} Width={"95%"} />
+            <img src={p3} Width={"95%"} />
             <br />
             促使健康保健IT產業(healthcare IT)
             的使用者以及廠商能夠共同合作達到IT系統互通(interoperability)，可透過以下方式達成
@@ -73,7 +73,7 @@ export const Inform = [
             ）以達到彼此需求，照護提供者提供臨床上面臨的實際問題，IT從業人員與廠商根據需求來發展符合標準的解決方案，根據共通的指引來購買這些符合規範。
           </li>
         </ul>
-      </>
+      </div>
     ),
   },
 
@@ -82,9 +82,9 @@ export const Inform = [
     Tabtitle: "關係人效益",
     icon: <BsLink />,
     content: (
-      <div style={{ padding: "3vw 0" }}>
-        <h3>使用者(醫院、消費者)的好處</h3>
-        <ul style={{ margin: " 0 0 2vh" }}>
+      <div style={{ padding: "2vw 0" }}>
+        <h3 style={{ margin: " 0 0 2vh" }}>使用者(醫院、消費者)的好處</h3>
+        <ul style={{ marginBottom: "2rem" }}>
           <li>減少客戶端(Site)潛在的互通性問題</li>
           <li>合格廠商可證明其產品支援標準規範，提供使用者採購時參考之依據</li>
           <li>有利於決策者對於競爭廠商投標回應做出決策(透過需求建議書)</li>
@@ -93,10 +93,10 @@ export const Inform = [
           <li>可註記已通過連測的廠商最做為日後審查之參考(過濾蟑螂公司)</li>
         </ul>
         <div>
-          <h3>使公司產品開發的好處</h3>
+          <h3 style={{ margin: " 0 0 2vh" }}>使公司產品開發的好處</h3>
           <h4>具體優點</h4>{" "}
         </div>
-        <ul style={{ margin: " 0 0 2vh" }}>
+        <ul style={{ marginBottom: "2rem" }}>
           <li>降低開發成本與縮短產品上市時間</li>
           <li>通過結構化且嚴謹的測試環境加快測試速度</li>
           <li>幾分鐘的測試可以節省除錯時間</li>
@@ -110,7 +110,7 @@ export const Inform = [
           <li>提供新創公司一條接軌市場的捷徑</li>
         </ul>
         <h4>通用優點</h4>
-        <ul style={{ margin: " 0 0 2vh" }}>
+        <ul style={{ marginBottom: "2rem" }}>
           <li>可將產品註冊至連測結果陣列(Connectathon Results Matrix)</li>
           <li>可證明公司在專業領域的互通性功能達到技術領先</li>
           <li>在一週面對面的活動中可與同行專家進行技術交流</li>
@@ -119,8 +119,8 @@ export const Inform = [
             全世界現有國家、區域與醫院的招標程序越來越注重要求開發標準化規範之能力
           </li>
         </ul>
-        <h3>整體產業好處</h3>
-        <ul style={{ margin: " 0 0 2vh" }}>
+        <h3 style={{ margin: " 0 0 2vh" }}>整體產業好處</h3>
+        <ul style={{ marginBottom: "2rem" }}>
           <li>與產業領先級專家者接觸</li>
           <li>與非常多的產業頂尖專家在現場分享經驗</li>
           <li>展示產業對於互通性的接受程度</li>
@@ -129,8 +129,10 @@ export const Inform = [
             參加的廠商越多，對產業鏈供給越緊密，進而讓病人以級醫護人員帶來更大的利益
           </li>
         </ul>
-        <h3>參加聯測對於學習醫學資訊標準(例如:DICOM、HL7)的好處</h3>
-        <ul style={{ margin: " 0 0 2vh" }}>
+        <h3 style={{ margin: " 0 0 2vh" }}>
+          參加聯測對於學習醫學資訊標準(例如:DICOM、HL7)的好處
+        </h3>
+        <ul style={{ marginBottom: "2rem" }}>
           <li>提供參加者學習、開發、以及測試FHIR規範 (Implementation Guide)</li>
           <li>
             開發者之間 面對面(Face to face)使用標準化DICOM、HL7
@@ -144,11 +146,11 @@ export const Inform = [
             透過由循序漸進的實作學習，結合教育訓練以及工作坊從做中學來了解醫學資訊標準知識
           </li>
         </ul>
-        <h3>國家發展電子病歷標準的好處</h3>
-        <ul style={{ margin: " 0 0 2vh" }}>
+        <h3 style={{ margin: " 0 0 2vh" }}>國家發展電子病歷標準的好處</h3>
+        <ul style={{ marginBottom: "2rem" }}>
           <li>
             改善只「訂」標準做法
-            <ul style={{ margin: " 0 0 2vh" }}>
+            <ul style={{ marginBottom: "2rem" }}>
               <li style={{ listStyle: "circle" }}>
                 醫院為了符合衛福部規定，僅要求廠商在輸出格式符合規範，作為電子病歷歸檔之用。
               </li>

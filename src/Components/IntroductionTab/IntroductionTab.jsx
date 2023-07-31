@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Inform } from "./Inform";
+import { motion } from "framer-motion";
 import "./Introduction.css";
 function IntroductionTab() {
   const [onHandle, setOnHandle] = useState("1");
@@ -32,24 +33,17 @@ function IntroductionTab() {
                   boxShadow: " 0px 0px 1px rgba(0, 0, 0, 0.5)",
                 }}
               >
-                <p
-                  className="IntroIcon"
-                  style={{
-                    color: onHandle === item.id ? "#7AACA9" : "#fff",
-                    stroke: "white",
-                    margin: 0,
-                  }}
-                >
-                  {item.icon}
-                </p>
-
-                <div style={{ padding: "2vw 0" }}>
+                <div style={{ padding: "2rem 0" }}>
                   <h5
                     style={{
                       color: onHandle === item.id ? "#7AACA9" : "#fff",
                       margin: 0,
                     }}
                   >
+                    <icon style={{ paddingRight: "5px", fontSize: "2rem" }}>
+                      {item.icon}
+                    </icon>
+
                     {item.Tabtitle}
                   </h5>
                 </div>
@@ -64,7 +58,6 @@ function IntroductionTab() {
             flexDirection: "column",
             backgroundColor: "#f6fcfffb",
             fontColor: "black",
-
             borderRadius: "0px 0px 1rem 1rem",
             justifyContent: "center",
             alignItems: "center",

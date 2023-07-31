@@ -1,6 +1,9 @@
 .Block {
-  background: #f8fafd;
-  padding-top: 15vh;
+  background: #f3f4f6;
+  /* background: #323b49; */
+
+  padding: 10vh;
+  display: flex;
   display: flex;
 }
 .SignupLink {

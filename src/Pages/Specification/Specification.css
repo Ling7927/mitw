@@ -4,8 +4,28 @@
   padding: 2vw 0;
   min-height: 100vh;
 }
+@media screen and (min-width: 1400px) {
+  .SpecificationH5 {
+    font-size: 1.55rem;
+  }
+}
+
+@media screen and (min-width: 930px) and (max-width: 1400px) {
+  .SpecificationH5 {
+    font-size: 1.55rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 930px) {
+  .SpecificationH5 {
+    font-size: 1.4rem;
+  }
+}
 @media screen and (max-width: 500px) {
   .Specification_background {
     margin: 0;
+  }
+  .SpecificationH5 {
+    font-size: 1.4rem;
   }
 }

@@ -44,6 +44,12 @@ function Card({ item, cardHeight, setCardHeight }) {
 
             setMemId(item.Id);
           }}
+          onClick={() => {
+            //  handleClickOpen();
+            handleClick();
+
+            setMemId(item.Id);
+          }}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -131,6 +137,7 @@ function Card({ item, cardHeight, setCardHeight }) {
         {/* back */}
         <div
           onMouseLeave={handleClick}
+          onClick={handleClick}
           style={{
             display: "flex",
             flexDirection: "column",

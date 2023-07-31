@@ -103,6 +103,7 @@ function TraksTab() {
                 return (
                   <section id={sc.id} key={sc.id}>
                     <h1
+                      className="TracksH1"
                       style={{
                         fontWeight: "bold",
                         borderLeft: "4px orange solid",

@@ -17,6 +17,7 @@ function News() {
   return (
     <>
       <div
+        className="AllBackground"
         style={{
           background:
             // "linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(32, 65, 63, 0.7) 100%)",
@@ -50,7 +51,7 @@ function News() {
                 marginTop: "5rem",
               }}
             >
-              <img src={time} alt="time" style={{ width: "90%" }} />
+              <img src={time} alt="time" style={{ width: "80%" }} />
             </div>
           </Grid>
 
@@ -77,8 +78,9 @@ function News() {
             >
               <Grid
                 item
+                sx={12}
                 sm={12}
-                md={12}
+                md={4}
                 lg={4}
                 style={{ display: "flex", justifyContent: "flex-start" }}
               >
@@ -90,9 +92,10 @@ function News() {
               </Grid>
               <Grid
                 item
+                sx={12}
                 sm={12}
-                md={12}
-                lg={7}
+                md={8}
+                lg={8}
                 padding="2rem"
                 marginTop="2rem"
                 height="90%"
@@ -103,6 +106,8 @@ function News() {
                     textAlign: "center",
                     justifyContent: "center",
                     fontWeight: "bold",
+                    whiteSpace: "pre",
+                    letterSpacing: "10px",
                   }}
                 >
                   {NewsInform.title.p1}

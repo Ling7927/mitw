@@ -36,9 +36,12 @@ ul {
   list-style: circle;
 }
 /* ========== */
-@media screen and (min-width: 1400px) {
+.NewsP {
+  font-size: 2vmin;
+}
+/* @media screen and (min-width: 1400px) {
   .NewsP {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   .Newh3 {
     font-size: 2.5rem;
@@ -61,4 +64,4 @@ ul {
   .NewsP {
     font-size: 4vw;
   }
-}
+} */

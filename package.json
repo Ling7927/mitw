@@ -2,7 +2,7 @@
   "name": "mitw",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ling7927.github.io/mitw",
+  "homepage": "https://ling7927.github.io",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
@@ -24,6 +24,7 @@
     "react-icons": "^4.8.0",
     "react-native-flip-card": "^3.5.7",
     "react-router-dom": "^6.10.0",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "reactstrap": "^9.1.9",

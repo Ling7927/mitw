@@ -50,7 +50,7 @@ function Specification() {
               xs={2}
               sm={2}
               md={2}
-              lg={1.5}
+              lg={2}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -94,7 +94,7 @@ function Specification() {
               </motion.div>
             </Grid>
             {/* 說明內容 */}
-            <Grid item xs={10} sm={10} md={10} lg={10.5}>
+            <Grid item xs={9} sm={9} md={9} lg={9} padding="0 2vh">
               {List.map((item) => {
                 return (
                   <section
@@ -103,7 +103,7 @@ function Specification() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      padding: "0 5vw  2vh 0",
+                      paddingBottom: "  2vh",
                     }}
                   >
                     <motion.h5

@@ -5,9 +5,13 @@ import Background from "../assets/Background.png";
 import { Grid } from "@mui/material";
 import T2023 from "../assets/T2023.png";
 import Ttext from "../assets/Titletext.png";
-
+import TracksTab from "../Components/TraksTab/TracksTab";
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { routerList } from "../Components/RouterList";
+import Navbar from "../Components/Navbar/Navbar";
+import ImgDialog from "../Components/Dialog/Dialog";
 function Test() {
   // const [Thiscolor, setThisColor] = useState(
   //   "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3"
@@ -60,22 +64,51 @@ function Test() {
 
   return (
     <>
-    <div style={{display:"flex"}}>
-       <ReactCardFlip isFlipped={isFlipped} style ={{height:"10rem",width:"10rem"}}>
-        <button onClick={handleClick} style ={{height:"10rem",width:"10rem"}}>
-          This is the front of the card.
-          {/* <button onClick={handleClick}>Click to flip</button> */}
-        </button>
+      <div style={{ display: "flex" }}>
+        <ReactCardFlip
+          isFlipped={isFlipped}
+          style={{ height: "10rem", width: "10rem" }}
+        >
+          <button
+            onClick={handleClick}
+            style={{ height: "10rem", width: "10rem" }}
+          >
+            This is the front of the card.
+            {/* <button onClick={handleClick}>Click to flip</button> */}
+          </button>
 
-        <button onClick={handleClick} style ={{height:"10rem",width:"10rem",}}>
-          This is the back of the card.
-          {/* <button onClick={handleClick}>Click to flip</button> */}
-        </button>
-      </ReactCardFlip>
-    </div>
-     
+          <button
+            onClick={handleClick}
+            style={{ height: "10rem", width: "10rem" }}
+          >
+            This is the back of the card.
+            {/* <button onClick={handleClick}>Click to flip</button> */}
+          </button>
+        </ReactCardFlip>
+      </div>
+      <TracksTab />
       {/*  */}
-
+      {/* <div style={{ background: "black", color: "#fff" }}>
+        {routerList.map((item) => {
+          if (item.name === "歷年活動")
+            return (
+              <div>
+                {item.name}"ha"
+                {item.li.map((sub) => {
+                  return (
+                    <Link to={sub.lipath} target="_blank">
+                      {sub.liname}
+                    </Link>
+                  );
+                })}
+              </div>
+            );
+          else return <div>{item.name}</div>;
+        })}
+      </div> */}
+      <Navbar />
+      {/* ===== */}
+      <div style={{ height: "10rem", width: "10rem" }} />
       {/* <div>
         <button onClick={Click}>aaa</button>
         {open && <div>rjfvrs</div>}
@@ -279,6 +312,7 @@ function Test() {
           ></motion.img>
         </div>
       </div> */}
+      <ImgDialog Img={T2023} />
     </>
   );
 }

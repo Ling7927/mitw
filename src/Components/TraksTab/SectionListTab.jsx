@@ -10,7 +10,7 @@ function SectionListTab({ Click, setClick, onHandle }) {
       xs={2}
       sm={2}
       md={2}
-      lg={1.5}
+      lg={2}
       sx={{
         display: "flex",
         flexDirection: "column",

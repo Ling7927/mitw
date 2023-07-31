@@ -1,0 +1,22 @@
+@media screen and (mix-width: 931px) {
+}
+@media screen and (mix-width: 990px) {
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.nav {
+  background: #000;
+  /* display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center; */
+  /* justify-content: space-between; */
+  /* height: 15%;
+  width: 100%;
+  padding: 20px 0; */
+}
+.container-fluid {
+  background: #000;
+  color: #ddd;
+}

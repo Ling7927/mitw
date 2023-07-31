@@ -48,7 +48,7 @@ function TraksTab() {
           xs={8}
           sm={8}
           md={8}
-          lg={10.5}
+          lg={9}
           sx={{
             margin: 0,
           }}

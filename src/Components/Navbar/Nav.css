@@ -1,5 +1,5 @@
 .nav {
-  background: #000;
+  background: "transparent";
   display: flex !important;
   flex-wrap: nowrap !important;
   align-items: center;

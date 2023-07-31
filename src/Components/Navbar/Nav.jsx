@@ -27,21 +27,21 @@ function Nav() {
     <>
       <Grid container>
         <nav className="nav">
-          <Grid item xs={4} sm={4} md={3} lg={3}>
+          <Grid item xs={2} sm={2} md={2} lg={2} style={{ display: "flex" }}>
             <Link to="/" style={{ borderBottom: "none" }}>
               <img
                 src={Logo}
                 alt="Logo"
-                style={{ width: "80%", marginLeft: " 1.5rem" }}
+                style={{ width: "60%", marginLeft: " 1.5rem" }}
               />
             </Link>
           </Grid>
           <Grid
             item
-            xs={12}
-            sm={12}
-            md={8}
-            lg={8}
+            xs={10}
+            sm={10}
+            md={10}
+            lg={10}
             //  style={{ display: "flex", justifyContent: "space-evenly" }}
             className={collapse}
           >

@@ -7,12 +7,15 @@
 }
 .Subitems {
   text-decoration: none;
-  color: #ddd;
+  color: #fff8f8;
   flex-direction: column;
 }
 .Submenu {
   display: none;
   flex-direction: column;
+  border-radius: 3px;
+  background-color: #a9dbdb;
+  padding: 5px;
 }
 .Title {
   padding: 0 3px;
@@ -32,14 +35,11 @@
       position: absolute;
       /* top: 7rem;
       padding: 1vh; */
-      border-radius: 3px;
-      background-color: #f9ffff;
     }
     .Subitems {
-      color: #000;
-      padding: 3px;
+      padding: 10px;
       &:hover {
-        color: #53d0e0d2;
+        color: #000;
       }
     }
   }
@@ -56,16 +56,12 @@
     .Submenu {
       display: flex;
       position: absolute;
-
-      border-radius: 3px;
-      background-color: #f9ffff;
     }
 
     .Subitems {
-      color: #000;
       padding: 3px;
       &:hover {
-        color: #53d0e0d2;
+        color: #000;
       }
     }
   }

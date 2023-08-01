@@ -14,9 +14,9 @@ function Hospital() {
             key={i}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
           >
-            <Grid container spacing={1} key={i}>
+            <Grid container spacing={1} key={i} sx={{ marginTop: "1rem" }}>
               {/* 左 */}
               <Grid item sm={12} md={4} lg={4}>
                 <Grid container spacing={1} direction="column">

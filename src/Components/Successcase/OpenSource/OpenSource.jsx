@@ -2,7 +2,7 @@ import React from "react";
 import { OpenSourceInform } from "../../../Pages/Successcase/Inform";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
-
+import { AiOutlineGithub } from "react-icons/ai";
 function OpenSource() {
   return (
     <>
@@ -13,7 +13,7 @@ function OpenSource() {
             key={i}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             // left->right
             // initial={{
             //   x: "-150%",
@@ -26,16 +26,16 @@ function OpenSource() {
             // transition={{ delay: 0.7, duration: 0.7 }}
           >
             {/* -----------------------------上下布局-------------------------------- */}
-            <Grid container spacing={1}>
+            <Grid container spacing={1} sx={{ marginTop: "1rem" }}>
               {/* 上 */}
               <Grid item sx={12} sm={12} md={12}>
-                <Grid container spacing={1} direction="row" key={i}>
+                <Grid container spacing={1} direction="row" key={i} gap={1}>
                   {/* 照片 */}
                   <Grid
                     item
                     sx={12}
-                    sm={4}
-                    md={4}
+                    sm={3}
+                    md={3}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -62,13 +62,18 @@ function OpenSource() {
                         }}
                       />
                     </div>
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      style={{ textDecoration: "none ", color: "#0081a7" }}
-                    >
-                      {item.linkName}
-                    </a>
+                    <span>
+                      <icon style={{ fontSize: "1.5rem", marginRight: "5px" }}>
+                        <AiOutlineGithub />
+                      </icon>
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        style={{ textDecoration: "none ", color: "#0081a7" }}
+                      >
+                        {item.linkName}
+                      </a>
+                    </span>
                   </Grid>
                   {/* 產品名稱 */}
 
@@ -86,10 +91,34 @@ function OpenSource() {
 
               {/* 下 */}
               <Grid item>
-                <Grid container spacing={1} direction="row">
+                <Grid container spacing={1} gap={1} direction="row">
                   {/* 參與賽道 */}
-                  <Grid item sx={4} sm={4} md={4}>
-                    <p style={{ whiteSpace: "pre-line" }}>{item.tracks}</p>
+                  <Grid
+                    item
+                    sx={3}
+                    sm={3}
+                    md={3}
+                    style={{
+                      whiteSpace: "pre-line",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
+                    {/* <p style={{ whiteSpace: "pre-line" }}>
+                      參加賽道{item.tracks}
+                    </p> */}
+
+                    <p style={{ whiteSpace: "pre-wrap" }}>
+                      <strong>參加賽道</strong>
+                      {item.jointracks.map((tracks) => {
+                        return (
+                          <>
+                            {tracks.trackstitle}
+                            {tracks.tracksname}
+                          </>
+                        );
+                      })}
+                    </p>
                   </Grid>
                   {/* 介紹 */}
                   <Grid item sx={8} sm={8} md={8}>

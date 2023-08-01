@@ -1,6 +1,6 @@
 .Menu {
   text-decoration: none;
-  color: #ddd;
+  color: #646363;
   &:hover {
     color: #53d0e0d2;
   }
@@ -39,7 +39,7 @@
     .Subitems {
       padding: 10px;
       &:hover {
-        color: #000;
+        color: #646363;
       }
     }
   }

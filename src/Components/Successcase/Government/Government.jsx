@@ -16,7 +16,7 @@ function Goverment() {
             }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             // initial={{
             //   x: "-150%",
             // }}
@@ -27,7 +27,13 @@ function Goverment() {
             // }}
             // transition={{ delay: 0.7, duration: 0.7 }}
           >
-            <Grid container spacing={1} marginBottom="2rem" key={i}>
+            <Grid
+              container
+              spacing={1}
+              marginBottom="2rem"
+              key={i}
+              sx={{ marginTop: "1rem" }}
+            >
               <Grid item xs={6} sm={6} md={3} lg={3} style={{ padding: 0 }}>
                 <img src={item.img} style={{ width: "100%" }} />
                 <a

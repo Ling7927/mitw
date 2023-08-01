@@ -13,7 +13,7 @@ function Crosssystem() {
             key={i}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
             style={{
               margin: "1rem 0 3rem 0",
               display: "flex",

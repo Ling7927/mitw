@@ -3,10 +3,10 @@ import "./MemberCard.css";
 import { Mem } from "../../Pages/Member/Inform";
 import ReactCardFlip from "react-card-flip";
 
-function Card({ item, cardHeight, setCardHeight }) {
+function Card({ item }) {
   const ref = useRef(null);
   const [memId, setMemId] = useState(null);
-  // const [cardHeight, setCardHeight] = useState(0);
+  const [cardHeight, setCardHeight] = useState(0);
   const [cardWidth, setcardWidth] = useState(0);
   //   const [Open, setOpen] = useState(false);
   //   const [id, setId] = useState(null);
@@ -23,7 +23,14 @@ function Card({ item, cardHeight, setCardHeight }) {
   useEffect(() => {
     if (ref) {
       setCardHeight(ref.current.clientHeight);
+      setcardWidth(ref.current.clientWidth);
+      console.log(cardHeight, cardWidth);
     }
+    // if (ref || cardHeight) {
+    //   cardHeight > ref.current.clientHeight
+    //     ? setCardHeight(cardHeight)
+    //     : setCardHeight(ref.current.clientHeight);
+    // }
   });
 
   const handleClick = (e) => {
@@ -54,8 +61,8 @@ function Card({ item, cardHeight, setCardHeight }) {
             display: "flex",
             flexDirection: "column",
             background: "#fff",
-            /* width: 100%;*/
-            // height: "100%",
+            width: " 100%",
+            height: " 100%",
             /* margin-top: 5vw; */
             padding: " 0 1vw",
             boxShadow: "3px 3px 13px #dad7cd",
@@ -142,7 +149,7 @@ function Card({ item, cardHeight, setCardHeight }) {
             display: "flex",
             flexDirection: "column",
             height: cardHeight,
-            width: "100%",
+            width: cardWidth,
             cursor: "pointer",
             maxWidth: "514px",
             justifyContent: "space-between",

@@ -8,26 +8,32 @@ import MemberSlider from "./MemberSlider";
 function MemberCard() {
   // const { Id, Traks, Img, Members, Tollger } = props.item;
   const [clickTrackId, setclickTrackId] = useState(1);
-  const [cardHeight, setCardHeight] = useState(0);
   const [Tracksopen, setTracksopen] = useState("MemSec");
   const onToggle = () => {
     Tracksopen === "MemSec"
       ? setTracksopen("MemSec_click")
       : setTracksopen("MemSec");
   };
-  // const [memId, setMemId] = useState(null);
-  // const [Open, setOpen] = useState(false);
-  // const [id, setId] = useState(null);
+  // vvvvvvv dialog use
+  const [memId, setMemId] = useState(null);
+  const [Open, setOpen] = useState(false);
+  const [id, setId] = useState(null);
 
-  // const handleClickOpen = () => {
-  //   setOpen(true);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
-  //   useEffect(()=>{
-  // setMem(Mem.Id===clickTrackId)
-  //   },[clickTrackId])
+  const handleClickOpen = (ID) => {
+    setMemId(ID);
+    setOpen(true);
+    console.log(memId);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+  useEffect(() => {
+    //  setMemId(Mem.Id === clickTrackId);
+
+    console.log(memId);
+  }, [clickTrackId]);
+  // MMMMMM dialog use
+
   return (
     <>
       <Grid
@@ -124,11 +130,90 @@ function MemberCard() {
                       // , height: "100%"
                     }}
                   >
-                    <Card
-                      item={item}
-                      cardHeight={cardHeight}
-                      setCardHeight={setCardHeight}
-                    />
+                    {/* flipCard */}
+                    {/* <Card item={item} /> */}
+
+                    {/* dialog card */}
+                    <div
+                      // onMouseEnter={() => {
+                      //   //  handleClickOpen();
+                      //   handleClick();
+
+                      //   setMemId(item.Id);
+                      // }}
+                      onClick={() => {
+                        handleClickOpen(item.Id);
+
+                        // setMemId(item.Id);
+                      }}
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        background: "#fff",
+                        width: " 100%",
+                        height: " 100%",
+                        /* margin-top: 5vw; */
+                        padding: " 0 1vw",
+                        boxShadow: "3px 3px 13px #dad7cd",
+                      }}
+                    >
+                      {/* 賽道資訊 */}
+                      <div>
+                        <p className="Tracks">{item.Track}</p>
+                        <h2 className="TracksTitle">{item.TraksTitle}</h2>
+                      </div>
+                      {/* 姓名 身分 */}
+                      <h5
+                        className="Name" // style={{
+                        //   fontSize: "1.5vw",
+                        //   color: "#3ABCBF",
+                        //   height: "8vh",
+                        //   margin: 0,
+                        // }}
+                      >
+                        {item.Name}
+                      </h5>
+                      {/* 照片 */}
+                      <div className="ImgContainer">
+                        <img
+                          src={item.Img}
+                          style={{
+                            height: "100%",
+                            width: "100%",
+                            objectFit: "cover",
+                            cursor: "pointer",
+                          }}
+                        />
+                      </div>
+                      {/* 藍色標標 */}
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "flex-end",
+                          width: "100%",
+                        }}
+                      >
+                        <span
+                          style={{
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                          }}
+                        >
+                          <h4 className="Bluetag">{item.Position}</h4>
+                        </span>
+                      </div>
+                    </div>
+                    {Open === true && memId === item.Id ? (
+                      <Dialog open={Open} onClose={handleClose}>
+                        <DialogContent>
+                          <DialogContentText>
+                            <div style={{ width: "50vw" }}>{item.Tollger}</div>
+                          </DialogContentText>
+                        </DialogContent>
+                      </Dialog>
+                    ) : (
+                      ""
+                    )}
                   </Grid>
                 );
               }

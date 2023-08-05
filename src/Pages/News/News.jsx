@@ -1,10 +1,10 @@
 import React from "react";
 import "./News.css";
 import Title from "../../assets/Title.png";
-import time from "../../assets/date.png";
 import p1Img from "../../assets/example.png";
 import Traks from "../../Components/Traklist/Trakslist";
 import NewsInform from "./NewsInform.json";
+import TTime from "../../assets/TTime.png";
 
 import { Grid } from "@mui/material";
 import { useRef } from "react";
@@ -51,7 +51,7 @@ function News() {
                 marginTop: "5rem",
               }}
             >
-              <img src={time} alt="time" style={{ width: "80%" }} />
+              <img src={TTime} alt="time" style={{ width: "80%" }} />
             </div>
           </Grid>
 

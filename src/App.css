@@ -1,5 +1,7 @@
 * {
   font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
 }
 body {
   margin: 0;
@@ -13,6 +15,10 @@ ul {
 li {
   font-size: 18px;
 }
+.AllBackground {
+  background: #f3f4f6;
+  padding: 0 5vh 1vh;
+}
 @media screen and (min-width: 1400px) {
   h1 {
     font-size: 4vw;
@@ -21,7 +27,7 @@ li {
     font-size: 2.3rem !important;
   }
   p {
-    font-size: 1.5rem;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 930px) and (max-width: 1400px) {
@@ -29,7 +35,7 @@ li {
     font-size: 2.3rem;
   }
   p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 930px) {

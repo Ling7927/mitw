@@ -25,7 +25,7 @@ function Trakslist() {
             margin: "5rem 0",
           }}
         >
-          預計賽道(Track)
+          賽道(Track)
         </h2>
         {/* <div
           style={{

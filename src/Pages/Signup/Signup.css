@@ -1,10 +1,14 @@
 .Block {
   background: #f8fafd;
-  padding-top: 15vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
 }
 .SignupLink {
   text-decoration: none;
+  font-weight: bold;
+
   color: #3087a7;
 }
 @media screen and (min-width: 500px) {
@@ -21,7 +25,7 @@
 @media screen and (max-width: 500px) {
   .Block {
     width: 100%;
-    padding: 0 5vh;
+    /* padding: 0 5vh; */
   }
   .Background {
     background: #d9d9d9;

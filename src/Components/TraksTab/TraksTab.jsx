@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { TraksTabInform } from "./TraksTabInform";
 import Section from "./Section";
 import TracksTab from "./TracksTab";
@@ -12,6 +12,33 @@ function TraksTab() {
   const { id } = useParams();
   const [onHandle, setOnHandle] = useState(id || "1"); //Trackbutton
   const [Click, setClick] = useState("1"); //section
+
+  // const [currentScId, setCurrentScId] = useState("1");
+  // const sectionRefs = useRef({});
+  // const handleScroll = () => {
+  //   for (const [scId, sectionRef] of Object.entries(sectionRefs.current)) {
+  //     const sectionElement = sectionRef.current;
+  //     const boundingClientRect = sectionElement.getBoundingClientRect();
+
+  //     if (
+  //       boundingClientRect.top >= 0 &&
+  //       boundingClientRect.top < window.innerHeight / 2
+  //     ) {
+  //       setCurrentScId(scId);
+  //       break;
+  //     }
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   // 監聽滾輪事件
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     // 移除事件監聽器
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   // const [SectionOpen, setSectionOpen] = useState(false);
   // const SectionClick = () => {
   //   setSectionOpen(!SectionOpen);
@@ -101,7 +128,12 @@ function TraksTab() {
             {TraksTabInform.find((item) => item.Id === onHandle).List.map(
               (sc) => {
                 return (
-                  <section id={sc.id} key={sc.id}>
+                  <section
+                    id={sc.id}
+                    key={sc.id}
+                    // ref={(el) => (sectionRefs.current[sc.id] = el)}
+                    // className={currentScId === sc.id ? "active" : ""}
+                  >
                     <h1
                       className="TracksH1"
                       style={{

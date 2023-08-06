@@ -19,6 +19,7 @@ function TracksTab({ setOnHandle, onHandle }) {
         paddingTop: "1rem",
         top: "0",
         background: "#fdfdfd",
+        alignItems: "baseline",
         zIndex: 500,
       }}
     >
@@ -72,8 +73,9 @@ function TracksTab({ setOnHandle, onHandle }) {
         style={{
           display: "flex",
           flexDirection: "row",
+          alignItems: "baseline",
           // overflowX: "auto",
-          paddingBottom: "3vw",
+          // paddingBottom: "3vw",
         }}
       >
         <Grid container columns={20} alignItems="center" justify="center">

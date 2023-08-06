@@ -10,7 +10,7 @@ export const Inform = [
     Tabtitle: "簡介",
     icon: <BsPersonVideo3 />,
     content: (
-      <>
+      <div style={{ padding: "2vw 5vw" }}>
         <p>
           為促進醫療健康數據標準化、落實臨床醫療資訊系統之整合互通用、以助智慧醫療系統融入健康醫療流程，國際上推動「醫療健康資訊互通聯測」已行之有年，社團法人台灣醫療影像資訊標準協會(MISAT)融合全球知名的聯測體系，包含:
           HL7®(Health Level 7) FHIR® (Fast Healthcare Interoperability
@@ -23,8 +23,11 @@ export const Inform = [
           src={p1}
           style={{ display: "flex", width: "90%", marginLeft: "5%" }}
         /> */}
-        <img src={p1} Width={"80%"} />
-      </>
+        <center>
+          {" "}
+          <img src={p1} Width={"80%"} />
+        </center>
+      </div>
     ),
   },
 
@@ -33,13 +36,15 @@ export const Inform = [
     Tabtitle: "聯測松機制",
     icon: <GiTargetDummy />,
     content: (
-      <div style={{ padding: "2vw 0" }}>
+      <div style={{ padding: "2vw 5vw" }}>
         <ul style={{ margin: 0, padding: 0 }}>
           <li>
             聯測松(Connectathon)是由兩個名詞組成的組合字:
             互連性(Connectivity)以及以及馬拉松(Marathon)組成。運作方式是在連續幾天的時間(通常3-5天)，讓參加者以實體方式進行面對面(Face-to-face)的方式對於開發的系統進行互通性(Interoperability)測試。參加者針對特定的規格(Profile)以及情境(Scenario)進行系統開發。規格通常會結構化的方式將規格以角色(Actor)以及交易(Transaction)拆解，角色之間的交易通訊協定採用開放標準，例如:HL7,
             DICOM, IEEE, OSI,等國際標準或是工業標準規範。
-            <img src={p2} Width={"100%"} />
+            <center>
+              <img src={p2} Width={"80%"} />{" "}
+            </center>
           </li>
           <li>
             聯測目的在於針對依循指定規格開發的系統進行互通性驗證，參加聯測之前可事先使用開源工具或是開發的系統跟產品準備與測試。聯測提供一個有結構且嚴謹的驗證環境，讓參加者一起測試其彼此產品的互通性，並且可透過標準技術框架讓產品以實施或發佈的方式進行測試。
@@ -53,7 +58,10 @@ export const Inform = [
           <li>
             連測結束後，可透過連測結果陣列(Connectathon Results
             Matrix)查看。透過連測活動來達到產業之間的數據交換與互助，以合作的方式相互發展具備全球市場競爭力之產品。
-            <img src={p3} Width={"95%"} />
+            <center>
+              {" "}
+              <img src={p3} Width={"70%"} />{" "}
+            </center>
             <br />
             促使健康保健IT產業(healthcare IT)
             的使用者以及廠商能夠共同合作達到IT系統互通(interoperability)，可透過以下方式達成

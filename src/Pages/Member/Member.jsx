@@ -4,7 +4,7 @@ import "./Member.css";
 function Member() {
   return (
     <>
-      <div className="Membackground">
+      <div className="AllBackground">
         <MemberCard />
       </div>
     </>

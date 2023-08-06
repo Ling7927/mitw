@@ -3,12 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5rem;
+  height: 10rem;
 }
 .SignupLink {
   text-decoration: none;
   font-weight: bold;
-
   color: #3087a7;
 }
 @media screen and (min-width: 500px) {

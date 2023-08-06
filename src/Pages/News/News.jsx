@@ -4,7 +4,7 @@ import Title from "../../assets/Title.png";
 import p1Img from "../../assets/example.png";
 import Traks from "../../Components/Traklist/Trakslist";
 import NewsInform from "./NewsInform.json";
-import TTime from "../../assets/TTime.png";
+import TTime from "../../assets/TTimeblack.png";
 
 import { Grid } from "@mui/material";
 import { useRef } from "react";
@@ -19,9 +19,9 @@ function News() {
       <div
         className="AllBackground"
         style={{
-          background:
-            // "linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(32, 65, 63, 0.7) 100%)",
-            "#000",
+          // background:
+          //   // "linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(32, 65, 63, 0.7) 100%)",
+          //   "#000",
           color: "#000",
 
           // display:"flex"
@@ -41,6 +41,7 @@ function News() {
           direction="column"
           alignContent="center"
           alignItems="center"
+          className="AllContentBackground"
         >
           {/* -----------------時程規劃--------------------- */}
           <Grid item display="flex" justifyContent="center" marginBottom="3vw">

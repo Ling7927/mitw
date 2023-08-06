@@ -21,7 +21,7 @@ function SectionListTab({ Click, setClick, onHandle }) {
         // left: "3rem",
         height: "100%",
         width: "100%",
-        top: "5rem",
+        top: "10rem",
         paddingLeft: "1vh",
       }}
     >

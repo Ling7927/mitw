@@ -7,7 +7,7 @@ function ResultTab() {
   const [track, setTrack] = useState(1);
 
   return (
-    <>
+    <div className="AllContentBackground">
       {/* Tab */}
       <Grid
         container
@@ -33,7 +33,7 @@ function ResultTab() {
               margin: 0,
               padding: 0,
 
-              color: "#fff",
+              color: "#000",
               // textShadow:
               //   "0.5px 0.5px 1px #dcdcdc,0.6px 1px #00F9FF, 1px 0.9px #53F3D3",
               // position:"relative",top:"4.5rem"
@@ -220,7 +220,7 @@ function ResultTab() {
         {/* 表格 */}
         <ResultTable id={track} />
       </div>
-    </>
+    </div>
   );
 }
 

@@ -6,7 +6,7 @@ function IntroductionTab() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div className="IntroductionTabcontainer">
+      <div className="AllContentBackground">
         {/* 上方按鈕 */}
         <div
           style={{
@@ -25,7 +25,7 @@ function IntroductionTab() {
                   alignContent: "center",
                   alignItems: "center",
                   backgroundColor:
-                    onHandle === item.id ? "#f6fcfffb" : "#7AACA9 ",
+                    onHandle === item.id ? "#fdfdfd" : "#7AACA9 ",
                   color: onHandle === item.id ? "#7AACA9" : "#fff",
                   border: 0,
                   width: "30vh",
@@ -56,7 +56,7 @@ function IntroductionTab() {
           style={{
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "#f6fcfffb",
+            backgroundColor: "#fdfdfd",
             fontColor: "black",
             borderRadius: "0px 0px 1rem 1rem",
             justifyContent: "center",

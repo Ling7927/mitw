@@ -38,6 +38,7 @@ function MemberCard() {
     <>
       <Grid
         container
+        className="AllContentbackground"
         style={{
           justifyContent: "center",
           // margin: "2vw 5vw",

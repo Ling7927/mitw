@@ -61,26 +61,26 @@ function Signup() {
             alignContent: "center",
             marginTop: "3rem",
           }}
-          gap={1}
+          gap={2}
         >
           {Inform.map((item) => {
             return (
               <Grid item sx={5} sm={5} md={5} lg={5} className="Block">
                 {/* <div key={item} className="Block"> */}
-                <h3
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    alignContent: "center",
-                    fontWeight: "bold",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {" "}
-                  <a href={item.link} target="_blank" className="SignupLink">
+                <a href={item.link} target="_blank" className="SignupLink">
+                  <h4
+                    style={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      alignContent: "center",
+                      fontWeight: "bold",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {" "}
                     {item.title}
-                  </a>
-                </h3>
+                  </h4>
+                </a>
                 {/* </div> */}
               </Grid>
             );

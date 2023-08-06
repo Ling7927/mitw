@@ -17,7 +17,7 @@ function TracksTab({ setOnHandle, onHandle }) {
         margin: 0,
         position: "sticky",
         top: "0",
-        background: "#fff",
+        background: "#fdfdfd",
         zIndex: 999,
       }}
     >

@@ -67,30 +67,31 @@ function Main() {
             transform: isInView ? "translateX(0)" : "translateX(-200px)",
             opacity: isInView ? 1 : 0,
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            margin: 0,
           }}
         ></motion.img>
+        <motion.div
+          style={{
+            // display: "flex",
+            // position: "absolute",
+            marginRight: "5vw",
+            // bottom: "1rem",
+            // textAlign: "center",
+            // justifyContent: "center",
+            // fontSize: "25px",
+          }}
+        >
+          <a
+            href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
+            target="_blank"
+            style={{ color: "#fff" }}
+          >
+            MITW-DM 宣傳單下載 <AiOutlineDownload />
+          </a>
+        </motion.div>
       </div>
       {/* -------------------DM下載--------------------- */}
 
-      <motion.div
-        style={{
-          display: "flex",
-          position: "absolute",
-          right: "2rem",
-          bottom: "-1rem",
-          textAlign: "center",
-          justifyContent: "center",
-          fontSize: "25px",
-        }}
-      >
-        <a
-          href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
-          target="_blank"
-          style={{ color: "#fff" }}
-        >
-          MITW-DM 宣傳單下載 <AiOutlineDownload />
-        </a>
-      </motion.div>
       {/* </div> */}
     </>
   );

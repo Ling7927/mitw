@@ -10,7 +10,7 @@ function Successcase() {
 
   // }
   return (
-    <div className="SuccessBackground">
+    <div className="AllBackground">
       {/*格局 左|上下*/}
 
       <Grid

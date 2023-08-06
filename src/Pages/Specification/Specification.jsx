@@ -10,13 +10,14 @@ function Specification() {
   return (
     <>
       <div
-        style={{
-          background:
-            "linear-gradient(  180deg,  #ffffff 0%,  #6aadd9 0.01%,  rgba(0, 249, 255, 0) 56.56%,  rgba(240, 240, 240, 0) 100%)",
-          minHeight: "100%",
-        }}
+        className="AllBackground"
+        // style={{
+        //   background:
+        //     "linear-gradient(  180deg,  #ffffff 0%,  #6aadd9 0.01%,  rgba(0, 249, 255, 0) 56.56%,  rgba(240, 240, 240, 0) 100%)",
+        //   minHeight: "100%",
+        // }}
       >
-        <div className="Specification_background">
+        <div className="AllContentBackground">
           {/* 公開意見徵求 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}

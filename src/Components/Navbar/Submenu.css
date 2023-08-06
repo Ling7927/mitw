@@ -38,7 +38,7 @@
     }
     .Subitems {
       padding: 10px;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
 
       &:hover {
         color: #646363;
@@ -71,6 +71,7 @@
   }
 }
 /* sidbar */
+/* 500以上 小於930px */
 @media screen and (min-width: 500px) and (max-width: 930px) {
   /* 小於930px */
   .Title {
@@ -78,6 +79,7 @@
   }
   .Menu {
     margin-bottom: 1vw;
+    color: #fff8f8;
     /* width: 5vw; */
     /* height: 5vw; */
   }
@@ -95,6 +97,10 @@
     .Submenu {
       display: flex;
       flex-direction: column;
+      border-radius: 0;
+      background-color: #000;
+      padding: 0;
+
       /* margin-left: 1vw; */
     }
   }
@@ -112,14 +118,12 @@
     }
   }
 }
+/* 500以下 */
 @media screen and (max-width: 500px) {
   .Title {
     padding-top: 2vw;
     /* width: 5vw;
     height: 5vw; */
-  }
-  .Menu {
-    margin: 2vw 1vw;
   }
 
   .Submenu {
@@ -129,6 +133,8 @@
     .Submenu {
       display: flex;
       flex-direction: column;
+      padding: 0;
+
       /* margin-left: 1vw; */
     }
   }
@@ -136,9 +142,6 @@
     font-size: 1rem;
     white-space: pre;
     padding: 2px 0;
-    &:hover {
-      color: #53d0e0d2;
-    }
   }
   /* .Menu:hover {
     .Submenu {

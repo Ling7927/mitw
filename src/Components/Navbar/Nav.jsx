@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Twirl as Hamburger } from "hamburger-react";
 import { Grid, Box } from "@mui/material";
 import Submenu from "./Submenu";
 import Logo from "../../assets/Logo.png";
@@ -12,6 +13,7 @@ function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [toggleIcon, setToggleIcon] = useState("toggler__icon");
   const [submenu, setSubmenu] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   const showSubmenu = () => setSubmenu(!submenu);
   const onToggle = () => {
     setMenuOpen(!menuOpen);
@@ -67,9 +69,7 @@ function Nav() {
               onToggle();
             }}
           >
-            <div>
-              <AiOutlineMenu />
-            </div>
+            <Hamburger toggled={isOpen} toggle={setOpen} />
           </div>
         </nav>
       </Grid>

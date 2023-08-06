@@ -21,13 +21,15 @@ const ListTitle = [
   { id: "6", title: "聯測網路與主機架構" },
   { id: "7", title: "開源工具" },
 ];
+//     首行縮排                  style={{ textIndent: "2em" }}
+
 const List = [
   {
     id: "1",
     title: "運作機制說明",
     content: (
       <div>
-        <p>
+        <p style={{ textIndent: "2em" }}>
           資訊標準是健康醫療系統整合應用、系統商品化的基礎。醫資標準化系統之建置與推行有一套嚴謹的步驟，包含標準確立、準備測試案例、實作系統、聯測、以及推廣等，需有系統、有制度化地運作。本活動邀請國內健康醫療、醫療影像、資訊科技相關之產業界、政府單位、學術界、以及醫療機構參加。希望鼓勵醫療資訊系統相關新創業者，開發與使用標準化醫療資訊格式(包含:HL7,
           HL7 FHIR®,
           DICOM等)，預期效益為發展具國際標準標準化互通性(Interoperability)之醫學資訊系統以及醫療儀器、利於健康醫療系統整合應用、跨系統資料交換、也利於發展的系統在全球銷售。本活動包含:
@@ -69,7 +71,7 @@ const List = [
     title: "定義使用規範 (Profile)",
     content: (
       <div>
-        <p>
+        <p style={{ textIndent: "2em" }}>
           聯測將使用架設的IHE Gazelle (以下簡稱Gazelle)
           。在Gazelle聯測系統中，包含測試整合規範(Integration
           Profile)以及測試案例定義(Test
@@ -84,7 +86,7 @@ const List = [
     title: "定義測試情境(Test Script)",
     content: (
       <div>
-        <p>
+        <p style={{ textIndent: "2em" }}>
           測試情境將定義每個角色所需符合的條件，將測試流程定義為測試案例定義(Test
           Script)，每個測試案例定義會加入該角色對應要連線測試的受測角色，依據標準規範分成no
           peer以及peer to
@@ -98,7 +100,7 @@ const List = [
     title: "領域分類",
     content: (
       <div>
-        <p>
+        <p style={{ textIndent: "2em" }}>
           在交換情境設計上因應符合台灣的應用情境，引用自行定義以及國際IHE規範做為聯測的測試情境。每個規範定義分別的角色(Actor)以及交易(Transaction)，定義角色之間彼此的關係。聯測包含各種Profile包含:
         </p>
         <SpecificantionTable />
@@ -118,7 +120,7 @@ const List = [
     title: "驗測規則分級",
     content: (
       <div>
-        <p>
+        <p style={{ textIndent: "2em" }}>
           聯測根據性質區分三個等級。Level
           I為基本能力驗證，系統需根據各賽道的測試情境(Scenario)的測試腳本(Test
           Script)，與主辦單隊提供的主機系統進行驗證。通過後即可符合。Level
@@ -143,7 +145,7 @@ const List = [
     title: "聯測網路與主機架構",
     content: (
       <div>
-        <p>
+        <p style={{ textIndent: "2em" }}>
           各種情境的資料儲存至資料主機的FHIR與DICOM主機，透過健康數據服務API以標準FHIR與DICOMweb
           API提供模擬健康資料，包含個賽道提供的測試資料，使用情境則使用Gazelle平台以及平台的各種工具提供聯測使用，目前提供工具包含:
           FHIR基本格式驗證以及DICOM格式驗證。參加者需配合主辦單位設定網路以及API設定。
@@ -184,7 +186,7 @@ const List = [
     title: "開源工具",
     content: (
       <div>
-        <p>
+        <p style={{ textIndent: "2em" }}>
           為了協助開發者開發標準化的醫學資訊系統，本聯測由各開源團隊提供多個開源工具，以發展開源技術且建立開源生態系統
           (open source
           ecosystem)，降低開發者開發DICOM以及FHIR系統的最後一哩路的門檻。亦可協助產業在開發產品時能使用開源程式碼，透過透明且開放式的參與模式、可加速這個領域的產業發展，進而回饋至產業。

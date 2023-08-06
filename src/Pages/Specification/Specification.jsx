@@ -17,7 +17,7 @@ function Specification() {
         //   minHeight: "100%",
         // }}
       >
-        <div className="AllContentBackground">
+        <div className="AllContentBackground" style={{ padding: "2vw 5vw" }}>
           {/* 公開意見徵求 */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -31,8 +31,8 @@ function Specification() {
               flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              padding: "2vw",
-              margin: "2vw 5vh 0",
+              // padding: "2vw",
+              // margin: "2vw 5vh 0",
             }}
           >
             <h4 style={{ marginBottom: "2rem" }}> {P1.title}</h4>
@@ -48,14 +48,14 @@ function Specification() {
           <Grid container sx={{ margin: 0 }}>
             <Grid
               item
-              xs={2}
+              xs={3}
               sm={2}
               md={2}
-              lg={2}
+              lg={1.5}
               style={{
                 display: "flex",
-                justifyContent: "center",
-                paddingLeft: "1vh",
+                justifyContent: "flex-start",
+                // paddingLeft: "1vh",
               }}
             >
               {/* 選單 */}
@@ -95,7 +95,7 @@ function Specification() {
               </motion.div>
             </Grid>
             {/* 說明內容 */}
-            <Grid item xs={9} sm={9} md={9} lg={9} padding="0 2vh">
+            <Grid item xs={9} sm={10} md={10} lg={10.5} padding="0 2vh">
               {List.map((item) => {
                 return (
                   <section

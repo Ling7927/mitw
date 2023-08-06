@@ -61,29 +61,42 @@ function News() {
           {/*----------- 意見小組 -----------*/}
           <Grid
             item
-            sm={12}
-            md={12}
-            lg={12}
+            xs={12}
+            sm={10}
+            md={10}
+            lg={10}
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               marginTop: "2rem",
               marginBottom: "3vw",
+              padding: 0,
             }}
           >
             <Grid
               container
               direction="row"
-              style={{ background: "#f1f1f1", width: "80%" }}
+              className="ContentBlock"
+              style={{
+                background: "#f1f1f1",
+
+                // margin: "0 2vh",
+                // margin: " 0 8rem",
+              }}
             >
+              {" "}
               <Grid
                 item
-                sx={12}
-                sm={12}
+                sx={8}
+                sm={4}
                 md={4}
                 lg={4}
-                style={{ display: "flex", justifyContent: "flex-start" }}
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  // padding: "0 2rem",
+                }}
               >
                 <img
                   src={p1Img}
@@ -91,28 +104,29 @@ function News() {
                   style={{ objectFit: "cover", width: "100%" }}
                 />
               </Grid>
+              {/* 右半文字 */}
               <Grid
                 item
-                sx={12}
-                sm={12}
+                sx={6}
+                sm={8}
                 md={8}
                 lg={8}
-                padding="2rem"
-                marginTop="2rem"
-                height="90%"
+                padding="2vw"
+                // marginTop="2rem"
+                // height="90%"
               >
-                <h2
+                <h3
+                  className="NewsH3"
                   style={{
                     marginBottom: "3rem",
                     textAlign: "center",
                     justifyContent: "center",
                     fontWeight: "bold",
                     whiteSpace: "pre",
-                    letterSpacing: "10px",
                   }}
                 >
                   {NewsInform.title.p1}
-                </h2>
+                </h3>
                 <ul style={{ margin: 0 }}>
                   <h5>
                     {NewsInform.p1.hash1}
@@ -127,7 +141,7 @@ function News() {
                   <h5>{NewsInform.p1.hash2}</h5>
                   {NewsInform.p1.context.map((item) => {
                     return (
-                      <li style={{ margin: "2rem 0" }}>
+                      <li style={{ margin: "2rem 0", wordBreak: "normal" }}>
                         <p className="NewsP">{item}</p>
                       </li>
                     );

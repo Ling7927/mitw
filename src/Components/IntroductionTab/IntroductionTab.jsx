@@ -6,7 +6,7 @@ function IntroductionTab() {
   const [onHandle, setOnHandle] = useState("1");
   return (
     <>
-      <div className="AllContentBackground">
+      <div className="AllContentBackground" style={{ padding: "3rem 2rem" }}>
         {/* 上方按鈕 */}
         <div
           style={{

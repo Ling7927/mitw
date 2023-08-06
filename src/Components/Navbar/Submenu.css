@@ -38,6 +38,8 @@
     }
     .Subitems {
       padding: 10px;
+      font-size: 1.25rem;
+
       &:hover {
         color: #646363;
       }
@@ -60,6 +62,8 @@
 
     .Subitems {
       padding: 3px;
+      font-size: 1.1rem;
+
       &:hover {
         color: #000;
       }

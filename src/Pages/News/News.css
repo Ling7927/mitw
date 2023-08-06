@@ -39,6 +39,12 @@ ul {
 .NewsP {
   font-size: 2vmin;
 }
+.NewsH3 {
+  letter-spacing: 5px;
+}
+.ContentBlock {
+  width: 80%;
+}
 /* @media screen and (min-width: 1400px) {
   .NewsP {
     font-size: 1.5rem;
@@ -59,9 +65,12 @@ ul {
   .NewsP {
     font-size: 1rem;
   }
-}
+}*/
 @media screen and (max-width: 500px) {
-  .NewsP {
-    font-size: 4vw;
+  .NewsH3 {
+    letter-spacing: 0;
   }
-} */
+  .ContentBlock {
+    width: 100%;
+  }
+}

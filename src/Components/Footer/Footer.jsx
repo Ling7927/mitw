@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Grid } from "@mui/material";
+import "./Footer.css";
 import { FooterContext, Connection } from "./Inform";
 function Footer() {
   return (
@@ -11,7 +12,7 @@ function Footer() {
         style={{
           background: "#000",
           paddingTop: "1rem",
-          justifyContent: "center",
+          // justifyContent: "center",
         }}
       >
         {/* 左 */}
@@ -24,19 +25,21 @@ function Footer() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
+            paddingLeft: "2vh",
           }}
         >
           {FooterContext.map((item) => {
             return (
-              <Grid container alignItems="baseline" columns={12}>
+              <Grid container alignItems="baseline" justifyContent="flex-start">
                 <Grid
                   item
                   sm={3}
                   md={3}
                   lg={3}
+                  className="LeftBlock"
                   style={{
                     display: "flex",
-                    justifyContent: "flex-end",
+                    // justifyContent: "flex-start",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -88,7 +91,7 @@ function Footer() {
         </Grid>
 
         {/* 右 */}
-        <Grid item sm={6} md={6} lg={6}>
+        <Grid item sm={6} md={6} lg={6} style={{ paddingLeft: "2vh" }}>
           <h4
             style={{
               color: "#fff",

@@ -43,7 +43,7 @@ ul {
   letter-spacing: 5px;
 }
 .ContentBlock {
-  width: 80%;
+  width: 80% !important;
 }
 /* @media screen and (min-width: 1400px) {
   .NewsP {

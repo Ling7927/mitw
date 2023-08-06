@@ -8,6 +8,9 @@
   align-items: center;
   color: #fff;
 }
+.LeftBlock {
+  justify-content: flex-end;
+}
 /* .footer ul{
     // display:contents; 
     margin:0;
@@ -27,4 +30,10 @@
 }
 .connection h2 {
   color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .LeftBlock {
+    justify-content: flex-start;
+  }
 }

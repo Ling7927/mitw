@@ -12,7 +12,14 @@ function TracksTab({ setOnHandle, onHandle }) {
       spacing={1}
       direction="row"
       justifyContent="space-between"
-      style={{ width: "100%", margin: 0 }}
+      style={{
+        width: "100%",
+        margin: 0,
+        position: "sticky",
+        top: "0",
+        background: "#fff",
+        zIndex: 999,
+      }}
     >
       <Grid item xs={12} sm={12} md={2} lg={2} style={{ width: "100%" }}>
         {/* 目前賽道 */}
@@ -32,7 +39,7 @@ function TracksTab({ setOnHandle, onHandle }) {
             >
               <div
                 style={{
-                  fontSize: "4rem",
+                  fontSize: "3rem",
                 }}
               >
                 {item.TabTitle}
@@ -44,10 +51,9 @@ function TracksTab({ setOnHandle, onHandle }) {
                   // fontSize: "15px",
                   color: "#1e1e1e",
                   margin: 0,
-                  padding: "0.75rem",
                   background: "#fdfdfd",
                   position: "relative",
-                  top: "-30px",
+                  top: "-20px",
                 }}
               >
                 {item.ContentTitle}

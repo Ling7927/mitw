@@ -16,12 +16,13 @@ function TracksTab({ setOnHandle, onHandle }) {
         width: "100%",
         margin: 0,
         position: "sticky",
+        paddingTop: "1rem",
         top: "0",
         background: "#fdfdfd",
         zIndex: 500,
       }}
     >
-      <Grid item xs={12} sm={12} md={2} lg={2} style={{ width: "100%" }}>
+      <Grid item xs={12} sm={12} md={4} lg={2.5} style={{ width: "100%" }}>
         {/* 目前賽道 */}
         {TraksTabInform.filter((item) => item.Id === onHandle).map((item) => {
           return (
@@ -53,7 +54,7 @@ function TracksTab({ setOnHandle, onHandle }) {
                   margin: 0,
                   background: "#fdfdfd",
                   position: "relative",
-                  top: "-20px",
+                  top: "-10px",
                 }}
               >
                 {item.ContentTitle}
@@ -66,7 +67,7 @@ function TracksTab({ setOnHandle, onHandle }) {
         item
         xs={12}
         sm={12}
-        md={9}
+        md={8}
         lg={9}
         style={{
           display: "flex",

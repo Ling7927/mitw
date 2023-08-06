@@ -122,7 +122,7 @@ function TraksTab() {
               display: "flex",
               flexDirection: "column",
               alignContent: "center",
-              alignItems: "center",
+              alignItems: "flex-start",
             }}
           >
             {TraksTabInform.find((item) => item.Id === onHandle).List.map(

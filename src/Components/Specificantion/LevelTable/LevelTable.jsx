@@ -4,7 +4,7 @@ import { Table } from "reactstrap";
 function LevelTable() {
   return (
     <div>
-      <Table bordered style={{ backgroundColor: "#f2f8fd" }}>
+      <Table bordered style={{ backgroundColor: "#f3f4f6" }}>
         <thead>
           <tr>
             {Title.map((item, i) => {

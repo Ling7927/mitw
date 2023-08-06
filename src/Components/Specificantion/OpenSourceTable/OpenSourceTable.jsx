@@ -5,7 +5,7 @@ import { Table } from "reactstrap";
 function OpenSourceTable() {
   return (
     <div>
-      <Table bordered style={{ backgroundColor: "#f2f8fd" }}>
+      <Table bordered style={{ backgroundColor: "#f3f4f6" }}>
         <thead>
           <tr>
             {Title.map((item, i) => {
@@ -16,28 +16,58 @@ function OpenSourceTable() {
         <tbody style={{ justifyContent: "center", alignItems: "center" }}>
           {TBody.map((item, i) => {
             return (
-              <tr key={i}>
-                <th scope="row">
+              <tr
+                key={i}
+                style={{
+                  height: "100%",
+                }}
+              >
+                <th
+                  scope="row"
+                  style={{
+                    height: "100%",
+                  }}
+                >
                   <div
                     style={{
+                      height: "100%",
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    <img src={item.img} width={"30%"} />
+                    {" "}
+                    <img
+                      src={item.img}
+                      width={"30%"}
+                      style={{ height: "100%" }}
+                    />
                     <a
                       href={item.link}
                       target="_blank"
-                      style={{ color: "#295285", textDecoration: "none" }}
+                      style={{
+                        color: "#295285",
+                        textDecoration: "none",
+                        height: "100%",
+                      }}
                     >
                       {item.name}{" "}
                     </a>
                   </div>
                 </th>
                 <th>{item.introduce}</th>
-                <th>{item.traks}</th>
+                <th
+                  style={{
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {item.traks}
+                </th>
                 <th>
                   <a
                     href={item.clink}

@@ -21,7 +21,7 @@ li {
 }
 .AllContentBackground {
   background: #fdfdfd;
-  padding: 2vw 0;
+  /* padding: 2vw 0; */
   min-height: 100vh;
 }
 @media screen and (min-width: 1400px) {

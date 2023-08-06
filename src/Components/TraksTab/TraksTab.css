@@ -1,7 +1,8 @@
 .Tabsbutton {
   background: none;
   border: 0;
-  color: #dddddd;
+  color: #8b8b8b;
+
   margin: 0;
 }
 @media screen and (min-width: 500px) {

@@ -18,7 +18,7 @@ function TracksTab({ setOnHandle, onHandle }) {
         position: "sticky",
         top: "0",
         background: "#fdfdfd",
-        zIndex: 999,
+        zIndex: 500,
       }}
     >
       <Grid item xs={12} sm={12} md={2} lg={2} style={{ width: "100%" }}>

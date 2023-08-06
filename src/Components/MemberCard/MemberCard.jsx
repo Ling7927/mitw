@@ -110,7 +110,7 @@ function MemberCard() {
             container
             gap={1}
             style={{
-              height: "100%",
+              // height: "100%",
               width: "100%",
               // flexWrap: "nowrap",
               justifyContent: "space-evenly",

@@ -98,7 +98,7 @@
     height: 2cm;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   /* 1600以上 */
 
   .CardContainer {

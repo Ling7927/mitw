@@ -36,6 +36,7 @@ function OpenSource() {
                     sx={12}
                     sm={3}
                     md={3}
+                    lg={3}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -82,22 +83,23 @@ function OpenSource() {
                     sx={12}
                     sm={8}
                     md={8}
+                    lg={8}
                     style={{ display: "flex", alignItems: "center" }}
                   >
                     <h3>{item.name}</h3>
                   </Grid>
                 </Grid>
               </Grid>
-
               {/* 下 */}
               <Grid item>
-                <Grid container spacing={1} gap={1} direction="row">
+                <Grid container direction="row" justifyContent=" space-around">
                   {/* 參與賽道 */}
                   <Grid
                     item
                     sx={3}
                     sm={3}
                     md={3}
+                    lg={3}
                     style={{
                       whiteSpace: "pre-line",
                       display: "flex",
@@ -121,13 +123,13 @@ function OpenSource() {
                     </p>
                   </Grid>
                   {/* 介紹 */}
-                  <Grid item sx={8} sm={8} md={8}>
+                  <Grid item sx={8} sm={8} md={8} lg={8}>
                     <p>{item.introduce}</p>
-                  </Grid>
-                </Grid>
-              </Grid>
+                  </Grid>{" "}
+                </Grid>{" "}
+                <hr />
+              </Grid>{" "}
             </Grid>
-            <hr />
           </motion.div>
         );
       })}

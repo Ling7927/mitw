@@ -16,7 +16,7 @@
   position: absolute;
   margin: 0;
   font-size: 2.5rem;
-  color: #ddd;
+  color: #000000;
   width: 40px;
   height: 35px;
   right: 10px;
@@ -55,7 +55,7 @@
     display: flex;
     flex-direction: column !important;
     padding: 10px 0 15px 15px;
-    background: #000;
+    background: #fff;
     /* align-items: flex-start; */
     top: 4rem;
     width: 50%;
@@ -75,7 +75,7 @@
     width: 3rem;
     display: block;
     background-color: #fff;
-    font: #fff;
+    font: #0b0b0b;
   }
 }
 @media screen and (max-width: 500px) {
@@ -83,7 +83,7 @@
     display: flex;
     flex-direction: column !important;
     padding: 10px 0 15px 15px;
-    background: #000;
+    background: #ffffff;
     /* align-items: flex-start; */
     top: 4rem;
     width: 55%;
@@ -103,6 +103,6 @@
     /* font-size: 5rem; */
     display: block;
     background-color: #fff;
-    font: #fff;
+    font: #030303;
   }
 }

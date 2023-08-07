@@ -122,6 +122,7 @@ function Successcase() {
                 flexDirection: "column",
                 marginLeft: "auto",
                 marginRight: "auto",
+                padding: "0 2vh",
               }}
             >
               {List.filter((item) => onHandle === item.id)[0].cases}

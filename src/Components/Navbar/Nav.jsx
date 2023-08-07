@@ -66,17 +66,19 @@ function Nav() {
           </Grid>
           <div
             className={toggleIcon}
-            onClick={() => {
-              onToggle();
-            }}
+            // onClick={() => {
+            //   onToggle();
+            // }}
           >
             <Hamburger
               onToggle={(toggled) => {
                 if (toggled) {
                   // open a menu
+                  setCollapse("nav__menu nav__collapse");
                   setToggleIcon("toggler__icon toggle");
                 } else {
                   // close a menu
+                  setCollapse("nav__menu");
                   setToggleIcon("toggler__icon");
                 }
               }}

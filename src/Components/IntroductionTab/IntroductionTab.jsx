@@ -25,8 +25,8 @@ function IntroductionTab() {
                   alignContent: "center",
                   alignItems: "center",
                   backgroundColor:
-                    onHandle === item.id ? "#fdfdfd" : "#7AACA9 ",
-                  color: onHandle === item.id ? "#7AACA9" : "#fff",
+                    onHandle === item.id ? "#7AACA9 " : "#fdfdfd",
+                  color: onHandle === item.id ? "#fff" : "#7AACA9",
                   border: 0,
                   width: "30vh",
                   borderRadius: "10px 10px 0px 0px",
@@ -36,7 +36,7 @@ function IntroductionTab() {
                 <div style={{ padding: "2rem 0" }}>
                   <h5
                     style={{
-                      color: onHandle === item.id ? "#7AACA9" : "#fff",
+                      color: onHandle === item.id ? "#fff" : "#7AACA9",
                       margin: 0,
                     }}
                   >

@@ -19,7 +19,7 @@ function Successcase() {
         // direction="row"
         // gap={5}
         style={{
-          background: "#fff",
+          background: "#fdfdfd",
           padding: "2rem 0",
           justifyContent: "space-around",
           minHeight: "100vh",

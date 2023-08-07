@@ -10,7 +10,7 @@ function Trakslist() {
     <>
       <div
         style={{
-          color: "#fff",
+          color: "#8b8b8b",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -70,7 +70,7 @@ function Trakslist() {
                   >
                     <Link
                       to={`/Tracks/${item.id}`}
-                      style={{ color: "#fff", textDecoration: "none" }}
+                      style={{ color: "#191c23", textDecoration: "none" }}
                     >
                       <h3
                         className="Newh3"

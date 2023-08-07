@@ -10,7 +10,7 @@ function Trakslist() {
     <>
       <div
         style={{
-          color: "#8b8b8b",
+          color: "#000",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

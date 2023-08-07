@@ -7,6 +7,7 @@ import PhotoSlider from "../../Components/Slider/PhotoSlider";
 import { Grid, Box } from "@mui/material";
 import "./TraksTab.css";
 import { useParams } from "react-router-dom";
+import { Waypoint } from "react-waypoint";
 
 function TraksTab() {
   const { id } = useParams();
@@ -134,6 +135,7 @@ function TraksTab() {
                     // ref={(el) => (sectionRefs.current[sc.id] = el)}
                     // className={currentScId === sc.id ? "active" : ""}
                   >
+                    <Waypoint onEnter={() => setClick(sc.id)} />
                     <h1
                       className="TracksH1"
                       style={{
@@ -145,7 +147,7 @@ function TraksTab() {
                     >
                       {sc.Sc}
                     </h1>
-                    {sc.content}{" "}
+                    {sc.content}
                   </section>
                 );
               }

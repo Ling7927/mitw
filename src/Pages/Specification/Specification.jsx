@@ -5,6 +5,7 @@ import { P1, ListTitle, List } from "./SpecificationInform";
 import "./Specification.css";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import { Waypoint } from "react-waypoint";
 function Specification() {
   const [onHandle, setOnHandle] = useState("1");
   return (
@@ -107,6 +108,7 @@ function Specification() {
                       paddingBottom: "  2vh",
                     }}
                   >
+                    <Waypoint onEnter={() => setOnHandle(item.id)} />
                     <motion.h5
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}

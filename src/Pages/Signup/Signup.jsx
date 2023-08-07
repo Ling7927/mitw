@@ -34,7 +34,7 @@ function Signup() {
             margin: "2vw 0 0",
           }}
         >
-          <h3
+          <h1
             style={{
               borderWidth: "2px",
               paddingTop: "1vw",
@@ -51,7 +51,7 @@ function Signup() {
             }}
           >
             報名連結
-          </h3>
+          </h1>
         </div>
         <Grid
           container
@@ -68,7 +68,7 @@ function Signup() {
               <Grid item sx={5} sm={5} md={5} lg={5} className="Block">
                 {/* <div key={item} className="Block"> */}
                 <a href={item.link} target="_blank" className="SignupLink">
-                  <h4
+                  <h3
                     style={{
                       display: "flex",
                       justifyContent: "flex-start",
@@ -79,7 +79,7 @@ function Signup() {
                   >
                     {" "}
                     {item.title}
-                  </h4>
+                  </h3>
                 </a>
                 {/* </div> */}
               </Grid>

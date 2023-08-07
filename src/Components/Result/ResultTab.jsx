@@ -96,7 +96,6 @@ function ResultTab() {
                             filter: "blur(5px)",
                             borderRadius: "50%",
                             position: "absolute",
-                            top: 0,
                           }}
                         />
                       )}

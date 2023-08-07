@@ -29,7 +29,7 @@ function Relatedactivity() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            margin: "2vw 0 0",
+            margin: "2vw  0",
           }}
         >
           <h1

@@ -5,9 +5,9 @@
   min-height: 100vh;
 }
 @media screen and (min-width: 1400px) {
-  .SpecificationH5 {
+  /* .SpecificationH5 {
     font-size: 1.55rem;
-  }
+  } */
 }
 
 @media screen and (min-width: 930px) and (max-width: 1400px) {

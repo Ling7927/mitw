@@ -50,13 +50,13 @@ function Recruit() {
                         flexDirection: "column",
                       }}
                     >
-                      <h4
+                      <h1
                         key={item.title}
                         className="Recruith4"
                         style={{ padding: "1rem 0 1rem", fontWeight: "bold" }}
                       >
                         {item.title}
-                      </h4>
+                      </h1>
                       <p
                         style={{
                           letterSpacing: "1px",
@@ -145,13 +145,13 @@ function Recruit() {
                       style={{ padding: "3rem 3rem " }}
                     >
                       {/* 小組及說明(右) */}
-                      <h4
+                      <h1
                         className="Recruith4"
                         key={item.title}
                         style={{ padding: "1rem 0 1rem", fontWeight: "bold" }}
                       >
                         {item.title}
-                      </h4>
+                      </h1>
                       <p
                         style={{
                           // paddingRight: "1rem",

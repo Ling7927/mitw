@@ -109,7 +109,7 @@ function Specification() {
                     }}
                   >
                     <Waypoint onEnter={() => setOnHandle(item.id)} />
-                    <motion.h5
+                    <motion.h2
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 1.2 }}
@@ -117,12 +117,12 @@ function Specification() {
                       style={{
                         margin: "1rem 0",
                         padding: "0 1rem  ",
-                        borderLeft: "4px solid #F5CE85",
+                        borderLeft: "4px solid orange",
                         fontWeight: "bold",
                       }}
                     >
                       {item.title}
-                    </motion.h5>
+                    </motion.h2>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}

@@ -30,7 +30,7 @@ function Workgroupactivity() {
             margin: "2vw 0 ",
           }}
         >
-          <h3
+          <h1
             style={{
               // borderWidth: "2px",
               // padding: "1vw",
@@ -53,7 +53,7 @@ function Workgroupactivity() {
             }}
           >
             工作小組
-          </h3>
+          </h1>
           {/* <hr
           style={{
             width: "20%",

@@ -11,9 +11,13 @@ p {
 }
 ul {
   font-size: 18px;
+  margin: 0;
 }
 li {
   font-size: 18px;
+}
+h3 {
+  font-weight: bold;
 }
 .AllBackground {
   background: #f3f4f6;
@@ -26,34 +30,70 @@ li {
 }
 @media screen and (min-width: 1400px) {
   h1 {
-    font-size: 4vw;
+    font-size: 2rem !important;
   }
   h2 {
-    font-size: 2.3rem !important;
+    font-size: 1.75rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  h4 {
+    font-size: 1.25rem !important;
+  }
+  h5 {
+    font-size: 1.2rem !important;
   }
   p {
     font-size: 18px;
   }
 }
 @media screen and (min-width: 930px) and (max-width: 1400px) {
+  h1 {
+    font-size: 1.8rem !important;
+  }
   h2 {
-    font-size: 2.3rem;
+    font-size: 1.55rem !important;
+  }
+  h3 {
+    font-size: 1.3rem !important;
+  }
+  h4 {
+    font-size: 1.05rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
   }
   p {
-    font-size: 1rem;
+    font-size: 18px;
   }
+  /* p {
+    font-size: 1rem;
+  } */
 }
 @media screen and (min-width: 500px) and (max-width: 930px) {
   h1 {
-    font-size: 1rem;
+    font-size: 1.65rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  h3 {
+    font-size: 1.3rem !important;
+  }
+  h4 {
+    font-size: 1.1rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
   }
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 500px) {
-  h1 {
-    font-size: 4vw;
+  p {
+    font-size: 1rem;
   }
   .AllBackground {
     padding: 0;

@@ -91,8 +91,8 @@ function ResultTab() {
                               track === item.Id
                                 ? "0 1rem 1.25rem rgba(0, 249, 255,0.35),0 0.5rem 1.25rem #00F9FF, 0 0 1.25rem #00F9FF,0 0 1.25rem #53F3D3"
                                 : "",
-                            height: "3.5vw",
-                            width: "3.5vw",
+                            height: "3vw",
+                            width: "3vw",
                             filter: "blur(5px)",
                             borderRadius: "50%",
                             position: "absolute",
@@ -100,16 +100,16 @@ function ResultTab() {
                           }}
                         />
                       )}
-                      <h4
+                      <p
                         style={{
-                          fontSize: track === item.Id ? "3vw" : "2vw",
+                          fontSize: track === item.Id ? "2.5rem" : "2rem",
                           color: track === item.Id ? "#fff" : "#8b8b8b",
                           // color: "#fff",
                           // textShadow:
                           //   track === item.Id
                           //     ? "0.6px 0.6px #dcdcdc,1px 0.8px #23f0c7, 1.3px 1px #108998"
                           //     : "0.5px 0.5px 0.6px #dcdcdc,0.6px 0.8px #00F9FF, 0.7px 0.7px #53F3D3",
-
+                          margin: 0,
                           position: "relative",
                           // top:"2rem"
                         }}
@@ -164,7 +164,7 @@ function ResultTab() {
                             }}
                           />
                         </div> */}
-                      </h4>
+                      </p>
                     </button>
                   </Grid>
                 </>

@@ -118,7 +118,7 @@ function TraksTab() {
             lg={12}
             sx={{
               // width: "80%",
-              padding: "0 3rem 3rem 0",
+              paddingBottom: "3rem ",
               margin: 0,
               display: "flex",
               flexDirection: "column",
@@ -132,11 +132,12 @@ function TraksTab() {
                   <section
                     id={sc.id}
                     key={sc.id}
+                    style={{}}
                     // ref={(el) => (sectionRefs.current[sc.id] = el)}
                     // className={currentScId === sc.id ? "active" : ""}
                   >
                     <Waypoint onEnter={() => setClick(sc.id)} />
-                    <h1
+                    <h2
                       className="TracksH1"
                       style={{
                         fontWeight: "bold",
@@ -146,7 +147,7 @@ function TraksTab() {
                       }}
                     >
                       {sc.Sc}
-                    </h1>
+                    </h2>
                     {sc.content}
                   </section>
                 );

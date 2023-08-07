@@ -106,9 +106,9 @@ function Successcase() {
                 alignItems: "flex-end",
               }}
             >
-              <h3 style={{ fontWeight: "bold" }}>
+              <h2 style={{ fontWeight: "bold" }}>
                 {List.filter((item) => onHandle === item.id)[0].title}
-              </h3>
+              </h2>
             </Grid>
             {/*下--案例們 */}
             <Grid

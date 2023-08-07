@@ -11,9 +11,9 @@
   .Tabsbutton {
     font-size: 2rem;
   }
-  .TracksH1 {
-    font-size: 2rem;
-  }
+  /* .TracksH1 {
+    font-size: 1.5rem;
+  } */
 }
 /* 手機尺寸 */
 @media screen and (max-width: 480px) {

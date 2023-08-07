@@ -32,7 +32,7 @@ function Relatedactivity() {
             margin: "2vw 0 0",
           }}
         >
-          <h3
+          <h1
             style={{
               borderWidth: "2px",
               paddingTop: "1vw",
@@ -49,7 +49,7 @@ function Relatedactivity() {
             }}
           >
             相關活動
-          </h3>
+          </h1>
         </div>
 
         {active.map((item) => {

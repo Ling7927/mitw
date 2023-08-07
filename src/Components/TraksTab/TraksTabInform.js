@@ -8,6 +8,10 @@ import T1_6 from "../../assets/wg1_6.png";
 import T1_7 from "../../assets/wg1_7.png";
 import Ts1 from "../../assets/Ts1.png";
 
+import track1_1 from "../../assets/WG1_1.png";
+import track1_2 from "../../assets/Ts1.png";
+import track1_3 from "../../assets/WG1_3.png";
+
 import track4_1 from "../../assets/track4_1.png";
 import track4_2 from "../../assets/track4_2.png";
 import track4_3 from "../../assets/track4_3.png";
@@ -21,6 +25,12 @@ import ImgDialog from "../Dialog/Dialog";
 // 圖片放入<ImgDialog Img={Ts1} Width={"80%"} />頁面終能放大圖片顯示
 // Img={Ts1}裡面引入圖片
 // Width={"80%"}一般檢視頁面中的大小
+const ulStyle = {
+  margin: 0,
+};
+const h3Style = {
+  fontWeight: "bold",
+};
 export const TraksTabInform = [
   {
     Id: "1",
@@ -30,289 +40,760 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "Scenario 1、Scenario 2",
+        Sc: "簡介 (Summary)",
         content: (
           <>
-            <ul style={{ margin: 0 }}>
-              <li>
-                Scenario 1 病人身分確認用
-                <ul>
-                  <li>
-                    執行各項護理技術、檢查、治療、手術等醫療處置前對病人做身分確認
+            <ul style={ulStyle}>
+              <li class="has-line-data" data-line-start="7" data-line-end="8">
+                病患基本資料為醫療資訊系統中最基本元素，涵蓋所有電子病歷的範疇。本工作小組主要分析台灣病人基本資料之規格，根據國內現況制定出適合台灣病患基本資要用跨系統交換，以達到基本的互通性，並相容台灣核心規範。
+              </li>
+              <li class="has-line-data" data-line-start="8" data-line-end="12">
+                本工作小組有兩大目標:
+                <ol>
+                  <li
+                    class="has-line-data"
+                    data-line-start="9"
+                    data-line-end="10"
+                  >
+                    分析病患基本資料用實際醫療場域提出基本規格。
                   </li>
-                  <li>
-                    例如：在診療前，醫護人員請病人提供基本資訊如姓名、生日用以核對病人身分是否正確
+                  <li
+                    class="has-line-data"
+                    data-line-start="10"
+                    data-line-end="12"
+                  >
+                    訂立病患基本資料的使用情境用於各種作業流程。
                   </li>
-                </ul>
+                </ol>
               </li>
-              <li>
-                Scenario 2 聯繫病人用
-                <ul>
-                  <li>聯絡方式如手機、email…用以聯絡病人</li>
-                  <li>通訊地址如住家地址、工作地址</li>
-                </ul>
-              </li>
-              <li>
-                兩種用途的病人資料將共用相同的識別碼如身分證、護照、居留證、病歷號
-              </li>
-              <center>
-                {" "}
-                <ImgDialog Img={Ts1} Width={"80%"} />
-              </center>
             </ul>
           </>
         ),
       },
       {
         id: "2",
-        Sc: "Scenario 3：院外系統",
+        Sc: "效益 (Benefits) ",
         content: (
           <>
-            <h5 style={{ fontWeight: "bold" }}>情境</h5>
-            <ul style={{ margin: 0 }}>
-              <li>Patient ID 串接其他兩種 Resource 資料並適當呈現</li>
-              <li>
-                病人保有自己的PHR Patient
-                ID，可透過PHR的授權機制授權醫護人員調用個人的健康資訊
+            <ul style={ulStyle}>
+              <li class="has-line-data" data-line-start="13" data-line-end="14">
+                本工作小組制定醫院內部流程以及跨院交換流程的使用情境，確立病人基本資料通用於機構內健康醫療作業流程、跨機構之資訊互通、以及個人健康紀錄(PHR)之整合。針對特定之應用情境，可選用部分欄位，組合成標準病人基本資料，達到互通整合應用。
+              </li>
+              <li class="has-line-data" data-line-start="14" data-line-end="16">
+                透過提供互通應用情境範例，讓開發者可以模擬實際流程提供發展「機構內系統整合」、「跨機構互通應用」、以及「個人健康紀錄(PHR)之應用」，作為發展標準化醫療資訊系統的核心基礎架構。
               </li>
             </ul>
-            <h5>
-              <strong>範例</strong>
-            </h5>
-            <ul style={{ margin: 0 }}>
-              <li>
-                病人就醫時提供個人的PHR Patient
-                ID，並授權醫護人員可對此ID對應的PHR個案資料調用和操作
+          </>
+        ),
+      },
+      {
+        id: "3",
+        Sc: "詳細資訊(Details)",
+        content: (
+          <>
+            <p>本賽道的情境描述如下:</p>
+            <ol>
+              <li class="has-line-data" data-line-start="18" data-line-end="20">
+                <strong>Scenario 1：核心資料交換:</strong>{" "}
+                目的在於提供台灣核心-病人規範的格式驗證，以下為核心資料交換的邏輯模型(資料來源:
+                <a href="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-TWPatient.html">
+                  TW Core Patient
+                </a>
+                )。
+              </li>
+            </ol>
+            <img src={track1_1} />
+
+            <ol start="3">
+              <li class="has-line-data" data-line-start="22" data-line-end="28">
+                <strong>Scenario 2,3：院內系統:</strong>{" "}
+                提供兩個在醫院內部病人資訊交換的情境，包含:
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="23"
+                    data-line-end="24"
+                  >
+                    <strong>Scenario 2：病人身分資料交換:</strong>{" "}
+                    執行各項護理技術、檢查、治療、手術等醫療處置前對病人做身分確認，例如：在診療前，醫護人員請病人提供基本資訊如姓名、生日用以核對病人身分是否正確
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="24"
+                    data-line-end="25"
+                  >
+                    <strong>Scenario 3：病人聯絡資訊交換:</strong>{" "}
+                    聯絡方式如手機、email…用以聯絡病人，通訊地址如住家地址、工作地址
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="25"
+                    data-line-end="28"
+                  >
+                    兩種用途的病人資料將共用相同的識別碼如身分證、護照、居留證、病歷號
+                    <br />
+                    <img src={track1_2} />
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </>
+        ),
+      },
+      {
+        id: "4",
+        Sc: "涉及系統(Systems Affected)",
+        content: (
+          <>
+            <p>本規範涉及涉及的系统有：</p>
+
+            <h3 style={h3Style}>
+              醫院資訊系統(Hosptial Information System, HIS)
+            </h3>
+            <h3>FHIR Client</h3>
+            <ul>
+              <li class="has-line-data" data-line-start="32" data-line-end="33">
+                發起處理請求，並能夠執行 Patient Resource
+                的新增、查詢、修改、刪除操作 (CRUD Operations)
+              </li>
+              <li class="has-line-data" data-line-start="33" data-line-end="34">
+                必須使用 FHIR 定義的 REST API 來進行上述操作
+              </li>
+              <li class="has-line-data" data-line-start="34" data-line-end="35">
+                必須能針對 FHIR 定義的 Patient Search Parameters 進行搜尋
+              </li>
+              <li class="has-line-data" data-line-start="35" data-line-end="37">
+                必須能使用 FHIR 定義的 history 參數進行歷史記錄調閱
               </li>
             </ul>
-            <h5>
-              <strong>注意</strong>
-            </h5>
-            <ul style={{ margin: 0 }}>
-              <li>
-                參加 SC3 聯測時，產品必須同時通過 Track Observation(WG2) 或
-                Track Medication(WG3) 才算通過
+            <p class="has-line-data" data-line-start="37" data-line-end="38">
+              FHIR Client分成Creator以及Consumer依序說明如下:
+            </p>
+            <ul>
+              <li class="has-line-data" data-line-start="38" data-line-end="45">
+                <p
+                  class="has-line-data"
+                  data-line-start="38"
+                  data-line-end="39"
+                >
+                  <strong>Patient Creator</strong>
+                </p>
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="39"
+                    data-line-end="40"
+                  >
+                    發起處理請求，必須使用 FHIR 定義的 REST API新增Patient
+                    Resource新增
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="40"
+                    data-line-end="41"
+                  >
+                    檢核基準：成功新增資料後，測試系統要能正確回傳 id 及病人資料
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="41"
+                    data-line-end="45"
+                  >
+                    <strong>檢核基準</strong>
+                    <ul>
+                      <li
+                        class="has-line-data"
+                        data-line-start="42"
+                        data-line-end="43"
+                      >
+                        調閱資料後，測試系統要能將回傳的病人資料以自行定義的
+                        UI、或以 JSON / XML 等原始文件格式正確呈現
+                      </li>
+                      <li
+                        class="has-line-data"
+                        data-line-start="43"
+                        data-line-end="45"
+                      >
+                        編輯資料後，測試系統要能將回傳的病人資料及 History ID
+                        以自行定義的 UI、或以 JSON / XML 等原始文件格式正確呈現
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
-              <li>
-                範例：通過 WG1/SC3 + WG2 任一 SC、或 WG1/SC3 + WG3 任一 SC
+              <li class="has-line-data" data-line-start="45" data-line-end="48">
+                <p
+                  class="has-line-data"
+                  data-line-start="45"
+                  data-line-end="46"
+                >
+                  <strong>Patient Consumer</strong>
+                </p>
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="46"
+                    data-line-end="47"
+                  >
+                    發起處理請求，必須使用 FHIR 定義的 REST API執行Patient
+                    Resource查詢、修改、刪除操作
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="47"
+                    data-line-end="48"
+                  >
+                    查詢功能須能支援
+                    <a href="https://twcore.mohw.gov.tw/ig/twcore/CapabilityStatement-CapabilityStatementTWCoreClient.html">
+                      臺灣核心-用戶端(TW Core Client)能力聲明
+                    </a>
+                    中定義的臺灣核心-病人(TW Core
+                    Patient)必要查詢參數，包含如下表:
+                  </li>
+                </ul>
               </li>
-              <center>
-                <ImgDialog Img={T1_6} Width={"80%"} />
-              </center>
-              <center>
-                <ImgDialog Img={T1_7} Width={"80%"} />
-              </center>
+              <li class="has-line-data" data-line-start="48" data-line-end="50">
+                <p
+                  class="has-line-data"
+                  data-line-start="48"
+                  data-line-end="49"
+                >
+                  必須(SHALL)符合查詢參數摘要
+                </p>
+              </li>
             </ul>
-            <div>
-              <h5>
-                <strong>Roles</strong>
-              </h5>
-              <ul style={{ margin: 0 }}>
-                <li>
-                  Patient Creator
-                  <ul style={{ margin: 0 }}>
-                    <li>
-                      病人基本資料建檔單位系統，可包含：醫療照護機構、藥局、消防局、第三方健康照護應用等
-                    </li>
-                    <li>
-                      檢核基準：成功新增資料後，測試系統要能正確回傳 id
-                      及病人資料
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Patient Consumer
-                  <ul style={{ margin: 0 }}>
-                    <li>
-                      病人基本資料使用單位系統，可包含：醫療照護機構、藥局、消防局、第三方健康照護應用、個人等
-                    </li>
-                    <li>
-                      檢核基準
-                      <ul style={{ margin: 0 }}>
-                        <li>
-                          調閱資料後，測試系統要能將回傳的病人資料以自行定義的
-                          UI、或以 JSON / XML 等原始文件格式正確呈現
-                        </li>
-                        <li>
-                          編輯資料後，測試系統要能將回傳的病人資料及 History ID
-                          以自行定義的 UI、或以 JSON / XML
-                          等原始文件格式正確呈現
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <h5>
-                <strong>System Roles</strong>
-              </h5>
-              <ul style={{ margin: 0 }}>
-                <li>
-                  FHIR Client
-                  <ul style={{ margin: 0 }}>
-                    <li>
-                      發起處理請求，並能夠執行 Patient Resource
-                      的新增、查詢、修改、刪除操作 (CRUD Operations)
-                    </li>
-                    <li>必須使用 FHIR 定義的 REST API 來進行上述操作</li>
-                    <li>
-                      必須能針對 FHIR 定義的 Patient Search Parameters 進行搜尋
-                    </li>
-                    <li>必須能使用 FHIR 定義的 history 參數進行歷史記錄調閱</li>
-                  </ul>
-                </li>
-                <li>
-                  FHIR Server
-                  <ul style={{ margin: 0 }}>
-                    <li>
-                      實作或提供一個儲存機制 (repository
-                      storage)，並正確處理所接收的處理請求
-                    </li>
-                    <li>
-                      接收處理請求，並能夠執行 Patient Resource
-                      的新增、查詢、修改、刪除操作 (CRUD Operations)
-                    </li>
-                    <li>
-                      必須能夠支援 FHIR Client 使用 FHIR 定義的 REST API
-                      來進行上述操作
-                    </li>
-                    <li>
-                      必須能夠支援 FHIR Client 使用 FHIR 定義的 Patient Search
-                      Parameters 進行搜尋
-                    </li>
-                    <li>
-                      必須能夠支援 FHIR Client使用 FHIR 定義的 history
-                      參數進行歷史記錄調閱
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <h5>
-                <strong>Levels and Bonus Points(Level 1 &amp; 1+)</strong>
-              </h5>
-              <ul style={{ margin: 0 }}>
-                <li>
-                  本次聯測比照國際 FHIR Connectathon 26，將測試項目劃分為若干
-                  Level，並新增 Bonus Point
-                </li>
-                <li>
-                  Level 1
-                  <ul style={{ margin: 0 }}>
-                    <li>能正確設定 Gazelle，並以 Gazelle 作為檢核依據</li>
-                    <li>測試系統完成各 Scenario 要求之項目</li>
-                    <li>能順利完成 Create、Read、Update、Delete 等動作</li>
-                    <li>能順利以 Search Parameters 搜尋指定的 Record</li>
-                  </ul>
-                </li>
-                <li>
-                  Level 1+
-                  <ul style={{ margin: 0 }}>
-                    <li>完成 Level 1 之檢核項目</li>
-                    <li>
-                      測試系統能以 history 參數調閱單筆 Record 的指定歷史記錄
-                    </li>
-                    <li>
-                      Bonus Point: 測試系統能正確顯示單筆 Record
-                      的歷史記錄清單，並能自由調閱歷史記錄
-                    </li>
-                    <li>
-                      Bonus Point: 測試系統搜尋指定 Record 時，能同時以多項
-                      Search Parameters 進行多條件搜索
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <h5>
-                <strong>Levels and Bonus Points(Level 2)</strong>
-              </h5>
-              <ul style={{ margin: 0 }}>
-                <li>
-                  Level 2
-                  <ul style={{ margin: 0 }}>
-                    <li>
-                      測試系統新增 Patient 時，符合以下所有條件
-                      <ul style={{ margin: 0 }}>
-                        <li>HTTP Method 必須為 PUT</li>
-                        <li>
-                          HTTP Header Accept 必須為 ‘application/fhir+json’
-                        </li>
-                        <li>
-                          HTTP Header Content-Type 必須為
-                          ‘application/fhir+json’
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      測試系統編輯 Patient 時，符合以下所有條件
-                      <ul style={{ margin: 0 }}>
-                        <li>HTTP Method 必須為 PUT</li>
-                        <li>
-                          HTTP Header Accept 必須為 ‘application/fhir+json’
-                        </li>
-                        <li>
-                          HTTP Header Content-Type 必須為
-                          ‘application/fhir+json’
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      測試系統調閱 Patient 時，符合以下所有條件
-                      <ul style={{ margin: 0 }}>
-                        <li>HTTP Method 必須為 GET</li>
-                        <li>
-                          HTTP Header Accept 必須為 ‘application/fhir+json’
-                        </li>
-                        <li>
-                          HTTP Header Content-Type 必須為
-                          ‘application/fhir+json’
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      測試系統調閱 Patient Record 的歷史資料時，符合以下所有條件
-                      <ul style={{ margin: 0 }}>
-                        <li>HTTP Method 必須為 GET</li>
-                        <li>
-                          HTTP Header Accept 必須為 ‘application/fhir+json’
-                        </li>
-                        <li>HTTP Header Content-Type 不存在</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <h5>
-                <strong>Levels and Bonus Points(Level 2)</strong>
-              </h5>
-              <ul style={{ margin: 0 }}>
-                <li>
-                  Level 2
-                  <ul style={{ margin: 0 }}>
-                    <li>
-                      測試系統以 Search Parameters 調閱 Patient
-                      時，符合以下所有條件
-                      <ul style={{ margin: 0 }}>
-                        <li>HTTP Method 必須為 GET</li>
-                        <li>
-                          HTTP Header Accept 必須為 ‘application/fhir+json’
-                        </li>
-                        <li>HTTP Header Content-Type 不存在</li>
-                      </ul>
-                    </li>
-                    <li>
-                      測試系統刪除 Patient 時，符合以下所有條件
-                      <ul style={{ margin: 0 }}>
-                        <li>HTTP Method 必須為 DELETE</li>
-                        <li>
-                          HTTP Header Accept 必須為 ‘application/fhir+json’
-                        </li>
-                        <li>HTTP Header Content-Type 不存在</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>參數</strong>
+                  </th>
+                  <th>
+                    <strong>類型</strong>
+                  </th>
+                  <th>
+                    <strong>範例</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>邏輯ID</td>
+                  <td>_id</td>
+                  <td>token</td>
+                  <td>
+                    GET [base]/Patient?_id=[id],&lt;br&gt;GET
+                    [base]/Patient/[id]
+                  </td>
+                </tr>
+                <tr>
+                  <td>出生年月日</td>
+                  <td>birthdate</td>
+                  <td>date</td>
+                  <td>GET [base]/Patient?birthdate=[birthdate]</td>
+                </tr>
+                <tr>
+                  <td>性別</td>
+                  <td>gender</td>
+                  <td>token</td>
+                  <td>GET [base]/Patient?gender=[code]</td>
+                </tr>
+                <tr>
+                  <td>身份識別碼</td>
+                  <td>identifier</td>
+                  <td>token</td>
+                  <td>[base]/Patient?identifier=</td>
+                </tr>
+                <tr>
+                  <td>姓名</td>
+                  <td>name</td>
+                  <td>string</td>
+                  <td>GET [base]/Patient?name=[name]</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li class="has-line-data" data-line-start="58" data-line-end="59">
+                需支援history 參數進行歷史記錄調閱
+              </li>
+              <li class="has-line-data" data-line-start="59" data-line-end="63">
+                <strong>檢核基準</strong>
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="60"
+                    data-line-end="61"
+                  >
+                    調閱資料後，測試系統要能將回傳的病人資料以自行定義的
+                    UI、或以 JSON / XML 等原始文件格式正確呈現
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="61"
+                    data-line-end="63"
+                  >
+                    編輯資料後，測試系統要能將回傳的病人資料及 History ID
+                    以自行定義的 UI、或以 JSON / XML 等原始文件格式正確呈現
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h3 class="code-line" data-line-start="63" data-line-end="64">
+              <a id="FHIR_Server_63"></a>FHIR Server
+            </h3>
+            <ul>
+              <li class="has-line-data" data-line-start="64" data-line-end="66">
+                實作或提供一個儲存機制 (repository
+                storage)，並正確處理所接收的處理請求
+                <br />
+                接收處理請求，並能夠執行 Patient Resource
+                的新增、查詢、修改、刪除操作 (CRUD Operations)
+              </li>
+              <li class="has-line-data" data-line-start="66" data-line-end="67">
+                必須能夠支援 FHIR Client 使用 FHIR 定義的 REST API
+                來進行上述操作
+              </li>
+              <li class="has-line-data" data-line-start="67" data-line-end="68">
+                必須能夠支援 FHIR Client 使用 FHIR 定義的查詢參數進行搜尋
+              </li>
+              <li class="has-line-data" data-line-start="68" data-line-end="70">
+                必須能夠支援 FHIR Client使用 FHIR 定義的 history
+                參數進行歷史記錄調閱
+              </li>
+            </ul>
+            <p class="has-line-data" data-line-start="70" data-line-end="71">
+              FHIR Server由Patient Repository扮演說明如下:
+            </p>
+            <ul>
+              <li class="has-line-data" data-line-start="72" data-line-end="79">
+                <strong>Patient Repository</strong>
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="73"
+                    data-line-end="74"
+                  >
+                    實作或提供一個儲存機制 (repository
+                    storage)，並正確處理所接收的處理請求
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="74"
+                    data-line-end="75"
+                  >
+                    接收處理請求，並能夠執行 Patient Resource
+                    的新增、查詢、修改、刪除操作 (CRUD Operations)
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="75"
+                    data-line-end="76"
+                  >
+                    必須能夠支援 Patient Client 使用 FHIR 定義的 REST API
+                    來進行上述操作
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="76"
+                    data-line-end="77"
+                  >
+                    必須能夠支援 Patient Client 使用 FHIR 定義的查詢參數進行搜尋
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="77"
+                    data-line-end="79"
+                  >
+                    必須能夠支援 Patient Client使用 FHIR 定義的 history
+                    參數進行歷史記錄調閱
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        id: "5",
+        Sc: "規格(Specification)",
+        content: (
+          <>
+            <p>
+              本賽道驗證規格比照國際 FHIR 聯測，將測試項目劃分為若干
+              Level，並新增 Bonus Point，依序說明如下:
+            </p>
+            <h3>Level 1</h3>
+            <ul>
+              <li>能正確設定Gazelle，並以Gazelle Test Script作為檢核依據</li>
+              <li>測試系統完成各情境要求之項目</li>
+              <li>能順利完成Create/Read/Update/Delete 等動作</li>
+              <li>能順利以 Search Parameters 搜尋指定的 Record</li>
+            </ul>
+            <h3>Level 1+</h3>
+            <ul>
+              <li class="has-line-data" data-line-start="87" data-line-end="88">
+                完成 Level 1 之檢核項目
+              </li>
+              <li class="has-line-data" data-line-start="88" data-line-end="89">
+                測試系統能以 history 參數調閱單筆 Record 的指定歷史記錄
+              </li>
+              <li class="has-line-data" data-line-start="89" data-line-end="90">
+                <strong>Bonus Point:</strong> 測試系統能正確顯示單筆 Record
+                的歷史記錄清單，並能自由調閱歷史記錄
+              </li>
+              <li class="has-line-data" data-line-start="90" data-line-end="92">
+                <strong>Bonus Point:</strong> 測試系統搜尋指定 Record
+                時，能同時以多項查詢參數進行多條件搜索
+              </li>
+            </ul>
+            <h3>Level 2</h3>
+            <ul>
+              <li class="has-line-data" data-line-start="93" data-line-end="97">
+                測試系統<code>新增</code> Patient 時，符合以下所有條件
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="94"
+                    data-line-end="95"
+                  >
+                    HTTP Method 必須為 PUT
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="95"
+                    data-line-end="96"
+                  >
+                    HTTP Header Accept 必須為 ‘application/fhir+json’
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="96"
+                    data-line-end="97"
+                  >
+                    HTTP Header Content-Type 必須為 ‘application/fhir+json’
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="has-line-data"
+                data-line-start="97"
+                data-line-end="101"
+              >
+                測試系統<code>編輯</code> Patient 時，符合以下所有條件
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="98"
+                    data-line-end="99"
+                  >
+                    HTTP Method 必須為 PUT
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="99"
+                    data-line-end="100"
+                  >
+                    HTTP Header Accept 必須為 ‘application/fhir+json’
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="100"
+                    data-line-end="101"
+                  >
+                    HTTP Header Content-Type 必須為 ‘application/fhir+json’
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="has-line-data"
+                data-line-start="101"
+                data-line-end="105"
+              >
+                測試系統<code>調閱</code> Patient 時，符合以下所有條件
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="102"
+                    data-line-end="103"
+                  >
+                    HTTP Method 必須為 GET
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="103"
+                    data-line-end="104"
+                  >
+                    HTTP Header Accept 必須為 ‘application/fhir+json’
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="104"
+                    data-line-end="105"
+                  >
+                    HTTP Header Content-Type 必須為 ‘application/fhir+json’
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="has-line-data"
+                data-line-start="105"
+                data-line-end="109"
+              >
+                測試系統<code>調閱 Patient Record 的歷史資料</code>
+                時，符合以下所有條件
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="106"
+                    data-line-end="107"
+                  >
+                    HTTP Method 必須為 GET
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="107"
+                    data-line-end="108"
+                  >
+                    HTTP Header Accept 必須為 ‘application/fhir+json’
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="108"
+                    data-line-end="109"
+                  >
+                    HTTP Header Content-Type 不存在
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="has-line-data"
+                data-line-start="109"
+                data-line-end="113"
+              >
+                測試系統以<code>Search Parameters 調閱</code> Patient
+                時，符合以下所有條件
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="110"
+                    data-line-end="111"
+                  >
+                    HTTP Method 必須為 GET
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="111"
+                    data-line-end="112"
+                  >
+                    HTTP Header Accept 必須為 ‘application/fhir+json’
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="112"
+                    data-line-end="113"
+                  >
+                    HTTP Header Content-Type 不存在
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="has-line-data"
+                data-line-start="113"
+                data-line-end="118"
+              >
+                測試系統<code>刪除</code> Patient 時，符合以下所有條件
+                <ul>
+                  <li
+                    class="has-line-data"
+                    data-line-start="114"
+                    data-line-end="115"
+                  >
+                    HTTP Method 必須為 DELETE
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="115"
+                    data-line-end="116"
+                  >
+                    HTTP Header Accept 必須為 ‘application/fhir+json’
+                  </li>
+                  <li
+                    class="has-line-data"
+                    data-line-start="116"
+                    data-line-end="118"
+                  >
+                    HTTP Header Content-Type 不存在
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h3>角色(Actors)</h3>
+            <ol>
+              <li
+                class="has-line-data"
+                data-line-start="119"
+                data-line-end="121"
+              >
+                <strong>病人基本資料(PAT)角色整理</strong>
+              </li>
+            </ol>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Keyword</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PAT_CREATOR</td>
+                  <td>Patient Creator</td>
+                  <td>產生病患基本資料角色</td>
+                </tr>
+                <tr>
+                  <td>PAT_CREATOR_SC3</td>
+                  <td>Patient Creator SC3</td>
+                  <td>情境3產生病患基本資料角色</td>
+                </tr>
+                <tr>
+                  <td>PAT_CONSUMER</td>
+                  <td>Patient Consumer</td>
+                  <td>查詢/調閱病患基本資料角色</td>
+                </tr>
+                <tr>
+                  <td>PAT_CONSUMER_SC3</td>
+                  <td>Patient Consumer SC3</td>
+                  <td>情境3查詢/調閱病患基本資料角色</td>
+                </tr>
+                <tr>
+                  <td>PAT_REPOSITORY</td>
+                  <td>Patient Repository</td>
+                  <td>病患基本資料儲存庫</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>交易(Transactions)</h3>
+            <p class="has-line-data" data-line-start="130" data-line-end="131">
+              1.<strong>病人基本資料(PAT)交易整理</strong>
+            </p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>編號</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MITW-1</td>
+                  <td>Patient Create</td>
+                  <td>情境1/2 - 新增病患基本資料</td>
+                </tr>
+                <tr>
+                  <td>MITW-2</td>
+                  <td>Patient Q/R</td>
+                  <td>情境1/2 - 查詢與調閱新增病患基本資料</td>
+                </tr>
+                <tr>
+                  <td>MITW-21</td>
+                  <td>Patient Create SC3</td>
+                  <td>情境3 - 新增病患基本資料</td>
+                </tr>
+                <tr>
+                  <td>MITW-22</td>
+                  <td>Patient Q/R/U SC3</td>
+                  <td>情境3 - 查詢與調閱患基本資料</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3>角色與交易關係圖</h3>
+            <ol>
+              <li
+                class="has-line-data"
+                data-line-start="140"
+                data-line-end="143"
+              >
+                病人基本資料(PAT)之角色與交易關係圖
+                <br />
+                <img src={track1_3} />
+              </li>
+            </ol>
+          </>
+        ),
+      },
+      {
+        id: "6",
+        Sc: "其他(See Also)",
+        content: (
+          <>
+            <h3></h3>
+            <p></p>
+          </>
+        ),
+      },
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>角色</th>
+                  <th>姓名</th>
+                  <th>所屬單位</th>
+                  <th>貢獻</th>
+                  <th>聯絡方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>作者</td>
+                  <td>蕭嘉宏</td>
+                  <td>慈濟大學 - 醫學資訊學系</td>
+                  <td>Profiling, 聯測測試情境設計</td>
+                  <td>chhsiao@gms.tcu.edu.tw</td>
+                </tr>
+                <tr>
+                  <td>作者</td>
+                  <td>楊宇凡</td>
+                  <td>矽塔資訊服務有限公司</td>
+                  <td>Profiling, 聯測測試情境設計</td>
+                  <td>ceo@sita.tech</td>
+                </tr>
+                <tr>
+                  <td>貢獻者</td>
+                  <td>施岳勳</td>
+                  <td>國立陽明交通大學 - 生物醫學工程學系</td>
+                  <td>聯測測試情境設計</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>貢獻者</td>
+                  <td>湯士滄</td>
+                  <td>銘傳大學 - 生物醫學工程學系</td>
+                  <td>聯測測試情境設計</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </>
         ),
       },

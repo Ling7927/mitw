@@ -12,6 +12,8 @@ import track1_1 from "../../assets/WG1_1.png";
 import track1_2 from "../../assets/Ts1.png";
 import track1_3 from "../../assets/WG1_3.png";
 
+import track2_1 from "../../assets/WG2_1.png";
+
 import track4_1 from "../../assets/track4_1.png";
 import track4_2 from "../../assets/track4_2.png";
 import track4_3 from "../../assets/track4_3.png";
@@ -25,38 +27,27 @@ import ImgDialog from "../Dialog/Dialog";
 // 圖片放入<ImgDialog Img={Ts1} Width={"80%"} />頁面終能放大圖片顯示
 // Img={Ts1}裡面引入圖片
 // Width={"80%"}一般檢視頁面中的大小
-const ulStyle = {
-  margin: 0,
-};
-const h3Style = {
-  fontWeight: "bold",
-};
+
 export const TraksTabInform = [
   {
     Id: "1",
     TabTitle: "01",
     ContentTitle: "病人基本資料",
-    Img: [{ img: T1_1 }, { img: T1_2 }, { img: T1_3 }, { img: T1_4 }],
+    Img: "",
     List: [
       {
         id: "1",
         Sc: "簡介 (Summary)",
         content: (
           <>
-            <ul style={ulStyle}>
-              <li class="has-line-data" data-line-start="7" data-line-end="8">
+            <ul>
+              <li>
                 病患基本資料為醫療資訊系統中最基本元素，涵蓋所有電子病歷的範疇。本工作小組主要分析台灣病人基本資料之規格，根據國內現況制定出適合台灣病患基本資要用跨系統交換，以達到基本的互通性，並相容台灣核心規範。
               </li>
-              <li class="has-line-data" data-line-start="8" data-line-end="12">
+              <li>
                 本工作小組有兩大目標:
                 <ol>
-                  <li
-                    class="has-line-data"
-                    data-line-start="9"
-                    data-line-end="10"
-                  >
-                    分析病患基本資料用實際醫療場域提出基本規格。
-                  </li>
+                  <li>分析病患基本資料用實際醫療場域提出基本規格。</li>
                   <li
                     class="has-line-data"
                     data-line-start="10"
@@ -75,7 +66,7 @@ export const TraksTabInform = [
         Sc: "效益 (Benefits) ",
         content: (
           <>
-            <ul style={ulStyle}>
+            <ul>
               <li class="has-line-data" data-line-start="13" data-line-end="14">
                 本工作小組制定醫院內部流程以及跨院交換流程的使用情境，確立病人基本資料通用於機構內健康醫療作業流程、跨機構之資訊互通、以及個人健康紀錄(PHR)之整合。針對特定之應用情境，可選用部分欄位，組合成標準病人基本資料，達到互通整合應用。
               </li>
@@ -102,7 +93,7 @@ export const TraksTabInform = [
                 )。
               </li>
             </ol>
-            <img src={track1_1} />
+            <img src={track1_1} Width="100%" />
 
             <ol start="3">
               <li class="has-line-data" data-line-start="22" data-line-end="28">
@@ -132,7 +123,7 @@ export const TraksTabInform = [
                   >
                     兩種用途的病人資料將共用相同的識別碼如身分證、護照、居留證、病歷號
                     <br />
-                    <img src={track1_2} />
+                    <img src={track1_2} Width="100%" />
                   </li>
                 </ul>
               </li>
@@ -147,9 +138,7 @@ export const TraksTabInform = [
           <>
             <p>本規範涉及涉及的系统有：</p>
 
-            <h3 style={h3Style}>
-              醫院資訊系統(Hosptial Information System, HIS)
-            </h3>
+            <h3>醫院資訊系統(Hosptial Information System, HIS)</h3>
             <h3>FHIR Client</h3>
             <ul>
               <li class="has-line-data" data-line-start="32" data-line-end="33">
@@ -305,7 +294,7 @@ export const TraksTabInform = [
                   <td>身份識別碼</td>
                   <td>identifier</td>
                   <td>token</td>
-                  <td>[base]/Patient?identifier=</td>
+                  <td>GET [base]/Patient?identifier=</td>
                 </tr>
                 <tr>
                   <td>姓名</td>
@@ -732,7 +721,7 @@ export const TraksTabInform = [
               >
                 病人基本資料(PAT)之角色與交易關係圖
                 <br />
-                <img src={track1_3} />
+                <img src={track1_3} Width="100%" />
               </li>
             </ol>
           </>
@@ -803,15 +792,29 @@ export const TraksTabInform = [
     Id: "2",
     TabTitle: "02",
     ContentTitle: "生理量測數據",
-    Img: [{ img: logo }, { img: logo }, { img: logo }],
+    Img: "",
     List: [
       {
         id: "1",
         Sc: "簡介 (Summary)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>
+              生理量測數據是為了患者監測和識別健康變化或問題而記錄的重要信息。生理量測數據包括身高、體重、體溫、進食後血糖、進食前血糖、體脂率、握力、血壓
+              (收縮壓、舒張壓)、心率等數據。生理量測數據通常在各種醫療保健場所定期和常規進行，包括入院檢查、住院監護、術後醫療程序、治療和療法程序以及密切監護。
+            </p>
+            <p>
+              由於這些信息在多個醫療保健場所和部門中使用，有必要對數據進行標準化，以確保一致性、準確的結果、便於比較和分析，並增強生理量測數據的互操作性。
+            </p>
+            <h3>生理量測數據互通</h3>
+            <p>
+              測試生理量測數據存儲規範（創建者 -
+              Creator）和生理量測數據展示（調閲著 -
+              Consumer）。測試是通過按照定義的標準規範存儲生理量測數據，並確保在其他系統上準確顯示。生理量測數據包括身高、體重、體溫、進食後血糖、進食前血糖、體脂率、握力、血壓（收縮壓和舒張壓）以及心率等參數。
+            </p>
+            <p>
+              本工作小組制定台灣的生理量測數據交換標準規範，並鼓勵參與者在開發涉及生理量測數據記錄功能的系統時遵循本規範。
+            </p>
           </>
         ),
       },
@@ -820,8 +823,9 @@ export const TraksTabInform = [
         Sc: "效益 (Benefits) ",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>
+              本賽道製定了各種生理監測及骨質密度資料的規範。參考本規範開發系統以便更輕鬆地實現跨系統的整合以及生理監測資料分享。
+            </p>
           </>
         ),
       },
@@ -830,8 +834,233 @@ export const TraksTabInform = [
         Sc: "詳細資訊(Details)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>本賽道的情境描述如下:</p>
+            <h3>情境1 - 生命徵象 (Vital signs)</h3>
+            <p>
+              本賽道會進行驗證生命徵象資料交換規範的格式。 FHIR Observation 的
+              “code” 欄位可以根據下面顯示的生命徵象項目代碼進行更改。
+            </p>
+            <a href="https://mitw.dicom.org.tw/MITW%20WG2%20Vital%20Sign%20Code%20System.xlsx">
+              生理信號規格與對應代碼整理表
+            </a>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>項目</strong>
+                  </th>
+                  <th>
+                    <strong>類型</strong>
+                  </th>
+                  <th>
+                    <strong>Code system</strong>
+                  </th>
+                  <th>
+                    <strong>Code</strong>
+                  </th>
+                  <th>
+                    <strong>Unit</strong>
+                  </th>
+                  <th>
+                    <strong>Unit Code&lt;br&gt;(UCUM Code)</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>身高</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>3137-7</td>
+                  <td>cm</td>
+                  <td>cm</td>
+                </tr>
+                <tr>
+                  <td>體重</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>29463-7</td>
+                  <td>kg</td>
+                  <td>kg</td>
+                </tr>
+                <tr>
+                  <td>體溫</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>8310-5</td>
+                  <td>Cel</td>
+                  <td>Cel</td>
+                </tr>
+                <tr>
+                  <td>進食後血糖</td>
+                  <td>Laboratory Data</td>
+                  <td>LoincCode</td>
+                  <td>87422-2</td>
+                  <td>mg/dL</td>
+                  <td>mg/dL</td>
+                </tr>
+                <tr>
+                  <td>進食前血糖</td>
+                  <td>Laboratory Data</td>
+                  <td>LoincCode</td>
+                  <td>88365-2</td>
+                  <td>mg/dL</td>
+                  <td>mg/dL</td>
+                </tr>
+                <tr>
+                  <td>體脂率</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>41982-0</td>
+                  <td>%</td>
+                  <td>%</td>
+                </tr>
+                <tr>
+                  <td>握力</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>83174-3</td>
+                  <td>kg</td>
+                  <td>kg</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>參考範例</h4>
+            <ul>
+              <li>身高：</li> <li>體重：</li>
+              <li>進食後血糖：</li> <li>進食前血糖：</li>
+              <li>體脂率：</li> <li>握力：</li>
+            </ul>
+            <h3>情境2 -用藥結合血壓與心率量測</h3>
+            <p>
+              本賽道會進行驗證用藥結合血壓與心率量測資料交換規範的格式。
+              <br />
+              FHIR Observation 的 “code”
+              欄位可以根據下面顯示的生命徵象項目代碼進行更改。
+            </p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>血壓</strong>
+                  </th>
+                  <th>
+                    <strong>Vital Signs</strong>
+                  </th>
+                  <th>
+                    <strong>LoincCode</strong>
+                  </th>
+                  <th>
+                    <strong>35094-2</strong>
+                  </th>
+                  <th>
+                    <strong>mmHg</strong>
+                  </th>
+                  <th>
+                    <strong>mmHg&lt;br&gt;(UCUM Code)</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>收縮壓</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>8480-6</td>
+                  <td>mmHg</td>
+                  <td>mmHg</td>
+                </tr>
+                <tr>
+                  <td>舒張壓</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>8462-4</td>
+                  <td>mmHg</td>
+                  <td>mmHg</td>
+                </tr>
+                <tr>
+                  <td>心率</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>8867-4</td>
+                  <td>{`beats`}/min</td>
+                  <td>{`beats`}/min</td>
+                </tr>
+                <tr>
+                  <td>血壓</td>
+                  <td>Vital Signs</td>
+                  <td>LoincCode</td>
+                  <td>35094-2</td>
+                  <td>mmHg</td>
+                  <td>mmHg</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>參考範例</h4>
+            <ul>
+              <li>血壓：</li> <li>收縮壓：</li>
+              <li>舒張壓：</li> <li>心率：</li>
+            </ul>
+            <h3>情境3 -骨骼密度</h3>
+            <p>
+              本賽道會進行驗證骨骼密度資料交換規範的格式。
+              <br />
+              FHIR Observation 的 “code”
+              欄位可以根據下面顯示的生命徵象項目代碼進行更改。
+            </p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>股骨骨密度</strong>
+                  </th>
+                  <th>
+                    <strong>Image</strong>
+                  </th>
+                  <th>
+                    <strong>LoincCode</strong>
+                  </th>
+                  <th>
+                    <strong>38263-0</strong>
+                  </th>
+                  <th>**{`T` - `score`} **</th>
+                  <th>
+                    <strong>{`T` - `score`}</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>左股骨骨密度</td>
+                  <td>Image</td>
+                  <td>LoincCode</td>
+                  <td>80948-3</td>
+                  <td>{`T` - `score`}</td>
+                  <td>{`T` - `score`}</td>
+                </tr>
+                <tr>
+                  <td>右股骨骨密度</td>
+                  <td>Image</td>
+                  <td>LoincCode</td>
+                  <td>80947-5</td>
+                  <td>{`T` - `score`}</td>
+                  <td>{`T` - `score`}</td>
+                </tr>
+                <tr>
+                  <td>腰椎骨密度</td>
+                  <td>Image</td>
+                  <td>LoincCode</td>
+                  <td>38267-1</td>
+                  <td>{`T` - `score`}</td>
+                  <td>{`T` - `score`}</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>參考範例</h4>
+            <ul>
+              <li>左股骨骨密度：</li> <li>右股骨骨密度：</li>
+              <li>腰椎骨密度：</li>
+            </ul>
           </>
         ),
       },
@@ -840,28 +1069,419 @@ export const TraksTabInform = [
         Sc: "涉及系統(Systems Affected)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            {" "}
+            <p>本規範涉及涉及的系统有：</p>
+            <h3>醫院資訊系統(Hosptial Information System, HIS)</h3>
+            <h3>FHIR Client</h3>
+            <ul>
+              <li>
+                發起處理請求，並能夠執行 Patient Resource
+                的新增、查詢、修改、刪除操作 (CRUD Operations)
+              </li>
+              <li>必須使用 FHIR 定義的 REST API 來進行上述操作</li>
+              <li>必須能針對 FHIR 定義的 Patient Search Parameters 進行搜尋</li>
+              <li>必須能使用 FHIR 定義的 history 參數進行歷史記錄調閱</li>
+            </ul>
+            <p>FHIR Client分成Creator以及Consumer依序說明如下:</p>
+            <ul>
+              <li>
+                <p>
+                  <strong>Patient Creator</strong>
+                </p>
+                <ul>
+                  <li>
+                    發起處理請求，必須使用 FHIR 定義的 REST API新增Patient
+                    Resource新增
+                  </li>
+                  <li>
+                    檢核基準：成功新增資料後，測試系統要能正確回傳 id 及病人資料
+                  </li>
+                  <li>
+                    檢核基準
+                    <ul>
+                      <li>
+                        調閱資料後，測試系統要能將回傳的病人資料以自行定義的
+                        UI、或以 JSON / XML 等原始文件格式正確呈現
+                      </li>
+                      <li>
+                        編輯資料後，測試系統要能將回傳的病人資料及 History ID
+                        以自行定義的 UI、或以 JSON / XML 等原始文件格式正確呈現
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>
+                  <strong>Patient Consumer</strong>
+                </p>
+                <ul>
+                  <li>
+                    發起處理請求，必須使用 FHIR 定義的 REST API執行Patient
+                    Resource查詢、修改、刪除操作
+                  </li>
+                  <li>
+                    查詢功能須能支援臺灣核心-用戶端(TW Core
+                    Client)能力聲明中定義的臺灣核心-病人(TW Core
+                    Patient)必要查詢參數，包含如下表:
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>必須(SHALL)符合查詢參數摘要</p>
+                <table class="table table-striped table-bordered" border="1">
+                  <thead>
+                    <tr>
+                      <th>
+                        <strong>名稱</strong>
+                      </th>
+                      <th>
+                        <strong>參數</strong>
+                      </th>
+                      <th>
+                        <strong>類型</strong>
+                      </th>
+                      <th>
+                        <strong>範例</strong>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>邏輯ID</td>
+                      <td>_id</td>
+                      <td>token</td>
+                      <td>
+                        GET [base]/Patient?_id=[id],&lt;br&gt;GET
+                        [base]/Patient/[id]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>出生年月日</td>
+                      <td>birthdate</td>
+                      <td>date</td>
+                      <td>GET [base]/Patient?birthdate=[birthdate]</td>
+                    </tr>
+                    <tr>
+                      <td>性別</td>
+                      <td>gender</td>
+                      <td>token</td>
+                      <td>GET [base]/Patient?gender=[code]</td>
+                    </tr>
+                    <tr>
+                      <td>身份識別碼</td>
+                      <td>identifier</td>
+                      <td>token</td>
+                      <td>GET [base]/Patient?identifier=</td>
+                    </tr>
+                    <tr>
+                      <td>姓名</td>
+                      <td>name</td>
+                      <td>string</td>
+                      <td>GET [base]/Patient?name=[name]</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                <p>需支援history 參數進行歷史記錄調閱</p>
+              </li>
+              <li>
+                <p>
+                  <strong>檢核基準</strong>
+                  <ul>
+                    <li>
+                      調閱資料後，測試系統要能將回傳的病人資料以自行定義的
+                      UI、或以 JSON / XML 等原始文件格式正確呈現
+                    </li>
+                    <li>
+                      編輯資料後，測試系統要能將回傳的病人資料及 History ID
+                      以自行定義的 UI、或以 JSON / XML 等原始文件格式正確呈現
+                    </li>
+                  </ul>
+                </p>
+              </li>
+            </ul>
+            <h3>FHIR Server</h3>
+            <ul>
+              <li>
+                實作或提供一個儲存機制 (repository
+                storage)，並正確處理所接收的處理請求 接收處理請求，並能夠執行
+                Patient Resource 的新增、查詢、修改、刪除操作 (CRUD Operations)
+                必須能夠支援 FHIR Client 使用 FHIR 定義的 REST API
+                來進行上述操作 必須能夠支援 FHIR Client 使用 FHIR
+                定義的查詢參數進行搜尋 必須能夠支援 FHIR Client使用 FHIR 定義的
+                history 參數進行歷史記錄調閱
+              </li>
+              <li>
+                實作或提供一個儲存機制 (repository
+                storage)，並正確處理所接收的處理請求 接收處理請求，並能夠執行
+                Patient Resource 的新增、查詢、修改、刪除操作 (CRUD Operations)
+                必須能夠支援 FHIR Client 使用 FHIR 定義的 REST API
+                來進行上述操作 必須能夠支援 FHIR Client 使用 FHIR
+                定義的查詢參數進行搜尋 必須能夠支援 FHIR Client使用 FHIR 定義的
+                history 參數進行歷史記錄調閱
+              </li>
+              <li>
+                實作或提供一個儲存機制 (repository
+                storage)，並正確處理所接收的處理請求 接收處理請求，並能夠執行
+                Patient Resource 的新增、查詢、修改、刪除操作 (CRUD Operations)
+                必須能夠支援 FHIR Client 使用 FHIR 定義的 REST API
+                來進行上述操作 必須能夠支援 FHIR Client 使用 FHIR
+                定義的查詢參數進行搜尋 必須能夠支援 FHIR Client使用 FHIR 定義的
+                history 參數進行歷史記錄調閱
+              </li>
+              <li>
+                實作或提供一個儲存機制 (repository
+                storage)，並正確處理所接收的處理請求 接收處理請求，並能夠執行
+                Patient Resource 的新增、查詢、修改、刪除操作 (CRUD Operations)
+                必須能夠支援 FHIR Client 使用 FHIR 定義的 REST API
+                來進行上述操作 必須能夠支援 FHIR Client 使用 FHIR
+                定義的查詢參數進行搜尋 必須能夠支援 FHIR Client使用 FHIR 定義的
+                history 參數進行歷史記錄調閱
+              </li>
+            </ul>
+            <p>FHIR Server由Patient Repository扮演說明如下:</p>
+            <ul>
+              <li>
+                Patient Repository
+                <ul>
+                  <li>
+                    實作或提供一個儲存機制 (repository
+                    storage)，並正確處理所接收的處理請求
+                  </li>
+                  <li>
+                    接收處理請求，並能夠執行 Patient Resource
+                    的新增、查詢、修改、刪除操作 (CRUD Operations)
+                  </li>
+                  <li>
+                    必須能夠支援 Patient Client 使用 FHIR 定義的 REST API
+                    來進行上述操作
+                  </li>
+                  <li>
+                    必須能夠支援 Patient Client 使用 FHIR 定義的查詢參數進行搜尋
+                  </li>
+                  <li>
+                    必須能夠支援 Patient Client使用 FHIR 定義的 history
+                    參數進行歷史記錄調閱
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </>
         ),
       },
       {
-        id: "6",
+        id: "5",
         Sc: "規格(Specification)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>
+              以下是用於記錄生命徵象的FHIR Observation規格
+              <br />
+              –Add the specs of fhir observation image
+            </p>
+            <h3>角色(Actors)</h3>
+            <p>1.生理量測數據(VTSIGN)角色整理</p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>Keyword</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>VT_SC1_CREATOR</td>
+                  <td>SC1 Vital Sign Creator</td>
+                  <td>新增生理量測數據(常用生理信號)</td>
+                </tr>
+                <tr>
+                  <td>VT_SC2_CREATOR</td>
+                  <td>SC2 Vital Sign Creator</td>
+                  <td>新增生理量測數據(結合用藥)</td>
+                </tr>
+                <tr>
+                  <td>VT_SC3_CREATOR</td>
+                  <td>SC3_Vital Sign Creator</td>
+                  <td>新增生理量測數據(骨骼密度量測)</td>
+                </tr>
+                <tr>
+                  <td>VT_SC4_CREATOR</td>
+                  <td>SC4 Vital Sign Creator</td>
+                  <td>新增生理量測數據(12導層心電圖)</td>
+                </tr>
+                <tr>
+                  <td>VT_SC1_CONSUMER</td>
+                  <td>SC1 Vital Sign Consumer</td>
+                  <td>查詢與調閱生理量測數據(常用生理信號)</td>
+                </tr>
+                <tr>
+                  <td>VT_SC2_CONSUMER</td>
+                  <td>SC2 Vital Sign Consumer</td>
+                  <td>查詢與調閱生理量測數據(結合用藥)</td>
+                </tr>
+                <tr>
+                  <td>VT_SC3_CONSUMER</td>
+                  <td>SC3 Vital Sign Consumer</td>
+                  <td>查詢與調閱生理量測數據(骨骼密度量測)</td>
+                </tr>
+                <tr>
+                  <td>VT_SC4_CONSUMER</td>
+                  <td>SC4 Vital Sign Consumer</td>
+                  <td>查詢與調閱生理量測數據(12導層心電圖)</td>
+                </tr>
+                <tr>
+                  <td>VT_REPOSITORY</td>
+                  <td>Vital Sign Repository</td>
+                  <td>生理量測數據儲存庫</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>交易(Transactions)</h3>
+            <p>1.生理量測數據(VTSIGN)交易整理</p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>
+                    <strong>編號</strong>
+                  </th>
+                  <th>
+                    <strong>名稱</strong>
+                  </th>
+                  <th>
+                    <strong>描述</strong>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MITW-3</td>
+                  <td>Vital signs create</td>
+                  <td>產生生理信號(常用生理信號)</td>
+                </tr>
+                <tr>
+                  <td>MITW-4</td>
+                  <td>Vital signs query/retrieve</td>
+                  <td>查詢與調閱生理量測數據(常用生理信號)</td>
+                </tr>
+                <tr>
+                  <td>MITW-15</td>
+                  <td>BMD create for scenario 3</td>
+                  <td>新增生理量測數據(骨骼密度量測)</td>
+                </tr>
+                <tr>
+                  <td>MITW-16</td>
+                  <td>BMD query &amp; retrieve for scenario 3</td>
+                  <td>查詢與調閱生理量測數據(骨骼密度量測)</td>
+                </tr>
+                <tr>
+                  <td>MITW-13</td>
+                  <td>Create vital signs with medication for scenario 2</td>
+                  <td>新增生理量測數據(結合用藥)</td>
+                </tr>
+                <tr>
+                  <td>MITW-14</td>
+                  <td>
+                    query &amp; retrieve create vital signs with medication for
+                    scenario 2
+                  </td>
+                  <td>查詢與調閱生理量測數據(結合用藥)</td>
+                </tr>
+                <tr>
+                  <td>MITW-17</td>
+                  <td>12-lead ECG create for scenario 4</td>
+                  <td>新增生理量測數據(12導層心電圖)</td>
+                </tr>
+                <tr>
+                  <td>MITW-18</td>
+                  <td>12-lead ECG query &amp; retrieve for scenario 4</td>
+                  <td>查詢與調閱生理量測數據(12導層心電圖)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>角色與交易關係圖</h3>
+            <p>
+              1.生理量測數據(VTSIGN)之角色與交易關係圖
+              <img src={track2_1} Width="100%" />
+            </p>
           </>
         ),
       },
       {
         id: "6",
         Sc: "其他(See Also)",
+        content: <></>,
+      },
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <table class="table table-striped table-bordered" border="1">
+              <thead>
+                <tr>
+                  <th>角色</th>
+                  <th>姓名</th>
+                  <th>所屬單位</th>
+                  <th>貢獻</th>
+                  <th>聯絡方式</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>作者</td>
+                  <td>蕭嘉宏</td>
+                  <td>慈濟大學 - 醫學資訊學系</td>
+                  <td>Profiling, 聯測測試情境設計</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>作者</td>
+                  <td>洪苑容</td>
+                  <td>馬雅資訊股份有限公司軟體工程師</td>
+                  <td>profiling, 測試工具開發, 聯測測試情境設計</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>作者</td>
+                  <td>湯士滄</td>
+                  <td>銘傳大學 - 生物醫學工程學系</td>
+                  <td>聯測測試情境設計</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>貢獻者</td>
+                  <td>林欣怡</td>
+                  <td></td>
+                  <td>Profiling</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>貢獻者</td>
+                  <td>莊舒雅</td>
+                  <td>慈濟大學 - 醫學資訊學系</td>
+                  <td>測試支援</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>貢獻者</td>
+                  <td>洪彬彬</td>
+                  <td>慈濟大學 - 醫學資訊學系</td>
+                  <td>測試支援</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </>
         ),
       },

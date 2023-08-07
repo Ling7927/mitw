@@ -4,7 +4,7 @@ import "./Workgroupactivity.css";
 function Workgroupactivity() {
   return (
     <div
-      className="Background"
+      className="AllBackground"
       style={{
         display: "flex",
         flexDirection: "column",

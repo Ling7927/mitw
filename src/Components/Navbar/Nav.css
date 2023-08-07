@@ -35,6 +35,9 @@
   white-space: nowrap;
 }
 @media screen and (min-width: 930px) {
+  .Logo {
+    width: 60%;
+  }
   .nav__menu {
     justify-content: space-evenly;
     /* font-size: 1.4rem; */
@@ -42,6 +45,9 @@
 }
 /* 930以下 */
 @media screen and (max-width: 930px) {
+  .Logo {
+    width: 100%;
+  }
   .nav {
     justify-content: space-between;
   }

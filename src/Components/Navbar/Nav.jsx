@@ -13,7 +13,7 @@ function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [toggleIcon, setToggleIcon] = useState("toggler__icon");
   const [submenu, setSubmenu] = useState(false);
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false); //hamburger
   const showSubmenu = () => setSubmenu(!submenu);
   const onToggle = () => {
     setMenuOpen(!menuOpen);
@@ -34,7 +34,8 @@ function Nav() {
               <img
                 src={Logo}
                 alt="Logo"
-                style={{ width: "60%", marginLeft: " 1.5rem" }}
+                className="Logo"
+                style={{ marginLeft: " 1.5rem" }}
               />
             </Link>
           </Grid>
@@ -69,7 +70,17 @@ function Nav() {
               onToggle();
             }}
           >
-            <Hamburger toggled={isOpen} toggle={setOpen} />
+            <Hamburger
+              onToggle={(toggled) => {
+                if (toggled) {
+                  // open a menu
+                  setToggleIcon("toggler__icon toggle");
+                } else {
+                  // close a menu
+                  setToggleIcon("toggler__icon");
+                }
+              }}
+            />
           </div>
         </nav>
       </Grid>

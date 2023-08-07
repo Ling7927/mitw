@@ -72,15 +72,26 @@ function Main() {
         ></motion.img>
         <motion.div
           style={{
-            // display: "flex",
-            // position: "absolute",
+            display: "flex",
+            flexDirection: "column",
+            position: "sticky",
             marginRight: "5vw",
+            top: "3rem",
+            alignItems: "flex-end",
             // bottom: "1rem",
             // textAlign: "center",
             // justifyContent: "center",
             // fontSize: "25px",
           }}
         >
+          {" "}
+          <a
+            href="https://goo.gl/maps/yUavFiSYCd612aS37"
+            target="_blank"
+            style={{ color: "#fff", marginBottom: "3vh" }}
+          >
+            <h3>台北市信義區松仁路9號(國泰金融會議中心)</h3>{" "}
+          </a>
           <a
             href="https://mitw.dicom.org.tw/pdf/mitw2023_DM.pdf"
             target="_blank"

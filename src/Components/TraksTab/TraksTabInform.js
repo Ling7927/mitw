@@ -14,13 +14,27 @@ import track1_3 from "../../assets/WG1_3.png";
 
 import track2_1 from "../../assets/WG2_1.png";
 
+import track3_1 from "../../assets/WG3_1.png";
+
 import track4_1 from "../../assets/track4_1.png";
 import track4_2 from "../../assets/track4_2.png";
 import track4_3 from "../../assets/track4_3.png";
+
 import track4_4 from "../../assets/track4_4.png";
-import track4_5 from "../../assets/track4_5.png";
-import track4_6 from "../../assets/track4_6.png";
-import track4_7 from "../../assets/track4_7.png";
+import track4_5 from "../../assets/WG4_5.png";
+import track4_6 from "../../assets/track4_5.png";
+import track4_7 from "../../assets/track4_6.png";
+import track4_8 from "../../assets/track4_7.png";
+
+import track5_1 from "../../assets/WG5_1.png"
+import track5_2 from "../../assets/WG5_2.png"
+
+import track6_1 from "../../assets/WG6_1.png"
+import track6_2 from "../../assets/WG6_2.png"
+
+
+
+
 
 import ImgDialog from "../Dialog/Dialog";
 //有需要輪播圖的話import後放入Img:[]
@@ -1498,8 +1512,7 @@ export const TraksTabInform = [
         Sc: "簡介 (Summary)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>藥物處方(MedicationRequest)、用藥紀錄(MedicationAdministration)、服務請求(ServiceRequest，在院內情境中常為醫令/醫囑)與電子病歷文件打包(Document Bundle)為門、急、住診醫療照護資料流程的核心元素，幾乎在所有的醫療照護領域都是最常用的資源種類 (Resource Type)，本工作小組依據台灣國內醫院資訊系統(HIS)、全民健康保險(NHI)申報格式及衛生福利部電子病歷互通交換格式為基礎，設計符合台灣醫療照護應用情境資訊需求之用藥、醫令、電子病歷文件 FHIR Resource 應用規範與範例，提供產業應用交流與參考，以達到基本的跨系統互通性，並相容衛生福利部台灣核心實作指引(TW FHIR Core IG)規。本工作小組任務目標與範圍著重在 FHIR Resource 中請求類 Request Resource 為主。</p>
           </>
         ),
       },
@@ -1508,8 +1521,7 @@ export const TraksTabInform = [
         Sc: "效益 (Benefits) ",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>本工作小組制定醫療照護流程中常用的用藥、醫令與電子病歷應用規範，提供給醫院資訊系統(HIS)、電子病歷系統(EMR)、醫院內外其他醫療照護系統、衛生行政系統、個人健康檔案(PHR)、病患入口(Patient Portal)、行動健康系統(Mobile Health)等系統實作參考與參與聯測驗證。讓開發者/開發單位無論是醫院、廠商、政府單位、非政府組織，均可將其實作之系統與不同單位之系統進行互通交流與驗證，以確保醫療資訊標準規範的落實。</p>
           </>
         ),
       },
@@ -1534,12 +1546,139 @@ export const TraksTabInform = [
         ),
       },
       {
-        id: "6",
+        id: "5",
         Sc: "規格(Specification)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <h3>角色(Actors)</h3>
+            <p>1.處方用藥與文件打包(MED&DOC)角色整理</p>
+            <table class="table table-striped table-bordered" border="1">
+<thead>
+<tr>
+<th><strong>Keyword</strong></th>
+<th><strong>名稱</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MEDRQ_CREATOR</td>
+<td>MedicationRequest Creator</td>
+<td>產生MedicationRequest角色</td>
+</tr>
+<tr>
+<td>MEDAM_CREATOR</td>
+<td>MedicationAdministration Creator</td>
+<td>產生MedicationAdministration角色</td>
+</tr>
+<tr>
+<td>DOCLAB_CREATOR</td>
+<td>Laboratory Report Document Bundle Creator</td>
+<td>產生Laboratory Report Document Bundle角色</td>
+</tr>
+<tr>
+<td>DOC_CREATOR</td>
+<td>DocumentBundle Creator</td>
+<td>產生 General Document Bundle角色</td>
+</tr>
+<tr>
+<td>MEDRQ_CONSUMER</td>
+<td>MedicationRequest Consumer</td>
+<td>查詢與調閱MedicationRequest角色</td>
+</tr>
+<tr>
+<td>MEDAM_CONSUMER</td>
+<td>MedicationAdministration Consumer</td>
+<td>查詢與調閱MedicationAdministration角色</td>
+</tr>
+<tr>
+<td>DOCLAB_CONSUMER</td>
+<td>Laboratory Report Document Bundle Consumer</td>
+<td>查詢與調閱 Laboratory Report Document Bundle角色</td>
+</tr>
+<tr>
+<td>DOC_CONSUMER</td>
+<td>DocumentBundle Consumer</td>
+<td>查詢與調閱 General Document Bundle角色</td>
+</tr>
+<tr>
+<td>MEDRQ_REPOSITORY</td>
+<td>MedicationRequest Repository</td>
+<td>MedicationRequest儲存庫</td>
+</tr>
+<tr>
+<td>MEDAM_REPOSITORY</td>
+<td>MedicationAdministration Repository</td>
+<td>MedicationAdministration儲存庫</td>
+</tr>
+<tr>
+<td>DOCLAB_REPOSITORY</td>
+<td>Test Result Document Bundle Repository</td>
+<td>Laboratory Report Document Bundle 儲存庫</td>
+</tr>
+<tr>
+<td>DOC_REPOSITORY</td>
+<td>DocumentBundle Repository</td>
+<td>General Document Bundle儲存庫</td>
+</tr>
+</tbody>
+</table>
+<h3>交易(Transactions)</h3>
+<p>1.處方用藥與文件打包(MED&DOC)交易整理</p>
+<table class="table table-striped table-bordered" border="1">
+<thead>
+<tr>
+<th><strong>編號</strong></th>
+<th><strong>名稱</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MITW-5</td>
+<td>Create MedicationRequest</td>
+<td>新增MedicationRequest</td>
+</tr>
+<tr>
+<td>MITW-7</td>
+<td>Create MedicationAdministration</td>
+<td>新增MedicationAdministration</td>
+</tr>
+<tr>
+<td>MITW-25</td>
+<td>Create Laboratory Report Document Bundle</td>
+<td>新增Laboratory Report Document Bundle</td>
+</tr>
+<tr>
+<td>MITW-23</td>
+<td>Create General Document Bundle</td>
+<td>新增Document Bundle</td>
+</tr>
+<tr>
+<td>MITW-6</td>
+<td>Qurey/Retrieve MedicationRequest</td>
+<td>查詢與調閱MedicationRequest</td>
+</tr>
+<tr>
+<td>MITW-8</td>
+<td>Qurey/Retrieve MedicationAdministration</td>
+<td>查詢與調閱MedicationAdministration</td>
+</tr>
+<tr>
+<td>MITW-26</td>
+<td>Query/Retrieve Laboratory Report Document Bundle</td>
+<td>查詢與調閱 Laboratory Report Document Bundle</td>
+</tr>
+<tr>
+<td>MITW-24</td>
+<td>Query/Retrieve General Document Bundle</td>
+<td>查詢與調閱General Document Bundle</td>
+</tr>
+</tbody>
+</table>
+<h3>角色與交易關係圖</h3>
+<p>1.處方用藥與文件打包(MED&DOC)之角色與交易關係圖</p>
+<img src={track3_1} Width="100%" />
           </>
         ),
       },
@@ -1553,6 +1692,55 @@ export const TraksTabInform = [
           </>
         ),
       },
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            <table class="table table-striped table-bordered" border="1">
+<thead>
+<tr>
+<th>角色</th>
+<th>姓名</th>
+<th>所屬單位</th>
+<th>貢獻</th>
+<th>聯絡方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作者</td>
+<td>李祥豪</td>
+<td>台灣醫學資訊學會</td>
+<td>Profiling, 聯測測試情境設計</td>
+<td></td>
+</tr>
+<tr>
+<td>作者</td>
+<td>吳宇婷</td>
+<td>仁寶電腦</td>
+<td>聯測測試情境設計</td>
+<td></td>
+</tr>
+<tr>
+<td>作者</td>
+<td>楊宗翰</td>
+<td>國立陽明交通大學生物醫學資訊所</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>貢獻者</td>
+<td>蕭嘉宏</td>
+<td>慈濟大學 - 醫學資訊學系</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+          </>
+        ),
+      }
     ],
   },
   {
@@ -1659,262 +1847,281 @@ export const TraksTabInform = [
         content: (
           <>
             <p> 本規範涉及涉及的系统有：</p>
-            <ul style={{ margin: 0 }}>
+            <h3>醫院資訊系統(Hosptial Information System, HIS)</h3>
+            <ul>
               <li style={{ fontWeight: "bold" }}>
-                醫院資訊系統(Hosptial Information System, HIS)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                針對HIS開立影像檢查單，以HL7 v2訊息(HL7
-                message)標準提供造影工作清單(Modality
-                Worklist)上的造影檢查單之新增、刪除、修改等功能。影像調閱至門診或是HIS系統，以DICOMweb方式調閱影像並呈現在HIS系統。
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                放射科資訊系統(Radiology Information Systm, RIS)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                用於放射科檢查流程管理，包含: 造影檢查排程管理(DICOM Modality
-                Performed Procedure Step
-                (MPPS)、造影工作清單(Worklist)主機、影像傳輸確認機制(Storage
-                Commitment)、{" "}
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                針對PACS產品包含: Modality Worklist, Image Manager, Image
-                Archive, Image
-                Display等功能進行驗證，與醫療儀器廠商針對影像上傳，例如:
-                C-STORE, STOW, 等方式進行介接測試驗證。
+              病患註冊系統 - ADT (Admission/Discharge/Transfer)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>負責新增或修改病患基本資料以及就醫資訊。在聯測情境的定義為部門資訊系統用來註冊新病人。
+                </li>
+                <li>
+                  <strong>採用標準: </strong>HL7 V2.3, HL7 V 2.5
+                </li>
+              </ul>
               </li>
               <li style={{ fontWeight: "bold" }}>
-                報告儲存系統(Report Repository)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                用於儲存與管理影像報告的資料庫，支援標準化FHIR
-                DiagnosticReport以及ImagingStudy查詢與調閱。
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                亦可支援FHIR格式之影像發現以及影像標記註。
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                報告顯示/編輯系統(Reporting System)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                用於顯示以及編影像報告，可支援標準化FHIR
-                診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)的查詢與調閱以及上傳，影像整合報告部分，可透過影像索引(ImagingStudy)組合影像對應的WADO連結，並可向影像儲存系統以DICOM/DICOMweb的方式調閱影像以及影像的標記註解至影像顯示系統顯示。
-                影像發現以及影像標記註解亦可支援FHIR格式儲存，可從報告儲存系統中調閱影像發現以及影像標記並顯示在影像顯示系統中。
+              部門排程與開單系統 - OF (Department System Scheduler/Order Filler)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>部門資訊系統（例如，放射科或檢驗科），提供與從外部系統或通過部門系統的用戶界面接收的醫令管理相關功能。根據檢查流程作業，讓程序可用於批價。實際導致收費的動作/事件由參與者定義。
+                </li>
+                <li>
+                <strong>採用標準: </strong>HL7 V2.3, HL7 V 2.5, DICOM Modality Worklist
+                </li>
+              </ul>
               </li>
               <li style={{ fontWeight: "bold" }}>
-                影像儲存系統(Image Manager/Archive, IM)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                {" "}
-                此系統也稱為PACS
-                Server，用於符合DICOM標準格式之影像、波型、結構化報告、標記註解等類型的儲存與管理，並支援標準化DICOM、DICOMweb查詢與調閱協定。DICOM協定常用支援為C-STORE,
-                C-FIND, C-MOVE,
-                C-GET等；DICOMweb支援QIDO-RS、WADO-RS/WAOD-URI、STOW-RS等。
+              醫令系統 - OP (Order Placer)
+              <ul>
+                <li>
+                <strong>系統功能簡介: </strong>提供醫院的各個部門產生檢查單並將這些檢查單分發給正確部門。例如: 開立影像檢查單，以HL7 v2訊息(HL7 message)標準提供造影工作清單(Modality Worklist)上的造影檢查單之新增、刪除、修改等功能。
+                </li>
+                <li>
+                <strong>採用標準: </strong>HL7 V2.3, HL7 V 2.5
+                </li>
+              </ul>
+              </li>              
+            </ul>
+            
+            <h3>放射科資訊系統(Radiology Information Systm, RIS)</h3>
+            <ul>
+              <li style={{ fontWeight: "bold" }}>
+              影像檢查程序管理系統 - PPSM (Performed Procedure Step Manager)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>實作「DICOM Modality Performed Procedure Step」，管理從檢查儀器(Modality)或影像產生設備(Image Creator)傳送到發到OF以及IM。
+                </li>
+                <li>
+                  <strong>採用標準: </strong>DICOM MPPS
+                </li>
+              </ul>
               </li>
               <li style={{ fontWeight: "bold" }}>
-                (數位病理)影像顯示系統(Image Display, ID)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                {" "}
-                提供DICOM數位病理影像或一般醫學影像之顯示、影像處理，標記註解等功能，此系統通常結合影像報告系統，影像從影像儲存系統調閱後，用來提供病理科醫師或是臨床醫師查看影像以及對應報告。
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                證據產生系統(Evidence Creator, EC)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                在醫學資訊整合系統中，產生已完成檢查的相關影像、關鍵影像(key
-                Image
-                Noate)、標記註解、結構化報告等，並可將結果傳送至影像儲存系統。此系統大多由輔助決策系統或是人工智慧模型產生標準化之DICOM
-                AI結果(AI Resutls)，例如: GSPS, RTSS,
-                SEG等，上傳至影像儲存系統，並提供影像檢視器之顯示。其驗證包含:
-                格式驗證以及傳輸協定驗證(請參考 醫療儀器設備說明)
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                {" "}
-                影像標記註解亦可支援FHIR格式儲存，可將結果以FHIR方式上傳報告儲存系統中。
+              影像管理與儲存系統 - IM (Image Manager/Image Archive)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong> 用於管理DICOM影像儲存與管理，此系統也稱為PACS Server，用於符合DICOM標準格式之影像、波型、結構化報告、標記註解等類型的儲存與管理，並支援標準化DICOM、DICOMweb查詢與調閱協定。DICOM協定常用支援為C-STORE, C-FIND, C-MOVE, C-GET等；DICOMweb支援QIDO-RS、WADO-RS/WAOD-URI、STOW-RS等。
+                </li>
+                <li>
+                  <strong>採用標準: </strong>DICOM, DICOMweb
+                </li>
+              </ul>
               </li>
               <li style={{ fontWeight: "bold" }}>
-                醫療儀器設備(Modality, MOD)
+              影像佐證建構系統 - EC (Evidence Creator)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>
+                  <ul>
+                    <li>
+                    在醫學資訊整合系統中，產生已完成檢查的相關影像、關鍵影像(key Image Noate)、標記註解、結構化報告等，並可將結果傳送至影像儲存系統。此系統大多由輔助決策系統或是人工智慧模型產生標準化之DICOM AI結果(AI Resutls)，例如: GSPS, RTSS, SEG等，上傳至影像儲存系統，並提供影像檢視器之顯示。其驗證包含: 格式驗證以及傳輸協定驗證(請參考 醫療儀器設備說明)
+                    </li>
+                    <li>
+                    影像標記註解亦可支援FHIR格式儲存，可將結果以FHIR方式上傳報告儲存系統中。通過度取資料後經過處理所產生的影像佐證物件，例如: 影像或是量測資訊的系統。常見有電腦輔助診斷系統、影像標記系統等。
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>採用標準: </strong>DICOM, FHIR
+                </li>
+              </ul>
               </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                參加對象以國內外醫療儀器製造商在台灣銷售為主，包含:
-                超音波、心電圖、X光機、內視鏡等。主要驗證儀器是否符合DICOM以下規格
+
+              <li style={{ fontWeight: "bold" }}>
+              醫療儀器設備 -MOD (Modality)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>擷取或產生醫學影像之儀器或系統。參加對象以國內外醫療儀器製造商在台灣銷售為主，包含: 超音波、心電圖、X光機、內視鏡等。主要驗證儀器是否符合DICOM以下規格
+                  <ul>
+                    <li>
+                    <strong>影像格式驗證: </strong> 針對儀器製造商提供之符合性宣稱(Conformance Statement)，針對儀器端產生之DICOM物件進行格式驗證，以符合DICOM PS 3.3 SOP Class UID定義的格式規範。例如:產生的超音波影像是否符合DICOM格式、具備必要欄位、儲存的數值符合欄位規範、OID與UID之正確性等。
+                    
+                    </li>
+                    <li>
+                    <strong>傳輸協定驗證: </strong>針對儀器製造商提供之符合性宣稱(Conformance Statement)，驗證傳輸功能是否符合DICOM規範，例如: C-STORE, Storage Commitment, MPPS, C-FIND-MWL等功能。                    
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>採用標準: </strong>DICOM
+                </li>
+              </ul>
+              </li>          
+            </ul>
+              
+            <h3>報告系統 (Report System)</h3>
+            <ul>
+              <li style={{ fontWeight: "bold" }}>
+              放射影像報告儲存系統(Report Repository)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>用於儲存與管理影像報告的資料庫，支援標準化FHIR DiagnosticReport以及ImagingStudy查詢與調閱。亦可支援FHIR格式之影像發現以及影像標記註。
+                </li>              
+              </ul>              
               </li>
-              <li style={{ marginLeft: "30px" }}>
-                影像格式驗證: 針對儀器製造商提供之符合性宣稱(Conformance
-                Statement)，針對儀器端產生之DICOM物件進行格式驗證，以符合DICOM
-                PS 3.3 SOP Class
-                UID定義的格式規範。例如:產生的超音波影像是否符合DICOM格式、具備必要欄位、儲存的數值符合欄位規範、OID與UID之正確性等。
-              </li>
-              <li style={{ marginLeft: "30px" }}>
-                {" "}
-                傳輸協定驗證: 針對儀器製造商提供之符合性宣稱(Conformance
-                Statement)，驗證傳輸功能是否符合DICOM規範，例如: C-STORE,
-                Storage Commitment, MPPS, C-FIND-MWL等功能。
+              <li style={{ fontWeight: "bold" }}>
+              報告顯示/編輯系統(Reporting System)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>
+                  <ul>
+                    <li>
+                    用於顯示以及編影像報告，可支援標準化FHIR 診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)的查詢與調閱以及上傳，影像整合報告部分，可透過影像索引(ImagingStudy)組合影像對應的WADO連結，並可向影像儲存系統以DICOM/DICOMweb的方式調閱影像以及影像的標記註解至影像顯示系統顯示。
+                    </li>
+                    <li>
+                    影像發現以及影像標記註解亦可支援FHIR格式儲存，可從報告儲存系統中調閱影像發現以及影像標記並顯示在影像顯示系統中。
+                    </li>
+                  </ul>
+                </li>              
+              </ul>              
+              </li>    
+            </ul>
+
+            <h3>顯示系統</h3>
+            <ul>
+              <li style={{ fontWeight: "bold" }}>
+              (數位病理)影像顯示系統 - ID(Image Display)
+              <ul>
+                <li>
+                  <strong>系統功能簡介: </strong>提供DICOM數位病理影像或一般醫學影像之顯示、影像處理，標記註解等功能，此系統通常結合影像報告系統，影像從影像儲存系統調閱後，用來提供病理科醫師或是臨床醫師查看影像以及對應報告。
+                </li>    
+                <li>
+                  <strong>採用標準: </strong>DICOM
+                </li>   
+              </ul>              
               </li>
             </ul>
-            <p>本工作小組制定的使用情境依序說明如下:</p>
-            <h5 style={{ fontWeight: "bold" }}>情境1:影像與標記互通</h5>
-            <ul style={{ margin: 0 }}>
-              {/*  */}
+
+            <h3>影像檢查流程</h3>
+            <strong>本工作小組制定的使用情境依序說明如下:</strong>
+            <h3>情境1:影像與標記互通</h3>
+
+            <ul>
+            <li>
+              測試一般影像以及病理影像儲存管理主機(Source)以及顯示端(Consumer)能依照DICOMweb標準查詢與調閱。能夠正確顯示影像以及標記註解，根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Dispaly Consistency)。
+            </li>
+            <li>
+              使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，依照DICOM階層式架構回傳結果。可選擇使用DICOM(C-STORE)或是使用WADO-URI或WADO-RS調閱影像，並顯示結果。
+            </li>
+            <li>
+              影像標記與註解格式可能是影像分割形式的點陣圖型、透過座標定義輪廓之向量圖型等，本情境主要針對註解標示影像的關注區(regions of interest, ROIs)的標準化進行驗證。亦希望參加者能提供簡單的標記，作為標準化醫學影像以及病理影像的示範案例，提供異質性系統互通。
+            </li>
+            <li>
+              影像標記註解部分，DICOM支援標記規格，例如: GSPS, RTSS, SEG等。FHIR標記註解部分支援SVG格式。
+            </li>
+            <li>
+              病理影像部分能夠支援顯示DICOM Supplement 145定義的超大尺寸數位病理影像(Whole Slide Image, WSI)，並能正確顯示。
+              <ul>
+                <li>使用DICOMweb階層式查詢方式查詢DICOMweb主機，依照DICOM階層式架構回傳結果。使用WADO-URI或WADO-RS調閱影像。</li>
+                <li>產生DICOM數位病理影像並透過DICOM標準協定上傳至PACS Servers</li>
+                <li>產生TID 1500結構化報告或是DIOCM ANN (DICOM Supplement 222: Whole Slide Microscopy Bulk Annotations Storage SOP Class格式作為標記註解格式</li>
+              </ul>
+            </li>              
+            </ul>
+            
+            <ul>
+              <li>
+              <strong>情境1-1: 醫學影像及DICOM標記呈現</strong>
+              <p>使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳影像以及標記註解，且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Display Consistency)。</p>
+              <ul>
+              <li>        
+                <strong>使用資料:</strong>
+                <ul>
+                  <li>醫學影像(DICOM)</li>
+                  <li>影像標記與註解(DICOM SR, GSPS, RTSS, SEG, etc)</li>
+                </ul>
+              </li>
+              </ul>
+              </li>
 
               <li>
-                測試一般影像以及病理影像儲存管理主機(Source)以及顯示端(Consumer)能依照DICOMweb標準查詢與調閱。能夠正確顯示影像以及標記註解，根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Dispaly
-                Consistency)。
+              <strong>情境1-2: 病理全切片及DICOM標記呈現</strong>
+              <p>使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳數位全切片病理影像(Whole Slide Image, WSI)，且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Display Consistency)。</p>
+              <ul>
+              <li>        
+                <strong>使用資料:</strong>
+                <ul>
+                  <li>醫學影像(DICOM)</li>
+                  <li>影像標記與註解(FHIR Observation)</li>
+                </ul>
+              </li>
+              </ul>
+              </li>
+
+              <li>
+              <strong>情境1-3: 醫學影像及FHIR標記呈現</strong>
+              <p>使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳影像，且能從FHIR影像報告儲存中心 (Report Repository)調閱FHIR標記且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Display Consistency)。</p>
+              <ul>
+              <li>        
+                <strong>使用資料:</strong>
+                <ul>
+                  <li>醫學影像(DICOM)</li>
+                  <li>影像標記與註解(FHIR Observation)</li>
+                </ul>
+              </li>
+              </ul>
               </li>
               <li>
-                使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，依照DICOM階層式架構回傳結果。可選擇使用DICOM(C-STORE)或是使用WADO-URI或WADO-RS調閱影像，並顯示結果。
-              </li>
-              <li>
-                影像標記與註解格式可能是影像分割形式的點陣圖型、透過座標定義輪廓之向量圖型等，本情境主要針對註解標示影像的關注區(regions
-                of interest,
-                ROIs)的標準化進行驗證。亦希望參加者能提供簡單的標記，作為標準化醫學影像以及病理影像的示範案例，提供異質性系統互通。
-              </li>
-              <li>
-                影像標記註解部分，DICOM支援標記規格，例如: GSPS, RTSS,
-                SEG等。FHIR標記註解部分支援SVG格式。
-              </li>
-              <li>
-                病理影像部分能夠支援顯示DICOM Supplement
-                145定義的超大尺寸數位病理影像(Whole Slide Image,
-                WSI)，並能正確顯示。
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                使用DICOMweb階層式查詢方式查詢DICOMweb主機，依照DICOM階層式架構回傳結果。使用WADO-URI或WADO-RS調閱影像。
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                產生DICOM數位病理影像並透過DICOM標準協定上傳至PACS Servers
-              </li>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                產生TID 1500結構化報告或是DIOCM ANN (DICOM Supplement 222: Whole
-                Slide Microscopy Bulk Annotations Storage SOP
-                Class格式作為標記註解格式
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                情境1-1: 醫學影像及DICOM標記呈現
-              </li>
-              <p>
-                使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳影像以及標記註解，且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Dispaly
-                Consistency)。
-              </p>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                使用資料:
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  醫學影像(DICOM)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  影像標記與註解(FHIR Observation)
-                </li>
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                情境1-2: 醫學影像及FHIR標記呈現
-              </li>
-              <p>
-                使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳影像，且能從FHIR影像報告儲存中心
-                (Report
-                Repository)調閱FHIR標記且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Dispaly
-                Consistency)。
-              </p>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                使用資料:
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  醫學影像(DICOM)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  影像標記與註解(FHIR Observation)
-                </li>
+              <strong>情境1-4: 醫學影像及DICOM標記呈現</strong>
+              <p>使用DICOM/DICOMweb階層式查詢方式查詢影像儲存系統，並將回傳影像以及標記註解，且能正確顯示。根據測試腳本完成基本功能的操作(移動到特定位置、縮放、切換不同Layer層等)，確保相同影像在不同系統中能呈顯一致(Display Consistency)。</p>
               </li>
             </ul>
-            {/*  */}
-            <h5 style={{ fontWeight: "bold" }}>情境2:報告及影像整合</h5>
+            
+           
+            <h3>情境2:報告及影像整合</h3>
+            <p>製作FHIR放射影像索引及放射報告並上傳至影像報告儲存中心 (Report Repository) 結合影像報告與DICOM影像整合情境，以臺灣核心實作指引 (TW core IG)為基礎向上設計，成為電子病歷交換中心(EEC)之跨院調閱單張「醫療影像及報告」設計案例。</p>
+            <ul>
+              <li>針對影像報告以及對應的DICOM影像、DICOM標記註解解進行存取調閱、並能正確顯示。</li>
+              <li>產生FHIR 診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)並以FHIR方式上傳至報告儲存系統。</li>
+              <li>使用FHIR方式用於查尋與調閱診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)，並能整合報告對應的影像，且適當使用影像檢視器開啟影像與標記。</li>
+              <li><strong>情境2-1: 醫學影像報告及影像整合</strong>
+                <p>製作FHIR放射影像索引及放射報告並上傳至影像報告儲存中心 (Report Repository) 結合影像報告與DICOM影像整合情境</p>
+                <ul>
+                <li>
+                <strong>使用資料:</strong>
+                <ul>
+                  <li>放射影像報告 (FHIR DiagnosticReport)</li>
+                  <li>影像索引(FHIR ImagingStudy)</li>
+                  <li>醫學影像(DICOM)</li>
+                  <li>影像標記與註解(DICOM SR, GSPS, RTSS, SEG, etc)</li>
+                </ul>
+              </li>
+              </ul>
+              </li>              
+              <li>
+                <strong>情境2-2: 數位病理影像報告及影像整合</strong>
+                <p>製作FHIR病理影像索引及病理報告並上傳至影像報告儲存中心 (Report Repository) 結合影像報告與DICOM WSI影像整合情境</p>
+                <ul>
+                <li>
+                <strong>使用資料:</strong>
+                <ul>
+                  <li>病理影像報告 (FHIR DiagnosticReport)</li>
+                  <li>影像索引(FHIR ImagingStudy)</li>
+                  <li>WSI影像(DICOM)</li>
+                  <li>WSI影像標記與註解(DICOM ANN, DICOM SR)</li>
+                </ul>
+              </li>
+              </ul>
+              </li>
+              <li>
+                <strong>情境2-3: 影像、標記與影像發現整合</strong>
+                <p>製作FHIR影像索引及影像報告並上傳至影像報告儲存中心 (Report Repository) 結合影像報告與影像發現與標記註解整合情境</p>
+                <ul>
+                <li>
+                <strong>使用資料:</strong>
+                <ul>
+                  <li>病理影像報告 (FHIR DiagnosticReport)</li>
+                  <li>影像索引(FHIR ImagingStudy)</li>
+                  <li>醫學影像(DICOM)</li>
+                  <li>影像發現與標記(FHIR Observation)</li>
+                </ul>
+              </li>
+              </ul>
+              </li>              
+            </ul>            
             <p>
-              製作FHIR放射影像索引及放射報告並上傳至影像報告儲存中心 (Report
-              Repository) 結合影像報告與DICOM影像整合情境，以臺灣核心實作指引
-              (TW core
-              IG)為基礎向上設計，成為電子病歷交換中心(EEC)之跨院調閱單張「醫療影像及報告」設計案例。
-            </p>
-            <ul style={{ margin: 0 }}>
-              <li>
-                針對影像報告以及對應的DICOM影像、DICOM標記註解解進行存取調閱、並能正確顯示。
-              </li>
-              <li>
-                產生FHIR
-                診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)並以FHIR方式上傳至報告儲存系統。
-              </li>
-              <li>
-                使用FHIR方式用於查尋與調閱診斷報告(DiagnosticReport)以及影像索引(ImagingStudy)，並能整合報告對應的影像，且適當使用影像檢視器開啟影像與標記。
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                情境2-1: 醫學影像報告及影像整合
-              </li>
-              <p>
-                製作FHIR放射影像索引及放射報告並上傳至影像報告儲存中心 (Report
-                Repository) 結合影像報告與DICOM影像整合情境
-              </p>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                使用資料:
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  放射影像報告 (FHIR DiagnosticReport)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  影像索引(FHIR ImagingStudy)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  醫學影像(DICOM)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  影像標記與註解(DICOM SR, GSPS, RTSS, SEG, etc)
-                </li>
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                情境2-2: 數位病理影像報告及影像整合
-              </li>
-              <p>
-                製作FHIR病理影像索引及病理報告並上傳至影像報告儲存中心 (Report
-                Repository) 結合影像報告與DICOM WSI影像整合情境
-              </p>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                使用資料:
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  病理影像報告 (FHIR DiagnosticReport)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  影像索引(FHIR ImagingStudy)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  WSI影像(DICOM)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  WSI影像標記與註解(DICOM ANN, DICOM SR)
-                </li>
-              </li>
-              <li style={{ fontWeight: "bold" }}>
-                情境2-3: 影像、標記與影像發現整合
-              </li>
-              <p>
-                製作FHIR影像索引及影像報告並上傳至影像報告儲存中心 (Report
-                Repository) 結合影像報告與影像發現與標記註解整合情境
-              </p>
-              <li style={{ listStyleType: "circle", marginLeft: "15px" }}>
-                使用資料:
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  病理影像報告 (FHIR DiagnosticReport)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  影像索引(FHIR ImagingStudy)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  醫學影像(DICOM)
-                </li>
-                <li style={{ listStyleType: "disc", marginLeft: "15px" }}>
-                  影像發現與標記(FHIR Observation)
-                </li>
-              </li>
-            </ul>
-            <p>
-              下圖為影像報告的Profile設計結構，包含: (1)
-              放射影像報告/病理影像報告 (FHIR
-              DiagnosticReport)、(2)影像索引(FHIR ImagingStudy)。
+            下圖為影像報告的Profile設計結構，包含: (1) 放射影像報告/病理影像報告 (FHIR DiagnosticReport)、(2)影像索引(FHIR ImagingStudy)。
             </p>
             <p style={{ fontWeight: "bold" }}>
               放射影像報告/病理影像報告 (FHIR DiagnosticReport)設計結構示意圖
@@ -1943,7 +2150,7 @@ export const TraksTabInform = [
               <ImgDialog Img={track4_3} Width={"50%"} />
             </center>
             <div>
-              <h5 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h5>
+              <h3 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h3>
               <span>
                 此情境為建立一個醫學影像的造影檢查流程，此情境完全依照
               </span>
@@ -1965,7 +2172,7 @@ export const TraksTabInform = [
                 <li>Evidence Creator</li>
               </ul>
               <p>
-                備註:
+                <strong>備註:</strong>
                 此情境採用互通性聯測機制，同一情境測試項目需滿足IHE聯測規範，即需三家不同公司或是機構進行交互驗證方可通過聯測。
               </p>
             </div>
@@ -1978,225 +2185,219 @@ export const TraksTabInform = [
         content: (
           <>
             <p>涉及到的角色 (Actors)以及交易(Transactions)，說明如下:</p>
-            <h4 style={{ fontWeight: "bold" }}>角色(Actors)</h4>
+            <h3 style={{ fontWeight: "bold" }}>角色(Actors)</h3>
             <p>1.影像、結構化影像報告(IMAGE)角色整理</p>
-            <table border="1" class="table table-striped table-bordered">
-              <thead>
-                <tr>
-                  <th>
-                    <strong>編號</strong>
-                  </th>
-                  <th>
-                    <strong>名稱</strong>
-                  </th>
-                  <th>
-                    <strong>描述</strong>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>RAD-18</td>
-                  <td>Creator Images Stored</td>
-                  <td>產生影像儲存至影像儲存庫</td>
-                </tr>
-                <tr>
-                  <td>RAD-16</td>
-                  <td>Retrieves Images</td>
-                  <td>從影像檢索資料提供者與影像儲存庫查詢與調閱影像</td>
-                </tr>
-                <tr>
-                  <td>RAD-107</td>
-                  <td>WADO-RS Retrieve</td>
-                  <td>使用WADO-RS調閱DICOM SOP實例</td>
-                </tr>
-                <tr>
-                  <td>MITW-29</td>
-                  <td>ImagingStudy Create</td>
-                  <td>新增影像索引</td>
-                </tr>
-                <tr>
-                  <td>MITW-30</td>
-                  <td>ImagingStudy Query/Retrieve</td>
-                  <td>查詢與調閱影像索引</td>
-                </tr>
-                <tr>
-                  <td>MITW-31</td>
-                  <td>Image Report Create</td>
-                  <td>新增影像報告</td>
-                </tr>
-                <tr>
-                  <td>MITW-32</td>
-                  <td>Image Report Query/Retrieve</td>
-                  <td>查詢與調閱影像報告</td>
-                </tr>
-                <tr>
-                  <td>MITW-35</td>
-                  <td>Observation-Annotation Create</td>
-                  <td>新增影像標記(FHIR)</td>
-                </tr>
-                <tr>
-                  <td>MITW-36</td>
-                  <td>Observation-annotation Query/Retrieve</td>
-                  <td>查詢與調閱影像標記(FHIR)</td>
-                </tr>
-              </tbody>
-            </table>
+            <table class="table table-striped table-bordered" border="1">
+<thead>
+<tr>
+<th><strong>Keyword</strong></th>
+<th><strong>名稱</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IMG_REPORT_CREATOR</td>
+<td>Imaging Report Creator</td>
+<td>新增影像報告角色</td>
+</tr>
+<tr>
+<td>IMG_STUDY_CREATOR</td>
+<td>ImageStudy Creator</td>
+<td>新增影像索引角色</td>
+</tr>
+<tr>
+<td>OBS_ANN_CREATOR</td>
+<td>Observation-Annotation Creator</td>
+<td>新增影像標記(FHIR)角色</td>
+</tr>
+<tr>
+<td>IMG_REPORT_CONSUMER</td>
+<td>Imaging Report Consumer</td>
+<td>查詢與調閱影像報告角色</td>
+</tr>
+<tr>
+<td>IMG_STUDY_CONSUMER</td>
+<td>Imaging Consumer</td>
+<td>查詢與調閱影像索引角色</td>
+</tr>
+<tr>
+<td>OBS_ANN_CONSUMER</td>
+<td>Observation-Annotation Consumer</td>
+<td>查詢與調閱影像標記(FHIR)角色</td>
+</tr>
+<tr>
+<td>IMG_REPORT_REPOSITORY</td>
+<td>Report Repository</td>
+<td>影像報告儲存庫</td>
+</tr>
+<tr>
+<td>OBS_ANN_REPOSITORY</td>
+<td>Observation-Annotation Repository</td>
+<td>影像標記(FHIR)儲存庫</td>
+</tr>
+<tr>
+<td>IMG_DOC_CONSUMER</td>
+<td>Imaging Document Consumer</td>
+<td>調閱影像角色</td>
+</tr>
+<tr>
+<td>IMG_DOC_RESPONDER</td>
+<td>Imaging Document Responder</td>
+<td>影像檢索資料提供者</td>
+</tr>
+<tr>
+<td>IM</td>
+<td>Image Manager / Image Archive</td>
+<td>影像儲存庫</td>
+</tr>
+</tbody>
+</table>
+
             <p>2.數位病理影像存取(PATH)角色整理</p>
             <table class="table table-striped table-bordered" border="1">
-              <thead>
-                <tr>
-                  <th>
-                    <strong>Keyword</strong>
-                  </th>
-                  <th>
-                    <strong>名稱</strong>
-                  </th>
-                  <th>
-                    <strong>描述</strong>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>WSI_ANN_CREATOR</td>
-                  <td>WSI Annotation Creator</td>
-                  <td>新增影像標記角色</td>
-                </tr>
-                <tr>
-                  <td>WSI_CONSUMER</td>
-                  <td>WSI Consumer</td>
-                  <td>查詢與調閱影像角色</td>
-                </tr>
-                <tr>
-                  <td>WSI_ANN_CONSUMER</td>
-                  <td>WSI ANN Consumer</td>
-                  <td>查詢與調閱影像標記(DICOM ANN)角色</td>
-                </tr>
-                <tr>
-                  <td>WSI_REPOSITORY</td>
-                  <td>WSI Repository</td>
-                  <td>影像與標記儲存庫</td>
-                </tr>
-              </tbody>
-            </table>
-            <h4 style={{ fontWeight: "bold" }}>交易(Transactions)</h4>
+<thead>
+<tr>
+<th><strong>Keyword</strong></th>
+<th><strong>名稱</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WSI_ANN_CREATOR</td>
+<td>WSI Annotation Creator</td>
+<td>新增影像標記角色</td>
+</tr>
+<tr>
+<td>WSI_CONSUMER</td>
+<td>WSI Consumer</td>
+<td>查詢與調閱影像角色</td>
+</tr>
+<tr>
+<td>WSI_ANN_CONSUMER</td>
+<td>WSI ANN Consumer</td>
+<td>查詢與調閱影像標記(DICOM ANN)角色</td>
+</tr>
+<tr>
+<td>WSI_REPOSITORY</td>
+<td>WSI Repository</td>
+<td>影像與標記儲存庫</td>
+</tr>
+</tbody>
+</table>
+            
+            <h3 style={{ fontWeight: "bold" }}>交易(Transactions)</h3>
             <p>1.影像、結構化影像報告(IMAGE)交易整理</p>
             <table class="table table-striped table-bordered" border="1">
-              <thead>
-                <tr>
-                  <th>
-                    <strong>編號</strong>
-                  </th>
-                  <th>
-                    <strong>名稱</strong>
-                  </th>
-                  <th>
-                    <strong>描述</strong>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>RAD-18</td>
-                  <td>Creator Images Stored</td>
-                  <td>產生影像儲存至影像儲存庫</td>
-                </tr>
-                <tr>
-                  <td>RAD-16</td>
-                  <td>Retrieves Images</td>
-                  <td>從影像檢索資料提供者與影像儲存庫查詢與調閱影像</td>
-                </tr>
-                <tr>
-                  <td>RAD-107</td>
-                  <td>WADO-RS Retrieve</td>
-                  <td>使用WADO-RS調閱DICOM SOP實例</td>
-                </tr>
-                <tr>
-                  <td>MITW-29</td>
-                  <td>ImagingStudy Create</td>
-                  <td>新增影像索引</td>
-                </tr>
-                <tr>
-                  <td>MITW-30</td>
-                  <td>ImagingStudy Query/Retrieve</td>
-                  <td>查詢與調閱影像索引</td>
-                </tr>
-                <tr>
-                  <td>MITW-31</td>
-                  <td>Image Report Create</td>
-                  <td>新增影像報告</td>
-                </tr>
-                <tr>
-                  <td>MITW-32</td>
-                  <td>Image Report Query/Retrieve</td>
-                  <td>查詢與調閱影像報告</td>
-                </tr>
-                <tr>
-                  <td>MITW-35</td>
-                  <td>Observation-Annotation Create</td>
-                  <td>新增影像標記(FHIR)</td>
-                </tr>
-                <tr>
-                  <td>MITW-36</td>
-                  <td>Observation-annotation Query/Retrieve</td>
-                  <td>查詢與調閱影像標記(FHIR)</td>
-                </tr>
-              </tbody>
-            </table>
+<thead>
+<tr>
+<th><strong>編號</strong></th>
+<th><strong>名稱</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAD-18</td>
+<td>Creator Images Stored</td>
+<td>產生影像儲存至影像儲存庫</td>
+</tr>
+<tr>
+<td>RAD-16</td>
+<td>Retrieves Images</td>
+<td>從影像檢索資料提供者與影像儲存庫查詢與調閱影像</td>
+</tr>
+<tr>
+<td>RAD-107</td>
+<td>WADO-RS Retrieve</td>
+<td>使用WADO-RS調閱DICOM SOP實例</td>
+</tr>
+<tr>
+<td>MITW-29</td>
+<td>ImagingStudy Create</td>
+<td>新增影像索引</td>
+</tr>
+<tr>
+<td>MITW-30</td>
+<td>ImagingStudy Query/Retrieve</td>
+<td>查詢與調閱影像索引</td>
+</tr>
+<tr>
+<td>MITW-31</td>
+<td>Image Report Create</td>
+<td>新增影像報告</td>
+</tr>
+<tr>
+<td>MITW-32</td>
+<td>Image Report Query/Retrieve</td>
+<td>查詢與調閱影像報告</td>
+</tr>
+<tr>
+<td>MITW-35</td>
+<td>Observation-Annotation Create</td>
+<td>新增影像標記(FHIR)</td>
+</tr>
+<tr>
+<td>MITW-36</td>
+<td>Observation-annotation Query/Retrieve</td>
+<td>查詢與調閱影像標記(FHIR)</td>
+</tr>
+</tbody>
+</table>
+            
             <p>2.影像、結構化影像報告(IMAGE)交易整理</p>
             <table class="table table-striped table-bordered" border="1">
-              <thead>
-                <tr>
-                  <th>
-                    <strong>編號</strong>
-                  </th>
-                  <th>
-                    <strong>名稱</strong>
-                  </th>
-                  <th>
-                    <strong>描述</strong>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>RAD-129</td>
-                  <td>QIDO-RS Query</td>
-                  <td>使用QIDO-RS查詢DICOM SOP實例</td>
-                </tr>
-                <tr>
-                  <td>RAD-107</td>
-                  <td>WADO-RS Retrieve</td>
-                  <td>使用WADO-RS調閱DICOM SOP實例</td>
-                </tr>
-                <tr>
-                  <td>RAD-108</td>
-                  <td>Store Instances over the Web</td>
-                  <td>使用STOW-RS傳輸DICOM SOP實例</td>
-                </tr>
-              </tbody>
-            </table>
-            <h4 style={{ fontWeight: "bold" }}>角色與交易關係圖</h4>
+<thead>
+<tr>
+<th><strong>編號</strong></th>
+<th><strong>名稱</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAD-129</td>
+<td>QIDO-RS Query</td>
+<td>使用QIDO-RS查詢DICOM SOP實例</td>
+</tr>
+<tr>
+<td>RAD-107</td>
+<td>WADO-RS Retrieve</td>
+<td>使用WADO-RS調閱DICOM SOP實例</td>
+</tr>
+<tr>
+<td>RAD-108</td>
+<td>Store Instances over the Web</td>
+<td>使用STOW-RS傳輸DICOM SOP實例</td>
+</tr>
+</tbody>
+</table>
+            
+            <h3 style={{ fontWeight: "bold" }}>角色與交易關係圖</h3>
             <ul>
               <li>醫學影像與DICOM標記互通之角色與交易關係圖</li>{" "}
               <center>
                 {" "}
                 <ImgDialog Img={track4_4} Width={"50%"} />
               </center>
+              <center>
+                {" "}
+                <ImgDialog Img={track4_5} Width={"50%"} />
+              </center>
               <li>影像、結構化影像報告(IMAGE)、FHIR標記之角色與交易關係圖</li>{" "}
               <center>
-                <ImgDialog Img={track4_5} Width={"80%"} />
+                <ImgDialog Img={track4_6} Width={"80%"} />
               </center>{" "}
               <li>數位病理影像存取(PATH)之角色與交易關係圖 </li>{" "}
               <center>
                 {" "}
-                <ImgDialog Img={track4_6} Width={"50%"} />
+                <ImgDialog Img={track4_7} Width={"50%"} />
               </center>
               <li>影像檢查流程之角色與交易關係圖</li>{" "}
               <center>
                 {" "}
-                <ImgDialog Img={track4_7} Width={"50%"} />
+                <ImgDialog Img={track4_8} Width={"50%"} />
               </center>
             </ul>
           </>
@@ -2254,6 +2455,84 @@ export const TraksTabInform = [
           </>
         ),
       },
+      ,
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            <table class="table table-striped table-bordered" border="1">
+<thead>
+<tr>
+<th>角色</th>
+<th>姓名</th>
+<th>所屬單位</th>
+<th>貢獻</th>
+<th>聯絡方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>作者</td>
+<td>連中岳</td>
+<td>國立臺北護理健康大學－資訊管理系</td>
+<td>Profiling, 系統分析, 開發工具, 聯測測試情境</td>
+<td>chungyueh@ntunhs.edu.tw</td>
+</tr>
+<tr>
+<td>作者</td>
+<td>丁子芸</td>
+<td>國立臺北護理健康大學－資訊管理系</td>
+<td>FHIR報告規格設計</td>
+<td>aewqoo832456@gmail.com</td>
+</tr>
+<tr>
+<td>貢獻者</td>
+<td>洪彬彬</td>
+<td>慈濟大學 - 醫學資訊學系</td>
+<td>SVG Annoation設計</td>
+<td></td>
+</tr>
+<tr>
+<td>貢獻者</td>
+<td>蕭嘉宏</td>
+<td>慈濟大學 - 醫學資訊學系</td>
+<td>SVG Annoation設計, 諮詢</td>
+<td></td>
+</tr>
+<tr>
+<td>貢獻者</td>
+<td>李沁霖</td>
+<td>國立陽交通大學 - 生物醫學工程學系</td>
+<td>開源工具開發, 聯測情境設計</td>
+<td></td>
+</tr>
+<tr>
+<td>貢獻者</td>
+<td>郭俐君</td>
+<td>國立臺北護理健康大學－資訊管理系</td>
+<td>聯測情境設計</td>
+<td>lily220487@gmail.com</td>
+</tr>
+<tr>
+<td>貢獻者</td>
+<td>鄧瑞均</td>
+<td>國立臺北護理健康大學－資訊管理系</td>
+<td>測試, 工具開發, 測試</td>
+<td></td>
+</tr>
+<tr>
+<td>貢獻者</td>
+<td>陳紹瑜</td>
+<td>國立臺北護理健康大學－資訊管理系</td>
+<td>病理影像聯測情境設計, 開源工具開發</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+          </>
+        ),
+      }
     ],
   },
   {
@@ -2267,8 +2546,11 @@ export const TraksTabInform = [
         Sc: "簡介 (Summary)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>醫療健康照護的領域中，資料交換的需求能夠有助於病人連續性照護、醫療資料整合、照護資料應用，然而，不同醫療系統中的資料格式各有差異、資料結構以及欄位內容的標準亦有所落差。</p>
+            <p>臺灣屬於健保單一給付制度的醫療給付架構，大部分格式、資料標準以健保申報為主，在互操作性上雖然已有既定的架構與規格，但對於醫療醫療單位間之資料交換還是有所落差，大多數的需求都需【客製化】、【唯一化】，每當有資料交換需求或是產生新的傳輸資料架構，往往醫療院所皆須從不同來源的資料重新產製符合格式之資料。</p>
+            <p>有鑑於此，著手推動統一標準合適的FHIR資料架構，定義完善的資料內容、交換項目，當【交換單張】的需求產生時，可以快速地萃取出需要的資料、以及使用統一的前端介面進行讀取、同時加速資料儲存的效率。</p>
+            <br/>
+            <p>今年度照護協調內容主要以慢性病電子處方箋、電子病歷交換中心(EEC)及健保健康存摺(NHI myHealthBank)現有單張規範為基礎，進行資料內容的定義，並將其以台灣現有參考台灣FHIR核心實作指引(Tw Core IG)規範為基礎進行設計，納入整體交換架構規範中，期望讓已經有其基礎的醫療院所、醫療資訊服務提供商可以加速落實互操作架構開發，並推動我國醫療單張跨機構交換之效率。</p>
           </>
         ),
       },
@@ -2277,8 +2559,8 @@ export const TraksTabInform = [
         Sc: "效益 (Benefits) ",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <p>醫療健康照護場域中有許多跨院醫療照護團隊持續性照護的需求，例如轉診轉院、慢性病照護、癌病治療/照護、長期照護等，相關資料不只在醫療專業人員手上處理業務使用，民眾本身也有了解並持有自身電子健康檔案(PHR)的權利，且能促進民眾本身的健康識能。台灣除了民眾向就醫院所申請病歷以外，在衛生福利部不同單位間已有分別建立不同格式之電子病歷、健康資料互通交換格式與規範，本工作小組目標以衛福部下一代主要資訊標準FHIR為核心，向前相容各種已存在之電子交換格式，協助相關醫療健康照護資料更容易歸人彙整於單一標準上，促進不同醫療健康照護機構與專業人員及相關系統可更容易有效率的整合資訊並應用。</p>
+            <p>本工作小組依據既有非FHIR標準之互通標準，以FHIR標準設計符合台灣醫療照護應用情境資訊需求之慢性處方箋、電子病歷交換、健康存摺資料 FHIR Resource 規範與通用系統互通操作應用流程，提供產業應用交流與參考，以達到基本的跨系統互通性，並相容衛生福利部台灣核心實作指引(TW FHIR Core IG)規範。</p>
           </>
         ),
       },
@@ -2287,8 +2569,15 @@ export const TraksTabInform = [
         Sc: "詳細資訊(Details)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <h3>Scenario 1: 慢性處方箋開立與領用藥流程</h3>
+            <h3>Scenario 2: 現有PHR互通格式匯入_EEC門診病歷Bundle</h3>
+            <h3>Scenario 3: 現有PHR互通格式匯入_EEC出院病摘Bundle</h3>
+            <h3>Scenario 4: 現有PHR互通格式匯入_EEC檢驗報告Bundle</h3>
+            <h3>Scenario 5: 現有PHR互通格式匯入_EEC醫學影像報告Bundle (與 Track#4 Scenario 2-1 整合)</h3>
+            <h3>Scenario 6: 現有PHR互通格式匯入_健保健康存摺Bundle</h3>
+            <h3>Scenario 7: Long-Term Services and Supports (eLTSS)</h3>
+            <img src={track5_1} Width="100%"/>
+            
           </>
         ),
       },
@@ -2303,12 +2592,155 @@ export const TraksTabInform = [
         ),
       },
       {
-        id: "6",
+        id: "5",
         Sc: "規格(Specification)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+          <h3>角色(Actors)</h3>
+            <p>1. 照護協調(COLLCARE)角色整理</p>
+            <table class="part in-view" data-startline="970" data-endline="983">
+<thead>
+<tr>
+<th><strong data-position="47948" data-size="0"><span data-position="47950" data-size="7">Keyword</span></strong></th>
+<th><strong data-position="47978" data-size="0"><span data-position="47980" data-size="4">Name</span></strong></th>
+<th><strong data-position="48020" data-size="0"><span data-position="48022" data-size="11">Description</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-position="48120" data-size="19">PRESCRIPTION_CREATOR</span></td>
+<td><span data-position="48146" data-size="28">Medical Prescription Creator</span></td>
+<td><span data-position="48184" data-size="5">產生處方箋</span></td>
+</tr>
+<tr>
+<td><span data-position="48200" data-size="20">PRESCRIPTION_CONSUMER</span></td>
+<td><span data-position="48226" data-size="35">Query/Retrieve Medcial Prescription</span></td>
+<td><span data-position="48264" data-size="8">處方箋查詢與調閱</span></td>
+</tr>
+<tr>
+<td><span data-position="48280" data-size="22">PRESCRIPTION_REPOSITORY</span></td>
+<td><span data-position="48306" data-size="23">Prescription Repository</span></td>
+<td><span data-position="48344" data-size="6">處方箋儲存庫</span></td>
+</tr>
+<tr>
+<td><span data-position="48360" data-size="12">EEC_OS_CREATOR</span></td>
+<td><span data-position="48386" data-size="30">EEC Outpatient Summary Creator</span></td>
+<td><span data-position="48424" data-size="11">EEC門診病歷文件產生</span></td>
+</tr>
+<tr>
+<td><span data-position="48440" data-size="13">EEC_OS_CONSUMER</span></td>
+<td><span data-position="48466" data-size="31">EEC Outpatient Summary Consumer</span></td>
+<td><span data-position="48504" data-size="9">EEC門診病歷調閱</span></td>
+</tr>
+<tr>
+<td><span data-position="48520" data-size="12">EEC_DS_CREATOR</span></td>
+<td><span data-position="48546" data-size="29">EEC Discharge Summary Creator</span></td>
+<td><span data-position="48584" data-size="9">EEC出院病摘產生</span></td>
+</tr>
+<tr>
+<td><span data-position="48600" data-size="13">EEC_DS_CONSUMER</span></td>
+<td><span data-position="48626" data-size="30">EEC Discharge Summary Consumer</span></td>
+<td><span data-position="48664" data-size="11">EEC出院病摘文件調閱</span></td>
+</tr>
+<tr>
+<td><span data-position="48680" data-size="13">EEC_LAB_CREATOR</span></td>
+<td><span data-position="48706" data-size="29">EEC Laboratory Report Creator</span></td>
+<td><span data-position="48744" data-size="11">EEC檢驗檢查報告產生</span></td>
+</tr>
+<tr>
+<td><span data-position="48759" data-size="16">IMG_REPORT_CREATOR</span></td>
+<td><span data-position="48783" data-size="22">Imaging Report Creator</span></td>
+<td><span data-position="48819" data-size="15">新增影像報告角色 (賽道#4)</span></td>
+</tr>
+<tr>
+<td><span data-position="48838" data-size="15">IMG_STUDY_CREATOR</span></td>
+<td><span data-position="48862" data-size="18">ImageStudy Creator</span></td>
+<td><span data-position="48898" data-size="15">新增影像索引角色 (賽道#4)</span></td>
+</tr>
+<tr>
+<td><span data-position="48915" data-size="17">IMG_REPORT_CONSUMER</span></td>
+<td><span data-position="48939" data-size="23">Imaging Report Consumer</span></td>
+<td><span data-position="48975" data-size="18">查詢與調閱影像報告角色 (賽道#4)</span></td>
+</tr>
+<tr>
+<td><span data-position="48997" data-size="16">IMG_STUDY_CONSUMER</span></td>
+<td><span data-position="49021" data-size="16">Imaging Consumer</span></td>
+<td><span data-position="49057" data-size="18">查詢與調閱影像索引角色 (賽道#4)</span></td>
+</tr>
+</tbody>
+</table>
+<h3>交易(Transactions)</h3>
+            <p>1. 照護協調(COLLCARE)交易整理</p>
+            <table class="part in-view" data-startline="988" data-endline="1000">
+<thead>
+<tr>
+<th><strong data-position="49130" data-size="0"><span data-position="49132" data-size="2">編號</span></strong></th>
+<th><strong data-position="49144" data-size="0"><span data-position="49146" data-size="2">名稱</span></strong></th>
+<th><strong data-position="49196" data-size="0"><span data-position="49198" data-size="2">描述</span></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-position="49298" data-size="7">MITW-55</span></td>
+<td><span data-position="49308" data-size="44">Create EEC Outpatient Medical Summary Bundle</span></td>
+<td><span data-position="49356" data-size="13">EEC門診病歷文件打包上傳</span></td>
+</tr>
+<tr>
+<td><span data-position="49376" data-size="7">MITW-56</span></td>
+<td><span data-position="49386" data-size="45">Query/Retrieve EEC Outpatient Medical Summary</span></td>
+<td><span data-position="49434" data-size="9">EEC門診病歷調閱</span></td>
+</tr>
+<tr>
+<td><span data-position="49454" data-size="7">MITW-57</span></td>
+<td><span data-position="49464" data-size="35">Create EEC Discharge Summary Bundle</span></td>
+<td><span data-position="49512" data-size="13">EEC出院病摘文件打包上傳</span></td>
+</tr>
+<tr>
+<td><span data-position="49532" data-size="7">MITW-58</span></td>
+<td><span data-position="49542" data-size="36">Query/Retrieve EEC Discharge Summary</span></td>
+<td><span data-position="49590" data-size="9">EEC出院病摘調閱</span></td>
+</tr>
+<tr>
+<td><span data-position="49610" data-size="7">MITW-59</span></td>
+<td><span data-position="49620" data-size="35">Create EEC Laboratory Report Bundle</span></td>
+<td><span data-position="49668" data-size="15">EEC檢驗檢查報告文件打包上傳</span></td>
+</tr>
+<tr>
+<td><span data-position="49688" data-size="7">MITW-60</span></td>
+<td><span data-position="49698" data-size="36">Query/Retrieve EEC Laboratory Report</span></td>
+<td><span data-position="49746" data-size="11">EEC檢驗檢查報告調閱</span></td>
+</tr>
+<tr>
+<td><span data-position="49766" data-size="7">MITW-62</span></td>
+<td><span data-position="49776" data-size="22">Query/Retrieve NIH PHR</span></td>
+<td><span data-position="49824" data-size="9">NIH健康存摺調閱</span></td>
+</tr>
+<tr>
+<td><span data-position="49844" data-size="7">MITW-31</span></td>
+<td><span data-position="49854" data-size="19">Image Report Create</span></td>
+<td><span data-position="49894" data-size="13">新增影像報告 (賽道#4)</span></td>
+</tr>
+<tr>
+<td><span data-position="49911" data-size="7">MITW-61</span></td>
+<td><span data-position="49921" data-size="26">Image Report Bundle Create</span></td>
+<td><span data-position="49961" data-size="16">新增影像報告文件打包(賽道#4)</span></td>
+</tr>
+<tr>
+<td><span data-position="49981" data-size="7">MITW-30</span></td>
+<td><span data-position="49991" data-size="27">ImagingStudy Query/Retrieve</span></td>
+<td><span data-position="50031" data-size="16">查詢與調閱影像索引 (賽道#4)</span></td>
+</tr>
+<tr>
+<td><span data-position="50052" data-size="7">MITW-32</span></td>
+<td><span data-position="50062" data-size="27">Image Report Query/Retrieve</span></td>
+<td><span data-position="50102" data-size="16">查詢與調閱影像報告 (賽道#4)</span></td>
+</tr>
+</tbody>
+</table>
+          <h3>角色與交易關係圖</h3>
+          <img src={track5_2} Width="100%"/>
+          
+
           </>
         ),
       },
@@ -2317,11 +2749,88 @@ export const TraksTabInform = [
         Sc: "其他(See Also)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            
           </>
         ),
       },
+      ,
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            <table class="part in-view" data-startline="1008" data-endline="1017">
+<thead>
+<tr>
+<th><span data-position="50213" data-size="2">角色</span></th>
+<th><span data-position="50218" data-size="2">姓名</span></th>
+<th><span data-position="50223" data-size="4">所屬單位</span></th>
+<th><span data-position="50232" data-size="2">貢獻</span></th>
+<th><span data-position="50238" data-size="4">聯絡方式</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-position="50293" data-size="2">作者</span></td>
+<td><span data-position="50300" data-size="3">李祥豪</span></td>
+<td><span data-position="50306" data-size="12">台灣醫學資訊學會 秘書長</span></td>
+<td></td>
+<td><a href="mailto:shvoidlee@gmail.com" target="_blank" rel="noopener"><span data-position="50339" data-size="19">shvoidlee@gmail.com</span></a></td>
+</tr>
+<tr>
+<td><span data-position="50367" data-size="2">作者</span></td>
+<td><span data-position="50374" data-size="3">李修安</span></td>
+<td><span data-position="50380" data-size="22">國家衛生研究院 - 癌症研究所 博士後研究員</span></td>
+<td></td>
+<td><a href="mailto:billy72325@gmail.com" target="_blank" rel="noopener"><span data-position="50406" data-size="20">billy72325@gmail.com</span></a></td>
+</tr>
+<tr>
+<td><span data-position="50434" data-size="2">作者</span></td>
+<td><span data-position="50441" data-size="3">楊宇凡</span></td>
+<td><span data-position="50447" data-size="10">矽塔資訊服務有限公司</span></td>
+<td></td>
+<td><span data-position="50469" data-size="13">ceo@sita.tech</span></td>
+</tr>
+<tr>
+<td><span data-position="50497" data-size="3">貢獻者</span></td>
+<td><span data-position="50503" data-size="3">劉貞沂</span></td>
+<td><span data-position="50509" data-size="18">國立臺北護理健康大學 - 資訊管理系</span></td>
+<td></td>
+<td><a href="mailto:jennyliu1003@gmail.com" target="_blank" rel="noopener"><span data-position="50538" data-size="22">jennyliu1003@gmail.com</span></a></td>
+</tr>
+<tr>
+<td><span data-position="50566" data-size="3">貢獻者</span></td>
+<td><span data-position="50572" data-size="3">吳品樺</span></td>
+<td><span data-position="50578" data-size="18">國立臺北護理健康大學 - 資訊管理系</span></td>
+<td></td>
+<td><a href="mailto:shin66945@gmail.com" target="_blank" rel="noopener"><span data-position="50607" data-size="19">shin66945@gmail.com</span></a></td>
+</tr>
+<tr>
+<td><span data-position="50635" data-size="3">貢獻者</span></td>
+<td><span data-position="50641" data-size="3">燕洛嫺</span></td>
+<td><span data-position="50647" data-size="18">國立臺北護理健康大學 - 資訊管理系</span></td>
+<td></td>
+<td><a href="mailto:reachelyen@gmail.com" target="_blank" rel="noopener"><span data-position="50676" data-size="20">reachelyen@gmail.com</span></a></td>
+</tr>
+<tr>
+<td><span data-position="50704" data-size="3">貢獻者</span></td>
+<td><span data-position="50710" data-size="3">黃子庭</span></td>
+<td><span data-position="50716" data-size="18">國立臺北護理健康大學 - 資訊管理系</span></td>
+<td></td>
+<td><a href="mailto:huangnookashi@gmail.com" target="_blank" rel="noopener"><span data-position="50745" data-size="23">huangnookashi@gmail.com</span></a></td>
+</tr>
+<tr>
+<td><span data-position="50773" data-size="3">貢獻者</span></td>
+<td><span data-position="50779" data-size="3">黃睿駿</span></td>
+<td><span data-position="50785" data-size="18">國立臺北護理健康大學 - 資訊管理系</span></td>
+<td></td>
+<td><a href="mailto:a27114171@gmail.com" target="_blank" rel="noopener"><span data-position="50806" data-size="19">a27114171@gmail.com</span></a></td>
+</tr>
+</tbody>
+</table>
+          </>
+        ),
+      }
     ],
   },
   {
@@ -2335,8 +2844,22 @@ export const TraksTabInform = [
         Sc: "簡介 (Summary)",
         content: (
           <>
-            <h3></h3>
-            <p></p>
+            <ul class="part in-view" data-startline="1027" data-endline="1035" data-position="50997" data-size="0">
+<li class="" data-startline="1027" data-endline="1027" data-position="50999" data-size="0">
+<p data-position="50997" data-size="0"><span data-position="50999" data-size="212">次世代定序(Next Generation Sequencing, NGS)是精準醫學(Precision Medicine, PM)的核心技術。隨著精準醫學的發展，基因定序的需求日益增加，NGS分析產生的巨量資料對於研究人員及醫師在管理上是項龐大的負擔，而在生物醫學研究中往往需要針對特定染色體、基因區間等條件研究，要在大量的資料間一一擷取是困難且費時的，且不同分析工具所產生的格式定義不同，造成資料整合不易無法有效應用。</span></p>
+</li>
+<li class="" data-startline="1028" data-endline="1029" data-position="51214" data-size="0">
+<p data-position="51212" data-size="0"><span data-position="51214" data-size="200">基因資料主要處理基因定序後產生的檔案，包含: VCF(Variant Call Format)格式是NGS的通用語言，基因突變資料儲存格式等，提FHIR標準化格式轉換，作為與電子病歷資料整合。根據基因定序的流程，由病人抽血後經過基因定序以及分析產生的變異點資料，經過FHIR格式轉換後儲存至FHIR Server，透過FHIR標準化API存取基因定序資料，流程圖以及FHIR基因資源結構圖請參考下圖。</span></p>
+</li>
+<li class="" data-startline="1030" data-endline="1032" data-position="51418" data-size="0">
+<p data-position="51416" data-size="0"><span data-position="51418" data-size="22">基因 – 基因定序格式轉換FHIR格式流程圖</span><br/>
+<img src={track6_1} Width="100%"/></p>
+</li>
+<li class="" data-startline="1033" data-endline="1035" data-position="51481" data-size="0">
+<p data-position="51479" data-size="0"><span data-position="51481" data-size="17">基因 –本次FHIR基因資源結構圖</span><br/>
+<img src={track6_2} Width="100%"/></p>
+</li>
+</ul>
           </>
         ),
       },
@@ -2371,7 +2894,7 @@ export const TraksTabInform = [
         ),
       },
       {
-        id: "6",
+        id: "5",
         Sc: "規格(Specification)",
         content: (
           <>
@@ -2390,6 +2913,16 @@ export const TraksTabInform = [
           </>
         ),
       },
+      ,
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            
+          </>
+        ),
+      }
     ],
   },
   {
@@ -2787,7 +3320,7 @@ export const TraksTabInform = [
         ),
       },
       {
-        id: "6",
+        id: "5",
         Sc: "規格(Specification)",
         content: (
           <>
@@ -2806,6 +3339,16 @@ export const TraksTabInform = [
           </>
         ),
       },
+      ,
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            
+          </>
+        ),
+      }
     ],
   },
   {
@@ -2855,7 +3398,7 @@ export const TraksTabInform = [
         ),
       },
       {
-        id: "6",
+        id: "5",
         Sc: "規格(Specification)",
         content: (
           <>
@@ -2874,6 +3417,16 @@ export const TraksTabInform = [
           </>
         ),
       },
+      ,
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            
+          </>
+        ),
+      }
     ],
   },
   {
@@ -2923,7 +3476,7 @@ export const TraksTabInform = [
         ),
       },
       {
-        id: "6",
+        id: "5",
         Sc: "規格(Specification)",
         content: (
           <>
@@ -2942,6 +3495,16 @@ export const TraksTabInform = [
           </>
         ),
       },
+      ,
+      {
+        id: "7",
+        Sc: "作者與貢獻者",
+        content: (
+          <>
+            
+          </>
+        ),
+      }
     ],
   },
 ];

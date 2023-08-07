@@ -10,7 +10,7 @@
 }
 @media screen and (min-width: 930px) {
   .WorkBlock {
-    width: 60%;
+    width: 80%;
   }
 }
 @media (min-width: 500px) and (max-width: 930px) {

@@ -25,8 +25,7 @@
 }
 @media (min-width: 500px) and (max-width: 930px) {
   .ActiveBlock {
-    width: 60%;
-    padding: 0 5vh;
+    width: 80%;
   }
   .Background {
     background: #d9d9d9;
@@ -36,7 +35,7 @@
 @media screen and (max-width: 500px) {
   .ActiveBlock {
     width: 100%;
-    padding: 0 5vh;
+    padding: 2vh;
   }
   .Background {
     background: #d9d9d9;

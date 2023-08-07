@@ -44,7 +44,16 @@ function News() {
           className="AllContentBackground"
         >
           {/* -----------------時程規劃--------------------- */}
-          <Grid item display="flex" justifyContent="center" marginBottom="3vw">
+          <Grid
+            item
+            style={{
+              display: "flex",
+              // flexDirection: "column",
+              alignItems: "flex-end",
+              marginBottom: "3vw",
+              width: "80%",
+            }}
+          >
             <div
               style={{
                 display: "flex",
@@ -52,8 +61,15 @@ function News() {
                 marginTop: "5rem",
               }}
             >
-              <img src={TTime} alt="time" style={{ width: "80%" }} />
+              <img src={TTime} alt="time" style={{ width: "100%" }} />
             </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8833716834442!2d121.5665275761131!3d25.03803173812775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbaef895c3d%3A0xe29a01ea22ea80a7!2z5ZyL5rOw6YeR6J6N5pyD6K2w5buz!5e0!3m2!1szh-TW!2stw!4v1691389468010!5m2!1szh-TW!2stw"
+              style={{ border: 0, width: "30%", height: "50vh" }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            />
           </Grid>
 
           {/* <hr style={{ border: 0, height: "1px", background: "#000" }} /> */}

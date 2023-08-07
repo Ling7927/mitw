@@ -72,6 +72,7 @@ function Footer() {
                         >
                           <Link
                             to={item.path}
+                            target="_blank"
                             style={{
                               color: "#fff",
                               maxWidth: "100%",

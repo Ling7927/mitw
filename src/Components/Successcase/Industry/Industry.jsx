@@ -3,6 +3,8 @@ import { IndustryInform } from "../../../Pages/Successcase/Inform";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import "../Successcase.css";
+
 import SeeMore from "../../Function/SeeMore";
 // const StringLength = ({ introduce }) => {
 //   const [stringLength, setStringLength] = useState(50);
@@ -77,7 +79,7 @@ function Industry() {
             key={i}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             style={{
               marginBottom: "2vw",
               paddingBottom: "2vw",
@@ -93,14 +95,18 @@ function Industry() {
           >
             <Grid container spacing={1} key={i} sx={{ marginTop: "1rem" }}>
               {/* 左 */}
-              <Grid item xs={12} sm={12} md={4} lg={4}>
-                <Grid container direction="column">
-                  <Grid item width="65%">
+              <Grid item xs={12} sm={12} md={4} lg={3}>
+                <Grid
+                  container
+                  spacing={1}
+                  direction="column"
+                  alignItems="flex-start"
+                >
+                  <Grid item>
                     <img
                       src={item.img}
+                      className="IndusImg"
                       style={{
-                        width: "100%",
-
                         objectFit: "cover",
                         marginBottom: "1rem",
                       }}
@@ -130,7 +136,6 @@ function Industry() {
                     <p
                       style={{
                         whiteSpace: "pre-line",
-                        marginTop: "1rem",
                       }}
                     >
                       {item.tracks}
@@ -140,7 +145,7 @@ function Industry() {
               </Grid>
               {/* 右 */}
 
-              <Grid item xs={12} sm={12} md={8} lg={8}>
+              <Grid item xs={12} sm={12} md={8} lg={9}>
                 <Grid container spacing={1} direction="column">
                   <Grid item>
                     <h3>{item.name}</h3>

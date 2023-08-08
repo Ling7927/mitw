@@ -14,6 +14,7 @@ function Submenu({ item, onToggle }) {
         <div className="Menu">
           <div
             className="Menu"
+            style={{ paddingRight: "2vh" }}
             onClick={() => {
               if (item.li) {
                 setSubmenu(true);

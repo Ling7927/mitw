@@ -1,0 +1,46 @@
+@media screen and (min-width: 1400px) {
+  .IndusImg {
+    width: 25vh;
+  }
+  .GoverImg {
+    width: 25vh;
+  }
+  .HosImg {
+    width: 25vh;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1400px) {
+  .IndusImg {
+    width: 20vh;
+  }
+  .GoverImg {
+    width: 100%;
+  }
+  .HosImg {
+    width: 100%;
+  }
+}
+/* sm */
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .IndusImg {
+    width: 25vh;
+  }
+  .GoverImg {
+    width: 100%;
+  }
+  .HosImg {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .IndusImg {
+    width: 25vh;
+  }
+  .GoverImg {
+    width: 100%;
+  }
+  .HosImg {
+    width: 100%;
+  }
+}

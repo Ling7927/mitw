@@ -11,6 +11,9 @@ import Recruit from "../Pages/Recruit/Recruit";
 import Workgroupactivity from "../Pages/Workgroupactivity/Workgroupactivity";
 import Relatedactivity from "../Pages/Relatedactivity/Relatedactivity";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
+const iconStyle = {
+  marginLeft: "5px",
+};
 const routerList = [
   {
     name: "最新消息",
@@ -32,8 +35,8 @@ const routerList = [
   {
     name: "招募",
 
-    iconOpened: <AiFillCaretDown />,
-    iconClosed: <AiFillCaretUp />,
+    iconOpened: <AiFillCaretUp style={iconStyle} />,
+    iconClosed: <AiFillCaretDown style={iconStyle} />,
     path: "",
     Component: "",
     li: [
@@ -73,8 +76,8 @@ const routerList = [
   {
     name: "歷年活動",
 
-    iconOpened: <AiFillCaretDown />,
-    iconClosed: <AiFillCaretUp />,
+    iconOpened: <AiFillCaretUp style={iconStyle} />,
+    iconClosed: <AiFillCaretDown style={iconStyle} />,
     path: "",
     Component: "",
     li: [
@@ -98,8 +101,8 @@ const routerList = [
   {
     name: "活動",
 
-    iconOpened: <AiFillCaretDown />,
-    iconClosed: <AiFillCaretUp />,
+    iconOpened: <AiFillCaretUp style={iconStyle} />,
+    iconClosed: <AiFillCaretDown style={iconStyle} />,
     path: "",
     Component: "",
     li: [

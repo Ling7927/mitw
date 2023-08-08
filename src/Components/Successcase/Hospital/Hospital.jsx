@@ -3,6 +3,7 @@ import { HospitalInform } from "../../../Pages/Successcase/Inform";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import SeeMore from "../../Function/SeeMore";
+import "../Successcase.css";
 function Hospital() {
   return (
     <>
@@ -18,14 +19,14 @@ function Hospital() {
           >
             <Grid container spacing={1} key={i} sx={{ marginTop: "1rem" }}>
               {/* 左 */}
-              <Grid item sm={12} md={4} lg={4}>
+              <Grid item sm={12} md={4} lg={3}>
                 <Grid container spacing={1} direction="column">
                   <Grid item>
                     {" "}
                     <img
                       src={item.img}
+                      className="HosImg"
                       style={{
-                        width: "100%",
                         objectFit: "cover",
                         marginBottom: "1rem",
                       }}
@@ -52,14 +53,15 @@ function Hospital() {
                 </Grid>
               </Grid>
               {/* 右 */}
-              <Grid item sm={12} md={8} lg={8}>
+              <Grid item sm={12} md={8} lg={9}>
                 <Grid container spacing={1} direction="column">
                   <Grid item>
                     <h3>{item.name}</h3>
                   </Grid>
                   <Grid item style={{ whiteSpace: "pre-line" }}>
                     <p>
-                      <SeeMore introduce={item.introduce} />
+                      {/* <SeeMore introduce={item.introduce} /> */}
+                      {item.introduce}
                     </p>
                   </Grid>
                 </Grid>

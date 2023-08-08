@@ -2,6 +2,7 @@ import React from "react";
 import { GovernmentInform } from "../../../Pages/Successcase/Inform";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import "../Successcase.css";
 function Goverment() {
   return (
     <>
@@ -16,7 +17,7 @@ function Goverment() {
             }}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             // initial={{
             //   x: "-150%",
             // }}
@@ -34,8 +35,21 @@ function Goverment() {
               key={i}
               sx={{ marginTop: "1rem" }}
             >
-              <Grid item xs={6} sm={6} md={3} lg={3} style={{ padding: 0 }}>
-                <img src={item.img} style={{ width: "100%" }} />
+              {/* 上半 */}
+              <Grid
+                item
+                xs={6}
+                sm={6}
+                md={3}
+                lg={3}
+                style={{
+                  padding: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  paddingLeft: "1vh",
+                }}
+              >
+                <img src={item.img} className="GoverImg" />
                 <a
                   href={item.link}
                   target="_blank"
@@ -52,16 +66,18 @@ function Goverment() {
                 sm={12}
                 md={9}
                 lg={9}
-                style={{ display: "flex", flexDirection: "column" }}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  paddingLeft: "1vh",
+                }}
               >
-                {/* 上半 */}
-
                 <h3>{item.name}</h3>
                 <p style={{ whiteSpace: "pre-line" }}>{item.tracks}</p>
               </Grid>
-
               {/* 下半 */}
-              <p style={{ margin: "2rem 1rem 1rem 0" }}>{item.introduce}</p>
+
+              <p style={{ margin: "2rem 1rem 1rem 1vh" }}>{item.introduce}</p>
             </Grid>
           </motion.div>
         );

@@ -26,67 +26,65 @@ function Nav() {
       : setToggleIcon("toggler__icon");
   };
   return (
-    <>
-      <Grid container>
-        <nav className="nav">
-          <Grid item xs={2} sm={2} md={2} lg={2} style={{ display: "flex" }}>
-            <Link to="/" style={{ borderBottom: "none" }}>
-              <img
-                src={Logo}
-                alt="Logo"
-                className="Logo"
-                style={{ marginLeft: " 1.5rem" }}
-              />
-            </Link>
-          </Grid>
-          <Grid
-            item
-            xs={10}
-            sm={10}
-            md={10}
-            lg={10}
-            //  style={{ display: "flex", justifyContent: "space-evenly" }}
-            className={collapse}
-          >
-            {" "}
-            {/* =================== */}
-            {/* <div className={collapse}> */}
-            {routerList.map((item, index) => {
-              return <Submenu item={item} key={index} onToggle={onToggle} />;
-            })}
-            {/* </div> */}
-            {/* =================== */}
-            {/* <div className={collapse}>
+    <Grid container sx={{ position: "fixed", top: 0, background: "#fdfdfd" }}>
+      <nav className="nav">
+        <Grid item xs={2} sm={2} md={2} lg={2} style={{ display: "flex" }}>
+          <Link to="/" style={{ borderBottom: "none" }}>
+            <img
+              src={Logo}
+              alt="Logo"
+              className="Logo"
+              style={{ marginLeft: " 1.5rem" }}
+            />
+          </Link>
+        </Grid>
+        <Grid
+          item
+          xs={10}
+          sm={10}
+          md={10}
+          lg={10}
+          //  style={{ display: "flex", justifyContent: "space-evenly" }}
+          className={collapse}
+        >
+          {" "}
+          {/* =================== */}
+          {/* <div className={collapse}> */}
+          {routerList.map((item, index) => {
+            return <Submenu item={item} key={index} onToggle={onToggle} />;
+          })}
+          {/* </div> */}
+          {/* =================== */}
+          {/* <div className={collapse}>
           {routerList.map((item, index) => {
             return
              <Submenu item={item} key={index} onToggle={onToggle} />;
           })}
         </div> */}
-            {/* ==================================================================== */}
-          </Grid>
-          <div
-            className={toggleIcon}
-            // onClick={() => {
-            //   onToggle();
-            // }}
-          >
-            <Hamburger
-              onToggle={(toggled) => {
-                if (toggled) {
-                  // open a menu
-                  setCollapse("nav__menu nav__collapse");
-                  setToggleIcon("toggler__icon toggle");
-                } else {
-                  // close a menu
-                  setCollapse("nav__menu");
-                  setToggleIcon("toggler__icon");
-                }
-              }}
-            />
-          </div>
-        </nav>
-      </Grid>
-    </>
+          {/* ==================================================================== */}
+        </Grid>
+        <div
+          className={toggleIcon}
+          // onClick={() => {
+          //   onToggle();
+          // }}
+        >
+          <Hamburger
+            onToggle={(toggled) => {
+              if (toggled) {
+                // open a menu
+                setCollapse("nav__menu nav__collapse");
+                setToggleIcon("toggler__icon toggle");
+              } else {
+                // close a menu
+                setCollapse("nav__menu");
+                setToggleIcon("toggler__icon");
+              }
+            }}
+          />
+        </div>
+      </nav>
+    </Grid>
   );
 }
 

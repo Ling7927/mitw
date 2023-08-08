@@ -79,7 +79,8 @@ function TracksTab({ setOnHandle, onHandle }) {
         }}
       >
         <Grid container columns={20} alignItems="center" justify="center">
-          {TraksTabInform.filter((item) => item.Id !== onHandle).map((item) => {
+          {/* {TraksTabInform.filter((item) => item.Id !== onHandle).map((item) => { */}
+          {TraksTabInform.map((item) => {
             return (
               <Grid item xs={2} sm={2}>
                 <button

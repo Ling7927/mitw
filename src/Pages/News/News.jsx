@@ -56,7 +56,8 @@ function News() {
                 xs={12}
                 sm={12}
                 md={12}
-                lg={8}
+                // lg={8}
+                lg={12}
                 style={{
                   display: "flex",
                   // flexDirection: "column",
@@ -75,7 +76,7 @@ function News() {
                 </div>
               </Grid>
               {/* 地圖 */}
-              <Grid
+              {/* <Grid
                 item
                 xs={12}
                 sm={12}
@@ -98,7 +99,7 @@ function News() {
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                 />
-              </Grid>
+              </Grid> */}
 
               {/* <hr style={{ border: 0, height: "1px", background: "#000" }} /> */}
             </Grid>

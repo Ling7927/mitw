@@ -28,7 +28,7 @@ function OpenSource() {
             {/* -----------------------------上下布局-------------------------------- */}
             <Grid container spacing={1} sx={{ marginTop: "1rem" }}>
               {/* 上 */}
-              <Grid item sx={12} sm={12} md={12}>
+              <Grid item sx={12} sm={12} md={12} lg={12}>
                 <Grid container spacing={1} direction="row" key={i} gap={1}>
                   {/* 照片 */}
                   <Grid
@@ -36,11 +36,11 @@ function OpenSource() {
                     sx={12}
                     sm={3}
                     md={3}
-                    lg={3}
                     style={{
                       display: "flex",
                       alignItems: "center",
                       flexDirection: "column",
+                      width: "100%",
                     }}
                   >
                     <div
@@ -83,8 +83,11 @@ function OpenSource() {
                     sx={12}
                     sm={8}
                     md={8}
-                    lg={8}
-                    style={{ display: "flex", alignItems: "center" }}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      width: "100%",
+                    }}
                   >
                     <h3>{item.name}</h3>
                   </Grid>
@@ -92,18 +95,18 @@ function OpenSource() {
               </Grid>
               {/* 下 */}
               <Grid item>
-                <Grid container direction="row" justifyContent=" space-around">
+                <Grid container direction="row" spacing={1}>
                   {/* 參與賽道 */}
                   <Grid
                     item
                     sx={3}
                     sm={3}
                     md={3}
-                    lg={3}
                     style={{
                       whiteSpace: "pre-line",
                       display: "flex",
                       flexDirection: "column",
+                      width: "100%",
                     }}
                   >
                     {/* <p style={{ whiteSpace: "pre-line" }}>
@@ -123,7 +126,7 @@ function OpenSource() {
                     </p>
                   </Grid>
                   {/* 介紹 */}
-                  <Grid item sx={8} sm={8} md={8} lg={8}>
+                  <Grid item sx={9} sm={9} md={9} lg={9} xs={{ width: "100%" }}>
                     <p>{item.introduce}</p>
                   </Grid>{" "}
                 </Grid>{" "}

@@ -1,13 +1,13 @@
 const FooterContext = [
-  {
-    title: "活動地點:",
-    data: [
-      {
-        name: "國泰金融會議中心",
-        path: "https://goo.gl/maps/SUt6NggqmSnPrjLv7",
-      },
-    ],
-  },
+  // {
+  //   title: "活動地點:",
+  //   data: [
+  //     {
+  //       name: "國泰金融會議中心",
+  //       path: "https://goo.gl/maps/SUt6NggqmSnPrjLv7",
+  //     },
+  //   ],
+  // },
   {
     title: "主辦單位:",
     data: [

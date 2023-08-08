@@ -26,6 +26,10 @@ function App() {
   const location = useLocation();
   // const [istop, setIstop] = useState(true);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
+
   // useEffect(() => {
   //   const handleScroll = () => {
   //     if (window.scrollY === 0) setIstop(true);

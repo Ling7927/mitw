@@ -22,15 +22,16 @@ function Crosssystem() {
               borderBottom: "1px solid #dfdfdf",
             }}
           >
-            <h3
+            <h1
               style={{
                 marginBottom: "2rem",
                 borderBottom: "orange solid 3px",
-                paddingBottom: "1rem",
+                padding: "0 2vh 1rem",
+                fontWeight: "bold",
               }}
             >
               {item.title}
-            </h3>
+            </h1>
             <div style={{ width: "70%" }}>{item.img}</div>
           </motion.div>
         );

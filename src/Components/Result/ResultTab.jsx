@@ -204,14 +204,14 @@ function ResultTab() {
             paddingBottom: "2rem",
           }}
         >
-          <h3
+          <h1
             style={{
-              margin: 0,
+              margin: "5vh",
               // borderStyle: " solid ",
               // borderWidth: " 4px",
               // padding: "1vw",
               // borderImage: "linear-gradient(#23f0c7, #108998,#00F9FF) 20 ",
-              color: "#fff",
+              color: "#000",
               marginBottom: "2vw",
               // fontSize: "4vw",
             }}
@@ -220,7 +220,7 @@ function ResultTab() {
               ResultTabInform.filter((item) => item.Id === track)[0]
                 .ContentTitle
             }
-          </h3>
+          </h1>
 
           {/* 表格 */}
           <ResultTable id={track} />

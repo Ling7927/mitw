@@ -67,6 +67,16 @@ function Signup() {
             return (
               <Grid item sx={5} sm={5} md={5} lg={5} className="Block">
                 {/* <div key={item} className="Block"> */}
+                <img
+                  src={item.icon}
+                  style={{
+                    color: "#3087a7",
+                    width: "2.5rem",
+                    filter: " saturate(2)",
+                    marginRight: "2rem",
+                  }}
+                />
+
                 <a href={item.link} target="_blank" className="SignupLink">
                   <h3
                     style={{

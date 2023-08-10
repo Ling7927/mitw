@@ -32,11 +32,12 @@ function IntroductionTab() {
                   borderRadius: "10px 10px 0px 0px",
                   boxShadow: " 0px 0px 1px rgba(0, 0, 0, 0.5)",
                 }}
+                key={item}
               >
-                <div style={{ padding: "1rem 0" }}>
+                <div className="Tab" style={{ padding: "1rem 0" }}>
                   <h5
                     style={{
-                      color: onHandle === item.id ? "#fff" : "#7AACA9",
+                      // color: onHandle === item.id ? "#fff" : "#7AACA9",
                       margin: 0,
                     }}
                   >
@@ -62,6 +63,7 @@ function IntroductionTab() {
             justifyContent: "center",
             alignItems: "center",
             padding: "3vw 5vw",
+            boxShadow: " 0px 0px 1px rgba(0, 0, 0, 0.5)",
           }}
         >
           {Inform.filter((item) => item.id === onHandle)[0].content}

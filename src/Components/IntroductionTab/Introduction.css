@@ -5,6 +5,9 @@
   padding: 5rem 0;
   /* background:  #f6fcfffb ; */
 }
+.Tab > h5:hover {
+  color: #204d49;
+}
 @media screen and (min-width: 1400px) {
   .IntroIcon {
     font-size: 4rem;

@@ -17,7 +17,7 @@ function TracksTab({ setOnHandle, onHandle }) {
         margin: 0,
         position: "sticky",
         paddingTop: "1rem",
-        // top: "0",
+        top: "5%",
         background: "#fdfdfd",
         alignItems: "baseline",
         zIndex: 500,

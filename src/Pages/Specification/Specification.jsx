@@ -66,7 +66,7 @@ function Specification() {
                 transition={{ duration: 0.8 }}
                 //style={{ width: "20%" }}
               >
-                <div style={{ position: "sticky", top: "3rem" }}>
+                <div style={{ position: "sticky", top: "5.5rem" }}>
                   {ListTitle.map((item) => {
                     return (
                       <div style={{ marginBottom: "5px" }}>

@@ -33,7 +33,7 @@ function IntroductionTab() {
                   boxShadow: " 0px 0px 1px rgba(0, 0, 0, 0.5)",
                 }}
               >
-                <div style={{ padding: "2rem 0" }}>
+                <div style={{ padding: "1rem 0" }}>
                   <h5
                     style={{
                       color: onHandle === item.id ? "#fff" : "#7AACA9",

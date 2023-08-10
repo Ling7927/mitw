@@ -7,7 +7,12 @@ function ResultTab() {
   const [track, setTrack] = useState(1);
 
   return (
-    <div className="AllContentBackground">
+    <div
+      //className="AllContentBackground"
+      style={{
+        background: "#fdfdfd",
+      }}
+    >
       {/* Tab */}
 
       <Grid
@@ -18,7 +23,7 @@ function ResultTab() {
           padding: "2vh",
           justifyContent: "center",
           position: "sticky",
-          top: 0,
+          top: "5rem",
           background: "#fdfdfd",
           zIndex: 500,
         }}

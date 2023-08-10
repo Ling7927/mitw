@@ -26,7 +26,10 @@ function Nav() {
       : setToggleIcon("toggler__icon");
   };
   return (
-    <Grid container sx={{ position: "fixed", top: 0, background: "#fdfdfd" }}>
+    <Grid
+      container
+      sx={{ position: "fixed", top: 0, background: "#fdfdfd", zIndex: "9999" }}
+    >
       <nav className="nav">
         <Grid item xs={2} sm={2} md={2} lg={2} style={{ display: "flex" }}>
           <Link to="/" style={{ borderBottom: "none" }}>

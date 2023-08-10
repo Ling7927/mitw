@@ -21,11 +21,11 @@ h3 {
 }
 .AllBackground {
   background: #f3f4f6;
-  padding: 0 5vh 1vh;
+  padding: 4% 5vh 2vh;
 }
 .AllContentBackground {
   background: #fdfdfd;
-  /* padding: 2vw 0; */
+  padding-top: 5%;
   min-height: 100vh;
 }
 @media screen and (min-width: 1400px) {

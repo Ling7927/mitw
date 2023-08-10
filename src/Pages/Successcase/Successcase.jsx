@@ -19,11 +19,12 @@ function Successcase() {
         // direction="row"
         // gap={5}
         style={{
-          background: "#fdfdfd",
-          padding: "2rem 0",
+          // background: "#fdfdfd",
+          // padding: "2rem 0",
           justifyContent: "space-around",
           minHeight: "100vh",
         }}
+        className="AllContentBackground"
       >
         {/*左--選單 */}
         <motion.Grid
@@ -49,7 +50,7 @@ function Successcase() {
             //style={{ width: "20%" }}
             style={{
               position: "sticky",
-              top: "3rem",
+              top: "5rem",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
@@ -58,7 +59,7 @@ function Successcase() {
             <div
               style={{
                 position: "sticky",
-                top: "3rem",
+                top: "5rem",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",

@@ -1,12 +1,12 @@
 .nav {
-  background: "transparent";
+  background: #fff;
   display: flex !important;
   flex-wrap: nowrap !important;
   align-items: center;
   /* justify-content: space-between; */
   height: 15%;
   min-width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .toggler__icon {
   cursor: pointer;

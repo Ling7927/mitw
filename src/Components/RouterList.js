@@ -60,7 +60,31 @@ const routerList = [
     path: "/Tracks",
     Component: <Traks />,
   },
+  {
+    name: "活動",
 
+    iconOpened: <AiFillCaretUp style={iconStyle} />,
+    iconClosed: <AiFillCaretDown style={iconStyle} />,
+    path: "",
+    Component: "",
+    li: [
+      {
+        liname: "工作小組",
+        lipath: "/Workgroupactivity",
+        liComponent: <Workgroupactivity />,
+      },
+      {
+        liname: "相關活動",
+        lipath: "/Relatedactivity",
+        liComponent: <Relatedactivity />,
+      },
+      {
+        liname: "教育訓練",
+        lipath: "/training",
+        liComponent: "",
+      },
+    ],
+  },
   {
     name: "2022聯測松結果",
     icon: null,
@@ -94,31 +118,6 @@ const routerList = [
       {
         liname: "2020年 MI-TW 聯測工作坊",
         lipath: "https://mitw.dicom.org.tw/2020/",
-        liComponent: "",
-      },
-    ],
-  },
-  {
-    name: "活動",
-
-    iconOpened: <AiFillCaretUp style={iconStyle} />,
-    iconClosed: <AiFillCaretDown style={iconStyle} />,
-    path: "",
-    Component: "",
-    li: [
-      {
-        liname: "工作小組",
-        lipath: "/Workgroupactivity",
-        liComponent: <Workgroupactivity />,
-      },
-      {
-        liname: "相關活動",
-        lipath: "/Relatedactivity",
-        liComponent: <Relatedactivity />,
-      },
-      {
-        liname: "教育訓練",
-        lipath: "/training",
         liComponent: "",
       },
     ],

@@ -59,9 +59,9 @@ function Signup() {
             display: "flex",
             justifyContent: "center",
             alignContent: "center",
-            marginTop: "3rem",
+            margin: "3rem 0",
           }}
-          gap={2}
+          gap={3}
         >
           {Inform.map((item) => {
             return (

@@ -10,7 +10,7 @@ const Inform = [
     icon: track,
   },
   {
-    title: "聯測松督察員招募報名",
+    title: "聯測松督察員報名",
     link: "https://docs.google.com/forms/d/e/1FAIpQLSd277k6jdIutskEV6cjrQ5McT0K2AqZGg-41-VoerAfi8nuCQ/viewform?usp=sf_link",
     icon: recruit,
   },

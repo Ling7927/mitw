@@ -11,10 +11,13 @@ function Submenu({ item, onToggle }) {
           {item.name}
         </NavLink>
       ) : (
-        <div className="Menu">
+        <div
+          // className="Menu"
+          className="MenuContainer"
+        >
           <div
             className="Menu"
-            style={{ paddingRight: "2vh" }}
+            // style={{ paddingRight: "2vh" }}
             onClick={() => {
               if (item.li) {
                 setSubmenu(true);

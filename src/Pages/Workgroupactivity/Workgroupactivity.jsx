@@ -14,6 +14,7 @@ function Workgroupactivity() {
       }}
     >
       <div
+        className="AllContentBackground"
         style={{
           background: "#fdfdfd",
           display: "flex",

@@ -54,7 +54,7 @@ function App() {
 
         <Route path="/Specification" element={<Specification />} />
         <Route path="/Tracks" element={<Traks />} />
-        <Route path="/Tracks/:id" element={<TraksTab />} />
+        <Route path="/Tracks/:id" element={<Traks />} />
         <Route path="/Result" element={<Result />} />
         <Route path="/Successcase" element={<Successcase />} />
         <Route path="/Recruit" element={<Recruit />} />

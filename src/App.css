@@ -44,7 +44,9 @@ h3 {
   h5 {
     font-size: 1.2rem !important;
   }
-  p {
+  p,
+  li,
+  a {
     font-size: 18px;
   }
 }
@@ -64,7 +66,9 @@ h3 {
   h5 {
     font-size: 1rem !important;
   }
-  p {
+  p,
+  li,
+  a {
     font-size: 18px;
   }
   /* p {
@@ -87,15 +91,19 @@ h3 {
   h5 {
     font-size: 1rem !important;
   }
-  /* p {
-    font-size: 1rem;
-  } */
+  p,
+  li,
+  a {
+    font-size: 16px;
+  }
   .AllBackground {
     padding: 0;
   }
 }
 @media screen and (max-width: 500px) {
-  p {
+  p,
+  li,
+  a {
     font-size: 1rem;
   }
   .AllBackground {

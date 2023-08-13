@@ -34,9 +34,7 @@
   list-style: circle;
 }
 /* ========== */
-.NewsP {
-  font-size: 2vmin;
-}
+
 .NewsH3 {
   letter-spacing: 5px;
 }
@@ -64,7 +62,20 @@
     font-size: 1rem;
   }
 }*/
+@media screen and (min-width: 930px) {
+  .NewsP {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 930px) {
+  .NewsP {
+    font-size: 2vmin;
+  }
+}
 @media screen and (max-width: 500px) {
+  .NewsP {
+    font-size: 2vmin;
+  }
   .NewsH3 {
     letter-spacing: 0;
   }

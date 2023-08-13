@@ -4159,7 +4159,7 @@ export const TraksTabInform = [
     List: [
       {
         id: "1",
-        Sc: "簡介",
+        Sc: "簡介 (Summary)",
         content: (
           <>
             <p>

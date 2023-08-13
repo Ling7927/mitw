@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { ResultTabInform } from "./Inform";
+import { trackstable } from "./Tables";
 import ResultTable from "../Result/Table/ResultTable";
 import { motion } from "framer-motion";
 import { Grid, duration, Box } from "@mui/material";
 function ResultTab() {
   const [track, setTrack] = useState(1);
+  const [table, setTable] = useState([]);
 
+  // useEffect(() => {
+  //   setTable(trackstable[track]);
+  // }, [track]);
   return (
     <div
       //className="AllContentBackground"
@@ -228,7 +233,13 @@ function ResultTab() {
           </h1>
 
           {/* 表格 */}
-          <ResultTable id={track} />
+          {/* <ResultTable id={track} /> */}
+
+          {trackstable[track].map((item, index) => (
+            <center key={index} style={{ margin: "2rem 0" }}>
+              {item.table}
+            </center>
+          ))}
         </div>
       </Grid>
     </div>

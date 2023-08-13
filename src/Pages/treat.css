@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  width: 3rem;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  &:hover {
+    .Submanu {
+      display: flex;
+      flex-direction: column;
+      background: #837873;
+      position: absolute;
+      top: 3rem;
+      width: 5rem;
+    }
+  }
+}
+
+.Submanu {
+  display: none;
+}

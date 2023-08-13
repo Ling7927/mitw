@@ -27,19 +27,15 @@ function Successcase() {
         className="AllContentBackground"
       >
         {/*左--選單 */}
-        <motion.Grid
+        <Grid
           item
           xs={12}
-          sm={3}
-          md={3}
-          lg={3}
-          initial={{ x: -200 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.8 }}
+          sm={2}
+          md={2}
+          lg={1.5}
           style={{
             display: "flex",
             justifyContent: "center",
-            paddingLeft: "1vh",
           }}
         >
           {/* 選單 */}
@@ -77,10 +73,11 @@ function Successcase() {
                         border: "none",
                         cursor: "pointer",
                         overflow: "hidden",
-                        fontSize: onHandle === item.id ? "1.25rem" : "1rem",
+                        fontSize: onHandle === item.id ? "1.1rem" : "1rem",
                         margin: 0,
                         color: onHandle === item.id ? "#000" : "#949494",
                         marginBottom: "0.5rem",
+                        padding: 0,
                       }}
                       key={i}
                     >
@@ -91,7 +88,7 @@ function Successcase() {
               })}
             </div>
           </motion.div>
-        </motion.Grid>
+        </Grid>
         {/* 上--目前案例 */}
         <Grid item xs={12} sm={9} md={9} lg={9}>
           <Grid container spacing={1} direction="column">

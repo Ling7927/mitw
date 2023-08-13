@@ -24,8 +24,8 @@ function Footer() {
           style={{
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
             paddingLeft: "2vh",
+            justifyContent: " space-between",
           }}
         >
           {FooterContext.map((item) => {
@@ -39,7 +39,6 @@ function Footer() {
                   className="LeftBlock"
                   style={{
                     display: "flex",
-                    // justifyContent: "flex-start",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -52,7 +51,10 @@ function Footer() {
                   sm={8}
                   md={8}
                   lg={8}
-                  style={{ display: "flex", margin: "1vh 0" }}
+                  style={{
+                    display: "flex",
+                    margin: "1vh 0",
+                  }}
                 >
                   <ul
                     style={{
@@ -93,7 +95,7 @@ function Footer() {
 
         {/* 右 */}
         <Grid item sm={6} md={6} lg={6} style={{ paddingLeft: "2vh" }}>
-          <h4
+          <h3
             style={{
               color: "#fff",
               display: "flex",
@@ -102,7 +104,7 @@ function Footer() {
             }}
           >
             聯絡我們
-          </h4>
+          </h3>
           {Connection.map((item) => {
             return (
               <p

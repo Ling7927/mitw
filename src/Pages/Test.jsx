@@ -12,6 +12,7 @@ import { useInView } from "framer-motion";
 import { routerList } from "../Components/RouterList";
 import Navbar from "../Components/Navbar/Navbar";
 import ImgDialog from "../Components/Dialog/Dialog";
+import "./treat.css";
 function Test() {
   // const [Thiscolor, setThisColor] = useState(
   //   "0 0 0.7em #53F3D3, 0 0 0.7em #53F3D3,0 0 0.7em #53F3D3"
@@ -117,6 +118,26 @@ function Test() {
         <h5>h1</h5>
         <p>pp</p>
       </div>
+      {/* ========submenu ======*/}
+      <div
+        style={{
+          background: "#dcdcdc",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div className="container">
+          <p className="menu">a▼</p>
+          <div className="Submanu">
+            <p className="Subitem">b</p>
+            <p className="Subitem">c</p>
+          </div>
+        </div>
+      </div>
+
+      {/* ========submenu ======*/}
+
       {/* <div>
         <button onClick={Click}>aaa</button>
         {open && <div>rjfvrs</div>}

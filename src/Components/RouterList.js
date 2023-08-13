@@ -69,6 +69,11 @@ const routerList = [
     Component: "",
     li: [
       {
+        liname: "論壇",
+        lipath: "/forum",
+        liComponent: "",
+      },
+      {
         liname: "工作小組",
         lipath: "/Workgroupactivity",
         liComponent: <Workgroupactivity />,
@@ -78,11 +83,11 @@ const routerList = [
         lipath: "/Relatedactivity",
         liComponent: <Relatedactivity />,
       },
-      {
-        liname: "教育訓練",
-        lipath: "/training",
-        liComponent: "",
-      },
+      // {
+      //   liname: "教育訓練",
+      //   lipath: "/training",
+      //   liComponent: "",
+      // },
     ],
   },
   {
@@ -90,12 +95,6 @@ const routerList = [
     icon: null,
     path: "/Result",
     Component: <Result />,
-  },
-  {
-    name: "成果發表",
-    icon: null,
-    path: "/Successcase",
-    Component: <Successcase />,
   },
   {
     name: "歷年活動",
@@ -121,6 +120,12 @@ const routerList = [
         liComponent: "",
       },
     ],
+  },
+  {
+    name: "成果發表",
+    icon: null,
+    path: "/Successcase",
+    Component: <Successcase />,
   },
 ];
 

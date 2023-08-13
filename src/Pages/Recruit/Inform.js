@@ -184,7 +184,7 @@ const WorkGrop = [
           領域
         </h5>
         <ul style={{ margin: 0 }}>
-          <li>標準專家: IHE, DICOM, HL7, HL7 FHIR</li>
+          <li>標準專家: IHE, DICOM, HL7, FHIR</li>
         </ul>
       </div>,
       <div style={{ marginTop: "2rem" }}>

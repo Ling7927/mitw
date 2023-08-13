@@ -15,9 +15,9 @@ function Relatedactivity() {
       // }}
     >
       <div
-        className="AllContentBackground"
+        // className="AllContentBackground"
         style={{
-          // background: "#fdfdfd",
+          background: "#fdfdfd",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

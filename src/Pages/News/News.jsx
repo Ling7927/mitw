@@ -43,40 +43,37 @@ function News() {
             alignContent="center"
             alignItems="center"
           >
+            {/* -----------------時程規劃--------------------- */}
+
             <Grid
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
               item
+              // style={{                width: "80%",
+
+              // }}
               style={{
+                display: "flex",
+                // flexDirection: "column",
+                alignItems: "flex-end",
+                marginBottom: "3vw",
                 width: "80%",
               }}
             >
-              <Grid container>
-                {/* -----------------時程規劃--------------------- */}
-                <Grid
-                  item
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  // lg={8}
-                  lg={12}
-                  style={{
-                    display: "flex",
-                    // flexDirection: "column",
-                    alignItems: "flex-end",
-                    marginBottom: "3vw",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      marginTop: "5rem",
-                    }}
-                  >
-                    <img src={TTime} alt="time" style={{ width: "100%" }} />
-                  </div>
-                </Grid>
-                {/* 地圖 */}
-                {/* <Grid
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  // marginTop: "5rem",
+                }}
+              >
+                <img src={TTime} alt="time" style={{ width: "100%" }} />
+              </div>
+
+              {/* 地圖 */}
+              {/* <Grid
                 item
                 xs={12}
                 sm={12}
@@ -101,24 +98,23 @@ function News() {
                 />
               </Grid> */}
 
-                {/* <hr style={{ border: 0, height: "1px", background: "#000" }} /> */}
-              </Grid>
+              {/* <hr style={{ border: 0, height: "1px", background: "#000" }} /> */}
             </Grid>
 
             {/*----------- 意見小組 -----------*/}
             <Grid
               item
               xs={12}
-              sm={10}
-              md={10}
-              lg={10}
+              sm={12}
+              md={12}
+              lg={11}
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: "2rem",
-                marginBottom: "3vw",
+                marginTop: "2rem 0 3vw",
                 padding: 0,
+                width: "100%",
               }}
             >
               <Grid
@@ -127,7 +123,7 @@ function News() {
                 className="ContentBlock"
                 style={{
                   background: "#f1f1f1",
-
+                  width: "100%",
                   // margin: "0 2vh",
                   // margin: " 0 8rem",
                 }}
@@ -154,11 +150,13 @@ function News() {
                 {/* 右半文字 */}
                 <Grid
                   item
-                  sx={6}
+                  sx={8}
                   sm={8}
                   md={8}
                   lg={8}
                   padding="2vw"
+                  width="100%"
+
                   // marginTop="2rem"
                   // height="90%"
                 >

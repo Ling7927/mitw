@@ -10,16 +10,15 @@
 .MenuContainer {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
 }
 .Subitems {
   text-decoration: none;
   color: #070707;
+  white-space: pre-wrap;
 }
 .Submenu {
   display: none;
   flex-direction: column;
-  position: absolute;
   border-radius: 3px;
   background-color: #a9dbdb;
   padding: 10px;
@@ -35,6 +34,7 @@
 
   .MenuContainer:hover {
     /* padding: 0 2rem; */
+    align-items: flex-end;
 
     .Submenu {
       display: flex;
@@ -42,6 +42,7 @@
       top: 3.6rem;
       justify-content: space-evenly;
       height: 8rem;
+      position: absolute;
 
       /* left: 3rem; */
       /* top: 7rem;
@@ -65,6 +66,7 @@
 
   .MenuContainer:hover {
     /* padding: 0 2rem; */
+    align-items: flex-end;
 
     .Submenu {
       display: flex;
@@ -86,6 +88,77 @@
 /* 500以上 小於930px */
 @media screen and (min-width: 500px) and (max-width: 930px) {
   /* 小於930px */
+  .Title {
+    margin: 2px 0;
+  }
+  .Menu {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .Submenu {
+    display: none;
+  }
+  /* .Menu:focus {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1vw;
+    }
+  } */
+  .MenuContainer:hover {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      border-radius: 0;
+      background-color: #ffffff;
+      padding: 0;
+
+      /* margin-left: 1vw; */
+    }
+  }
+  .Menu:active {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      /* margin-left: 1vw; */
+    }
+  }
+  .Subitems {
+    padding: 2px 0;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: #53d0e0d2;
+    }
+  }
+}
+/* 500以下 */
+@media screen and (max-width: 500px) {
+  /* .Title {
+    padding-top: 2vw;
+   
+  }
+
+  .Submenu {
+    display: none;
+  }
+  .Menu:hover {
+    .Submenu {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+
+    }
+  }
+  .Subitems {
+    font-size: 1rem;
+    white-space: pre;
+    padding: 2px 0;
+  } */
+
   .Title {
     margin: 2px 0;
   }
@@ -129,32 +202,7 @@
       color: #53d0e0d2;
     }
   }
-}
-/* 500以下 */
-@media screen and (max-width: 500px) {
-  .Title {
-    padding-top: 2vw;
-    /* width: 5vw;
-    height: 5vw; */
-  }
 
-  .Submenu {
-    display: none;
-  }
-  .Menu:hover {
-    .Submenu {
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-
-      /* margin-left: 1vw; */
-    }
-  }
-  .Subitems {
-    font-size: 1rem;
-    white-space: pre;
-    padding: 2px 0;
-  }
   /* .Menu:hover {
     .Submenu {
       display: flex;

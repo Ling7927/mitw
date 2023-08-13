@@ -88,12 +88,9 @@
     top: 4rem;
     width: 55%;
     right: 0%;
-    height: 100%;
-    /* transform: translateX(-210%); */
-
     position: absolute;
 
-    transform: translateY(-300%);
+    transform: translateY(-1000%);
     transition: 0.5s ease;
   }
   .nav__collapse {

@@ -19,6 +19,7 @@
   background: #3abcbf;
   color: #fff;
   box-shadow: 2px 0px 3px #d6ccc2;
+  width: 100%;
 }
 .ImgContainer {
   display: flex;

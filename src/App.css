@@ -19,6 +19,12 @@ li {
 h3 {
   font-weight: bold;
 }
+table,
+th,
+td {
+  border: 1px solid #dcdcdc;
+  border-collapse: collapse;
+}
 .AllBackground {
   background: #f3f4f6;
   padding: 5rem 5vh 2vh;

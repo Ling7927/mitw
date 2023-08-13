@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogContentText } from "@mui/material";
 import { Tabs, Mem } from "../../Pages/Member/Inform";
 import Card from "./Card";
 import { Box, Grid } from "@mui/material";
+import { CCard, CCardImage, CCardText, CCardTitle } from "@coreui/react";
 import "./MemberCard.css";
 import MemberSlider from "./MemberSlider";
 function MemberCard() {
@@ -22,15 +23,14 @@ function MemberCard() {
   const handleClickOpen = (ID) => {
     setMemId(ID);
     setOpen(true);
-    console.log(memId);
+    // console.log(memId);
   };
   const handleClose = () => {
     setOpen(false);
   };
   useEffect(() => {
     //  setMemId(Mem.Id === clickTrackId);
-
-    console.log(memId);
+    // console.log(memId);
   }, [clickTrackId]);
   // MMMMMM dialog use
 
@@ -49,7 +49,7 @@ function MemberCard() {
         }}
       >
         <Grid item xs={12} sm={12} md={12} lg={12} height="10vh" sx={{}}>
-          <h4>賽道工作小組</h4>
+          <h2>賽道工作小組</h2>
           <hr style={{ margin: "2vh 0 " }} />
         </Grid>
         {/* 選單 */}
@@ -133,49 +133,37 @@ function MemberCard() {
                   >
                     {/* flipCard */}
                     {/* <Card item={item} /> */}
-
                     {/* dialog card */}
-                    <div
-                      // onMouseEnter={() => {
-                      //   //  handleClickOpen();
-                      //   handleClick();
-
-                      //   setMemId(item.Id);
-                      // }}
+                    {/* <div
+                     
                       onClick={() => {
-                        handleClickOpen(item.Id);
-
-                        // setMemId(item.Id);
-                      }}
+                        handleClickOpen(item.Id); */}
+                    {/* setMemId(item.Id); */}
+                    {/* }}
                       style={{
                         display: "flex",
                         flexDirection: "column",
                         background: "#fff",
                         width: " 100%",
-                        height: " 100%",
-                        /* margin-top: 5vw; */
+                        height: " 75vh",
+
                         padding: " 0 1vw",
                         boxShadow: "3px 3px 13px #dad7cd",
                       }}
-                    >
-                      {/* 賽道資訊 */}
-                      <div>
+                    > */}
+                    {/* 賽道資訊 */}
+                    {/* <div>
                         <p className="Tracks">{item.Track}</p>
                         <h2 className="TracksTitle">{item.TraksTitle}</h2>
-                      </div>
-                      {/* 姓名 身分 */}
-                      <h5
-                        className="Name" // style={{
-                        //   fontSize: "1.5vw",
-                        //   color: "#3ABCBF",
-                        //   height: "8vh",
-                        //   margin: 0,
-                        // }}
+                      </div> */}
+                    {/* 姓名 身分 */}
+                    {/* <h5
+                        className="Name" 
                       >
                         {item.Name}
-                      </h5>
-                      {/* 照片 */}
-                      <div className="ImgContainer">
+                      </h5> */}
+                    {/* 照片 */}
+                    {/* <div className="ImgContainer">
                         <img
                           src={item.Img}
                           style={{
@@ -185,8 +173,44 @@ function MemberCard() {
                             cursor: "pointer",
                           }}
                         />
+                      </div> */}
+                    {/* 藍色標標 */}
+                    {/* <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "flex-end",
+                          width: "100%",
+                        }}
+                      >
+                        <span
+                          style={{
+                            display: "flex",
+                            flexDirection: "row-reverse",
+                          }}
+                        >
+                          <h4 className="Bluetag">{item.Position}</h4>
+                        </span>
                       </div>
-                      {/* 藍色標標 */}
+                    </div> */}
+                    {/* card component */}
+                    <CCard
+                      className="CardContainer"
+                      style={{ width: "100%", border: "none" }}
+                    >
+                      <p className="Tracks"> {item.Track}</p>
+                      <h2 className="TracksTitle">{item.TraksTitle}</h2>
+                      <div style={{ height: "3.5rem" }}>
+                        <h5 className="Name">{item.Name}</h5>
+                      </div>
+                      <CCardImage
+                        style={{ width: "90%" }}
+                        src={item.Img}
+                        onClick={() => {
+                          handleClickOpen(item.Id);
+                          // setMemId(item.Id);
+                        }}
+                      />
+
                       <div
                         style={{
                           display: "flex",
@@ -203,7 +227,7 @@ function MemberCard() {
                           <h4 className="Bluetag">{item.Position}</h4>
                         </span>
                       </div>
-                    </div>
+                    </CCard>
                     {Open === true && memId === item.Id ? (
                       <Dialog open={Open} onClose={handleClose}>
                         <DialogContent>

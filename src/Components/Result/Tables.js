@@ -11,9 +11,12 @@ export const trackstable = {
       table: (
         <table
           class="rwd-table "
-          border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{
+            textAlign: "center",
+            width: "80%",
+            border: "1px #dcdcdc solid",
+          }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">

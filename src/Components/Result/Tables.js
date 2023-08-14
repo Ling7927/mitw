@@ -1774,8 +1774,12 @@ export const trackstable = {
               </td>
             </tr>
             <tr bgcolor="#D1E9E9">
-              <td width="20%">CONSUMER</td>
-              <td width="20%">CREATOR</td>
+              <td width="20%" colspan="4">
+                CONSUMER
+              </td>
+              <td width="20%" colspan="4">
+                CREATOR
+              </td>
             </tr>
             <tr>
               <td bgcolor="#D1E9E9">
@@ -1783,8 +1787,8 @@ export const trackstable = {
                 <br />
                 中華電信智慧醫療服務 版本1.0
               </td>
-              <td>✓</td>
-              <td>✓</td>
+              <td colspan="4">✓</td>
+              <td colspan="4">✓</td>
             </tr>
             <tr>
               <td bgcolor="#D1E9E9">
@@ -1792,8 +1796,8 @@ export const trackstable = {
                 <br />
                 遠距醫療資料交換系統 版本1.0
               </td>
-              <td>✓</td>
-              <td>✓</td>
+              <td colspan="4">✓</td>
+              <td colspan="4">✓</td>
             </tr>
             <tr>
               <td bgcolor="#D1E9E9">
@@ -1801,8 +1805,8 @@ export const trackstable = {
                 <br />
                 m4FHIR 數據平台 版本1.0
               </td>
-              <td>✓</td>
-              <td>✓</td>
+              <td colspan="4">✓</td>
+              <td colspan="4">✓</td>
             </tr>
           </tbody>
         </table>

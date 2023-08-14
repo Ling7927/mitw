@@ -710,17 +710,11 @@ const GovernmentInform = [
 const CrosssystemInform = [
   {
     title: "DICOM互通情境",
-    img: [
-      <ImgDialog Img={c1} Width={"100%"} />,
-      <ImgDialog Img={c2} Width={"100%"} />,
-    ],
+    img: [<img src={c1} Width={"100%"} />, <img src={c2} Width={"100%"} />],
   },
   {
     title: "FHIR互通情境",
-    img: [
-      <ImgDialog Img={f1} Width={"100%"} />,
-      <ImgDialog Img={f2} Width={"100%"} />,
-    ],
+    img: [<img src={f1} Width={"100%"} />, <img src={f2} Width={"100%"} />],
   },
 ];
 export {

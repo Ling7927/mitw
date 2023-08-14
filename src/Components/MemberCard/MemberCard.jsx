@@ -203,7 +203,7 @@ function MemberCard() {
                         <h5 className="Name">{item.Name}</h5>
                       </div>
                       <CCardImage
-                        style={{ width: "90%" }}
+                        style={{ width: "90%", cursor: "pointer" }}
                         src={item.Img}
                         onClick={() => {
                           handleClickOpen(item.Id);

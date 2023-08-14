@@ -64,17 +64,17 @@
 }*/
 @media screen and (min-width: 930px) {
   .NewsP {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 500px) and (max-width: 930px) {
   .NewsP {
-    font-size: 2vmin;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 500px) {
   .NewsP {
-    font-size: 2vmin;
+    font-size: 3vw;
   }
   .NewsH3 {
     letter-spacing: 0;

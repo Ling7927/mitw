@@ -70,6 +70,24 @@ function Main() {
             marginTop: "5%",
           }}
         ></motion.img>
+        <div
+          style={{
+            width: "25vw",
+            height: "25vh",
+            position: "absolute",
+            right: "35rem",
+            bottom: "4rem",
+          }}
+        >
+          <iframe
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+            frameborder="0"
+            height="100%"
+            src="https://www.youtube-nocookie.com/embed/_9BZXTGUvwI?rel=0"
+            width="100%"
+          ></iframe>
+        </div>
         <motion.div
           style={{
             display: "flex",
@@ -101,6 +119,16 @@ function Main() {
           </a>
         </motion.div>
       </div>
+      {/* <center style={{ background: "#dcdcdc", height: "70vh" }}>
+        <iframe
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen=""
+          frameborder="0"
+          height="100%"
+          src="https://www.youtube-nocookie.com/embed/_9BZXTGUvwI?rel=0"
+          width="80%"
+        ></iframe>
+      </center> */}
       {/* -------------------DM下載--------------------- */}
 
       {/* </div> */}

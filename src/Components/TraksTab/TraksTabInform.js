@@ -112,7 +112,9 @@ export const TraksTabInform = [
                 )。
               </li>
             </ol>
-            <img src={track1_1} Width="100%" />
+            <center>
+              <img src={track1_1} Width="70%" />
+            </center>
 
             <ol start="3">
               <li>
@@ -2178,13 +2180,13 @@ export const TraksTabInform = [
             </p>{" "}
             <center>
               {" "}
-              <ImgDialog Img={track4_1} Width={"50%"} />
+              <img src={track4_1} Width="100%" />
             </center>{" "}
             <p style={{ fontWeight: "bold" }}>
               影像索引(FHIR ImagingStudy)設計結構示意圖
             </p>
             <center>
-              <ImgDialog Img={track4_2} Width={"50%"} />
+              <img src={track4_2} Width={"50%"} />
             </center>
             <li>
               {" "}
@@ -2197,7 +2199,7 @@ export const TraksTabInform = [
             </li>
             <h5 style={{ fontWeight: "bold" }}>情境1與情境2角色與交易關係圖</h5>
             <center>
-              <ImgDialog Img={track4_3} Width={"50%"} />
+              <img src={track4_3} Width={"50%"} />
             </center>
             <div>
               <h3 style={{ fontWeight: "bold" }}>情境3:影像檢查流程(SWF)</h3>
@@ -2453,25 +2455,25 @@ export const TraksTabInform = [
               <li>醫學影像與DICOM標記互通之角色與交易關係圖</li>{" "}
               <center>
                 {" "}
-                <ImgDialog Img={track4_4} Width={"50%"} />
+                <img src={track4_4} Width={"50%"} />
               </center>
               <center>
                 {" "}
-                <ImgDialog Img={track4_5} Width={"50%"} />
+                <img src={track4_5} Width={"50%"} />
               </center>
               <li>影像、結構化影像報告(IMAGE)、FHIR標記之角色與交易關係圖</li>{" "}
               <center>
-                <ImgDialog Img={track4_6} Width={"80%"} />
+                <img src={track4_6} Width={"80%"} />
               </center>{" "}
               <li>數位病理影像存取(PATH)之角色與交易關係圖 </li>{" "}
               <center>
                 {" "}
-                <ImgDialog Img={track4_7} Width={"50%"} />
+                <img src={track4_7} Width={"50%"} />
               </center>
               <li>影像檢查流程之角色與交易關係圖</li>{" "}
               <center>
                 {" "}
-                <ImgDialog Img={track4_8} Width={"50%"} />
+                <img src={track4_8} Width={"50%"} />
               </center>
             </ul>
           </>
@@ -2671,7 +2673,9 @@ export const TraksTabInform = [
             </h3>
             <h3>Scenario 6: 現有PHR互通格式匯入_健保健康存摺Bundle</h3>
             <h3>Scenario 7: Long-Term Services and Supports (eLTSS)</h3>
-            <img src={track5_1} Width="100%" />
+            <center>
+              <img src={track5_1} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -2692,7 +2696,7 @@ export const TraksTabInform = [
           <>
             <h3>角色(Actors)</h3>
             <p>1. 照護協調(COLLCARE)角色整理</p>
-            <table class="part in-view" data-startline="970" data-endline="983">
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -2927,11 +2931,7 @@ export const TraksTabInform = [
             </table>
             <h3>交易(Transactions)</h3>
             <p>1. 照護協調(COLLCARE)交易整理</p>
-            <table
-              class="part in-view"
-              data-startline="988"
-              data-endline="1000"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -3148,7 +3148,9 @@ export const TraksTabInform = [
               </tbody>
             </table>
             <h3>角色與交易關係圖</h3>
-            <img src={track5_2} Width="100%" />
+            <center>
+              <img src={track5_2} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -3163,11 +3165,7 @@ export const TraksTabInform = [
         Sc: "作者與貢獻者",
         content: (
           <>
-            <table
-              class="part in-view"
-              data-startline="1008"
-              data-endline="1017"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -3491,7 +3489,9 @@ export const TraksTabInform = [
                     基因 – 基因定序格式轉換FHIR格式流程圖
                   </span>
                   <br />
-                  <img src={track6_1} Width="100%" />
+                  <center>
+                    <img src={track6_1} Width="70%" />
+                  </center>
                 </p>
               </li>
               <li
@@ -3506,7 +3506,9 @@ export const TraksTabInform = [
                     基因 –本次FHIR基因資源結構圖
                   </span>
                   <br />
-                  <img src={track6_2} Width="100%" />
+                  <center>
+                    <img src={track6_2} Width="70%" />
+                  </center>
                 </p>
               </li>
             </ul>
@@ -3748,11 +3750,7 @@ export const TraksTabInform = [
           <>
             <h3>角色(Actors)</h3>
             <p>基因體標記(GEN)角色整理</p>
-            <table
-              class="part in-view"
-              data-startline="1060"
-              data-endline="1067"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -3885,11 +3883,7 @@ export const TraksTabInform = [
             </table>
             <h3>交易(Transactions)</h3>
             <p>1. 基因體標記(GEN)交易整理</p>
-            <table
-              class="part in-view"
-              data-startline="1072"
-              data-endline="1077"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -4007,11 +4001,7 @@ export const TraksTabInform = [
         Sc: "作者與貢獻者",
         content: (
           <>
-            <table
-              class="part in-view"
-              data-startline="1083"
-              data-endline="1088"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -4313,7 +4303,9 @@ export const TraksTabInform = [
                   TW Core IG 的相容性。
                 </span>
               </li>
-              <img src={track7_1} Width="100%" />
+              <center>
+                <img src={track7_1} Width="70%" />
+              </center>
               <li
                 class=""
                 data-startline="1116"
@@ -5212,7 +5204,9 @@ export const TraksTabInform = [
 
             <h3>角色與交易關係圖</h3>
             <p>1. 緊急醫療救護(EMS)之角色與交易關係圖</p>
-            <img src={track7_2} Width="100%" />
+            <center>
+              <img src={track7_2} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -5401,7 +5395,9 @@ export const TraksTabInform = [
               RESTful
               API方式傳輸至保險公司的交換中心進行保險審核。完成核保後再由保險公司逕付保險費用給醫院，並且讓病人不需要代墊保險理賠金額，省去大量的時間成本。醫院也會節省核發紙本診斷證明書以及收據，保險公司也會節省人力成本，民眾也不需要先行墊付費用，已達到病患、醫院以及保險公司三贏的局面。期望能善患者的照護，提高醫療保健服務的效率，並降低醫療保健的成本。
             </p>
-            <img src={track8_1} Width="100%" />
+            <center>
+              <img src={track8_1} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -5732,7 +5728,9 @@ export const TraksTabInform = [
                           病理報告 (DiagnosticReport)
                         </span>
                       </li>
-                      <img src={track8_2} Width="100%" />
+                      <center>
+                        <img src={track8_2} Width="70%" />
+                      </center>
                     </ul>
                   </li>
                 </ul>
@@ -5841,7 +5839,9 @@ export const TraksTabInform = [
                     </span>
                   </strong>
                   <br />
-                  <img src={track8_3} Width="100%" />
+                  <center>
+                    <img src={track8_3} Width="70%" />
+                  </center>
                 </p>
               </li>
             </ul>
@@ -5887,7 +5887,9 @@ export const TraksTabInform = [
                   </span>
                 </strong>
                 <br />
-                <img src={track8_4} Width="100%" />
+                <center>
+                  <img src={track8_4} Width="70%" />
+                </center>
               </li>
             </ul>
           </>
@@ -6045,7 +6047,9 @@ export const TraksTabInform = [
               </table>
             </ol>
             <h3>角色與交易關係圖</h3>
-            <img src={track8_5} Width="100%" />
+            <center>
+              <img src={track8_5} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -6211,13 +6215,21 @@ export const TraksTabInform = [
               <strong>本工作小組制定的使用情境依序說明如下:</strong>
             </p>
             <h3>情境1:遠距醫療病患基本資料維護</h3>
-            <img src={track9_1} Width="100%" />
+            <center>
+              <img src={track9_1} Width="70%" />
+            </center>
             <h3>情境2:遠距端掛號作業</h3>
-            <img src={track9_1} Width="100%" />
+            <center>
+              <img src={track9_1} Width="70%" />
+            </center>
             <h3>情境3:在地端檢驗檢查上傳與遠距端診斷結果回傳</h3>
-            <img src={track9_1} Width="100%" />
+            <center>
+              <img src={track9_1} Width="70%" />
+            </center>
             <h3>情境4:在地端診療診斷結果上傳</h3>
-            <img src={track9_1} Width="100%" />
+            <center>
+              <img src={track9_1} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -6228,11 +6240,7 @@ export const TraksTabInform = [
           <>
             <h3>角色(Actors)</h3>
             <p>1.遠距醫療(TELMED)角色整理</p>
-            <table
-              class="part in-view"
-              data-startline="1377"
-              data-endline="1381"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -6314,11 +6322,7 @@ export const TraksTabInform = [
             </table>
             <h3>交易(Transactions)</h3>
             <p>1.台遠距醫療(TELMED)交易整理</p>
-            <table
-              class="part in-view"
-              data-startline="1385"
-              data-endline="1394"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -6478,7 +6482,9 @@ export const TraksTabInform = [
               </tbody>
             </table>
             <h3>角色與交易關係圖</h3>
-            <img src={track9_2} Width="100%" />
+            <center>
+              <img src={track9_2} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -6708,7 +6714,9 @@ export const TraksTabInform = [
               癌症登記長表上傳系統(Creator)，依照臺灣癌症登記短表 FHIR
               IG規格將資料轉換為 FHIR 格式，並以Bundle格式上傳TCR FHIR儲存庫
             </li>
-            <img src={track10_1} Width="100%" />
+            <center>
+              <img src={track10_1} Width="70%" />
+            </center>
             <p>
               表10-1以及表10-2為台灣癌症登記癌登的Profile設計對照台灣癌症登記格式對照表。Profile主要設計概念包含:
               (1)
@@ -6720,11 +6728,7 @@ export const TraksTabInform = [
                 表10-1、臺灣癌症登記短表格式轉換FHIR Profile對照表
               </center>
             </p>
-            <table
-              class="part in-view"
-              data-startline="1446"
-              data-endline="1492"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th></th>
@@ -7520,11 +7524,7 @@ export const TraksTabInform = [
                 表10-1、臺灣癌症登記長表格式轉換FHIR Profile對照表
               </center>
             </p>
-            <table
-              class="part in-view"
-              data-startline="1498"
-              data-endline="1614"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th></th>
@@ -9570,11 +9570,7 @@ export const TraksTabInform = [
             <p>涉及到的角色 (Actors)以及交易(Transactions)，說明如下:</p>
             <h3>角色(Actors)</h3>
             <p>1.台灣癌症登記短表與長表(TCR)角色整理</p>
-            <table
-              class="part in-view"
-              data-startline="1626"
-              data-endline="1632"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -9690,11 +9686,7 @@ export const TraksTabInform = [
             </table>
             <h3>交易(Transactions)</h3>
             <p>1.台灣癌症登記短表與長表(TCR)交易整理</p>
-            <table
-              class="part in-view"
-              data-startline="1637"
-              data-endline="1642"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>
@@ -9792,7 +9784,9 @@ export const TraksTabInform = [
               </tbody>
             </table>
             <h3>角色與交易關係圖</h3>
-            <img src={track10_2} Width="100%" />
+            <center>
+              <img src={track10_2} Width="70%" />
+            </center>
           </>
         ),
       },
@@ -9807,11 +9801,7 @@ export const TraksTabInform = [
         Sc: "作者與貢獻者",
         content: (
           <>
-            <table
-              class="part in-view"
-              data-startline="1650"
-              data-endline="1655"
-            >
+            <table class="table table-striped table-bordered" border="1">
               <thead>
                 <tr>
                   <th>

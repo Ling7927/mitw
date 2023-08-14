@@ -69,7 +69,7 @@ function Trakslist() {
                     }}
                   >
                     <Link
-                      to={`/Tracks/${item.id}`}
+                      to={`/Tracks/${item.id}#1`}
                       style={{ color: "#191c23", textDecoration: "none" }}
                     >
                       <h3

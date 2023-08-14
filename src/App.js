@@ -22,13 +22,22 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-function App() {
-  const location = useLocation();
-  // const [istop, setIstop] = useState(true);
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [location.pathname]);
+    //
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname]);
+
+  return null;
+};
+
+function App() {
+  const location = useLocation();
+
+  // const [istop, setIstop] = useState(true);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -45,7 +54,7 @@ function App() {
       // istop={istop}
       />
       {/* <Up /> */}
-
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/News" element={<News />} />

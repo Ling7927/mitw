@@ -1,0 +1,25 @@
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+@media screen and (min-width: 1400px) {
+  .Tables {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+  .Tables {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .Tables {
+    width: 100%;
+  }
+}

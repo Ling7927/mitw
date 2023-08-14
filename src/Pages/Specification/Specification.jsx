@@ -69,27 +69,28 @@ function Specification() {
                 <div style={{ position: "sticky", top: "5.5rem" }}>
                   {ListTitle.map((item) => {
                     return (
-                      <div style={{ marginBottom: "5px" }}>
-                        <Link
-                          to={`#${item.id}`}
-                          onClick={() => setOnHandle(item.id)}
-                          key={item.id}
-                          style={{
-                            margin: 0,
-                            backgroundColor: "Transparent",
-                            backgroundRepeat: "no-repeat",
-                            //whiteSpace: "nowrap", //不換行
-                            border: "none",
-                            //cursor: "pointer",//鼠標形狀改變
-                            overflow: "hidden",
-                            fontSize: onHandle === item.id ? "1.25rem" : "1rem",
-                            color: onHandle === item.id ? "#000" : "#949494",
-                          }}
-                          smooth
-                        >
+                      <Link
+                        to={`#${item.id}`}
+                        onClick={() => setOnHandle(item.id)}
+                        key={item.id}
+                        style={{
+                          margin: 0,
+                          backgroundColor: "Transparent",
+                          backgroundRepeat: "no-repeat",
+                          //whiteSpace: "nowrap", //不換行
+                          border: "none",
+                          //cursor: "pointer",//鼠標形狀改變
+                          overflow: "hidden",
+                          fontSize: onHandle === item.id ? "1.25rem" : "1rem",
+                          color: onHandle === item.id ? "#000" : "#949494",
+                          width: "100%",
+                        }}
+                        smooth
+                      >
+                        <div style={{ marginBottom: "5px", width: "100%" }}>
                           {item.title}
-                        </Link>
-                      </div>
+                        </div>
+                      </Link>
                     );
                   })}
                 </div>

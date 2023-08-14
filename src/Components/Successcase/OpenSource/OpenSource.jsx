@@ -113,12 +113,19 @@ function OpenSource() {
                       參加賽道{item.tracks}
                     </p> */}
 
-                    <p style={{ whiteSpace: "pre-wrap" }}>
+                    <p
+                      style={{
+                        whiteSpace: "pre-wrap",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
                       <strong>參加賽道</strong>
                       {item.jointracks.map((tracks) => {
                         return (
                           <>
                             {tracks.trackstitle}
+
                             {tracks.tracksname}
                           </>
                         );

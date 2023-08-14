@@ -64,7 +64,7 @@ const OpenSourceInform = [
       { trackstitle: "\nTRACK#4", tracksname: " - DICOMWeb查詢與調閱" },
       {
         trackstitle: "\nTRACK#5",
-        tracksname: " - DICOM數位全幅病理顯微鏡 \n\t\t      影像查詢與調閱",
+        tracksname: " - DICOM數位全幅病理顯微鏡 影像查詢與調閱",
       },
       { trackstitle: "\nTRACK#7", tracksname: " - 影像檢查流程" },
     ],
@@ -82,7 +82,7 @@ const OpenSourceInform = [
       { trackstitle: "\nTRACK#4", tracksname: " - DICOMWeb查詢與調閱" },
       {
         trackstitle: "\nTRACK#5",
-        tracksname: " - DICOM數位全幅病理顯微鏡 \n\t\t      影像查詢與調閱",
+        tracksname: " - DICOM數位全幅病理顯微鏡 影像查詢與調閱",
       },
       { trackstitle: "\nTRACK#7", tracksname: " - 影像檢查流程" },
     ],

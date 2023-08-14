@@ -4,6 +4,7 @@ import { trackstable } from "./Tables";
 import ResultTable from "../Result/Table/ResultTable";
 import { motion } from "framer-motion";
 import { Grid, duration, Box } from "@mui/material";
+import "./Result.css";
 function ResultTab() {
   const [track, setTrack] = useState(1);
   const [table, setTable] = useState([]);
@@ -236,7 +237,7 @@ function ResultTab() {
           {/* <ResultTable id={track} /> */}
 
           {trackstable[track].map((item, index) => (
-            <center key={index} style={{ margin: "2rem 0" }}>
+            <center key={index} style={{ margin: "2rem 0" }} className="Tables">
               {item.table}
             </center>
           ))}

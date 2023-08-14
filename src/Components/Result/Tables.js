@@ -3,7 +3,7 @@
 // class="rwd-table "
 // border="1"
 // cellpadding="10px"
-// style={{ textAlign: "center", width: "80%" }}
+// style={{ textAlign: "center", width: "100%" }}
 // >
 export const trackstable = {
   1: [
@@ -14,7 +14,7 @@ export const trackstable = {
           cellpadding="10px"
           style={{
             textAlign: "center",
-            width: "80%",
+            width: "100%",
             border: "1px #dcdcdc solid",
           }}
         >
@@ -320,7 +320,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -679,7 +679,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -753,7 +753,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -776,7 +776,7 @@ export const trackstable = {
               <td width="5%">飯前血糖</td>
               <td width="5%">飯後血糖</td>
               <td width="5%">右手握力</td>
-              <td width="9%">血氧濃度(SpO2)</td>
+              <td width="15%">血氧濃度(SpO2)</td>
               <td width="3.5%">血糖</td>
               <td width="3.5%">血壓</td>
               <td width="3.5%">脈率</td>
@@ -1068,7 +1068,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -1091,7 +1091,7 @@ export const trackstable = {
               <td width="5%">飯前血糖</td>
               <td width="5%">飯後血糖</td>
               <td width="5%">右手握力</td>
-              <td width="9%">血氧濃度(SpO2)</td>
+              <td width="15%">血氧濃度(SpO2)</td>
               <td width="3.5%">血糖</td>
               <td width="3.5%">血壓</td>
               <td width="3.5%">脈率</td>
@@ -1425,7 +1425,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -1509,7 +1509,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -1628,7 +1628,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -1758,7 +1758,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -1816,7 +1816,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -1903,7 +1903,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -1968,7 +1968,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2070,7 +2070,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2174,7 +2174,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2248,7 +2248,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2307,7 +2307,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2366,7 +2366,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2404,7 +2404,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2413,12 +2413,12 @@ export const trackstable = {
                   <b></b>
                 </font>
               </td>
-              <td rowspan="2" width="2%">
+              <td rowspan="2" width="10%">
                 <font color="white">
                   <b></b>
                 </font>
               </td>
-              <td colspan="4">
+              <td colspan="3">
                 <font color="white">
                   <b>商之器科技股份有限公司(EBM)</b>
                 </font>
@@ -2469,7 +2469,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2540,7 +2540,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2578,7 +2578,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2643,7 +2643,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">
@@ -2692,7 +2692,7 @@ export const trackstable = {
           class="rwd-table "
           border="1"
           cellpadding="10px"
-          style={{ textAlign: "center", width: "80%" }}
+          style={{ textAlign: "center", width: "100%" }}
         >
           <tbody>
             <tr bgcolor="#4F9D9D">

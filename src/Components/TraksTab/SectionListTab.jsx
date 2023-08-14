@@ -38,6 +38,7 @@ function SectionListTab({ Click, setClick, onHandle }) {
                 color: "#000",
                 textDecoration: "none",
                 marginBottom: "5px",
+                width: "100%",
               }}
               key={sectiontab.id}
               onClick={() => setClick(sectiontab.id)}

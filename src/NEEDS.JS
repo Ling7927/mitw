@@ -81,3 +81,36 @@ padding 上下左右
 然後裡面的產業產品 內容不用顯示更多 ok
 
 互通情境的圖片不用在點開後放大 ok
+
+//0811
+
+Navbar ok
+1.menu 變成靠右對齊
+2.item 間距
+
+Footer ok
+3.主辦單位字元大小跟名稱是否相同 聯絡我們再大一點
+
+New->tracks ok
+4.
+
+success ok
+5.選單字體不要放大 距離固定
+
+Activity ok
+6.頁面首標題的padding,margin 要相同
+
+Track7 ok
+7.(Summary)
+ 
+2022表格 ok
+9.table 換一個套件
+
+Recruit ok
+10.招募的督察員招募領域裡的HL7 FHIR的HL7要刪掉
+
+Relate ok
+11.議程下面li字體大小
+
+New ok
+NewP size

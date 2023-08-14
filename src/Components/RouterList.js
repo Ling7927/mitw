@@ -70,7 +70,7 @@ const routerList = [
     li: [
       {
         liname: "論壇",
-        lipath: "/forum",
+        lipath: "",
         liComponent: "",
       },
       {
